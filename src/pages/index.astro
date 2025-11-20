@@ -4,10 +4,21 @@ import { CATEGORY_CONFIG } from '../config/categories';
 
 const reviews = await getCollection('reviews');
 
-// Só mostra categorias que já têm ao menos 1 review
+// Categorias que já têm pelo menos 1 review
 const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
   ([label]) => reviews.some((r) => r.data.category === label)
 );
+
+// Imagens do carrossel (ajuste os nomes se tiver salvo diferente)
+const carouselImages = [
+  { src: '/old-man-gym.jpg', alt: 'Older man training at the gym' },
+  { src: '/supplements-hand.jpg', alt: 'Hands holding colorful supplement capsules' },
+  { src: '/supplements-yellow.jpg', alt: 'Supplements on a yellow background' },
+  { src: '/omega-softgels.jpg', alt: 'Omega-3 softgels spilling from a jar' },
+  { src: '/woman-plank.jpg', alt: 'Woman exercising on the beach' },
+  { src: '/barbell-gym.jpg', alt: 'Athlete holding barbell at the gym' },
+  { src: '/back-muscles.jpg', alt: 'Back muscles of a fit woman at the gym' }
+];
 ---
 
 <!doctype html>
@@ -17,17 +28,20 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
     <title>Best Supplements Today — Expert Supplement Reviews</title>
     <meta
       name="description"
-      content="Evidence-based supplement reviews organized by category to help you compare natural products for weight loss, brain health, circulation, liver, dental, men’s and women’s health, and more."
+      content="With BestSupplementsToday you compare the best supplements for every health goal — with expert reviews organized by health category."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="https://bestsupplementstoday.com/" />
+
+    <!-- Favicon global do site -->
+    <link rel="icon" href="/favicon-bst.png" type="image/png" sizes="32x32" />
 
     <style>
       :root {
         --bg-page: #f3f4f6;
         --bg-card: #ffffff;
-        --accent: #2563eb;
-        --accent-soft: #eff6ff;
+        --accent: #0ea5e9;
+        --accent-soft: #e0f2fe;
         --text-main: #0f172a;
         --text-muted: #64748b;
         --border-subtle: #e2e8f0;
@@ -47,12 +61,8 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
       }
 
       a {
-        color: var(--accent);
+        color: inherit;
         text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
       }
 
       .page {
@@ -61,54 +71,137 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         flex-direction: column;
       }
 
+      /* HEADER */
+
       header {
         border-bottom: 1px solid var(--border-subtle);
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 20;
       }
 
       .header-inner {
         max-width: 1120px;
         margin: 0 auto;
-        padding: 14px 16px;
+        padding: 10px 16px;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
 
-      .logo {
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .logo-img {
+        height: 32px;
       }
 
       nav {
         display: flex;
-        gap: 20px;
+        align-items: center;
+        gap: 22px;
         font-size: 14px;
         color: var(--text-muted);
       }
 
-      nav a {
-        color: inherit;
-        text-decoration: none;
+      .nav-link {
+        position: relative;
+        padding: 4px 0;
       }
 
-      nav a:hover {
+      .nav-link:hover {
         color: var(--text-main);
       }
+
+      /* Dropdown de categorias em All Reviews */
+
+      .nav-dropdown {
+        position: relative;
+      }
+
+      .nav-dropdown-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .nav-dropdown-toggle-icon {
+        font-size: 10px;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 110%;
+        right: 0;
+        min-width: 260px;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+        padding: 10px 10px 8px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(4px);
+        transition: opacity 0.16s ease-out, transform 0.16s ease-out;
+        z-index: 30;
+      }
+
+      @media (min-width: 640px) {
+        .dropdown-menu {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .nav-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .dropdown-title {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        padding: 4px 4px 6px;
+      }
+
+      .dropdown-item {
+        font-size: 13px;
+        padding: 6px 8px;
+        border-radius: 10px;
+        color: var(--text-main);
+      }
+
+      .dropdown-item span {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      .dropdown-item:hover {
+        background: var(--bg-page);
+      }
+
+      /* MAIN LAYOUT */
 
       main {
         flex: 1;
         max-width: 1120px;
         margin: 0 auto;
-        padding: 32px 16px 40px;
+        padding: 28px 16px 40px;
       }
 
       .hero {
         text-align: center;
-        margin-bottom: 28px;
+        margin-bottom: 22px;
       }
 
       .pill {
@@ -118,11 +211,11 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         padding: 4px 12px;
         border-radius: 999px;
         background: var(--accent-soft);
-        color: #1d4ed8;
+        color: #0369a1;
         font-size: 11px;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.14em;
         margin-bottom: 10px;
       }
 
@@ -145,28 +238,149 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         }
       }
 
-      .hero p {
-        max-width: 640px;
+      .hero-sub {
+        max-width: 680px;
         margin: 0 auto;
         font-size: 15px;
         color: var(--text-muted);
       }
 
-      .category-card {
+      /* INTRO + CARROSSEL LADO A LADO */
+
+      .intro-carousel {
+        margin-top: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      @media (min-width: 900px) {
+        .intro-carousel {
+          flex-direction: row;
+        }
+      }
+
+      .intro-card {
+        flex: 1.3;
         background: var(--bg-card);
         border-radius: var(--radius-card);
-        padding: 20px 18px;
+        padding: 20px 20px 18px;
         border: 1px solid var(--border-subtle);
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      .intro-card h2 {
+        font-size: 17px;
+        margin: 0 0 8px;
+        color: var(--text-main);
+      }
+
+      .intro-card p {
+        margin: 6px 0;
+        line-height: 1.5;
+      }
+
+      .intro-card strong {
+        color: var(--text-main);
+      }
+
+      /* CARROSSEL */
+
+      .carousel-wrap {
+        flex: 1;
+        background: var(--bg-card);
+        border-radius: var(--radius-card);
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+        padding: 10px 10px 14px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
 
+      .carousel-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--text-muted);
+        margin: 0 4px 8px;
+      }
+
+      .carousel {
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        height: 210px;
+      }
+
+      @media (min-width: 900px) {
+        .carousel {
+          height: 230px;
+        }
+      }
+
+      .carousel-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .carousel-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: #cbd5f5;
+      }
+
+      .carousel-dot.active {
+        background: var(--accent);
+      }
+
+      /* BLOCO CATEGORIAS */
+
+      .section-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin: 28px 0 14px;
+      }
+
+      .section-header h2 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      .section-header p {
+        margin: 0;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
       .categories-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 12px;
       }
 
       @media (min-width: 640px) {
@@ -181,16 +395,28 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         }
       }
 
+      .category-card {
+        background: var(--bg-card);
+        border-radius: var(--radius-card);
+        padding: 16px 14px 14px;
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 13px;
+      }
+
       .category-name {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         margin-bottom: 4px;
       }
 
       .category-desc {
-        font-size: 13px;
+        font-size: 12px;
         color: var(--text-muted);
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
 
       .category-footer {
@@ -201,42 +427,12 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         color: var(--text-muted);
       }
 
-      .pill-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 6px 12px;
-        border-radius: 999px;
-        border: 1px solid var(--accent);
-        color: var(--accent);
-        font-size: 12px;
-        font-weight: 500;
-        text-decoration: none;
+      .category-card:hover {
+        border-color: var(--accent);
+        box-shadow: 0 18px 40px rgba(14, 165, 233, 0.15);
       }
 
-      .pill-link:hover {
-        background: var(--accent);
-        color: white;
-        text-decoration: none;
-      }
-
-      .section-header {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        margin: 8px 0 14px;
-      }
-
-      .section-header h2 {
-        font-size: 18px;
-        margin: 0;
-      }
-
-      .section-header p {
-        margin: 0;
-        font-size: 13px;
-        color: var(--text-muted);
-      }
+      /* FOOTER */
 
       footer {
         border-top: 1px solid var(--border-subtle);
@@ -251,6 +447,8 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         padding: 10px 16px 14px;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
       }
     </style>
   </head>
@@ -259,10 +457,29 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
     <div class="page">
       <header>
         <div class="header-inner">
-          <a href="/" class="logo">Best Supplements Today</a>
+          <a href="/" class="logo-wrap">
+            <img src="/logo-bst.png" alt="Best Supplements Today" class="logo-img" />
+          </a>
+
           <nav>
-            <a href="/">Home</a>
-            <a href="/reviews">All Reviews</a>
+            <a href="/" class="nav-link">Home</a>
+
+            <div class="nav-link nav-dropdown">
+              <a href="/reviews" class="nav-dropdown-toggle">
+                <span>All Reviews</span>
+                <span class="nav-dropdown-toggle-icon">▾</span>
+              </a>
+              {categoriesInUse.length > 0 && (
+                <div class="dropdown-menu">
+                  <div class="dropdown-title">Browse by category</div>
+                  {categoriesInUse.map(([label, config]) => (
+                    <a href={`/categories/${config.slug}`} class="dropdown-item">
+                      <div>{label}</div>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </nav>
         </div>
       </header>
@@ -275,20 +492,60 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
             Evidence-based supplement hub
           </div>
           <h1>Explore supplement reviews by category</h1>
-          <p>
+          <p class="hero-sub">
             Navigate by health goal — from weight loss and brain support to
             circulation, liver, dental care, men’s and women’s health.
           </p>
         </section>
 
-        <!-- CATEGORIAS -->
+        <!-- INTRO + CARROSSEL LADO A LADO -->
+        <section class="intro-carousel">
+          <article class="intro-card">
+            <h2>With BestSupplementsToday you compare the best supplements for every health goal</h2>
+            <p>
+              At <strong>BestSupplementsToday.com</strong>, we review and compare
+              the best supplements across every major health category — from
+              Weight Loss, Men’s &amp; Women’s Health, and Heart &amp; Circulation
+              to Liver, Gut, Dental, Hearing, and Brain Health.
+            </p>
+            <p>
+              Our editorial team researches <strong>ingredient quality</strong>,
+              <strong>scientific evidence</strong>, and <strong>real user results</strong>
+              to deliver honest supplement reviews you can trust.
+            </p>
+            <p>
+              Each product is independently analyzed for safety, effectiveness, and
+              value — helping you find the top-rated supplements that truly match
+              your goals.
+            </p>
+          </article>
+
+          <aside class="carousel-wrap">
+            <div class="carousel-title">Health &amp; lifestyle snapshots</div>
+            <div class="carousel" data-carousel>
+              {carouselImages.map((img, index) => (
+                <figure
+                  class={`carousel-slide ${index === 0 ? 'active' : ''}`}
+                >
+                  <img src={img.src} alt={img.alt} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+            <div class="carousel-dots" data-carousel-dots>
+              {carouselImages.map((_, index) => (
+                <span
+                  class={`carousel-dot ${index === 0 ? 'active' : ''}`}
+                ></span>
+              ))}
+            </div>
+          </aside>
+        </section>
+
+        <!-- CATEGORIAS EM GRID -->
         <section>
           <div class="section-header">
             <h2>Browse by health category</h2>
-            <p>
-              Select a category to see all supplement reviews related to that
-              area.
-            </p>
+            <p>Select a category to see all supplement reviews related to that area.</p>
           </div>
 
           {categoriesInUse.length === 0 ? (
@@ -299,7 +556,10 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
           ) : (
             <div class="categories-grid">
               {categoriesInUse.map(([label, config]) => (
-                <a href={`/categories/${config.slug}`} class="category-card">
+                <a
+                  href={`/categories/${config.slug}`}
+                  class="category-card"
+                >
                   <div>
                     <div class="category-name">{label}</div>
                     <div class="category-desc">
@@ -307,7 +567,7 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
                     </div>
                   </div>
                   <div class="category-footer">
-                    <span>View reviews</span>
+                    <span>View related reviews</span>
                     <span>›</span>
                   </div>
                 </a>
@@ -324,6 +584,36 @@ const categoriesInUse = Object.entries(CATEGORY_CONFIG).filter(
         </div>
       </footer>
     </div>
+
+    <!-- Script do carrossel (auto-rotate) -->
+    <script>
+      const carouselEl = document.querySelector('[data-carousel]');
+      const slides = carouselEl
+        ? Array.from(carouselEl.querySelectorAll('.carousel-slide'))
+        : [];
+      const dotsWrapper = document.querySelector('[data-carousel-dots]');
+      const dots = dotsWrapper
+        ? Array.from(dotsWrapper.querySelectorAll('.carousel-dot'))
+        : [];
+
+      if (slides.length > 1) {
+        let current = 0;
+
+        const activate = (index) => {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+          });
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+          });
+        };
+
+        setInterval(() => {
+          current = (current + 1) % slides.length;
+          activate(current);
+        }, 4500);
+      }
+    </script>
   </body>
 </html>
 
