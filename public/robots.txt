@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bestsupplementstoday.com/sitemap-index.xml
