@@ -15,9 +15,24 @@ const { Content } = await entry.render();
 const { data } = entry;
 ---
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{data.pageTitle}</title>
+  <meta name="description" content={data.metaDescription} />
+  <link rel="icon" href="/favicon-bst.png" type="image/png" sizes="32x32" />
+
+  <!-- Tailwind CDN + Inter (igual ao Prostadine) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
 <FullReviewLayout
-  pageTitle={data.pageTitle}
-  metaDescription={data.metaDescription}
   title={data.title}
   description={data.description}
   heroImage={data.heroImage}
