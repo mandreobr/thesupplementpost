@@ -1,11 +1,12 @@
 ---
+slug: "max-boost-plus"
+
 title: "Max Boost Plus Review: A Natural Complex for Male Vitality & Performance"
 description: "Read our comprehensive review of Max Boost Plus, the natural male vitality supplement that targets sleep, mood, nitric oxide, and circulation with a 9-ingredient botanical blend."
 pageTitle: "Max Boost Plus Review: Natural OTC Male Vitality Support"
 metaDescription: "Max Boost Plus Reviews – A natural OTC male vitality supplement with 9 botanicals and nutrients to support nitric oxide, energy, libido, sleep, and circulation."
-slug: "max-boost-plus"
 
-heroImage: "/images/maxboostplus/hero.png"
+heroImage: "/images/max-boost-plus/hero.png"
 heroAlt: "Max Boost Plus male vitality supplement – natural formula for erections, libido, energy, and circulation"
 heroCaption: "Max Boost Plus is a natural male vitality complex designed to support nitric oxide activity, circulation, sleep quality, mood balance, and sexual confidence."
 
@@ -14,6 +15,8 @@ primaryCtaUrl: "https://linkly.link/2LziG"
 
 reviewCategory: "Men’s Health"
 ---
+
+
 
 <div class="intro-box">
   Explore how Max Boost Plus’ natural OTC supplement supports nitric oxide activity, circulation, libido, sleep, mood balance, and long-term male vitality.
