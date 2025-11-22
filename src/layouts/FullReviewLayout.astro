@@ -3,6 +3,8 @@ interface Props {
   title: string;
   description: string;
   heroImage?: string;
+  heroAlt?: string;
+  heroCaption?: string;
   primaryCtaLabel?: string;
   primaryCtaUrl?: string;
 }
@@ -11,6 +13,8 @@ const {
   title,
   description,
   heroImage,
+  heroAlt,
+  heroCaption,
   primaryCtaLabel,
   primaryCtaUrl,
 } = Astro.props;
@@ -24,7 +28,8 @@ const {
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="icon" href="/favicon-bst.png" type="image/png" sizes="32x32" />
-  <!-- Tailwind via CDN + fonte Inter -->
+
+  <!-- Tailwind CDN + Inter font -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,309 +40,492 @@ const {
 
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       color: #1f2937;
-      background-color: #f9fafb;
+      background-color: #f3f4f6;
     }
 
-    .text-primary { color: #2563eb; }
-    .border-primary { border-color: #2563eb; }
+    .text-primary {
+      color: #2563eb;
+    }
+    .border-primary {
+      border-color: #2563eb;
+    }
+
+    .review-shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .review-card {
+      background-color: #ffffff;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      padding: 2.5rem 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .review-card {
+        padding: 3.5rem 3rem;
+      }
+    }
 
     .markdown-prose {
       padding: 1rem 0;
     }
 
-    .markdown-prose p {
+    .markdown-prose p:not(.image-caption) {
       margin-bottom: 1.5rem;
-      font-size: 1.125rem;
-      line-height: 1.75;
+      font-size: 1.0625rem;
+      line-height: 1.8;
       text-align: justify;
     }
 
     .markdown-prose h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #1f2937;
-      margin-top: 3.5rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #2563eb;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #111827;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 3px solid #2563eb;
     }
 
     .markdown-prose h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      color: #1f2937;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.25rem;
+      margin-bottom: 0.9rem;
+      color: #111827;
     }
 
     .markdown-prose ul,
     .markdown-prose ol {
-      padding-left: 1.5rem;
+      padding-left: 1.3rem;
       margin-bottom: 1.5rem;
+      font-size: 1.02rem;
     }
-
-    .markdown-prose ul { list-style: disc; }
-    .markdown-prose ol { list-style: decimal; }
-
-    .markdown-prose li {
-      margin-bottom: 0.5rem;
+    .markdown-prose ul {
+      list-style: disc;
+    }
+    .markdown-prose ol {
+      list-style: decimal;
+    }
+    .markdown-prose ul li,
+    .markdown-prose ol li {
+      margin-bottom: 0.4rem;
     }
 
     .cta-block {
       text-align: center;
       margin: 3rem auto;
-      max-width: 600px;
+      max-width: 550px;
     }
 
     .btn-primary {
       display: inline-block;
-      padding: 1rem 2.5rem;
+      padding: 0.95rem 2.75rem;
       background-color: #2563eb;
       color: #ffffff;
       font-weight: 800;
-      border-radius: 0.75rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+      border-radius: 0.9rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.45);
     }
 
     .btn-primary:hover {
       background-color: #1d4ed8;
-      transform: translateY(-2px);
-      box-shadow: 0 15px 20px -5px rgba(37, 99, 235, 0.6);
+      transform: translateY(-1px);
+      box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
     }
 
     .intro-box {
-      padding: 1.5rem;
+      padding: 1.3rem 1.5rem;
       background-color: #eff6ff;
       border-left: 5px solid #2563eb;
-      border-radius: 0 0.75rem 0.75rem 0;
+      border-radius: 0 0.9rem 0.9rem 0;
       margin-bottom: 2rem;
       font-style: italic;
       font-weight: 500;
-      font-size: 1.125rem;
-      line-height: 1.6;
+      font-size: 1.03rem;
+      line-height: 1.7;
       text-align: justify;
+    }
+
+    .pros-cons-title {
+      margin-top: 3rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #111827;
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 0.4rem;
     }
 
     .pros-cons-block {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 2rem;
-      margin: 2.5rem 0;
-      padding: 1rem 0;
+      gap: 1.75rem;
+      margin: 1.75rem 0 2.5rem;
     }
-
     @media (min-width: 768px) {
       .pros-cons-block {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-
-    .pros-cons-block .pros {
-      padding: 1.5rem;
-      background-color: #f0fdf4;
-      border-left: 4px solid #10b981;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-    }
-
+    .pros-cons-block .pros,
     .pros-cons-block .cons {
-      padding: 1.5rem;
+      padding: 1.5rem 1.4rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+    .pros-cons-block .pros {
+      background-color: #ecfdf3;
+      border-left: 4px solid #16a34a;
+    }
+    .pros-cons-block .cons {
       background-color: #fef2f2;
       border-left: 4px solid #ef4444;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
     }
-
     .pros-cons-block h3 {
       margin-top: 0 !important;
-      margin-bottom: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    .pros-cons-block ul li {
+      margin-bottom: 0.7rem;
+      line-height: 1.65;
     }
 
     .pricing-table-container {
       overflow-x: auto;
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
+      margin-top: 2.25rem;
+      margin-bottom: 2.25rem;
+      border-radius: 1rem;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
       border: 1px solid #e5e7eb;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-
     .pricing-table {
       width: 100%;
       border-collapse: collapse;
       min-width: 650px;
-      background-color: white;
-      position: relative;
+      background-color: #ffffff;
     }
-
     .pricing-table th,
     .pricing-table td {
-      padding: 0.7rem 1rem;
+      padding: 0.75rem 1rem;
       text-align: center;
       font-size: 0.95rem;
-      border-bottom: 1px dashed #d1d5db;
+      border-bottom: 1px dashed #e5e7eb;
       vertical-align: middle;
     }
-
     .pricing-table thead th {
-      background-color: #f3f4f6;
+      background-color: #f9fafb;
       font-weight: 700;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: none;
-      position: relative;
+      border-bottom: 2px solid #e5e7eb;
     }
-
     .pricing-table thead .best-value-header {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      padding-top: 0.35rem;
+      padding-bottom: 0.35rem;
     }
-
-    .pricing-table tbody tr:last-child td {
-      border-bottom: none;
-    }
-
     .pricing-table .row-label {
       text-align: left;
       font-weight: 600;
-      color: #1f2937;
+      color: #111827;
     }
-
     .pricing-table .bold-black {
       font-weight: 700;
       color: #000000;
     }
-
     .pricing-table .best-value-col {
       background-color: #eff6ff;
     }
 
-    .pricing-table .best-value-header {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0.75rem;
-    }
-
     .ingredient-card-list {
       display: grid;
-      gap: 1rem;
+      gap: 0.9rem;
+      margin-top: 0.75rem;
     }
-
     .ingredient-card {
-      padding: 1.5rem;
-      background-color: #f5f8fa;
-      border: 1px solid #e0e6ed;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+      padding: 1rem 1.1rem;
+      background-color: #f5f8ff;
+      border-radius: 0.75rem;
+      border: 1px solid #e0e7ff;
     }
-
     .ingredient-card h3 {
       margin-top: 0 !important;
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #1f2937;
-    }
-
-    .ingredient-card .dosage {
-      color: #2563eb;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
       font-weight: 700;
     }
 
     .tag-container {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       padding-top: 1.5rem;
       border-top: 1px solid #e5e7eb;
     }
-
     .tag-item {
       display: inline-block;
       background-color: #f3f4f6;
       color: #4b5563;
-      padding: 0.25rem 0.75rem;
+      padding: 0.25rem 0.85rem;
       border-radius: 9999px;
-      font-size: 0.875rem;
+      font-size: 0.86rem;
       margin: 0.25rem;
-      border: 1px solid #d1d5db;
+      border: 1px solid #e5e7eb;
+      white-space: nowrap;
+    }
+
+    .hero-image,
+    .label-image,
+    .benefits-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      object-fit: contain;
+      background-color: transparent;
+    }
+    .hero-image {
+      max-height: 340px;
+    }
+    .label-image {
+      max-height: 360px;
+      cursor: zoom-in;
+    }
+    .benefits-image {
+      max-height: 320px;
+    }
+
+    .image-caption {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    .ingredients-link-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 0.6rem;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .ingredients-link-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 9999px;
+      border: 2px solid #2563eb;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ingredients-link-icon span {
+      font-size: 0.9rem;
+      color: #2563eb;
+    }
+    .ingredients-link-row a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    .footer-cta {
+      background-color: #2563eb;
+      color: #ffffff;
+      margin-top: 3rem;
+    }
+    .footer-cta-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    .footer-cta-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    @media (min-width: 768px) {
+      .footer-cta-title {
+        font-size: 1.9rem;
+      }
+    }
+    .footer-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+      padding: 0.9rem 2.75rem;
+      border-radius: 9999px;
+      border: 2px solid #ffffff;
+      background-color: #1d4ed8;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    .footer-cta-btn:hover {
+      background-color: #1e40af;
+      transform: translateY(-1px);
+    }
+    .footer-cta-copy {
+      font-size: 0.78rem;
+      opacity: 0.9;
+    }
+
+    #label-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      padding: 1.5rem;
+      backdrop-filter: blur(3px);
+    }
+    #label-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 0.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+      background: #fff;
+    }
+
+    .site-header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+
+    .site-header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #2563eb;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .site-nav a {
+      color: #4b5563;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      color: #2563eb;
     }
   </style>
 </head>
 
-<body class="min-h-screen flex flex-col antialiased text-gray-800">
+<body class="min-h-screen flex flex-col antialiased">
   <!-- HEADER -->
-  <header class="bg-white shadow-md sticky top-0 z-10 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold text-[#2563eb] tracking-wide">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">
         BEST SUPPLEMENTS TODAY
       </a>
-      <nav class="hidden sm:flex space-x-4">
-        <a href="/" class="text-gray-700 hover:text-[#2563eb] font-medium">Home</a>
-        <a href="/reviews" class="text-gray-700 hover:text-[#2563eb] font-medium">Reviews</a>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/reviews">Reviews</a>
       </nav>
     </div>
   </header>
 
   <main class="flex-grow">
-    <div class="container mx-auto max-w-5xl p-4 py-8 md:py-12">
-      <article class="bg-white shadow-2xl rounded-xl overflow-hidden p-6 sm:p-10 md:p-16">
+    <div class="review-shell">
+      <article class="review-card">
         <!-- HERO -->
         <header class="mb-10 text-center">
-          <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+          <h1
+            class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
+          >
             {title}
           </h1>
 
-          <p class="text-lg md:text-2xl text-gray-600 font-medium mb-8">
+          <p class="text-lg md:text-xl text-gray-600 font-medium mb-8">
             {description}
           </p>
 
           {heroImage && (
-            <div class="my-8 flex justify-center">
-              <a href={primaryCtaUrl} target="_blank" rel="noopener noreferrer">
+            <div class="my-6 flex flex-col items-center">
+              <a
+                href={primaryCtaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={heroImage}
-                  alt={`Product image for ${title}`}
-                  class="max-w-full h-auto rounded-xl shadow-lg border border-gray-100"
-                  style={{ maxHeight: '400px' }}
+                  alt={heroAlt || `Product image for ${title}`}
+                  class="hero-image"
                 />
               </a>
+              {heroCaption && (
+                <p class="image-caption">
+                  {heroCaption}
+                </p>
+              )}
             </div>
           )}
         </header>
 
-        <!-- CONTEÚDO DO REVIEW -->
+        <!-- CONTEÚDO DO REVIEW (vem do .md) -->
         <section class="markdown-prose">
           <slot />
         </section>
       </article>
     </div>
+  </main>
 
-    {primaryCtaUrl && primaryCtaLabel && (
-      <section class="bg-[#2563eb] rounded-xl shadow-2xl p-8 text-center mt-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="text-3xl font-extrabold text-white mb-6">
-          {primaryCtaLabel}
-        </h3>
+  <!-- OVERLAY PARA ZOOM DA LABEL -->
+  <div id="label-overlay">
+    <img src="" alt="Expanded supplement ingredients label" />
+  </div>
+
+  <!-- FOOTER CTA GLOBAL -->
+  <footer class="footer-cta">
+    <div class="footer-cta-inner">
+      <h3 class="footer-cta-title">
+        {primaryCtaLabel || "Secure Checkout + Exclusive Bundles"}
+      </h3>
+      {primaryCtaUrl && (
         <a
           href={primaryCtaUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block py-4 px-10 bg-[#2563eb] text-white text-xl font-extrabold rounded-lg shadow-2xl transition duration-300 transform hover:scale-105 hover:bg-[#1d4ed8]"
-          style="border: 3px solid white;"
+          class="footer-cta-btn"
         >
-          VISIT OFFICIAL WEBSITE NOW
+          Visit Official Website
         </a>
-      </section>
-    )}
-  </main>
-
-  <footer class="bg-gray-800 text-white py-6 mt-12">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-      <p>&copy; {new Date().getFullYear()} Best Supplements Today. All rights reserved.</p>
-      <div class="mt-2 space-x-4">
-        <a href="/privacy" class="hover:text-[#2563eb]">Privacy Policy</a>
-        <a href="/terms" class="hover:text-[#2563eb]">Terms of Use</a>
-      </div>
+      )}
+      <p class="footer-cta-copy">
+        © 2025 Best Supplements Today. All rights reserved.
+      </p>
     </div>
   </footer>
 
@@ -349,12 +537,30 @@ const {
         href={primaryCtaUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="block w-full text-center py-3 text-lg font-extrabold bg-[#2563eb] text-white rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] active:scale-95 animate-pulse"
+        class="block w-full text-center py-3 text-lg font-extrabold bg-[#2563eb] text-white rounded-lg shadow-xl transition duration-300 transform hover:scale-[1.02] active:scale-95"
       >
         See Official Discounts
       </a>
     </div>
   )}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const labelImg = document.querySelector(".label-image");
+      const overlay = document.getElementById("label-overlay");
+      const overlayImg = overlay ? overlay.querySelector("img") : null;
+
+      if (labelImg && overlay && overlayImg) {
+        labelImg.addEventListener("click", () => {
+          overlayImg.src = labelImg.src;
+          overlay.style.display = "flex";
+        });
+
+        overlay.addEventListener("click", () => {
+          overlay.style.display = "none";
+        });
+      }
+    });
+  </script>
 </body>
 </html>
-
