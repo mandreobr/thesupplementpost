@@ -11,7 +11,7 @@ heroAlt: "Max Boost Plus male vitality supplement – natural formula for erecti
 heroCaption: "Max Boost Plus is a natural male vitality complex designed to support nitric oxide activity, circulation, sleep quality, mood balance, and sexual confidence."
 
 primaryCtaLabel: "Save $20 Per Bottle On Today’s Offer"
-primaryCtaUrl: "https://linkly.link/2LziG"
+primaryCtaUrl: "https://linkly.link/2Qwyc"
 
 reviewCategory: "Men’s Health"
 ---
@@ -30,7 +30,7 @@ reviewCategory: "Men’s Health"
 
   <div class="my-6 flex flex-col items-center">
     <a
-      href="https://linkly.link/2LziG"
+      href="https://linkly.link/2Qwyc"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -97,7 +97,7 @@ reviewCategory: "Men’s Health"
     Save $20 Per Bottle On Today’s Offer
   </h3>
   <a
-    href="https://linkly.link/2LziG"
+    href="https://linkly.link/2Qwyc"
     target="_blank"
     rel="noopener noreferrer"
     class="btn-primary text-base md:text-lg"
@@ -195,7 +195,7 @@ reviewCategory: "Men’s Health"
     <span>→</span>
   </div>
   <a
-    href="https://linkly.link/2LziG"
+    href="https://linkly.link/2Qwyc"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -256,7 +256,7 @@ reviewCategory: "Men’s Health"
     Secure Checkout + Exclusive Bundles
   </h3>
   <a
-    href="https://linkly.link/2LziG"
+    href="https://linkly.link/2Qwyc"
     target="_blank"
     rel="noopener noreferrer"
     class="btn-primary text-base md:text-lg"
@@ -301,7 +301,7 @@ reviewCategory: "Men’s Health"
     Save $120 On The 6-Bottle Pack Deal Today
   </h3>
   <a
-    href="https://linkly.link/2LziG"
+    href="https://linkly.link/2Qwyc"
     target="_blank"
     rel="noopener noreferrer"
     class="btn-primary text-base md:text-lg"
@@ -370,21 +370,21 @@ reviewCategory: "Men’s Health"
         <td class="row-label">Official Site:</td>
         <td>
           <a
-            href="https://linkly.link/2LziG"
+            href="https://linkly.link/2Qwyc"
             target="_blank"
             class="text-primary hover:underline font-bold"
           >Shop Now</a>
         </td>
         <td>
           <a
-            href="https://linkly.link/2LziG"
+            href="https://linkly.link/2Qwyc"
             target="_blank"
             class="text-primary hover:underline font-bold"
           >Shop Now</a>
         </td>
         <td class="best-value-col">
           <a
-            href="https://linkly.link/2LziG"
+            href="https://linkly.link/2Qwyc"
             target="_blank"
             class="text-primary hover:underline font-bold"
           >Shop Now</a>
@@ -497,7 +497,7 @@ reviewCategory: "Men’s Health"
     Secure Checkout + Exclusive Bundles
   </h3>
   <a
-    href="https://linkly.link/2LziG"
+    href="https://linkly.link/2Qwyc"
     target="_blank"
     rel="noopener noreferrer"
     class="btn-primary text-base md:text-lg"
