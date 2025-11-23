@@ -548,3 +548,47 @@ reviewCategory: "Men’s Health"
 <p>
   Max Boost Plus is sold through the official website, where you gain access to current bundles, authentic product, and the full refund policy. Buying directly from the source helps avoid counterfeit or expired products.
 </p>
+<div class="tag-container">
+  <h3
+    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+    style="border-bottom: none; margin-top: 0;"
+  >
+    CONDITION TAGS
+  </h3>
+
+  <div class="flex flex-wrap gap-2 mb-6">
+    <span class="tag-item">male vitality</span>
+    <span class="tag-item">reduced libido</span>
+    <span class="tag-item">weak erections</span>
+    <span class="tag-item">erectile support</span>
+    <span class="tag-item">stamina support</span>
+    <span class="tag-item">energy support</span>
+    <span class="tag-item">low motivation</span>
+    <span class="tag-item">stress-related performance</span>
+    <span class="tag-item">sleep disruption</span>
+    <span class="tag-item">mood imbalance</span>
+    <span class="tag-item">circulation support</span>
+    <span class="tag-item">nitric oxide pathways</span>
+    <span class="tag-item">fatigue</span>
+    <span class="tag-item">low daily energy</span>
+  </div>
+
+  <h3
+    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+    style="border-bottom: none; margin-top: 1.25rem;"
+  >
+    INGREDIENT TAGS
+  </h3>
+
+  <div class="flex flex-wrap gap-2">
+    <span class="tag-item">valerian root</span>
+    <span class="tag-item">hops</span>
+    <span class="tag-item">5-HTP</span>
+    <span class="tag-item">berberine</span>
+    <span class="tag-item">spirulina blue</span>
+    <span class="tag-item">black cohosh</span>
+    <span class="tag-item">lutein</span>
+    <span class="tag-item">inulin</span>
+    <span class="tag-item">beetroot powder</span>
+  </div>
+</div>
