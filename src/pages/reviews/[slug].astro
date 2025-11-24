@@ -1,17 +1,19 @@
 ---
 import FullReviewLayout from "../../layouts/FullReviewLayout.astro";
-import { getCollection } from "astro:content";
+import { getEntryBySlug } from "astro:content";
 
-export async function getStaticPaths() {
-  const reviews = await getCollection("reviews");
+const { slug } = Astro.params;
 
-  return reviews.map((entry) => ({
-    params: { slug: entry.data.slug || entry.slug },
-    props: { entry },
-  }));
+if (!slug) {
+  throw new Error("Slug is required for review page.");
 }
 
-const { entry } = Astro.props;
+const entry = await getEntryBySlug("reviews", slug);
+
+if (!entry) {
+  throw new Error(`Review not found for slug: ${slug}`);
+}
+
 const { Content } = await entry.render();
 const data = entry.data;
 ---
@@ -19,6 +21,9 @@ const data = entry.data;
 <FullReviewLayout
   pageTitle={data.pageTitle}
   metaDescription={data.metaDescription}
+  footerCtaLabel={data.footerCtaLabel}
+  footerCtaUrl={data.footerCtaUrl}
+  footerText={data.footerText}
 >
   <Content />
 </FullReviewLayout>

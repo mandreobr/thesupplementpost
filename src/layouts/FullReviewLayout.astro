@@ -450,28 +450,26 @@ const { pageTitle, metaDescription, footerCtaLabel, footerCtaUrl, footerText } =
           </section>
         </article>
 
-        {
-          footerCtaLabel &&
-            footerCtaUrl && (
-              <footer class="footer-cta-wrapper">
-                <div class="footer-cta-banner">
-                  <h3 class="footer-cta-title">{footerCtaLabel}</h3>
-                  <a
-                    href={footerCtaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="footer-cta-button"
-                  >
-                    Visit Official Website Now
-                  </a>
-                </div>
+        {footerCtaLabel && footerCtaUrl && (
+          <div class="footer-cta-wrapper">
+            <div class="footer-cta-banner">
+              <h3 class="footer-cta-title">{footerCtaLabel}</h3>
 
-                <p class="footer-copy">
-                  {footerText ?? "© 2025 Best Supplements Today. All rights reserved."}
-                </p>
-              </footer>
-            )
-        }
+              <a
+                href={footerCtaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-cta-button"
+              >
+                Visit Official Website Now
+              </a>
+            </div>
+          </div>
+        )}
+
+        <p class="footer-copy">
+          {footerText ?? "© 2025 Best Supplements Today. All rights reserved."}
+        </p>
       </div>
     </main>
   </body>
