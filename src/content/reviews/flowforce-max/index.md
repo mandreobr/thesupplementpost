@@ -642,22 +642,28 @@ Saw palmetto has an extensive evidence base for supporting urinary flow and comf
   </div>
 </div>
 
-<!-- FOOTER AZUL -->
-<footer class="mt-12">
-  <div class="bg-primary text-white rounded-3xl px-6 py-10 md:px-10 md:py-12 text-center shadow-md">
-    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+<!-- FOOTER BLOCK — BLUE CALL TO ACTION -->
+<div class="w-full bg-[#1E40AF] text-white py-10 mt-12 rounded-xl shadow-md">
+  <div class="max-w-3xl mx-auto text-center px-6">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6">
       Secure Checkout + Exclusive Bundles
     </h3>
     <a
       href="https://linkly.link/2R1gT"
       target="_blank"
       rel="noopener noreferrer"
-      class="btn-primary text-base md:text-lg inline-block"
+      class="inline-block bg-white text-[#1E40AF] font-semibold px-8 py-3 rounded-lg text-lg shadow hover:opacity-90 transition"
     >
       Visit Official FlowForce Max Website
     </a>
   </div>
-  <p class="text-center text-gray-500 text-sm mt-6">
-    © 2025 Best Supplements Today. All rights reserved.
-  </p>
-</footer>
+</div>
+
+<!-- COPYRIGHT -->
+<p class="text-center text-gray-500 text-sm mt-6 mb-4">
+  © 2025 Best Supplements Today. All rights reserved.
+</p>
+
+
+
+
