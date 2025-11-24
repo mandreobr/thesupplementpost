@@ -1,21 +1,21 @@
 ---
 import FullReviewLayout from "../../layouts/FullReviewLayout.astro";
-import { getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 
-const { slug } = Astro.params;
+// 🔥 Gera todas as páginas de reviews automaticamente
+export async function getStaticPaths() {
+  const reviews = await getCollection("reviews");
 
-if (!slug) {
-  throw new Error("Slug is required for review page.");
+  return reviews.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
-const entry = await getEntryBySlug("reviews", slug);
-
-if (!entry) {
-  throw new Error(`Review not found for slug: ${slug}`);
-}
-
-const { Content } = await entry.render();
+// 🔥 Recebe o conteúdo individual de cada review
+const { entry } = Astro.props;
 const data = entry.data;
+const { Content } = await entry.render();
 ---
 
 <FullReviewLayout
