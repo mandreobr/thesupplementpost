@@ -20,6 +20,10 @@ primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
 primaryCtaUrl: "https://linkly.link/2R1gT"
 
 reviewCategory: "Men’s Health"
+
+footerCtaLabel: "Secure Checkout + Exclusive Bundles"
+footerCtaUrl: "https://linkly.link/2R1gT"
+footerText: "© 2025 Best Supplements Today. All rights reserved."
 ---
 
 <header class="mb-10 text-center">
@@ -196,7 +200,6 @@ reviewCategory: "Men’s Health"
   </a>
 </div>
 
-
 <!-- LABEL IMAGE -->
 <div class="my-8 flex flex-col items-center">
   <a
@@ -214,8 +217,6 @@ reviewCategory: "Men’s Health"
     The FlowForce Max label highlights a blend of flower pollen extract, flavonoids, polyphenols, and antimicrobial agents for comprehensive prostate and urinary support.
   </p>
 </div>
-
-
 
 <h2>Scientific Support Behind FlowForce Max</h2>
 
@@ -640,3 +641,23 @@ Saw palmetto has an extensive evidence base for supporting urinary flow and comf
     <span class="tag-item">perilla leaf extract</span>
   </div>
 </div>
+
+<!-- FOOTER AZUL -->
+<footer class="mt-12">
+  <div class="bg-primary text-white rounded-3xl px-6 py-10 md:px-10 md:py-12 text-center shadow-md">
+    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+      Secure Checkout + Exclusive Bundles
+    </h3>
+    <a
+      href="https://linkly.link/2R1gT"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-primary text-base md:text-lg inline-block"
+    >
+      Visit Official FlowForce Max Website
+    </a>
+  </div>
+  <p class="text-center text-gray-500 text-sm mt-6">
+    © 2025 Best Supplements Today. All rights reserved.
+  </p>
+</footer>
