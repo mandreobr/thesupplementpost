@@ -641,23 +641,23 @@ reviewCategory: "Men’s Health"
 </p>
 
 <!-- CTA 4 – Blue Full-Width Banner Before Tags -->
-<div class="cta-banner">
-  <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">
+<div class="w-full bg-[#2563eb] rounded-2xl shadow-xl py-10 px-4 md:px-8 my-10">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4">
       Secure Checkout + Exclusive Bundles
     </h2>
     <a
       href="https://linkly.link/2RIOy"
       target="_blank"
       rel="noopener noreferrer"
-      class="cta-banner-button"
+      class="inline-block mt-2 border-2 border-white text-white text-base md:text-lg font-semibold rounded-full px-8 py-3 tracking-wide hover:bg-white hover:text-[#2563eb] transition-all duration-200 shadow-lg"
     >
       Visit Official Total Control 24 Website
     </a>
   </div>
 </div>
 
-
+<!-- TAGS START -->
 <div class="tag-container">
   <h3
     class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
@@ -665,7 +665,6 @@ reviewCategory: "Men’s Health"
   >
     CONDITION TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2 mb-6">
     <span class="tag-item">prostate health</span>
     <span class="tag-item">urinary flow</span>
@@ -683,8 +682,7 @@ reviewCategory: "Men’s Health"
   >
     INGREDIENT TAGS
   </h3>
-
-  <div class="flex flex-wrap gap-2 mb-6">
+  <div class="flex flex-wrap gap-2">
     <span class="tag-item">pine pollen extract</span>
     <span class="tag-item">saw palmetto</span>
     <span class="tag-item">pygeum africanum</span>
@@ -696,14 +694,16 @@ reviewCategory: "Men’s Health"
     <span class="tag-item">vitamin E</span>
     <span class="tag-item">vitamin B6</span>
   </div>
+</div>
 
+<!-- CATEGORY TAG -->
+<div class="tag-container mt-6">
   <h3
     class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
     style="border-bottom: none; margin-top: 1.25rem;"
   >
     CATEGORY TAG
   </h3>
-
   <div class="flex flex-wrap gap-2">
     <span class="tag-item">Men’s Health</span>
   </div>
