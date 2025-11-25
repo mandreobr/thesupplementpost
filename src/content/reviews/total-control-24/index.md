@@ -15,7 +15,6 @@ footerText: "© BestSupplementsToday. All rights reserved."
 reviewCategory: "Men’s Health"
 ---
 
-
 <header class="mb-10 text-center">
   <h1
     class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
@@ -80,7 +79,7 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base md:text-lg"
+    class="btn-primary text-sm md:text-base"
   >
     Visit Official Total Control 24 Website
   </a>
@@ -159,7 +158,7 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base md:text-lg"
+    class="btn-primary text-sm md:text-base"
   >
     Visit Official Total Control 24 Website
   </a>
@@ -222,7 +221,7 @@ reviewCategory: "Men’s Health"
 </p>
 
 <!-- Ingredients Link -->
-<div class="ingredients-link-row">
+<div class="ingredients-link-row mb-6">
   <div class="ingredients-link-icon">
     <span>→</span>
   </div>
@@ -240,7 +239,7 @@ reviewCategory: "Men’s Health"
   <img
     src="/images/2.Men/total-control-24/label.jpg"
     alt="Total Control 24 supplement facts and ingredients label showing pine pollen, saw palmetto, pygeum africanum, jaboticaba extract, Lipophytol, neem, boron, vitamin E, and vitamin B6"
-    class="label-image"
+    class="label-image zoomable"
   />
   <p class="image-caption">
     The Total Control 24 label reveals its blend of botanicals, phytosterols,
@@ -332,7 +331,7 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base md:text-lg"
+    class="btn-primary text-sm md:text-base"
   >
     Visit Official Total Control 24 Website
   </a>
@@ -430,9 +429,8 @@ reviewCategory: "Men’s Health"
 </div>
 
 <p class="mt-6">
-  <strong>(Closing paragraph)</strong><br />
   Looking for the best deal? The 6-Bottle package gives you the biggest
-  savings: free U.S. shipping and just $49 per unit. That’s a saving of $120
+  savings: free U.S. Shipping and just $49 per unit. That’s a saving of $120
   (30% OFF). You just pay about $1.63/day — no wonder it’s the most popular
   choice.
 </p>
@@ -647,7 +645,7 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base md:text-lg"
+    class="btn-primary text-sm md:text-base"
   >
     Visit Official Total Control 24 Website
   </a>
