@@ -399,7 +399,7 @@ reviewCategory: "Men’s Health"
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>
-        <td>$9.99 U.S. Shipping</td>
+        <td>--</td>
         <td>Free U.S. Shipping</td>
         <td class="best-value-col">Free U.S. Shipping</td>
       </tr>
@@ -600,7 +600,7 @@ reviewCategory: "Men’s Health"
   <h2 class="final-verdict-title">
     Final Verdict — Is Total Control 24 Worth It?
   </h2>
-  <div class="final-verdict-divider"></div>
+  
   <p class="final-verdict-body">
     <strong>Yes.</strong> TC24 is a strong natural option for men looking for a
     once-daily formula that supports prostate comfort, urinary flow,
@@ -642,21 +642,25 @@ reviewCategory: "Men’s Health"
   secure checkout, best pricing, and full guarantee protection.
 </p>
 
-<!-- Footer CTA -->
-<div class="cta-block mt-10">
-  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-    Secure Checkout + Exclusive Bundles
-  </h3>
-  <a
-    href="https://linkly.link/2RIOy"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn-primary cta-button"
-  >
-    Visit Official Total Control 24 Website
-  </a>
+<!-- CTA 4 – Blue Banner Before Tags -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h3 class="cta-banner-title">
+      Secure Checkout + Exclusive Bundles
+    </h3>
+
+    <a
+      href="https://linkly.link/2RIOy"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cta-banner-button"
+    >
+      Visit Official Total Control 24 Website
+    </a>
+  </div>
 </div>
 
+<!-- TAGS -->
 <div class="tag-container">
   <h3
     class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
@@ -664,6 +668,7 @@ reviewCategory: "Men’s Health"
   >
     CONDITION TAGS
   </h3>
+
   <div class="flex flex-wrap gap-2 mb-6">
     <span class="tag-item">prostate health</span>
     <span class="tag-item">urinary flow</span>
@@ -681,6 +686,7 @@ reviewCategory: "Men’s Health"
   >
     INGREDIENT TAGS
   </h3>
+
   <div class="flex flex-wrap gap-2">
     <span class="tag-item">pine pollen extract</span>
     <span class="tag-item">saw palmetto</span>
