@@ -648,7 +648,6 @@ reviewCategory: "Men’s Health"
     <h3 class="cta-banner-title">
       Secure Checkout + Exclusive Bundles
     </h3>
-
     <a
       href="https://linkly.link/2RIOy"
       target="_blank"
@@ -660,7 +659,6 @@ reviewCategory: "Men’s Health"
   </div>
 </div>
 
-<!-- TAGS -->
 <div class="tag-container">
   <h3
     class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
@@ -668,7 +666,6 @@ reviewCategory: "Men’s Health"
   >
     CONDITION TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2 mb-6">
     <span class="tag-item">prostate health</span>
     <span class="tag-item">urinary flow</span>
@@ -686,7 +683,6 @@ reviewCategory: "Men’s Health"
   >
     INGREDIENT TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2">
     <span class="tag-item">pine pollen extract</span>
     <span class="tag-item">saw palmetto</span>
