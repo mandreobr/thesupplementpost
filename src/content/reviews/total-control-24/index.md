@@ -79,7 +79,8 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base text-white no-underline"
+    class="btn-primary"
+    style="font-size:16px; text-decoration:none; color:#ffffff;"
   >
     Visit Official Total Control 24 Website
   </a>
@@ -158,7 +159,8 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base text-white no-underline"
+    class="btn-primary"
+    style="font-size:16px; text-decoration:none; color:#ffffff;"
   >
     Visit Official Total Control 24 Website
   </a>
@@ -221,7 +223,7 @@ reviewCategory: "Men’s Health"
 </p>
 
 <!-- Ingredients Link -->
-<div class="ingredients-link-row mb-6">
+<div class="ingredients-link-row" style="margin-bottom: 40px;">
   <div class="ingredients-link-icon">
     <span>→</span>
   </div>
@@ -337,7 +339,8 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base text-white no-underline"
+    class="btn-primary"
+    style="font-size:16px; text-decoration:none; color:#ffffff;"
   >
     Visit Official Total Control 24 Website
   </a>
@@ -651,7 +654,8 @@ reviewCategory: "Men’s Health"
     href="https://linkly.link/2RIOy"
     target="_blank"
     rel="noopener noreferrer"
-    class="btn-primary text-base text-white no-underline"
+    class="btn-primary"
+    style="font-size:16px; text-decoration:none; color:#ffffff;"
   >
     Visit Official Total Control 24 Website
   </a>
