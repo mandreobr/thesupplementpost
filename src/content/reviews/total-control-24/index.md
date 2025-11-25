@@ -300,33 +300,46 @@ reviewCategory: "Men’s Health"
   and prostate health.
 </p>
 
-<h3>1. Reduces inflammation</h3>
-<p>
-  Pygeum, saw palmetto, and jaboticaba help minimize inflammatory signaling
-  related to urgency and discomfort.
-</p>
+<div class="does-work-box">
+  <div class="does-work-item">
+    <h3>1. Reduces inflammation</h3>
+    <p>
+      Pygeum, saw palmetto, and jaboticaba help minimize inflammatory signaling
+      related to urgency and discomfort.
+    </p>
+  </div>
 
-<h3>2. Supports circulation</h3>
-<p>
-  Lipophytol&reg; and tocopheryl nicotinate help improve nutrient delivery into
-  prostate tissues.
-</p>
+  <div class="does-work-item">
+    <h3>2. Supports circulation</h3>
+    <p>
+      Lipophytol&reg; and tocopheryl nicotinate help improve nutrient delivery
+      into prostate tissues.
+    </p>
+  </div>
 
-<h3>3. Provides antioxidant protection</h3>
-<p>
-  Jaboticaba and pine pollen offer powerful support against oxidative stress.
-</p>
+  <div class="does-work-item">
+    <h3>3. Provides antioxidant protection</h3>
+    <p>
+      Jaboticaba and pine pollen offer powerful support against oxidative stress.
+    </p>
+  </div>
 
-<h3>4. Balances hormones</h3>
-<p>
-  Saw palmetto and boron support healthy testosterone and DHT metabolism.
-</p>
+  <div class="does-work-item">
+    <h3>4. Balances hormones</h3>
+    <p>
+      Saw palmetto and boron support healthy testosterone and DHT metabolism.
+    </p>
+  </div>
 
-<h3>5. Enhances urinary flow and comfort</h3>
-<p>
-  Pygeum and saw palmetto help reduce urgency, improve emptying, and support
-  smoother urinary patterns.
-</p>
+  <div class="does-work-item">
+    <h3>5. Enhances urinary flow and comfort</h3>
+    <p>
+      Pygeum and saw palmetto help reduce urgency, improve emptying, and support
+      smoother urinary patterns.
+    </p>
+  </div>
+</div>
+
 
 <!-- CTA 3 -->
 <div class="cta-block">
