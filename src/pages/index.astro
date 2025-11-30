@@ -80,6 +80,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
           sans-serif;
         background: var(--bg-page);
         color: var(--text-main);
+        font-size: 16px; /* 🔹 base maior no mobile */
       }
 
       a {
@@ -117,7 +118,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .header-logo {
-        height: 64px;        /* 🔹 logo bem visível */
+        height: 64px; /* logo bem visível */
         width: auto;
         display: block;
       }
@@ -126,7 +127,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
         display: none;
         align-items: center;
         gap: 20px;
-        font-size: 14px;
+        font-size: 15px; /* 🔹 menu desktop um pouco maior */
       }
 
       .nav-link {
@@ -151,7 +152,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
         border: 1px solid transparent;
         background: transparent;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 600;
         color: #374151;
       }
@@ -191,7 +192,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
         display: block;
         padding: 7px 10px;
         border-radius: 8px;
-        font-size: 13px;
+        font-size: 14px;
         color: #374151;
       }
 
@@ -222,7 +223,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
 
       .nav-mobile-inner {
         padding: 10px 16px 12px;
-        font-size: 14px;
+        font-size: 15px; /* 🔹 menu mobile maior */
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
@@ -278,7 +279,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .pill-eyebrow {
-        font-size: 11px;
+        font-size: 12px; /* 11 -> 12 */
         text-transform: uppercase;
         letter-spacing: 0.18em;
         font-weight: 700;
@@ -287,7 +288,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .hero-title {
-        font-size: 28px;
+        font-size: 30px; /* 28 -> 30 */
         font-weight: 800;
         margin: 0 0 6px;
         color: #0f172a;
@@ -295,12 +296,12 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
 
       @media (min-width: 768px) {
         .hero-title {
-          font-size: 32px;
+          font-size: 34px; /* 32 -> 34 */
         }
       }
 
       .hero-sub {
-        font-size: 15px;
+        font-size: 16px; /* 15 -> 16 */
         color: var(--text-muted);
         margin: 0 0 18px;
         max-width: 640px;
@@ -313,13 +314,13 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .about-title {
-        font-size: 22px;
+        font-size: 24px; /* 22 -> 24 */
         font-weight: 700;
         margin: 8px 0 8px;
       }
 
       .about-text {
-        font-size: 15px;
+        font-size: 16px; /* 15 -> 16 */
         line-height: 1.7;
         color: var(--text-muted);
       }
@@ -327,7 +328,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       /* LATEST REVIEWS */
 
       .section-title {
-        font-size: 24px;
+        font-size: 26px; /* 24 -> 26 */
         font-weight: 800;
         margin: 32px 0 16px;
         border-bottom: 2px solid var(--blue-main);
@@ -337,7 +338,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
 
       @media (min-width: 768px) {
         .section-title {
-          font-size: 26px;
+          font-size: 28px; /* 26 -> 28 */
         }
       }
 
@@ -400,7 +401,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
         background: #eff6ff;
         color: #1d4ed8;
         border: 1px solid rgba(37, 99, 235, 0.35);
-        font-size: 11px;
+        font-size: 12px; /* 11 -> 12 */
         font-weight: 600;
         margin-bottom: 8px;
         max-width: 100%;
@@ -410,7 +411,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .review-title {
-        font-size: 14px;
+        font-size: 16px; /* 14 -> 16 */
         font-weight: 700;
         color: #111827;
         margin: 0 0 4px;
@@ -425,7 +426,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .review-cta {
-        font-size: 13px;
+        font-size: 14px; /* 13 -> 14 */
         font-weight: 600;
         color: #1d4ed8;
       }
@@ -455,7 +456,7 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       .carousel-title {
         text-transform: uppercase;
         letter-spacing: 0.16em;
-        font-size: 11px;
+        font-size: 12px;
         color: #0f172a;
         font-weight: 700;
       }
@@ -523,14 +524,14 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
       }
 
       .disclaimer-title {
-        font-size: 18px;
+        font-size: 20px; /* 18 -> 20 */
         font-weight: 700;
         color: var(--blue-main);
         margin: 0 0 8px;
       }
 
       .disclaimer-text {
-        font-size: 13px;
+        font-size: 14px; /* 13 -> 14 */
         line-height: 1.7;
         color: #4b5563;
       }
@@ -776,4 +777,3 @@ const scrollingImages = [...heroCarouselImages, ...heroCarouselImages];
     </script>
   </body>
 </html>
-
