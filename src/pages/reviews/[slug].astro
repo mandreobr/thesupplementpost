@@ -6,11 +6,18 @@ import { getCollection } from "astro:content";
 export async function getStaticPaths() {
   const reviews = await getCollection("reviews");
 
-  return reviews.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+  return reviews.map((entry) => {
+    // 🔥 Se o arquivo estiver em uma subpasta, o slug vira "pasta/nome"
+    // Então pegamos só o nome final (prostadine, max-boost-plus, etc.)
+    const cleanSlug = entry.slug.split("/").pop();
+
+    return {
+      params: { slug: cleanSlug },
+      props: { entry },
+    };
+  });
 }
+
 
 // 🔥 Recebe o conteúdo individual de cada review
 const { entry } = Astro.props;

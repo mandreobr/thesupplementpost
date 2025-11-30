@@ -619,6 +619,18 @@ const categoryUrl = category ? `/reviews/category/${category}` : null;
           font-size: 0.9rem;
         }
       }
+
+      /* =========================================
+         AJUSTE DESKTOP CTA – MAIS ESTREITO E CENTRALIZADO
+         ========================================= */
+      @media (min-width: 1024px) {
+        .markdown-prose .cta-banner {
+          max-width: 760px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 1.75rem;
+        }
+      }
     </style>
   </head>
 
