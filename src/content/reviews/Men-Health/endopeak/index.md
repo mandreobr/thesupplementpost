@@ -232,7 +232,7 @@ category: "men-health"
 </div>
 
 <!-- LINK "CLICK HERE TO READ FULL INGREDIENTS LIST" -->
-<div class="ingredients-link-row">
+<div class="ingredients-link-row" style="margin: 32px 0;">
   <div class="ingredients-link-icon">
     <span>→</span>
   </div>
