@@ -47,7 +47,62 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   These issues often reflect deeper changes in prostate health triggered by aging, inflammation, hormonal shifts, and mineral imbalances. Prostadine presents itself as a natural, over-the-counter liquid formula designed to support prostate function, urinary flow, and bladder comfort using nine research-informed ingredients.
 </p>
 
-<h2>What Is Prostadine? The Quick Answer</h2>
+<!-- TABLE OF CONTENTS -->
+<style>
+  .mini-toc {
+    margin: 1.5rem 0 2rem 0;
+    padding: 1rem 1.1rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0 0 0.4rem 0;
+    color: #111827;
+  }
+
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
+
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="mini-toc">
+  <p class="mini-toc-title">In this guide:</p>
+  <ul class="mini-toc-list">
+    <li><a href="#what-is-prostadine-quick-answer">What Is Prostadine? The Quick Answer</a></li>
+    <li>
+      <a href="#prostate-health-symptoms">
+        Prostate Health — Symptoms That Indicate It’s Time to Pay Attention
+      </a>
+    </li>
+    <li><a href="#what-ingredients-are-in-prostadine">What Ingredients Are in Prostadine?</a></li>
+    <li><a href="#prostadine-price-and-discounts">Prostadine Price and Discounts</a></li>
+    <li><a href="#where-to-buy">Where to Buy Prostadine and Guarantee</a></li>
+    <li><a href="#who-is-prostadine-ideal-for">Who Is Prostadine Ideal For?</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</div>
+
+<h2 id="what-is-prostadine-quick-answer">What Is Prostadine? The Quick Answer</h2>
 
 <p>
   Prostadine is a natural, liquid-form prostate support supplement designed to help men maintain healthy urinary flow, bladder comfort, and long-term prostate wellness. Unlike capsules or stimulatory formulas, Prostadine relies on marine botanicals, herbal extracts, and trace minerals — including iodine-rich seaweeds, saw palmetto, pomegranate, and neem — to support biological pathways linked to prostate aging.
@@ -57,7 +112,7 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   Its liquid delivery system is one of its biggest differentiators. By using a dropper format, Prostadine may absorb faster and more efficiently, allowing nutrients to reach the bloodstream without relying on capsule breakdown or digestive bottlenecks. This positions it as a convenient option for men seeking proactive, daily support.
 </p>
 
-<h2>Prostate Health — Symptoms That Indicate It’s Time to Pay Attention</h2>
+<h2 id="prostate-health-symptoms">Prostate Health — Symptoms That Indicate It’s Time to Pay Attention</h2>
 
 <p>
   Prostate health becomes increasingly important as men age. Though small, the prostate has a direct impact on urinary function because it surrounds the urethra like a ring. When the prostate becomes inflamed, congested, or enlarged, it can compress this urinary channel, affecting both flow and bladder control.
@@ -101,7 +156,7 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   Recognizing these signs early empowers men to take proactive steps — and this is where natural OTC formulas like Prostadine can offer supportive benefits.
 </p>
 
-<h2>What Ingredients Are in Prostadine?</h2>
+<h2 id="what-ingredients-are-in-prostadine">What Ingredients Are in Prostadine?</h2>
 
 <p>
   Prostadine contains a 315 mg proprietary blend combining botanicals, marine extracts, and bioactive compounds known for supporting urinary, metabolic, and prostate wellness.
@@ -161,7 +216,6 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   </p>
 </div>
 
-
 <!-- CTA 2 – Banner (azul) -->
 <div class="cta-banner">
   <div class="cta-banner-inner">
@@ -172,7 +226,7 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   </div>
 </div>
 
-<h2>Prostadine Price and Discounts</h2>
+<h2 id="prostadine-price-and-discounts">Prostadine Price and Discounts</h2>
 
 <div class="pricing-table-container">
   <table class="pricing-table">
@@ -224,7 +278,7 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
         <td class="row-label">Official Site:</td>
         <td><a href="https://linkly.link/2LziG" class="text-primary hover:underline font-bold">Shop Now</a></td>
         <td><a href="https://linkly.link/2LziG" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td class="best-value-col"><a href="https://linkly.link/2LziG" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td class="best-value-col><a href="https://linkly.link/2LziG" class="text-primary hover:underline font-bold">Shop Now</a></td>
       </tr>
     </tbody>
   </table>
@@ -234,13 +288,13 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   Looking for the best deal? The 6-Bottle package provides the biggest savings — just $49 per bottle, plus Free U.S. Shipping.
 </p>
 
-<h2>Where to Buy Prostadine and Guarantee</h2>
+<h2 id="where-to-buy">Where to Buy Prostadine and Guarantee</h2>
 
 <p>
   Prostadine is sold exclusively on the official website to ensure authenticity, proper storage, and eligibility for refunds. No coupon code is required, and the manufacturer warns against Amazon, eBay, and other marketplaces due to counterfeits.
 </p>
 
-<h2>Who Is Prostadine Ideal For?</h2>
+<h2 id="who-is-prostadine-ideal-for">Who Is Prostadine Ideal For?</h2>
 
 <p>Prostadine may be suitable for men who:</p>
 
@@ -269,14 +323,14 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
     color: #2563eb;
     font-weight: 600;
     font-size: 1.05rem;
-    text-decoration: none; /* remove underline from whole link */
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
   }
 
   .cta-3-text {
-    text-decoration: underline; /* underline ONLY the text */
+    text-decoration: underline;
   }
 
   .cta-3-arrow {
@@ -303,8 +357,7 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-what-is"
   </a>
 </div>
 
-
-<h2>Final Thoughts</h2>
+<h2 id="final-thoughts">Final Thoughts</h2>
 
 <p>
   Prostadine continues to earn trust for its balanced ingredient profile, realistic results, and strong safety reputation. While improvements may develop gradually, consistency pays off — and the 60-day guarantee makes trying it a low-risk decision.
