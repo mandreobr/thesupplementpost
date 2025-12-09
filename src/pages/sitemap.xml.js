@@ -1,61 +1,69 @@
 // src/pages/sitemap.xml.js
-// Sitemap AUTOMÁTICO — agora respeitando a estrutura Category / Product / Mini
-
-import { getCollection } from "astro:content";
+// Sitemap automático baseado nos arquivos em src/content/reviews
 
 const BASE_URL = "https://www.bestsupplementstoday.com";
 
+// Rotas estáticas principais
+const STATIC_PATHS = [
+  "/",
+  "/reviews",
+  "/reviews/category/weight-loss",
+  "/reviews/category/brain-and-neuro",
+  "/reviews/category/men-health",
+  "/reviews/category/women-health",
+  "/reviews/category/heart-and-circulation",
+  "/reviews/category/liver-and-gut",
+  "/reviews/category/dental-health",
+  "/reviews/category/hearing-and-vision",
+  "/reviews/category/pain-joint-muscle",
+  "/reviews/category/blood-sugar",
+  "/reviews/category/skin-hair-aging",
+  "/reviews/category/other",
+];
+
+// Lê todos os .md dentro de src/content/reviews e converte em URLs públicas
+function getReviewPathsFromContent() {
+  // O Astro/Vite expande esse glob na build
+  const modules = import.meta.glob("/src/content/reviews/**/*.md", {
+    eager: true,
+  });
+
+  const paths = new Set();
+
+  for (const rawPath of Object.keys(modules)) {
+    // Normaliza separador de pasta
+    const normalized = rawPath.replace(/\\/g, "/");
+
+    // Remove o prefixo até "reviews/"
+    // Ex: "src/content/reviews/Men-Health/prostadine/what-is.md"
+    // vira "Men-Health/prostadine/what-is.md"
+    const relative = normalized.replace("/src/content/reviews/", "");
+
+    const segments = relative.split("/");
+
+    // Último item é o arquivo ("index.md", "what-is.md", etc.)
+    const fileName = segments.pop();      // ex: "what-is.md"
+    const product = segments.pop();       // ex: "prostadine"
+    if (!product || !fileName) continue;
+
+    const baseName = fileName.replace(/\.md$/, ""); // "what-is" | "index"
+
+    // Se for index.md => /reviews/prostadine
+    if (baseName === "index") {
+      paths.add(`/reviews/${product}`);
+    } else {
+      // Minis => /reviews/prostadine/what-is, /ingredients, etc.
+      paths.add(`/reviews/${product}/${baseName}`);
+    }
+  }
+
+  return Array.from(paths);
+}
+
 export async function GET() {
-  // 1) Todas as páginas da collection "reviews" (inclui subpastas)
-  const entries = await getCollection("reviews");
+  const reviewPaths = getReviewPathsFromContent();
+  const allPaths = [...STATIC_PATHS, ...reviewPaths];
 
-  const reviewPaths = entries
-    .map((entry) => {
-      // Exemplos de entry.slug:
-      // "Men-Health/prostadine/index"
-      // "Men-Health/prostadine/what-is"
-      // "Men-Health/prostadine/ingredients"
-      const parts = entry.slug.split("/");
-
-      if (parts.length < 2) return null;
-
-      // penúltima parte = produto (prostadine, endopeak, etc.)
-      const product = parts[parts.length - 2];
-      // última parte = "index" ou nome da mini (what-is, ingredients, etc.)
-      const last = parts[parts.length - 1];
-
-      // Se for o index.md → URL /reviews/prostadine
-      if (last === "index") {
-        return `/reviews/${product}`;
-      }
-
-      // Se for mini → URL /reviews/prostadine/what-is, /ingredients etc.
-      return `/reviews/${product}/${last}`;
-    })
-    .filter(Boolean);
-
-  // 2) Rotas estáticas fixas
-  const STATIC_PATHS = [
-    "/",
-    "/reviews",
-    "/reviews/category/weight-loss",
-    "/reviews/category/brain-and-neuro",
-    "/reviews/category/men-health",
-    "/reviews/category/women-health",
-    "/reviews/category/heart-and-circulation",
-    "/reviews/category/liver-and-gut",
-    "/reviews/category/dental-health",
-    "/reviews/category/hearing-and-vision",
-    "/reviews/category/pain-joint-muscle",
-    "/reviews/category/blood-sugar",
-    "/reviews/category/skin-hair-aging",
-    "/reviews/category/other",
-  ];
-
-  // 3) Junta tudo e remove duplicados (caso algum se repita)
-  const allPaths = Array.from(new Set([...STATIC_PATHS, ...reviewPaths]));
-
-  // 4) Gera o XML
   const urlsXml = allPaths
     .map(
       (path) => `
