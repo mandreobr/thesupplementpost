@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bestsupplementstoday.com/sitemap.xml
+Sitemap: https://www.thesupplementpost.com/sitemap.xml

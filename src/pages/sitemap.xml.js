@@ -1,7 +1,7 @@
 // src/pages/sitemap.xml.js
 // Sitemap automático baseado nos arquivos em src/content/reviews
 
-const BASE_URL = "https://www.bestsupplementstoday.com";
+const BASE_URL = "https://www.thesupplementpost.com";
 
 // Rotas estáticas principais
 const STATIC_PATHS = [

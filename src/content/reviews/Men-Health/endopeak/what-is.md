@@ -16,10 +16,10 @@ primaryCtaUrl: "https://linkly.link/2R0io"
 
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
 footerCtaUrl: "https://linkly.link/2R0io"
-footerText: "© 2025 Best Supplements Today. All rights reserved."
+footerText: "© The Supplement Post. All rights reserved."
 
 category: "men-health"
-canonicalUrl: "https://www.bestsupplementstoday.com/reviews/endopeak/what-is"
+canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak/what-is"
 ---
 
 <header class="mb-10 text-center">

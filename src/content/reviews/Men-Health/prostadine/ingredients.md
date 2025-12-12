@@ -11,9 +11,9 @@ primaryCtaLabel: "Save $20 Per Bottle On Today’s Offer"
 primaryCtaUrl: "https://linkly.link/2LziG"
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
 footerCtaUrl: "https://linkly.link/2LziG"
-footerText: "© 2025 Best Supplements Today. All rights reserved."
+footerText: "© 2025 The Supplement Post. All rights reserved."
 category: "men-health"
-canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-ingredients"
+canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-ingredients"
 ---
 
 <header class="mb-10 text-center">
@@ -508,7 +508,7 @@ canonicalUrl: "https://www.bestsupplementstoday.com/reviews/prostadine-ingredien
 
 <div class="cta-3-container">
   <a
-    href="https://www.bestsupplementstoday.com/reviews/prostadine"
+    href="https://www.thesupplementpost.com/reviews/prostadine"
     class="cta-3-link"
   >
     <span class="cta-3-arrow">➜</span>

@@ -15,7 +15,7 @@ primaryCtaUrl: "https://linkly.link/2R0io"
 
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
 footerCtaUrl: "https://linkly.link/2R0io"
-footerText: "© BestSupplementsToday. All rights reserved."
+footerText: "© The Supplement Post. All rights reserved."
 
 category: "men-health"
 ---
