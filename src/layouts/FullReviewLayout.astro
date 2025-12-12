@@ -1,5 +1,6 @@
 ---
-import { CATEGORY_CONFIG } from "../config/categories"; // ajuste o caminho se necessário
+import { CATEGORY_CONFIG } from "../config/categories"; // 
+import { SITE_URL } from "../config/site";              // 
 
 interface Props {
   pageTitle: string;
@@ -40,9 +41,7 @@ const categoryUrl = category ? `/reviews/category/${category}` : null;
     <meta name="description" content={metaDescription} />
 
     <!-- canonical automático -->
-    <link
-      rel="canonical"
-      href={canonicalUrl ?? `https://www.thesupplementpost.com${Astro.url.pathname}`}
+    <link rel="canonical" href={canonicalUrl ?? `${SITE_URL}${Astro.url.pathname}`} />
     />
 
     <link rel="icon" type="image/png" href="/public/favicon.png" />
