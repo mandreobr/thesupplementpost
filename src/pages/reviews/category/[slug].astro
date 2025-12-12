@@ -73,12 +73,8 @@ const breadcrumbs = [
 
     <title>{categoryTitle} — Supplement Reviews | The Supplement Post</title>
     <meta name="description" content={categoryDescription} />
-    <meta
-      name="robots"
-      content={categoryReviews.length === 0
-        ? "noindex,follow"
-        : "index,follow"}
-    />
+    <meta name="robots" content="index,follow" />
+
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Inter font -->
