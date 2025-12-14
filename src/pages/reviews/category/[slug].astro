@@ -41,7 +41,7 @@ const categoryReviews = reviews.filter((review) => {
   const raw = review.data.category;
   if (!raw) return false;
 
-  const slugNorm = slug.toLowerCase();
+  const slugNorm = String(slug || "").toLowerCase();
   const valueNorm = normalize(raw);
   return valueNorm === slugNorm;
 });
@@ -54,11 +54,12 @@ const categoryDescription =
   categoryConfig.description ??
   `Explore in-depth supplement reviews for ${categoryTitle} on The Supplement Post.`;
 
+// Canonical (www + trailing slash)
 const canonicalUrl = `https://www.thesupplementpost.com/reviews/category/${slug}/`;
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
-  { name: "All Reviews", url: "/reviews" },
+  { name: "All Reviews", url: "/reviews/" },
   { name: categoryTitle, url: canonicalUrl },
 ];
 ---
@@ -73,6 +74,8 @@ const breadcrumbs = [
 
     <title>{categoryTitle} — Supplement Reviews | The Supplement Post</title>
     <meta name="description" content={categoryDescription} />
+
+    <!-- IMPORTANT: never noindex category pages -->
     <meta name="robots" content="index,follow" />
 
     <link rel="canonical" href={canonicalUrl} />
@@ -127,6 +130,12 @@ const breadcrumbs = [
         text-transform: uppercase;
         font-weight: 700;
         color: var(--primary-blue);
+      }
+
+      .header-nav {
+        display: inline-flex;
+        gap: 16px;
+        align-items: center;
       }
 
       .header-nav a {
@@ -291,6 +300,15 @@ const breadcrumbs = [
         gap: 6px;
       }
 
+      /* Empty state */
+      .empty-state {
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 20px;
+        color: var(--text-muted);
+        background: #ffffff;
+      }
+
       /* Footer */
       .site-footer {
         margin-top: 60px;
@@ -383,12 +401,13 @@ const breadcrumbs = [
         <div class="brand">The Supplement Post</div>
         <nav class="header-nav">
           <a href="/">Home</a>
+          <a href="/reviews/">Reviews</a>
         </nav>
       </div>
     </header>
 
     <main class="page-wrapper">
-      <nav class="breadcrumb">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
           {breadcrumbs.map((crumb, index) => (
             <li>
@@ -410,24 +429,27 @@ const breadcrumbs = [
 
       {categoryReviews.length === 0 ? (
         <section class="empty-state">
-          <p>No reviews found for this category.</p>
+          <p>No reviews found for this category yet.</p>
         </section>
       ) : (
         <section class="article-list">
           {categoryReviews.map((review) => {
-            const title = review.data.pageTitle ?? review.data.title;
+            const title = review.data.pageTitle ?? review.data.title ?? review.slug;
             const description = review.data.description ?? "";
             const heroImage = review.data.heroImage ?? null;
+            const heroAlt = review.data.heroAlt ?? title;
 
             return (
-              <a href={`/reviews/${review.slug}`} class="article-card">
+              <a href={`/reviews/${review.slug}/`} class="article-card">
                 <div class="article-card-inner">
                   <div class="article-image-container">
                     {heroImage ? (
                       <img
                         src={heroImage}
-                        alt={title}
+                        alt={heroAlt}
                         class="article-image"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div>Hero Image</div>
@@ -438,9 +460,7 @@ const breadcrumbs = [
                     <h2 class="article-title">{title}</h2>
                     <p class="article-description">{description}</p>
 
-                    <div class="article-cta">
-                      Read Full Review →
-                    </div>
+                    <div class="article-cta">Read Full Review →</div>
                   </div>
                 </div>
               </a>
@@ -451,9 +471,7 @@ const breadcrumbs = [
     </main>
 
     <footer class="site-footer">
-      <div class="footer-inner">
-        © The Supplement Post. All rights reserved.
-      </div>
+      <div class="footer-inner">© BestSupplementsToday. All rights reserved.</div>
     </footer>
   </body>
 </html>
