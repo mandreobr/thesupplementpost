@@ -1,66 +1,139 @@
 ---
-// Imports
 import { getCollection } from "astro:content";
 import { CATEGORY_CONFIG } from "../../../config/categories";
+import { SITE_URL } from "../../../config/site";
 
-// 1) Static paths
+/* =========================
+   STATIC PATHS
+========================= */
 export async function getStaticPaths() {
-  const paths = Object.values(CATEGORY_CONFIG).map((config) => ({
+  return Object.values(CATEGORY_CONFIG).map((config) => ({
     params: { slug: config.slug },
   }));
-  return paths;
 }
 
-// 2) Load reviews
+/* =========================
+   LOAD CONTENT
+========================= */
 const reviews = await getCollection("reviews");
-
-// 3) Retrieve slug + match category
 const { slug } = Astro.params;
 
-const entries = Object.entries(CATEGORY_CONFIG);
-const match = entries.find(([, cfg]) => cfg.slug === slug);
+if (!slug) {
+  throw new Error("Category slug is missing.");
+}
 
-if (!match) {
+/* =========================
+   MATCH CATEGORY CONFIG
+========================= */
+const entry = Object.entries(CATEGORY_CONFIG).find(([, cfg]) => cfg.slug === slug);
+
+if (!entry) {
   throw new Error(`Category not found for slug: ${slug}`);
 }
 
-const [categoryKey, categoryConfig] = match;
+const [categoryKey, categoryConfig] = entry;
 
-// Normalize helper
-const normalize = (val) =>
-  val
-    ? String(val)
+/* =========================
+   HELPERS
+========================= */
+const normalize = (value) =>
+  value
+    ? String(value)
         .trim()
         .toLowerCase()
         .replace(/[’']/g, "")
         .replace(/\s+/g, "-")
     : "";
 
-// Filtering
-const categoryReviews = reviews.filter((review) => {
-  const raw = review.data.category;
-  if (!raw) return false;
+// minis "flattened" (prostadine-what-is, prostadine-price, etc)
+const MINI_SUFFIXES = [
+  "what-is",
+  "ingredients",
+  "side-effects",
+  "price",
+  "pros-and-cons",
+  "does-really-work",
+];
 
-  const slugNorm = String(slug || "").toLowerCase();
-  const valueNorm = normalize(raw);
-  return valueNorm === slugNorm;
-});
+const isMiniSlug = (s) => {
+  if (!s) return false;
+  return MINI_SUFFIXES.some((suffix) => s.endsWith(`-${suffix}`) || s.endsWith(`/${suffix}`));
+};
 
-// Text helpers
-const categoryTitle =
-  categoryConfig.title ?? categoryConfig.label ?? categoryKey;
+const getFolderCategorySlugFromId = (id) => {
+  // id pode ser:
+  // "Men-Health/prostadine/index"
+  // "Men-Health/prostadine/what-is"
+  // "Men-Health/prostadine-what-is"
+  // pegamos a primeira parte como "Men-Health"
+  const first = (id || "").split("/")[0];
+  return normalize(first);
+};
+
+const isFullReview = (review) => {
+  const id = review?.id || "";
+  const s = review?.slug || "";
+
+  // Formato clássico em pasta: .../index
+  if (id.endsWith("/index")) return true;
+
+  // Formato "flatten": FULL costuma ser só "prostadine" (sem sufixo de mini)
+  // (e normalmente sem barra)
+  const looksLikeSingle = !s.includes("/");
+  if (looksLikeSingle && !isMiniSlug(s)) return true;
+
+  // Extra segurança: se slug tem pasta e NÃO parece mini, trate como full
+  // Ex: "Men-Health/prostadine"
+  const parts = s.split("/").filter(Boolean);
+  if (parts.length === 2 && !isMiniSlug(s)) return true;
+
+  return false;
+};
+
+const isSameCategory = (review) => {
+  // 1) Preferência: frontmatter category (quando existe e é confiável)
+  const byFrontmatter = review?.data?.category === slug;
+
+  // 2) Fallback: pasta (Men-Health -> men-health)
+  const byFolder = getFolderCategorySlugFromId(review?.id) === slug;
+
+  return byFrontmatter || byFolder;
+};
+
+const getPublicSlug = (review) => {
+  // Se vier "Men-Health/prostadine" -> "prostadine"
+  // Se vier "prostadine" -> "prostadine"
+  // Se vier "prostadine-what-is" -> "prostadine-what-is" (mas minis já serão filtradas fora)
+  const s = String(review?.slug || "");
+  return s.includes("/") ? s.split("/").filter(Boolean).pop() : s;
+};
+
+/* =========================
+   FILTER: ONLY FULL REVIEWS
+========================= */
+const categoryReviews = reviews
+  .filter((review) => isSameCategory(review) && isFullReview(review))
+  .sort((a, b) => {
+    const ta = (a.data.pageTitle ?? a.data.title ?? "").toString();
+    const tb = (b.data.pageTitle ?? b.data.title ?? "").toString();
+    return ta.localeCompare(tb);
+  });
+
+/* =========================
+   SEO META
+========================= */
+const categoryTitle = categoryConfig.title ?? categoryConfig.label ?? categoryKey;
 
 const categoryDescription =
   categoryConfig.description ??
   `Explore in-depth supplement reviews for ${categoryTitle} on The Supplement Post.`;
 
-// Canonical (www + trailing slash)
-const canonicalUrl = `https://www.thesupplementpost.com/reviews/category/${slug}/`;
+const canonicalUrl = `${SITE_URL}/reviews/category/${slug}`;
 
 const breadcrumbs = [
   { name: "Home", url: "/" },
-  { name: "All Reviews", url: "/reviews/" },
-  { name: categoryTitle, url: canonicalUrl },
+  { name: "All Reviews", url: "/reviews" },
+  { name: categoryTitle, url: `/reviews/category/${slug}` },
 ];
 ---
 
@@ -74,10 +147,7 @@ const breadcrumbs = [
 
     <title>{categoryTitle} — Supplement Reviews | The Supplement Post</title>
     <meta name="description" content={categoryDescription} />
-
-    <!-- IMPORTANT: never noindex category pages -->
     <meta name="robots" content="index,follow" />
-
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Inter font -->
@@ -90,9 +160,9 @@ const breadcrumbs = [
       :root {
         --primary-blue: #1e3a8a;
 
-        --bg-page: #f3f4f6; /* fundo externo */
-        --bg-container: #ffffff; /* painel central */
-        --bg-card: #ffffff; /* cards */
+        --bg-page: #f3f4f6;
+        --bg-container: #ffffff;
+        --bg-card: #ffffff;
 
         --text-main: #1f2937;
         --text-muted: #6b7280;
@@ -133,9 +203,8 @@ const breadcrumbs = [
       }
 
       .header-nav {
-        display: inline-flex;
-        gap: 16px;
-        align-items: center;
+        display: flex;
+        gap: 14px;
       }
 
       .header-nav a {
@@ -238,7 +307,6 @@ const breadcrumbs = [
         }
       }
 
-      /* IMAGEM ESQUERDA — fundo totalmente branco */
       .article-image-container {
         background: #ffffff;
         display: flex;
@@ -261,7 +329,6 @@ const breadcrumbs = [
         padding: 20px;
       }
 
-      /* CONTENT */
       .article-content {
         padding: 24px;
         display: flex;
@@ -300,15 +367,6 @@ const breadcrumbs = [
         gap: 6px;
       }
 
-      /* Empty state */
-      .empty-state {
-        border: 1px solid var(--border-subtle);
-        border-radius: 16px;
-        padding: 20px;
-        color: var(--text-muted);
-        background: #ffffff;
-      }
-
       /* Footer */
       .site-footer {
         margin-top: 60px;
@@ -325,9 +383,6 @@ const breadcrumbs = [
         color: #6b7280;
       }
 
-      /* =========
-         AJUSTES MOBILE
-         ========= */
       @media (max-width: 640px) {
         .header-inner {
           padding: 12px 12px;
@@ -336,10 +391,6 @@ const breadcrumbs = [
         .brand {
           font-size: 12px;
           letter-spacing: 0.18em;
-        }
-
-        .header-nav a {
-          font-size: 14px;
         }
 
         .page-wrapper {
@@ -401,13 +452,13 @@ const breadcrumbs = [
         <div class="brand">The Supplement Post</div>
         <nav class="header-nav">
           <a href="/">Home</a>
-          <a href="/reviews/">Reviews</a>
+          <a href="/reviews">Reviews</a>
         </nav>
       </div>
     </header>
 
     <main class="page-wrapper">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
+      <nav class="breadcrumb">
         <ol>
           {breadcrumbs.map((crumb, index) => (
             <li>
@@ -428,38 +479,29 @@ const breadcrumbs = [
       </section>
 
       {categoryReviews.length === 0 ? (
-        <section class="empty-state">
-          <p>No reviews found for this category yet.</p>
-        </section>
+        <p>No reviews found for this category.</p>
       ) : (
         <section class="article-list">
           {categoryReviews.map((review) => {
-            const title = review.data.pageTitle ?? review.data.title ?? review.slug;
+            const title = review.data.pageTitle ?? review.data.title;
             const description = review.data.description ?? "";
-            const heroImage = review.data.heroImage ?? null;
-            const heroAlt = review.data.heroAlt ?? title;
+            const heroImage = review.data.heroImage;
+
+            // ✅ Link SEMPRE no formato público: /reviews/{slug-limpo}
+            const href = `/reviews/${getPublicSlug(review)}`;
 
             return (
-              <a href={`/reviews/${review.slug}/`} class="article-card">
+              <a href={href} class="article-card">
                 <div class="article-card-inner">
                   <div class="article-image-container">
                     {heroImage ? (
-                      <img
-                        src={heroImage}
-                        alt={heroAlt}
-                        class="article-image"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    ) : (
-                      <div>Hero Image</div>
-                    )}
+                      <img src={heroImage} alt={title} class="article-image" />
+                    ) : null}
                   </div>
 
                   <div class="article-content">
                     <h2 class="article-title">{title}</h2>
                     <p class="article-description">{description}</p>
-
                     <div class="article-cta">Read Full Review →</div>
                   </div>
                 </div>
@@ -471,7 +513,7 @@ const breadcrumbs = [
     </main>
 
     <footer class="site-footer">
-      <div class="footer-inner">© BestSupplementsToday. All rights reserved.</div>
+      <div class="footer-inner">© The Supplement Post. All rights reserved.</div>
     </footer>
   </body>
 </html>
