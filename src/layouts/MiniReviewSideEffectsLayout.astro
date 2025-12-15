@@ -1,6 +1,5 @@
 ---
-import { CATEGORY_CONFIG } from "../config/categories"; // 
-import { SITE_URL } from "../config/site";              // 
+import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
   pageTitle: string;
@@ -8,7 +7,6 @@ interface Props {
   footerCtaLabel?: string;
   footerCtaUrl?: string;
   footerText?: string;
-  category?: string;
   canonicalUrl?: string;
 }
 
@@ -22,597 +20,570 @@ const {
 } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-    <meta name="description" content={metaDescription} />
+<BaseLayout
+  pageTitle={pageTitle}
+  metaDescription={metaDescription}
+  canonicalUrl={canonicalUrl}
+>
+  <style global>
+    body {
+      font-family: "Inter", sans-serif;
+      color: #1f2937;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding-top: 72px; /* espaço para o header fixo */
+    }
 
-    <!-- canonical automático -->
-<link
-  rel="canonical"
-  href={canonicalUrl ?? `${SITE_URL}${Astro.url.pathname}`}
-/>
+    .text-primary {
+      color: #2563eb;
+    }
+    .border-primary {
+      border-color: #2563eb;
+    }
 
+    .review-shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
 
-    <!-- Favicon (usar arquivo em public/favicon.png) -->
-    <link
-      rel="icon"
-      href="/favicon.png?v=3"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/favicon.png?v=3"
-    />
+    .review-card {
+      background-color: #ffffff;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      padding: 2.5rem 1.5rem;
+    }
 
-    <!-- Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <style global>
-      body {
-        font-family: "Inter", sans-serif;
-        color: #1f2937;
-        background-color: #f3f4f6;
-        margin: 0;
-        padding-top: 72px; /* espaço para o header fixo */
-      }
-
-      .text-primary {
-        color: #2563eb;
-      }
-      .border-primary {
-        border-color: #2563eb;
-      }
-
-      .review-shell {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 2rem 1rem 3rem;
-      }
-
+    @media (min-width: 768px) {
       .review-card {
-        background-color: #ffffff;
-        border-radius: 1.25rem;
-        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
-        padding: 2.5rem 1.5rem;
+        padding: 3.5rem 3rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .review-card {
-          padding: 3.5rem 3rem;
-        }
-      }
+    .markdown-prose {
+      padding: 1rem 0;
+    }
 
-      .markdown-prose {
-        padding: 1rem 0;
-      }
+    .markdown-prose p:not(.image-caption) {
+      margin-bottom: 1.5rem;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
 
-      .markdown-prose p:not(.image-caption) {
-        margin-bottom: 1.5rem;
-        font-size: 1.0625rem;
-        line-height: 1.8;
-        text-align: justify;
-      }
+    .markdown-prose h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #111827;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+    }
 
-      .markdown-prose h1 {
-        font-size: 2rem;
-        font-weight: 800;
-        color: #111827;
-        margin-top: 0;
-        margin-bottom: 1.25rem;
-      }
+    .markdown-prose h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #111827;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 3px solid #2563eb;
+    }
 
-      .markdown-prose h2 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        color: #111827;
-        margin-top: 3rem;
-        margin-bottom: 1.25rem;
-        padding-bottom: 0.4rem;
-        border-bottom: 3px solid #2563eb;
-      }
+    .markdown-prose h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.25rem;
+      margin-bottom: 0.9rem;
+      color: #111827;
+    }
 
-      .markdown-prose h3 {
-        font-size: 1.35rem;
-        font-weight: 700;
-        margin-top: 2.25rem;
-        margin-bottom: 0.9rem;
-        color: #111827;
-      }
+    .markdown-prose ul,
+    .markdown-prose ol {
+      padding-left: 1.3rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.02rem;
+    }
+    .markdown-prose ul {
+      list-style: disc;
+    }
+    .markdown-prose ol {
+      list-style: decimal;
+    }
+    .markdown-prose ul li,
+    .markdown-prose ol li {
+      margin-bottom: 0.4rem;
+    }
 
-      .markdown-prose ul,
-      .markdown-prose ol {
-        padding-left: 1.3rem;
-        margin-bottom: 1.5rem;
-        font-size: 1.02rem;
-      }
-      .markdown-prose ul {
-        list-style: disc;
-      }
-      .markdown-prose ol {
-        list-style: decimal;
-      }
-      .markdown-prose ul li,
-      .markdown-prose ol li {
-        margin-bottom: 0.4rem;
-      }
+    .cta-block {
+      text-align: center;
+      margin: 3rem auto;
+      max-width: 550px;
+    }
 
-      .cta-block {
-        text-align: center;
-        margin: 3rem auto;
-        max-width: 550px;
-      }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.75rem 2.25rem;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 0.9rem;
+      transition: all 0.25s ease;
+      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.45);
+    }
 
-      .btn-primary {
-        display: inline-block;
-        padding: 0.75rem 2.25rem;
-        background-color: #2563eb;
-        color: #ffffff;
-        font-weight: 600;
-        border-radius: 0.9rem;
-        transition: all 0.25s ease;
-        box-shadow: 0 12px 25px rgba(37, 99, 235, 0.45);
-      }
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
+    }
 
-      .btn-primary:hover {
-        background-color: #1d4ed8;
-        transform: translateY(-1px);
-        box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
-      }
+    /* CTA azul padrão */
+    .markdown-prose .cta-banner {
+      background: #2563eb;
+      color: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 18px 45px rgba(37, 99, 235, 0.35);
+      width: 100%;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      /* CTA azul padrão */
+    .markdown-prose .cta-banner-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .markdown-prose .cta-banner-title {
+      color: #ffffff;
+      font-size: 1.75rem;
+      line-height: 1.3;
+      font-weight: 800;
+      margin: 0 0 1rem;
+      border-bottom: none;
+    }
+
+    .markdown-prose .cta-banner-button {
+      display: inline-block;
+      margin-top: 0.25rem;
+      padding: 0.9rem 2.6rem;
+      border-radius: 999px;
+      background-color: #ffffff;
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border: 2px solid #ffffff;
+      transition: background-color 0.15s ease, color 0.15s ease,
+        transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .markdown-prose .cta-banner-button:hover {
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+    }
+
+    .cta-button {
+      font-size: 0.9rem !important;
+      color: #ffffff !important;
+      text-decoration: none !important;
+    }
+
+    .intro-box {
+      padding: 1.3rem 1.5rem;
+      background-color: #eff6ff;
+      border-left: 5px solid #2563eb;
+      border-radius: 0 0.9rem 0.9rem 0;
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.03rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .ingredient-card-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 0.75rem;
+    }
+    .ingredient-card {
+      padding: 1rem 1.1rem;
+      background-color: #f5f8ff;
+      border-radius: 0.75rem;
+      border: 1px solid #e0e7ff;
+    }
+    .ingredient-card h3 {
+      margin-top: 0 !important;
+      margin-bottom: 0.3rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    /* TAGS */
+    .tag-container {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .tag-item {
+      display: inline-block;
+      padding: 0.25rem 0.85rem;
+      border-radius: 9999px;
+      background-color: #f3f4f6;
+      color: #4b5563;
+      font-size: 0.86rem;
+      margin: 0.25rem;
+      border: 1px solid #e5e7eb;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .tag-item:hover {
+      text-decoration: none;
+    }
+
+    .hero-image,
+    .label-image,
+    .benefits-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+      object-fit: contain;
+      background-color: transparent;
+    }
+    .hero-image {
+      max-height: 340px;
+    }
+    .label-image {
+      max-height: 360px;
+      cursor: zoom-in;
+    }
+    .benefits-image {
+      max-height: 320px;
+    }
+
+    .image-caption {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      background-color: #30b7cf;
+      border-bottom: 1px solid #e5e7eb;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+      transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .site-header.header-scrolled {
+      background-color: rgba(48, 183, 207, 0.92);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+      backdrop-filter: blur(4px);
+    }
+
+    .site-header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 60px;
+    }
+
+    .site-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .site-logo-image {
+      height: 60px;
+      max-width: 220px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .site-nav {
+      position: absolute;
+      right: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .site-nav a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .site-nav a:hover {
+      opacity: 0.9;
+    }
+
+    .footer-cta-wrapper {
+      margin-top: 2.75rem;
+    }
+
+    .footer-cta-banner {
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.55);
+    }
+
+    .footer-cta-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.9rem;
+    }
+
+    .footer-cta-button {
+      display: inline-block;
+      padding: 0.85rem 2.6rem;
+      border-radius: 999px;
+      border: none;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      box-shadow: 0 18px 45px rgba(37, 99, 235, 0.65);
+      transition: background-color 0.2s ease, transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .footer-cta-button:hover {
+      background-color: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 22px 55px rgba(37, 99, 235, 0.8);
+    }
+
+    .footer-copy {
+      margin-top: 1.75rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* CTA "Go to Full Review" em versão link (se você usar no .md) */
+    .cta-3-container {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 1rem;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta-3-link {
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cta-3-text {
+      text-decoration: underline;
+    }
+
+    .cta-3-arrow {
+      display: inline-block;
+      font-size: 1.2rem;
+      color: #2563eb;
+      animation: arrowMove 1.1s infinite ease-in-out;
+    }
+
+    @keyframes arrowMove {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(6px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    /* MINI TABLE OF CONTENTS (se quiser usar) */
+    .mini-toc {
+      margin: 1.5rem 0 2rem 0;
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      background-color: #f9fafb;
+      border: 1px solid #e5e7eb;
+    }
+
+    .mini-toc-title {
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #111827;
+    }
+
+    .mini-toc-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .mini-toc-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    .mini-toc-list a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    /* MOBILE AJUSTES */
+    @media (max-width: 640px) {
       .markdown-prose .cta-banner {
-        background: #2563eb;
-        color: #ffffff;
-        border-radius: 1.5rem;
-        padding: 2.5rem 2rem;
-        margin: 2.5rem 0;
-        box-shadow: 0 18px 45px rgba(37, 99, 235, 0.35);
-        width: 100%;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100vw;
+        max-width: none;
+        border-radius: 0;
+        padding: 1.75rem 1.25rem;
+        margin: 2rem 0;
+        margin-left: 50%;
+        transform: translateX(-50%);
       }
 
       .markdown-prose .cta-banner-inner {
-        max-width: 640px;
-        margin: 0 auto;
-        text-align: center;
+        max-width: 100%;
       }
 
       .markdown-prose .cta-banner-title {
-        color: #ffffff;
-        font-size: 1.75rem;
-        line-height: 1.3;
-        font-weight: 800;
-        margin: 0 0 1rem;
-        border-bottom: none;
+        font-size: 1.25rem;
+        line-height: 1.35;
       }
 
       .markdown-prose .cta-banner-button {
-        display: inline-block;
-        margin-top: 0.25rem;
-        padding: 0.9rem 2.6rem;
-        border-radius: 999px;
-        background-color: #ffffff;
-        color: #2563eb;
-        font-weight: 600;
-        font-size: 1.05rem;
-        text-decoration: none;
-        border: 2px solid #ffffff;
-        transition:
-          background-color 0.15s ease,
-          color 0.15s ease,
-          transform 0.15s ease,
-          box-shadow 0.15s ease;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-      }
-
-      .markdown-prose .cta-banner-button:hover {
-        background-color: #eff6ff;
-        color: #1d4ed8;
-        transform: translateY(-1px);
-        box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
-      }
-
-      .cta-button {
-        font-size: 0.9rem !important;
-        color: #ffffff !important;
-        text-decoration: none !important;
-      }
-
-      .intro-box {
-        padding: 1.3rem 1.5rem;
-        background-color: #eff6ff;
-        border-left: 5px solid #2563eb;
-        border-radius: 0 0.9rem 0.9rem 0;
-        margin-bottom: 2rem;
-        font-style: italic;
-        font-weight: 500;
-        font-size: 1.03rem;
-        line-height: 1.7;
-        text-align: justify;
-      }
-
-      .ingredient-card-list {
-        display: grid;
-        gap: 0.9rem;
-        margin-top: 0.75rem;
-      }
-      .ingredient-card {
-        padding: 1rem 1.1rem;
-        background-color: #f5f8ff;
-        border-radius: 0.75rem;
-        border: 1px solid #e0e7ff;
-      }
-      .ingredient-card h3 {
-        margin-top: 0 !important;
-        margin-bottom: 0.3rem;
-        font-size: 1.05rem;
-        font-weight: 700;
-      }
-
-      /* TAGS */
-      .tag-container {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #e5e7eb;
-      }
-
-      .tag-item {
-        display: inline-block;
-        padding: 0.25rem 0.85rem;
-        border-radius: 9999px;
-        background-color: #f3f4f6;
-        color: #4b5563;
-        font-size: 0.86rem;
-        margin: 0.25rem;
-        border: 1px solid #e5e7eb;
-        white-space: nowrap;
-        text-decoration: none;
-      }
-
-      .tag-item:hover {
-        text-decoration: none;
-      }
-
-      .hero-image,
-      .label-image,
-      .benefits-image {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.6rem;
+        line-height: 1.3;
+        width: auto;
         max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius: 0;
-        box-shadow: none;
-        border: none;
-        object-fit: contain;
-        background-color: transparent;
-      }
-      .hero-image {
-        max-height: 340px;
-      }
-      .label-image {
-        max-height: 360px;
-        cursor: zoom-in;
-      }
-      .benefits-image {
-        max-height: 320px;
-      }
-
-      .image-caption {
-        font-size: 0.75rem;
-        color: #6b7280;
-        margin-top: 0.5rem;
+        white-space: normal;
         text-align: center;
-        font-style: italic;
-      }
-
-      /* HEADER */
-      .site-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 40;
-        background-color: #30b7cf;
-        border-bottom: 1px solid #e5e7eb;
-        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-        transition: background-color 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .site-header.header-scrolled {
-        background-color: rgba(48, 183, 207, 0.92);
-        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
-        backdrop-filter: blur(4px);
       }
 
       .site-header-inner {
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 0.5rem 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        min-height: 60px;
-      }
-
-      .site-logo {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
+        padding: 0.5rem 0.9rem;
+        justify-content: space-between;
       }
 
       .site-logo-image {
-        height: 60px;
-        max-width: 220px;
-        object-fit: contain;
-        display: block;
+        height: 50px;
+        max-width: 190px;
       }
 
       .site-nav {
-        position: absolute;
-        right: 1.5rem;
-        display: flex;
-        gap: 1.5rem;
-        font-size: 0.95rem;
-        font-weight: 500;
+        position: static;
+        gap: 0.9rem;
+        font-size: 0.9rem;
       }
+    }
 
-      .site-nav a {
-        color: #ffffff;
-        text-decoration: none;
+    @media (min-width: 1024px) {
+      .markdown-prose .cta-banner {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1.75rem;
       }
+    }
+  </style>
 
-      .site-nav a:hover {
-        opacity: 0.9;
-      }
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">
+        <img
+          src="/images/1.Home/logo.png"
+          alt="The Supplement Post logo"
+          class="site-logo-image"
+        />
+      </a>
+      <nav class="site-nav">
+        <a href="/">Home</a>
+      </nav>
+    </div>
+  </header>
 
-      .footer-cta-wrapper {
-        margin-top: 2.75rem;
-      }
+  <main class="flex-grow">
+    <div class="review-shell">
+      <article class="review-card">
+        <section class="markdown-prose">
+          <slot />
+        </section>
+      </article>
 
-      .footer-cta-banner {
-        background: #111827;
-        color: #f9fafb;
-        border-radius: 1rem;
-        padding: 1.75rem 1.5rem;
-        text-align: center;
-        box-shadow: 0 16px 36px rgba(15, 23, 42, 0.55);
-      }
+      {footerCtaLabel && footerCtaUrl && (
+        <div class="footer-cta-wrapper">
+          <div class="footer-cta-banner">
+            <h3 class="footer-cta-title">{footerCtaLabel}</h3>
 
-      .footer-cta-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 0.9rem;
-      }
-
-      .footer-cta-button {
-        display: inline-block;
-        padding: 0.85rem 2.6rem;
-        border-radius: 999px;
-        border: none;
-        background-color: #2563eb;
-        color: #ffffff;
-        font-weight: 600;
-        font-size: 0.98rem;
-        text-decoration: none;
-        box-shadow: 0 18px 45px rgba(37, 99, 235, 0.65);
-        transition:
-          background-color 0.2s ease,
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .footer-cta-button:hover {
-        background-color: #1d4ed8;
-        transform: translateY(-1px);
-        box-shadow: 0 22px 55px rgba(37, 99, 235, 0.8);
-      }
-
-      .footer-copy {
-        margin-top: 1.75rem;
-        font-size: 0.82rem;
-        color: #6b7280;
-        text-align: center;
-      }
-
-      /* CTA "Go to Full Review" em versão link (se você usar no .md) */
-      .cta-3-container {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 1rem;
-        padding: 1.4rem 1.5rem;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 2rem 0;
-      }
-
-      .cta-3-link {
-        color: #2563eb;
-        font-weight: 600;
-        font-size: 1.05rem;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .cta-3-text {
-        text-decoration: underline;
-      }
-
-      .cta-3-arrow {
-        display: inline-block;
-        font-size: 1.2rem;
-        color: #2563eb;
-        animation: arrowMove 1.1s infinite ease-in-out;
-      }
-
-      @keyframes arrowMove {
-        0% { transform: translateX(0); }
-        50% { transform: translateX(6px); }
-        100% { transform: translateX(0); }
-      }
-
-      /* MINI TABLE OF CONTENTS (se quiser usar) */
-      .mini-toc {
-        margin: 1.5rem 0 2rem 0;
-        padding: 1rem 1.25rem;
-        border-radius: 0.75rem;
-        background-color: #f9fafb;
-        border: 1px solid #e5e7eb;
-      }
-
-      .mini-toc-title {
-        margin: 0 0 0.5rem 0;
-        font-weight: 700;
-        font-size: 1rem;
-        color: #111827;
-      }
-
-      .mini-toc-list {
-        list-style: disc;
-        padding-left: 1.25rem;
-        margin: 0;
-        font-size: 0.95rem;
-      }
-
-      .mini-toc-list li {
-        margin-bottom: 0.25rem;
-      }
-
-      .mini-toc-list a {
-        color: #2563eb;
-        text-decoration: underline;
-      }
-
-      /* MOBILE AJUSTES */
-      @media (max-width: 640px) {
-        .markdown-prose .cta-banner {
-          width: 100vw;
-          max-width: none;
-          border-radius: 0;
-          padding: 1.75rem 1.25rem;
-          margin: 2rem 0;
-          margin-left: 50%;
-          transform: translateX(-50%);
-        }
-
-        .markdown-prose .cta-banner-inner {
-          max-width: 100%;
-        }
-
-        .markdown-prose .cta-banner-title {
-          font-size: 1.25rem;
-          line-height: 1.35;
-        }
-
-        .markdown-prose .cta-banner-button {
-          font-size: 0.95rem;
-          padding: 0.75rem 1.6rem;
-          line-height: 1.3;
-          width: auto;
-          max-width: 100%;
-          white-space: normal;
-          text-align: center;
-        }
-
-        .site-header-inner {
-          padding: 0.5rem 0.9rem;
-          justify-content: space-between;
-        }
-
-        .site-logo-image {
-          height: 50px;
-          max-width: 190px;
-        }
-
-        .site-nav {
-          position: static;
-          gap: 0.9rem;
-          font-size: 0.9rem;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        .markdown-prose .cta-banner {
-          max-width: 760px;
-          margin-left: auto;
-          margin-right: auto;
-          border-radius: 1.75rem;
-        }
-      }
-    </style>
-  </head>
-
-  <body class="min-h-screen flex flex-col antialiased">
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">
-          <img
-            src="/images/1.Home/logo.png"
-            alt="The Supplement Post logo"
-            class="site-logo-image"
-          />
-        </a>
-        <nav class="site-nav">
-          <a href="/">Home</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="flex-grow">
-      <div class="review-shell">
-        <article class="review-card">
-          <section class="markdown-prose">
-            <slot />
-          </section>
-        </article>
-
-        {footerCtaLabel && footerCtaUrl && (
-          <div class="footer-cta-wrapper">
-            <div class="footer-cta-banner">
-              <h3 class="footer-cta-title">{footerCtaLabel}</h3>
-
-              <!-- Footer CTA abre na MESMA janela -->
-              <a href={footerCtaUrl} class="footer-cta-button">
-                Visit Official Website Now
-              </a>
-            </div>
+            <a
+              href={footerCtaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-button"
+            >
+              Visit Official Website Now
+            </a>
           </div>
-        )}
+        </div>
+      )}
 
-        <p class="footer-copy">
-          {footerText ?? "© The Supplement Post. All rights reserved."}
-        </p>
-      </div>
-    </main>
+      <p class="footer-copy">
+        {footerText ?? "© The Supplement Post. All rights reserved."}
+      </p>
+    </div>
+  </main>
 
-    <script>
-      if (typeof window !== "undefined") {
-        const header = document.querySelector(".site-header");
-        const onScroll = () => {
-          if (!header) return;
-          if (window.scrollY > 10) {
-            header.classList.add("header-scrolled");
-          } else {
-            header.classList.remove("header-scrolled");
-          }
-        };
-        window.addEventListener("scroll", onScroll);
-      }
-    </script>
-  </body>
-</html>
+  <script>
+    if (typeof window !== "undefined") {
+      const header = document.querySelector(".site-header");
+      const onScroll = () => {
+        if (!header) return;
+        if (window.scrollY > 10) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+      };
+      window.addEventListener("scroll", onScroll);
+    }
+  </script>
+</BaseLayout>

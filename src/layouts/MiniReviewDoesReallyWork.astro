@@ -1,6 +1,5 @@
 ---
-import { CATEGORY_CONFIG } from "../config/categories"; // 
-import { SITE_URL } from "../config/site";              // 
+import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
   pageTitle: string;
@@ -8,8 +7,7 @@ interface Props {
   footerCtaLabel?: string;
   footerCtaUrl?: string;
   footerText?: string;
-  category?: string;
-  canonicalUr?: string;
+  canonicalUrl?: string;
 }
 
 const {
@@ -22,341 +20,318 @@ const {
 } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-    <meta name="description" content={metaDescription} />
+<BaseLayout
+  pageTitle={pageTitle}
+  metaDescription={metaDescription}
+  canonicalUrl={canonicalUrl}
+>
+  <style global>
+    body {
+      font-family: "Inter", sans-serif;
+      color: #1f2937;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding-top: 72px; /* espaço para o header fixo */
+    }
 
-    <!-- canonical automático -->
-<link
-  rel="canonical"
-  href={canonicalUrl ?? `${SITE_URL}${Astro.url.pathname}`}
-/>
+    .text-primary {
+      color: #2563eb;
+    }
 
+    .review-shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="/images/1.Home/favicon.png?v=2"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link rel="apple-touch-icon" href="/images/1.Home/favicon.png?v=2" />
+    .review-card {
+      background-color: #ffffff;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+      padding: 2.5rem 1.5rem;
+    }
 
-    <!-- Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <style global>
-      body {
-        font-family: "Inter", sans-serif;
-        color: #1f2937;
-        background-color: #f3f4f6;
-        margin: 0;
-        padding-top: 72px; /* espaço para o header fixo */
-      }
-
-      .text-primary {
-        color: #2563eb;
-      }
-
-      .review-shell {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 2rem 1rem 3rem;
-      }
-
+    @media (min-width: 768px) {
       .review-card {
-        background-color: #ffffff;
-        border-radius: 1.25rem;
-        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
-        padding: 2.5rem 1.5rem;
+        padding: 3.5rem 3rem;
       }
+    }
 
-      @media (min-width: 768px) {
-        .review-card {
-          padding: 3.5rem 3rem;
-        }
-      }
+    .markdown-prose {
+      padding: 1rem 0;
+    }
 
-      .markdown-prose {
-        padding: 1rem 0;
-      }
+    .markdown-prose p:not(.image-caption) {
+      margin-bottom: 1.5rem;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
 
-      .markdown-prose p:not(.image-caption) {
-        margin-bottom: 1.5rem;
-        font-size: 1.0625rem;
-        line-height: 1.8;
-        text-align: justify;
-      }
+    .markdown-prose h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #111827;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
+    }
 
-      .markdown-prose h1 {
-        font-size: 2rem;
-        font-weight: 800;
-        color: #111827;
-        margin-top: 0;
-        margin-bottom: 1.25rem;
-      }
+    .markdown-prose h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #111827;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 3px solid #2563eb;
+    }
 
-      .markdown-prose h2 {
-        font-size: 1.9rem;
-        font-weight: 800;
-        color: #111827;
-        margin-top: 3rem;
-        margin-bottom: 1.25rem;
-        padding-bottom: 0.4rem;
-        border-bottom: 3px solid #2563eb;
-      }
+    .markdown-prose h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.25rem;
+      margin-bottom: 0.9rem;
+      color: #111827;
+    }
 
-      .markdown-prose h3 {
-        font-size: 1.35rem;
-        font-weight: 700;
-        margin-top: 2.25rem;
-        margin-bottom: 0.9rem;
-        color: #111827;
-      }
+    /* LISTAS */
+    .markdown-prose ul,
+    .markdown-prose ol {
+      padding-left: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
 
-      /* LISTAS */
-      .markdown-prose ul,
-      .markdown-prose ol {
-        padding-left: 1.3rem;
-        margin-bottom: 1.5rem;
-      }
+    /* INTRO BOX */
+    .intro-box {
+      padding: 1.3rem 1.5rem;
+      background-color: #eff6ff;
+      border-left: 5px solid #2563eb;
+      border-radius: 0 0.9rem 0.9rem 0;
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.03rem;
+      line-height: 1.7;
+      text-align: justify;
+    }
 
-      /* INTRO BOX */
-      .intro-box {
-        padding: 1.3rem 1.5rem;
-        background-color: #eff6ff;
-        border-left: 5px solid #2563eb;
-        border-radius: 0 0.9rem 0.9rem 0;
-        margin-bottom: 2rem;
-        font-style: italic;
-        font-weight: 500;
-        font-size: 1.03rem;
-        line-height: 1.7;
-        text-align: justify;
-      }
+    /* BENEFIT BOXES – Positive Reviews / Does Really Work, etc. */
+    .benefit-box-list {
+      display: grid;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2.25rem;
+    }
 
-      /* BENEFIT BOXES – Positive Reviews / Does Really Work, etc. */
+    @media (min-width: 768px) {
       .benefit-box-list {
-        display: grid;
-        gap: 1.5rem;
-        margin: 1.5rem 0 2.25rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+    }
 
-      @media (min-width: 768px) {
-        .benefit-box-list {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
+    .benefit-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-left: 5px solid #2563eb;
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.25rem;
+    }
 
-      .benefit-box {
-        background: #eff6ff;
-        border: 1px solid #bfdbfe;
-        border-left: 5px solid #2563eb;
-        border-radius: 0.9rem;
-        padding: 1.1rem 1.25rem;
-      }
+    .benefit-box-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin: 0 0 0.5rem 0;
+      color: #111827;
+    }
 
-      .benefit-box-title {
-        font-weight: 700;
-        font-size: 1.05rem;
-        margin: 0 0 0.5rem 0;
-        color: #111827;
-      }
+    .benefit-box-text {
+      font-size: 0.96rem;
+      line-height: 1.55;
+      color: #374151;
+      margin: 0 0 0.35rem 0;
+    }
 
-      .benefit-box-text {
-        font-size: 0.96rem;
-        line-height: 1.55;
-        color: #374151;
-        margin: 0 0 0.35rem 0;
-      }
+    /* PROS & CONS GRID (se algum mini usar) */
+    .markdown-prose .pros-cons-block {
+      display: grid;
+      gap: 1.75rem;
+      margin: 1.75rem 0 2.5rem;
+    }
 
-      /* PROS & CONS GRID (se algum mini usar) */
+    .markdown-prose .pros-cons-block .pros,
+    .markdown-prose .pros-cons-block .cons {
+      background: #f9fafb;
+      border-radius: 0.9rem;
+      border: 1px solid #e5e7eb;
+      padding: 1.25rem 1.4rem;
+    }
+
+    @media (min-width: 768px) {
       .markdown-prose .pros-cons-block {
-        display: grid;
-        gap: 1.75rem;
-        margin: 1.75rem 0 2.5rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+    }
 
-      .markdown-prose .pros-cons-block .pros,
-      .markdown-prose .pros-cons-block .cons {
-        background: #f9fafb;
-        border-radius: 0.9rem;
-        border: 1px solid #e5e7eb;
-        padding: 1.25rem 1.4rem;
-      }
+    /* IMAGENS */
+    .hero-image,
+    .label-image,
+    .benefits-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
 
-      @media (min-width: 768px) {
-        .markdown-prose .pros-cons-block {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
+    .benefits-image {
+      max-height: 320px;
+    }
 
-      /* IMAGENS */
-      .hero-image,
-      .label-image,
-      .benefits-image {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        object-fit: contain;
-      }
+    .image-caption {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+      text-align: center;
+      font-style: italic;
+    }
 
-      .benefits-image {
-        max-height: 320px;
-      }
+    /* TAGS (caso use) */
+    .tag-container {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e7eb;
+    }
 
-      .image-caption {
-        font-size: 0.75rem;
-        color: #6b7280;
-        margin-top: 0.5rem;
-        text-align: center;
-        font-style: italic;
-      }
+    .tag-item {
+      display: inline-block;
+      padding: 0.25rem 0.85rem;
+      border-radius: 9999px;
+      background-color: #f3f4f6;
+      color: #4b5563;
+      font-size: 0.86rem;
+      margin: 0.25rem;
+      border: 1px solid #e5e7eb;
+      white-space: nowrap;
+      text-decoration: none;
+    }
 
-      /* TAGS (caso use) */
-      .tag-container {
-        margin-top: 2.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid #e5e7eb;
-      }
+    .tag-item:hover {
+      text-decoration: none;
+    }
 
-      .tag-item {
-        display: inline-block;
-        padding: 0.25rem 0.85rem;
-        border-radius: 9999px;
-        background-color: #f3f4f6;
-        color: #4b5563;
-        font-size: 0.86rem;
-        margin: 0.25rem;
-        border: 1px solid #e5e7eb;
-        white-space: nowrap;
-        text-decoration: none;
-      }
+    /* HEADER */
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 40;
+      background-color: #30b7cf;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+      transition: background-color 0.2s ease;
+    }
 
-      .tag-item:hover {
-        text-decoration: none;
-      }
+    .site-logo-image {
+      height: 60px;
+      object-fit: contain;
+    }
 
-      /* HEADER */
-      .site-header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 40;
-        background-color: #30b7cf;
-        box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-        transition: background-color 0.2s ease;
-      }
+    .site-header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .site-logo-image {
-        height: 60px;
-        object-fit: contain;
-      }
+    /* FOOTER CTA */
+    .footer-cta-wrapper {
+      margin-top: 2.75rem;
+    }
 
-      .site-header-inner {
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 0.5rem 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .footer-cta-banner {
+      background: #111827;
+      color: #f9fafb;
+      border-radius: 1rem;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
 
-      /* FOOTER CTA */
-      .footer-cta-wrapper {
-        margin-top: 2.75rem;
-      }
+    .footer-cta-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.9rem;
+    }
 
-      .footer-cta-banner {
-        background: #111827;
-        color: #f9fafb;
-        border-radius: 1rem;
-        padding: 1.75rem 1.5rem;
-        text-align: center;
-      }
+    .footer-cta-button {
+      display: inline-block;
+      padding: 0.85rem 2.6rem;
+      border-radius: 999px;
+      border: none;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+    }
 
-      .footer-cta-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 0.9rem;
-      }
+    .footer-copy {
+      margin-top: 1.75rem;
+      font-size: 0.82rem;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
 
-      .footer-cta-button {
-        display: inline-block;
-        padding: 0.85rem 2.6rem;
-        border-radius: 999px;
-        border: none;
-        background-color: #2563eb;
-        color: #ffffff;
-        font-weight: 600;
-        font-size: 0.98rem;
-        text-decoration: none;
-      }
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo">
+        <img
+          src="/images/1.Home/logo.png"
+          alt="The Supplement Post logo"
+          class="site-logo-image"
+        />
+      </a>
+    </div>
+  </header>
 
-      .footer-copy {
-        margin-top: 1.75rem;
-        font-size: 0.82rem;
-        color: #6b7280;
-        text-align: center;
-      }
-    </style>
-  </head>
+  <main class="min-h-screen flex flex-col antialiased flex-grow">
+    <div class="review-shell">
+      <article class="review-card">
+        <section class="markdown-prose">
+          <slot />
+        </section>
+      </article>
 
-  <body class="min-h-screen flex flex-col antialiased">
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a href="/" class="site-logo">
-          <img
-            src="/images/1.Home/logo.png"
-            alt="The Supplement Post logo"
-            class="site-logo-image"
-          />
-        </a>
-      </div>
-    </header>
-
-    <main class="flex-grow">
-      <div class="review-shell">
-        <article class="review-card">
-          <section class="markdown-prose">
-            <slot />
-          </section>
-        </article>
-
-        {footerCtaLabel && footerCtaUrl && (
-          <div class="footer-cta-wrapper">
-            <div class="footer-cta-banner">
-              <h3 class="footer-cta-title">{footerCtaLabel}</h3>
-              <a href={footerCtaUrl} class="footer-cta-button">
-                Visit Official Website Now
-              </a>
-            </div>
+      {footerCtaLabel && footerCtaUrl && (
+        <div class="footer-cta-wrapper">
+          <div class="footer-cta-banner">
+            <h3 class="footer-cta-title">{footerCtaLabel}</h3>
+            <a
+              href={footerCtaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-cta-button"
+            >
+              Visit Official Website Now
+            </a>
           </div>
-        )}
+        </div>
+      )}
 
-        <p class="footer-copy">
-          {footerText ?? "© The Supplement Post. All rights reserved."}
-        </p>
-      </div>
-    </main>
+      <p class="footer-copy">
+        {footerText ?? "© The Supplement Post. All rights reserved."}
+      </p>
+    </div>
+  </main>
 
-    <script>
-      if (typeof window !== "undefined") {
-        const header = document.querySelector(".site-header");
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 10) header.classList.add("header-scrolled");
-          else header.classList.remove("header-scrolled");
-        });
-      }
-    </script>
-  </body>
-</html>
+  <script>
+    if (typeof window !== "undefined") {
+      const header = document.querySelector(".site-header");
+      window.addEventListener("scroll", () => {
+        if (!header) return;
+        if (window.scrollY > 10) header.classList.add("header-scrolled");
+        else header.classList.remove("header-scrolled");
+      });
+    }
+  </script>
+</BaseLayout>
