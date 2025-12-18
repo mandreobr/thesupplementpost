@@ -16,7 +16,7 @@ const canonical = canonicalUrl ?? `${SITE_URL}${Astro.url.pathname}`;
 <!doctype html>
 <html lang="en">
   <head>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{pageTitle}</title>
@@ -24,14 +24,16 @@ const canonical = canonicalUrl ?? `${SITE_URL}${Astro.url.pathname}`;
     <link rel="canonical" href={canonical} />
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VFVTJ72YHN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VFVTJ72YHN');
-</script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VFVTJ72YHN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-VFVTJ72YHN");
+    </script>
 
     <!-- Favicon (global) -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -52,16 +54,16 @@ const canonical = canonicalUrl ?? `${SITE_URL}${Astro.url.pathname}`;
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-NHMM523Q"
-      height="0"
-      width="0"
-      style="display:none;visibility:hidden">
-    </iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-     
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NHMM523Q"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <slot />
   </body>
 </html>
