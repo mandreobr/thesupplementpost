@@ -5,7 +5,7 @@ pageTitle: "Prostadine Price – Get the Best Official Website Discount"
 metaDescription: "Prostadine Price – Get the best deal and save on the 6-bottle pack. Natural prostate support with secure checkout and a 60-day guarantee."
 slug: "prostadine-price"
 
-heroImage: "/images/Men-Health/prostadine/hero.png"
+heroImage: "/images/men-health/prostadine/hero.png"
 heroAlt: "Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
 heroCaption: "Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control."
 
@@ -32,7 +32,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-price-offici
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2LziG">
       <img
-        src="/images/Men-Health/prostadine/hero.png"
+        src="/images/men-health/prostadine/hero.png"
         alt="Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
         class="hero-image"
       />
@@ -287,7 +287,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-price-offici
 <div class="my-10 flex flex-col items-center">
   <a href="https://linkly.link/2LziG">
     <img
-      src="/images/Men-Health/prostadine/benefits.png"
+      src="/images/men-health/prostadine/benefits.png"
       alt="Prostadine 6-bottle pack – prostate support supplement with natural ingredients and 60-day guarantee"
       class="benefits-image"
     />

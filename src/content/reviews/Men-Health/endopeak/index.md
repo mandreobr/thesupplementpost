@@ -6,7 +6,7 @@ description: "EndoPeak Review — A natural OTC male-enhancement formula support
 pageTitle: "EndoPeak Review: Natural Support for Libido & Performance"
 metaDescription: "EndoPeak Review — A natural OTC male-enhancement formula supporting erections, libido, stamina, circulation, and overall male vitality."
 
-heroImage: "/images/Men-Health/endopeak/hero.png"
+heroImage: "/images/men-health/endopeak/hero.png"
 heroAlt: "EndoPeak male enhancement supplement – natural formula for erections, libido, circulation, and male vitality"
 heroCaption: "EndoPeak is a natural male-enhancement formula designed to support nitric oxide, stamina, hormonal balance, and performance."
 
@@ -41,7 +41,7 @@ category: "men-health"
       rel="noopener noreferrer"
     >
       <img
-        src="/images/Men-Health/endopeak/hero.png"
+        src="/images/men-health/endopeak/hero.png"
         alt="EndoPeak male enhancement supplement – natural formula for erections, libido, circulation, and male vitality"
         class="hero-image"
       />
@@ -248,7 +248,7 @@ category: "men-health"
 <!-- LABEL IMAGE -->
 <div class="my-8 flex flex-col items-center">
   <img
-    src="/images/Men-Health/endopeak/label.jpg"
+    src="/images/men-health/endopeak/label.jpg"
     alt="EndoPeak supplement facts and ingredients label including tribulus, tongkat ali, horny goat weed, hawthorn berry, and zinc"
     class="label-image"
   />
@@ -566,7 +566,7 @@ category: "men-health"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/endopeak/benefits.png"
+      src="/images/men-health/endopeak/benefits.png"
       alt="EndoPeak 6-bottle bundle – male vitality supplement with natural ingredients and 60-day guarantee"
       class="benefits-image"
     />

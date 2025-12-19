@@ -7,7 +7,7 @@ pageTitle: "Does Prostadine Really Work or Just Another Supplement?"
 metaDescription: "Do prostate supplements actually work? Is there anything that shrinks the prostate? Can an enlarged prostate go back to normal naturally?"
 slug: "prostadine-does-really-work"
 
-heroImage: "/images/Men-Health/prostadine/hero.png"
+heroImage: "/images/men-health/prostadine/hero.png"
 heroAlt: "Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
 heroCaption: "Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control."
 
@@ -34,7 +34,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-does-really-
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2LziG">
       <img
-        src="/images/Men-Health/prostadine/hero.png"
+        src="/images/men-health/prostadine/hero.png"
         alt="Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
         class="hero-image"
       />
@@ -224,9 +224,9 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-does-really-
 
 <!-- LABEL IMAGE – zoom em nova aba -->
 <div class="my-8 flex flex-col items-center">
-  <a href="/images/Men-Health/prostadine/label.jpg" target="_blank" rel="noopener">
+  <a href="/images/men-health/prostadine/label.jpg" target="_blank" rel="noopener">
     <img
-      src="/images/Men-Health/prostadine/label.jpg"
+      src="/images/men-health/prostadine/label.jpg"
       alt="Prostadine supplement facts and ingredients label showing iodine, saw palmetto, shilajit, and pomegranate extract"
       class="label-image"
     />

@@ -4,7 +4,7 @@ description: "In-depth Total Control 24 (TC24) review — ingredients, benefits,
 pageTitle: "Total Control 24 Review: Natural Prostate & Urinary Support"
 metaDescription: "TC24 Review — Discover a natural OTC prostate-support formula promoting urinary comfort, flow, circulation, inflammation balance, and male vitality."
 slug: "total-control-24"
-heroImage: "/images/Men-Health/total-control-24/hero.png"
+heroImage: "/images/men-health/total-control-24/hero.png"
 heroAlt: "Total Control 24 prostate support supplement – natural capsules for urinary comfort, flow, circulation, and male vitality"
 heroCaption: "Total Control 24 (TC24) is a natural once-daily formula designed to support prostate comfort, urinary flow, inflammation balance, and circulation for long-term male vitality."
 primaryCtaLabel: "Save $20 Per Bottle On Today’s Offer"
@@ -35,7 +35,7 @@ category: "men-health"
       rel="noopener noreferrer"
     >
       <img
-        src="/images/Men-Health/total-control-24/hero.png"
+        src="/images/men-health/total-control-24/hero.png"
         alt="Total Control 24 prostate support supplement – natural capsules for urinary comfort, flow, circulation, and male vitality"
         class="hero-image"
       />
@@ -241,12 +241,12 @@ category: "men-health"
 <!-- LABEL IMAGE -->
 <div class="my-10 flex flex-col items-center">
   <a
-    href="/images/Men-Health/total-control-24/label.jpg"
+    href="/images/men-health/total-control-24/label.jpg"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/total-control-24/label.jpg"
+      src="/images/men-health/total-control-24/label.jpg"
       alt="Total Control 24 supplement facts and ingredients label showing pine pollen, saw palmetto, pygeum africanum, jaboticaba extract, Lipophytol, neem, boron, vitamin E, and vitamin B6"
       class="label-image"
     />
@@ -473,7 +473,7 @@ category: "men-health"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/total-control-24/benefits.png"
+      src="/images/men-health/total-control-24/benefits.png"
       alt="Total Control 24 multi-bottle bundle – prostate and urinary health supplement with natural ingredients and 60-day guarantee"
       class="benefits-image"
     />

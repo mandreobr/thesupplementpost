@@ -7,7 +7,7 @@ pageTitle: "What Is EndoPeak? Explained – Natural Libido & Performance Support
 metaDescription: "EndoPeak explained — discover how this natural OTC male-enhancement formula supports erections, stamina, libido, nitric oxide, and circulation."
 slug: "endopeak-what-is"
 
-heroImage: "/images/Men-Health/endopeak/hero.png"
+heroImage: "/images/men-health/endopeak/hero.png"
 heroAlt: "EndoPeak male enhancement supplement – natural formula for erections, libido, circulation, and male vitality"
 heroCaption: "EndoPeak is a natural male-enhancement formula designed to support nitric oxide, stamina, hormonal balance, and performance."
 
@@ -34,7 +34,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak/what-is"
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2R0io">
       <img
-        src="/images/Men-Health/endopeak/hero.png"
+        src="/images/men-health/endopeak/hero.png"
         alt="EndoPeak male enhancement supplement – natural formula for erections, libido, circulation, and male vitality"
         class="hero-image"
       />
@@ -164,9 +164,9 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak/what-is"
 
 <!-- LABEL IMAGE -->
 <div class="my-10 flex flex-col items-center">
-  <a href="/images/Men-Health/endopeak/label.jpg" target="_blank" rel="noopener noreferrer">
+  <a href="/images/men-health/endopeak/label.jpg" target="_blank" rel="noopener noreferrer">
     <img
-      src="/images/Men-Health/endopeak/label.jpg"
+      src="/images/men-health/endopeak/label.jpg"
       alt="EndoPeak supplement facts and ingredients label including tribulus, tongkat ali, horny goat weed, hawthorn berry, and zinc"
       class="label-image"
     />

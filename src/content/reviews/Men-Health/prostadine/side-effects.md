@@ -4,7 +4,7 @@ description: "Is Prostadine safe? Learn about its natural ingredients, possible 
 pageTitle: "Prostadine Side Effects and Safety Facts Explained"
 metaDescription: "Is Prostadine safe? Learn about its natural ingredients, possible side effects, and safety considerations before buying."
 slug: "prostadine-side-effects"
-heroImage: "/images/Men-Health/prostadine/hero.png"
+heroImage: "/images/men-health/prostadine/hero.png"
 heroAlt: "Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
 heroCaption: "Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control."
 primaryCtaLabel: "Save $20 Per Bottle On Today’s Offer"
@@ -28,7 +28,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-side-effects
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2LziG">
       <img
-        src="/images/Men-Health/prostadine/hero.png"
+        src="/images/men-health/prostadine/hero.png"
         alt="Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
         class="hero-image"
       />
@@ -280,7 +280,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-side-effects
 <div class="my-10 flex flex-col items-center">
   <a href="https://linkly.link/2LziG">
     <img
-      src="/images/Men-Health/prostadine/benefits.png"
+      src="/images/men-health/prostadine/benefits.png"
       alt="Prostadine 6-bottle pack – prostate support supplement with natural ingredients and 60-day guarantee"
       class="benefits-image"
     />

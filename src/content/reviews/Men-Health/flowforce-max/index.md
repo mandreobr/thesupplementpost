@@ -4,7 +4,7 @@ description: "Read our comprehensive review of FlowForce Max, the chewable suppl
 pageTitle: "FlowForce Max Review: Natural Prostate Support"
 metaDescription: "FlowForce Max Review — A natural OTC prostate support supplement designed to promote urinary flow, prostate comfort, microbial balance, and long-term male vitality."
 slug: "flowforce-max"
-heroImage: "/images/Men-Health/flowforce-max/hero.png"
+heroImage: "/images/men-health/flowforce-max/hero.png"
 heroAlt: "FlowForce Max chewable supplement – natural formula for prostate health, urinary comfort, and male vitality"
 heroCaption: "FlowForce Max is a natural chewable supplement designed to support prostate comfort, urinary flow, microbial balance, and daily vitality."
 primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
@@ -33,7 +33,7 @@ footerText: "© The Supplement Post. All rights reserved."
       rel="noopener noreferrer"
     >
       <img
-        src="/images/Men-Health/flowforce-max/hero.png"
+        src="/images/men-health/flowforce-max/hero.png"
         alt="FlowForce Max chewable supplement – natural formula for prostate health, urinary comfort, and male vitality"
         class="hero-image"
       />
@@ -213,12 +213,12 @@ footerText: "© The Supplement Post. All rights reserved."
 <!-- LABEL IMAGE -->
 <div class="my-10 flex flex-col items-center">
   <a
-    href="/images/Men-Health/flowforce-max/label.jpg"
+    href="/images/men-health/flowforce-max/label.jpg"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/flowforce-max/label.jpg"
+      src="/images/men-health/flowforce-max/label.jpg"
       alt="FlowForce Max supplement facts and ingredients label featuring flower pollen extract, saw palmetto, ViNitrox, luteolin, fisetin, and monolaurin"
       class="label-image"
     />
@@ -441,7 +441,7 @@ footerText: "© The Supplement Post. All rights reserved."
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/flowforce-max/benefits.png"
+      src="/images/men-health/flowforce-max/benefits.png"
       alt="FlowForce Max 6-bottle bundle – prostate and urinary support supplement with 60-day money-back guarantee"
       class="benefits-image"
     />

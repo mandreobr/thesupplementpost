@@ -4,7 +4,7 @@ description: "Read our comprehensive updated review of Prostadine, the liquid su
 pageTitle: "Prostadine Review 2026: Prostate Supplement Buyer’s Guide"
 metaDescription: "Explore Prostadine review 2026 buyer’s guide. Learn how this natural OTC prostate supplement supports urinary flow, bladder comfort, and prostate health."
 slug: "prostadine"
-heroImage: "/images/Men-Health/prostadine/hero.png"
+heroImage: "/images/men-health/prostadine/hero.png"
 heroAlt: "Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
 heroCaption: "Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control."
 primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
@@ -33,7 +33,7 @@ category: "men-health"
       rel="noopener noreferrer"
     >
       <img
-        src="/images/Men-Health/prostadine/hero.png"
+        src="/images/men-health/prostadine/hero.png"
         alt="Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
         class="hero-image"
       />
@@ -216,12 +216,12 @@ category: "men-health"
 <!-- LABEL IMAGE (zoom only) -->
 <div class="my-10 flex flex-col items-center">
   <a
-    href="/images/Men-Health/prostadine/label.jpg"
+    href="/images/men-health/prostadine/label.jpg"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/prostadine/label.jpg"
+      src="/images/men-health/prostadine/label.jpg"
       alt="Prostadine supplement facts and ingredients label showing iodine, saw palmetto, shilajit, and pomegranate extract"
       class="label-image"
     />
@@ -434,7 +434,7 @@ category: "men-health"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/prostadine/benefits.png"
+      src="/images/men-health/prostadine/benefits.png"
       alt="Prostadine 6-bottle pack – prostate support supplement with natural ingredients and 60-day guarantee"
       class="benefits-image"
     />
