@@ -45,14 +45,6 @@ category: "men-health"
   </div>
 </header>
 
-<!-- KEY INSIGHTS -->
-<ul>
-  <li>Max Boost Plus is a natural over-the-counter dietary supplement designed to support erection quality and sexual performance without a prescription.</li>
-  <li>The formula targets multiple contributors to erectile dysfunction, including blood flow efficiency, nitric oxide support, stress balance, and energy levels.</li>
-  <li>It is positioned as a daily-use supplement, not a fast-acting stimulant or medication.</li>
-  <li>Best value is the 6-bottle package, offering the lowest cost per bottle and Free U.S. Shipping.</li>
-  <li>The product is backed by a 90-day money-back guarantee, reducing the risk for first-time users.</li>
-</ul>
 
 <p>
   Explore how Max Boost Plus’s natural OTC supplement supports erection quality and sexual performance — without a prescription, as a dietary supplement, not a medication.
