@@ -40,6 +40,13 @@ category: "men-health"
 </header>
 
 <!-- KEY INSIGHTS -->
+<style>
+.key-insights li {
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+</style>
+
 <div class="key-insights">
   <ul>
     <li>Max Boost Plus is a non-prescription dietary supplement designed for gradual, daily support — not an instant fix.</li>

@@ -40,6 +40,13 @@ category: "men-health"
 </header>
 
 <!-- KEY INSIGHTS -->
+<style>
+.key-insights li {
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+</style>
+
 <div class="key-insights">
   <ul>
     <li>Max Boost Plus is a daily, non-prescription supplement designed to support erection quality, libido, and overall sexual performance naturally.</li>

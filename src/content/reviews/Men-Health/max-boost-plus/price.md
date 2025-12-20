@@ -40,6 +40,13 @@ category: "men-health"
 </header>
 
 <!-- KEY INSIGHTS -->
+<style>
+.key-insights li {
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+</style>
+
 <div class="key-insights">
   <ul>
     <li>Max Boost Plus is available in 1, 3, and 6-bottle packages, with significant savings on multi-bottle options.</li>
