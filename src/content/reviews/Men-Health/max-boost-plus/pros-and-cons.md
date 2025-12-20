@@ -54,6 +54,54 @@ category: "men-health"
   A transparent look at Max Boost Plus’s benefits, limitations, and real-world considerations before purchasing.
 </div>
 
+<style>
+  .mini-toc {
+    margin: 2rem 0 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.98rem;
+    color: #111827;
+  }
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- TABLE OF CONTENTS -->
+<div class="mini-toc">
+  <p class="mini-toc-title">In this guide:</p>
+  <ul class="mini-toc-list">
+    <li><a href="#ed-symptoms">Erectile Dysfunction — Symptoms That Indicate It’s Time to Pay Attention</a></li>
+    <li><a href="#what-is-max-boost-plus">What Is Max Boost Plus?</a></li>
+    <li><a href="#pros-and-cons">Max Boost Plus Pros &amp; Cons</a></li>
+    <li><a href="#positive-reviews">Positive Reviews — What’s Working for Users</a></li>
+    <li><a href="#complaints">Max Boost Plus Complaints &amp; Mixed Reviews</a></li>
+    <li><a href="#price-and-discounts">Max Boost Plus Price and Discounts</a></li>
+    <li><a href="#where-to-buy">Where to Buy Max Boost Plus and Guarantee</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</div>
+
 <h2>Erectile Dysfunction — Symptoms That Indicate It’s Time to Pay Attention</h2>
 
 <p>

@@ -43,6 +43,53 @@ category: "men-health"
   Understanding Max Boost Plus’s benefits and how this formula supports erection quality and sexual performance naturally.
 </div>
 
+<style>
+  .mini-toc {
+    margin: 2rem 0 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.98rem;
+    color: #111827;
+  }
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- TABLE OF CONTENTS -->
+<div class="mini-toc">
+  <p class="mini-toc-title">In this guide:</p>
+  <ul class="mini-toc-list">
+    <li><a href="#quick-answer">What Is Max Boost Plus? The Quick Answer</a></li>
+    <li><a href="#ed-symptoms">Erectile Dysfunction — Symptoms That Indicate It’s Time to Pay Attention</a></li>
+    <li><a href="#ingredients-overview">What Ingredients Are in Max Boost Plus?</a></li>
+    <li><a href="#price-and-discounts">Max Boost Plus Price and Discounts</a></li>
+    <li><a href="#where-to-buy">Where to Buy Max Boost Plus and Guarantee</a></li>
+    <li><a href="#who-is-it-for">Who Is Max Boost Plus Ideal For?</a></li>
+    <li><a href="#final-thoughts">Final Thoughts</a></li>
+  </ul>
+</div>
+
 <h2>What Is Max Boost Plus? The Quick Answer</h2>
 
 <p>
