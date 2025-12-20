@@ -230,13 +230,46 @@ EndoPeak is sold exclusively on the official website to ensure product authentic
 EndoPeak’s ingredient synergy gives it a clear advantage for men seeking natural, multi-pathway support for erection quality, libido, stamina, circulation, and hormonal balance. While results develop gradually, consistent daily use leads to more reliable and sustainable improvements over time.
 </p>
 
+<!-- TAGS START -->
 <div class="tag-container">
-  <h3>HEALTH CONDITION TAGS</h3>
-  erection support, libido support, nitric oxide support, circulation support, male vitality, sexual stamina, hormonal balance, erectile performance
+  <h3
+    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+    style="border-bottom: none; margin-top: 0;"
+  >
+    HEALTH CONDITION TAGS
+  </h3>
 
-  <h3>INGREDIENT TAGS</h3>
-  tribulus terrestris, tongkat ali, horny goat weed, hawthorn berry, saw palmetto, chrysin, cissus quadrangularis, magnesium, zinc
+  <div class="flex flex-wrap gap-2 mb-6">
+    <span class="tag-item">erection support</span>
+    <span class="tag-item">libido support</span>
+    <span class="tag-item">nitric oxide support</span>
+    <span class="tag-item">circulation support</span>
+    <span class="tag-item">male vitality</span>
+    <span class="tag-item">sexual stamina</span>
+    <span class="tag-item">hormonal balance</span>
+    <span class="tag-item">erectile performance</span>
+  </div>
+
+  <h3
+    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+    style="border-bottom: none; margin-top: 1.25rem;"
+  >
+    INGREDIENT TAGS
+  </h3>
+
+  <div class="flex flex-wrap gap-2">
+    <span class="tag-item">tribulus terrestris</span>
+    <span class="tag-item">tongkat ali</span>
+    <span class="tag-item">horny goat weed</span>
+    <span class="tag-item">hawthorn berry</span>
+    <span class="tag-item">saw palmetto</span>
+    <span class="tag-item">chrysin</span>
+    <span class="tag-item">cissus quadrangularis</span>
+    <span class="tag-item">magnesium</span>
+    <span class="tag-item">zinc</span>
+  </div>
 </div>
+
 
 <footer>
 © 2026 The Supplement Post. All rights reserved.

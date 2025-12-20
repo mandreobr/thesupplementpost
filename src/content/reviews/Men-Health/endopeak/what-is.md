@@ -418,9 +418,13 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 
 <!-- TAGS START -->
 <div class="tag-container">
-  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 0;">
+  <h3
+    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+    style="border-bottom: none; margin-top: 0;"
+  >
     HEALTH CONDITION TAGS
   </h3>
+
   <div class="flex flex-wrap gap-2 mb-6">
     <span class="tag-item">erection support</span>
     <span class="tag-item">libido support</span>
@@ -432,9 +436,13 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
     <span class="tag-item">erectile performance</span>
   </div>
 
-  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 1.25rem;">
+  <h3
+    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+    style="border-bottom: none; margin-top: 1.25rem;"
+  >
     INGREDIENT TAGS
   </h3>
+
   <div class="flex flex-wrap gap-2">
     <span class="tag-item">tribulus terrestris</span>
     <span class="tag-item">tongkat ali</span>
