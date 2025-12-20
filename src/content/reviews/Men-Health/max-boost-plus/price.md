@@ -41,9 +41,20 @@ category: "men-health"
 
 <!-- KEY INSIGHTS -->
 <style>
+/* Key Insights – Introductory Section */
+.key-insights {
+  font-size: 0.92rem;        /* Fonte levemente menor */
+}
+
 .key-insights li {
-  margin-bottom: 18px;
-  line-height: 1.3;
+  margin-bottom: 16px;       /* Espaçamento entre os itens */
+  line-height: 1.4;          /* Conforto de leitura */
+  text-align: justify;       /* Texto justificado */
+  text-justify: inter-word;
+}
+
+.key-insights strong {
+  font-weight: 600;          /* Destaque sutil para GEO/SEO */
 }
 </style>
 

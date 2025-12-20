@@ -47,18 +47,30 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 
 <!-- KEY INSIGHTS -->
 <style>
+/* Key Insights – Introductory Section */
+.key-insights {
+  font-size: 0.92rem;        /* Fonte levemente menor */
+}
+
 .key-insights li {
-  margin-bottom: 18px;
-  line-height: 1.3;
+  margin-bottom: 16px;       /* Espaçamento entre os itens */
+  line-height: 1.4;          /* Conforto de leitura */
+  text-align: justify;       /* Texto justificado */
+  text-justify: inter-word;
+}
+
+.key-insights strong {
+  font-weight: 600;          /* Destaque sutil para GEO/SEO */
 }
 </style>
 
+
 <div class="key-insights">
   <ul>
-    <li>EndoPeak is a natural, daily male enhancement supplement designed to support erections, libido, stamina, circulation, and overall male vitality.</li>
-    <li>Focuses on core biological systems, including nitric oxide signaling, blood flow, hormonal rhythm, and energy metabolism.</li>
-    <li>Uses plant extracts and essential minerals, avoiding stimulants or synthetic performance boosters.</li>
-    <li>Built for gradual, long-term results, supporting sexual performance and confidence through consistent daily use rather than instant effects.</li>
+    <li><strong>EndoPeak is a natural, daily male enhancement supplement</strong> designed to support erections, libido, stamina, circulation, and overall male vitality.</li>
+    <li>Focuses on core biological systems, including <strong>nitric oxide signaling, blood flow, hormonal rhythm, and energy metabolism.</strong></li>
+    <li>Uses plant extracts and essential minerals, <strong>avoiding stimulants or synthetic performance boosters</strong>.</li>
+    <li>Built for gradual, long-term results, supporting <strong>sexual performance</strong> and confidence through consistent daily use rather than instant effects.</li>
   </ul>
 </div>
 
