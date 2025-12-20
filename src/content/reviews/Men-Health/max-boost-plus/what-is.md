@@ -39,6 +39,16 @@ category: "men-health"
   </div>
 </header>
 
+<!-- KEY INSIGHTS -->
+<div class="key-insights">
+  <ul>
+    <li>Max Boost Plus is a daily, non-prescription supplement designed to support erection quality, libido, and overall sexual performance naturally.</li>
+    <li>Targets the root causes of erectile issues, including blood flow efficiency, nitric oxide signaling, stress balance, energy levels, and recovery.</li>
+    <li>Uses a multi-pathway formula that combines circulation support, antioxidant protection, nervous-system calm, and metabolic balance.</li>
+    <li>Built for gradual, sustainable results, offering a wellness-based alternative to stimulants or prescription medications.</li>
+  </ul>
+</div>
+
 <div class="intro-box">
   Understanding Max Boost Plus’s benefits and how this formula supports erection quality and sexual performance naturally.
 </div>
