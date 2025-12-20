@@ -38,34 +38,16 @@ category: "men-health"
     </p>
   </div>
 </header>
-<!-- KEY INSIGHTS -->
-<style>
-/* Key Insights – Introductory Section */
-.key-insights {
-  font-size: 0.92rem;        /* Fonte levemente menor */
-}
-
-.key-insights li {
-  margin-bottom: 16px;       /* Espaçamento entre os itens */
-  line-height: 1.4;          /* Conforto de leitura */
-  text-align: justify;       /* Texto justificado */
-  text-justify: inter-word;
-}
-
-.key-insights strong {
-  font-weight: 600;          /* Destaque sutil para GEO/SEO */
-}
-</style>
 
 <!-- KEY INSIGHTS -->
 <style>
 /* Key Insights – Introductory Section */
 .key-insights {
-  font-size: 0.88rem;        /* Fonte levemente menor */
+  font-size: 0.86rem;        /* Fonte levemente menor */
 }
 
 .key-insights li {
-  margin-bottom: 20px;       /* Espaçamento entre os itens */
+  margin-bottom: 24px;       /* Espaçamento entre os itens */
   line-height: 1.4;          /* Conforto de leitura */
   text-align: justify;       /* Texto justificado */
   text-justify: inter-word;
