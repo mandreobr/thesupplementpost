@@ -1,40 +1,40 @@
 ---
-title: "Max Boost Plus Ingredients: Full List and What’s Inside the Formula"
-description: "Discover the full list of Max Boost Plus ingredients and how this natural formula supports erection quality and sexual performance."
-pageTitle: "Max Boost Plus Ingredients List – What’s Inside the Formula"
-metaDescription: "Discover the full list of Max Boost Plus ingredients and how this natural formula supports erection quality and sexual performance."
-slug: "max-boost-plus-ingredients"
-canonicalUrl: "https://www.thesupplementpost.com/reviews/max-boost-plus-ingredients"
-heroImage: "/images/men-health/max-boost-plus/hero.png"
-heroAlt: "Max Boost Plus dietary supplement bottle – natural erectile dysfunction support for erection quality and sexual performance"
-heroCaption: "Max Boost Plus is a natural over-the-counter supplement designed to support erection quality and sexual performance."
+title: "EndoPeak Ingredients: Full List and What’s Inside the Formula"
+description: "Discover the full list of EndoPeak ingredients and how this natural formula supports erections, libido, circulation, stamina, and overall male vitality."
+pageTitle: "EndoPeak Ingredients List – What’s Inside the Formula"
+metaDescription: "Discover the full list of EndoPeak ingredients and how this natural formula supports erections, libido, circulation, stamina, and overall male vitality."
+slug: "endopeak-ingredients"
+canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-ingredients"
+heroImage: "/images/men-health/endopeak/hero.png"
+heroAlt: "EndoPeak male enhancement supplement bottle – natural support for erections, libido, circulation, stamina, and male vitality"
+heroCaption: "EndoPeak is a natural over-the-counter supplement designed to support erections, libido, circulation, stamina, and overall male vitality."
 primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
-primaryCtaUrl: "https://linkly.link/2Qwyc"
+primaryCtaUrl: "https://linkly.link/ENDOPEAK"
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
-footerCtaUrl: "https://linkly.link/2Qwyc"
+footerCtaUrl: "https://linkly.link/ENDOPEAK"
 footerText: "© 2026 The Supplement Post. All rights reserved."
 category: "men-health"
 ---
 
 <header class="mb-10 text-center">
   <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-    Max Boost Plus Ingredients: Full List and What’s Inside the Formula
+    EndoPeak Ingredients: Full List and What’s Inside the Formula
   </h1>
 
   <p class="text-lg md:text-xl text-gray-600 font-medium mb-8">
-    Learn how Max Boost Plus’s natural ingredients work together to support erection quality and sexual performance.
+    How EndoPeak’s natural ingredients are designed to support erections, libido, circulation, stamina, and overall male vitality.
   </p>
 
   <div class="my-6 flex flex-col items-center">
-    <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer">
+    <a href="https://linkly.link/ENDOPEAK" target="_blank" rel="noopener noreferrer">
       <img
-        src="/images/men-health/max-boost-plus/hero.png"
-        alt="Max Boost Plus dietary supplement bottle – natural erectile dysfunction support for erection quality and sexual performance"
+        src="/images/men-health/endopeak/hero.png"
+        alt="EndoPeak male enhancement supplement bottle – natural support for erections, libido, circulation, stamina, and male vitality"
         class="hero-image"
       />
     </a>
     <p class="image-caption">
-      Max Boost Plus is a natural over-the-counter supplement designed to support erection quality and sexual performance.
+      EndoPeak is a natural over-the-counter supplement designed to support erections, libido, circulation, stamina, and overall male vitality.
     </p>
   </div>
 </header>
@@ -43,11 +43,11 @@ category: "men-health"
 <style>
 /* Key Insights – Introductory Section */
 .key-insights {
-  font-size: 0.92rem;        /* Fonte levemente menor */
+  font-size: 0.86rem;        /* Fonte levemente menor */
 }
 
 .key-insights li {
-  margin-bottom: 16px;       /* Espaçamento entre os itens */
+  margin-bottom: 24px;       /* Espaçamento entre os itens */
   line-height: 1.4;          /* Conforto de leitura */
   text-align: justify;       /* Texto justificado */
   text-justify: inter-word;
@@ -60,15 +60,15 @@ category: "men-health"
 
 <div class="key-insights">
   <ul>
-    <li>Max Boost Plus is a daily, non-prescription supplement designed to support erection quality, libido, and overall sexual performance naturally.</li>
-    <li>Targets the root causes of erectile issues, including blood flow efficiency, nitric oxide signaling, stress balance, energy levels, and recovery.</li>
-    <li>Uses a multi-pathway formula that combines circulation support, antioxidant protection, nervous-system calm, and metabolic balance.</li>
-    <li>Built for gradual, sustainable results, offering a wellness-based alternative to stimulants or prescription medications.</li>
+    <li>Targets multiple male performance pathways, including nitric oxide production, circulation, hormonal balance, stamina, and libido.</li>
+    <li>Formulated around blood flow and nitric oxide support, two core factors behind erection quality and endurance.</li>
+    <li>Uses clinically studied botanicals and minerals linked to male vitality, hormonal rhythm, and sexual performance.</li>
+    <li>Designed for daily, long-term use, focusing on sustainable results rather than short-term stimulation.</li>
   </ul>
 </div>
 
 <div class="intro-box">
-  Learn how Max Boost Plus’s natural ingredients work together to support erection quality and sexual performance.
+  How EndoPeak’s natural ingredients are designed to support erections, libido, circulation, stamina, and overall male vitality.
 </div>
 
 <style>
@@ -108,35 +108,35 @@ category: "men-health"
 <div class="mini-toc">
   <p class="mini-toc-title">In this guide:</p>
   <ul class="mini-toc-list">
-    <li><a href="#what-is-max-boost-plus">What Is Max Boost Plus?</a></li>
-    <li><a href="#why-ingredients-matter">Why Max Boost Plus Ingredients Matter</a></li>
-    <li><a href="#key-ingredients-explained">Key Max Boost Plus Ingredients Explained</a></li>
+    <li><a href="#what-is-endopeak">What Is EndoPeak?</a></li>
+    <li><a href="#why-ingredients-matter">Why EndoPeak Ingredients Matter</a></li>
+    <li><a href="#key-ingredients-explained">Key EndoPeak Ingredients Explained</a></li>
     <li><a href="#scientific-support">Confirming What Is Scientifically Known About the Ingredients</a></li>
-    <li><a href="#ed-symptoms">Erectile Dysfunction — Symptoms That Indicate It’s Time to Pay Attention</a></li>
-    <li><a href="#price-and-discounts">Max Boost Plus Price and Discounts</a></li>
-    <li><a href="#where-to-buy">Where to Buy Max Boost Plus and Guarantee</a></li>
+    <li><a href="#ed-symptoms">Erectile & Sexual Health — Symptoms That Indicate It’s Time to Pay Attention</a></li>
+    <li><a href="#price-and-discounts">EndoPeak Price and Discounts</a></li>
+    <li><a href="#where-to-buy">Where to Buy EndoPeak and Guarantee</a></li>
     <li><a href="#final-thoughts">Final Thoughts</a></li>
   </ul>
 </div>
 
-<h2 id="what-is-max-boost-plus">What Is Max Boost Plus?</h2>
+<h2 id="what-is-endopeak">What Is EndoPeak?</h2>
 
 <p>
-  Max Boost Plus is a natural, over-the-counter dietary supplement formulated to support erection quality, libido, and sexual performance through a multi-pathway approach. Instead of acting as a stimulant or prescription medication, it is designed for daily use to support circulation, nitric oxide activity, stress balance, energy, and recovery — key biological systems involved in male performance.
+  EndoPeak is a natural over-the-counter male enhancement supplement formulated to support erection quality, libido, stamina, and healthy blood circulation. It blends nine botanicals and essential minerals — including tribulus terrestris, tongkat ali, horny goat weed, hawthorn berry, zinc, and magnesium — selected for their roles in supporting nitric oxide activity, hormonal balance, vascular health, and sexual vitality.
 </p>
 
 <p>
-  The formula combines nine ingredients selected to address both physical and mental contributors to erectile dysfunction, positioning Max Boost Plus as a gradual, wellness-based solution rather than a quick fix.
+  Rather than acting as a short-term stimulant, EndoPeak is positioned as a daily support system for long-term male performance and confidence, with benefits that develop gradually through consistent use.
 </p>
 
-<h2 id="why-ingredients-matter">Why Max Boost Plus Ingredients Matter</h2>
+<h2 id="why-ingredients-matter">Why EndoPeak Ingredients Matter</h2>
 
 <p>
-  Sexual performance depends on more than arousal alone. Healthy erections require efficient blood flow, balanced nitric oxide signaling, stable energy levels, low oxidative stress, and a calm nervous system. When one or more of these systems becomes strained, erection quality may decline.
+  Male sexual performance becomes more vulnerable to disruption as men age or face chronic stress, sleep disturbance, metabolic slowdown, and hormonal shifts. These changes directly affect blood flow, nitric oxide signaling, nerve responsiveness, stamina, and libido — all essential for erection quality and sexual confidence.
 </p>
 
 <p>
-  Max Boost Plus’s ingredient profile is designed to target these root contributors simultaneously. Rather than relying on a single compound, the formula blends circulation-supporting nutrients, stress-balancing botanicals, antioxidants, and metabolic-support ingredients to create broader, more sustainable support.
+  EndoPeak’s ingredient profile is designed to target these root causes using a combination of botanical extracts and minerals that support circulation, hormonal rhythm, oxidative balance, and physical endurance. Instead of focusing on a single mechanism, the formula blends complementary pathways, making the overall formulation more effective than isolated ingredients alone.
 </p>
 
 <h3>Key Biological Mechanisms</h3>
@@ -168,138 +168,138 @@ category: "men-health"
 </style>
 
 <div class="key-mechanism-box">
-  <p class="key-mechanism-title">Supports nitric oxide and circulation pathways to improve blood flow</p>
+  <p class="key-mechanism-title">Supports nitric oxide production and circulation</p>
   <p class="key-mechanism-text">
-    Healthy nitric oxide signaling helps relax blood vessels and support the circulation dynamics required for erection firmness and endurance.
+    Epimedium and hawthorn help promote healthy blood flow essential for firm erections.
   </p>
 </div>
 
 <div class="key-mechanism-box">
-  <p class="key-mechanism-title">Helps balance stress and nervous system activity linked to performance anxiety</p>
+  <p class="key-mechanism-title">Helps balance hormonal and libido pathways</p>
   <p class="key-mechanism-text">
-    Stress and sympathetic “fight-or-flight” signaling can interfere with arousal consistency, even when desire is present.
+    Tribulus, tongkat ali, saw palmetto, and zinc support male hormonal rhythm and sexual motivation.
   </p>
 </div>
 
 <div class="key-mechanism-box">
-  <p class="key-mechanism-title">Provides antioxidant protection for vascular and cellular health</p>
+  <p class="key-mechanism-title">Reduces oxidative stress</p>
   <p class="key-mechanism-text">
-    Antioxidants help protect blood vessels and cells from oxidative stress that can intensify with aging and lifestyle strain.
+    Chrysin and hawthorn help protect vascular and reproductive tissues from oxidative strain.
   </p>
 </div>
 
 <div class="key-mechanism-box">
-  <p class="key-mechanism-title">Supports energy, recovery, and metabolic balance</p>
+  <p class="key-mechanism-title">Supports stamina and energy metabolism</p>
   <p class="key-mechanism-text">
-    Better metabolic efficiency and recovery support can contribute to stamina, daily vitality, and long-term performance wellness.
+    Cissus and magnesium contribute to physical endurance, recovery, and metabolic efficiency.
   </p>
 </div>
 
-<h2 id="key-ingredients-explained">Key Max Boost Plus Ingredients Explained</h2>
+<h2 id="key-ingredients-explained">Key EndoPeak Ingredients Explained</h2>
 
 <p>
-  Max Boost Plus contains a blend of nine active ingredients chosen to support erection quality, stamina, and overall sexual performance. Below is a detailed explanation of each component and its primary role.
+  EndoPeak contains a proprietary blend combining botanicals and essential minerals known for their supportive roles in male vitality, circulation, stamina, and hormonal health. Below is a detailed breakdown of its key actives.
 </p>
 
 <h3>Key Active Ingredients</h3>
 
 <div class="ingredient-card-list">
   <div class="ingredient-card">
-    <h3>1. Beetroot Powder</h3>
+    <h3>1. Tribulus Terrestris</h3>
     <p>
-      Beetroot is naturally rich in dietary nitrates that help support nitric oxide production. Nitric oxide is essential for relaxing blood vessels and improving circulation, making this ingredient highly relevant for erection firmness and endurance.
+      Traditionally associated with libido, sexual motivation, and vitality. Helps support androgenic balance and arousal readiness.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>2. Berberine</h3>
+    <h3>2. Chrysin (Oroxylum indicum)</h3>
     <p>
-      A well-researched plant compound commonly associated with metabolic balance. Healthy metabolic function can indirectly support vascular health, energy levels, and long-term sexual performance.
+      A flavonoid known for supporting oxidative balance and vascular responsiveness, both important for erection quality.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>3. Spirulina Blue</h3>
+    <h3>3. Epimedium (Horny Goat Weed)</h3>
     <p>
-      A nutrient-dense algae known for its antioxidant properties. Antioxidant support helps protect blood vessels and cells from oxidative stress, which can negatively affect circulation and performance with age.
+      Contains icariin-like compounds that support nitric oxide signaling, blood flow, stamina, and arousal.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>4. Inulin</h3>
+    <h3>4. Tongkat Ali (Eurycoma longifolia)</h3>
     <p>
-      A prebiotic fiber that supports gut health. A balanced gut microbiome plays a role in inflammation control, nutrient absorption, and overall vitality — all of which influence male performance.
+      Supports libido, energy levels, hormonal rhythm, and stress resilience, contributing to male vitality.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>5. Griffonia Simplicifolia (5-HTP)</h3>
+    <h3>5. Saw Palmetto</h3>
     <p>
-      Used to support serotonin pathways that influence mood, stress resilience, and emotional balance. This can be particularly helpful for men whose performance is affected by anxiety or mental tension.
+      Supports male hormonal balance and overall reproductive health.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>6. Valerian Root</h3>
+    <h3>6. Hawthorn Berry</h3>
     <p>
-      Traditionally used to promote relaxation and sleep quality. Better sleep and recovery can support testosterone balance, libido, and daily energy levels.
+      Traditionally used for cardiovascular support, helping maintain vascular tone and blood flow necessary for strong erections.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>7. Humulus Lupulus (Hops)</h3>
+    <h3>7. Cissus Quadrangularis</h3>
     <p>
-      Included for its calming properties. Hops may help reduce stress-related nervous system interference that can disrupt arousal and performance.
+      Used to support stamina, physical resilience, and recovery.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>8. Lutein</h3>
+    <h3>8. Magnesium (as Magnesium Oxide)</h3>
     <p>
-      An antioxidant compound that supports cellular protection and general wellness. Antioxidant defense contributes to healthier aging pathways relevant to sexual health.
+      Essential for nerve signaling, muscle response, sleep quality, testosterone balance, and energy metabolism.
     </p>
   </div>
 
   <div class="ingredient-card">
-    <h3>9. Black Cohosh</h3>
+    <h3>9. Zinc (as Zinc Oxide)</h3>
     <p>
-      A botanical included for its broader wellness and inflammation-balance profile. While not directly linked to erectile function, it may contribute indirectly through overall system balance.
+      Critical for male hormonal health, libido, reproductive function, and overall vitality.
     </p>
   </div>
 </div>
 
 <p>
-  <strong>Additional Ingredients:</strong> Capsule materials and standard manufacturing excipients are listed on the product label and may vary slightly by batch.
+  <strong>Additional Ingredients:</strong> None.
 </p>
 
 <!-- BUTTON INGREDIENTS -->
 <div class="ingredients-link-row" style="margin-bottom: 40px; display: flex; align-items: center; gap: 8px;">
   <div class="ingredients-link-icon"><span>→</span></div>
-  <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkly.link/ENDOPEAK" target="_blank" rel="noopener noreferrer">
     Click Here to Read Full Ingredients List
   </a>
 </div>
 
 <!-- LABEL IMAGE (zoom only) -->
 <div class="my-10 flex flex-col items-center">
-  <a href="/images/men-health/max-boost-plus/label.jpg" target="_blank" rel="noopener noreferrer">
+  <a href="/images/men-health/endopeak/label.jpg" target="_blank" rel="noopener noreferrer">
     <img
-      src="/images/men-health/max-boost-plus/label.jpg"
-      alt="Max Boost Plus supplement facts and ingredients label showing natural compounds for erectile dysfunction support"
+      src="/images/men-health/endopeak/label.jpg"
+      alt="EndoPeak supplement facts and ingredients label showing botanicals and minerals for erections, libido, circulation, stamina, and male vitality support"
       class="label-image"
     />
   </a>
   <p class="image-caption">
-    Max Boost Plus’s label highlights its ingredient profile formulated to support erection quality and sexual performance.
+    EndoPeak’s label highlights its ingredient profile formulated to support erections, libido, circulation, stamina, and overall male vitality.
   </p>
 </div>
 
 <!-- CTA 2 – Banner -->
 <div class="cta-banner">
   <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">Save $240 on the 6-Bottle Pack Deal Today</h2>
-    <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
-      Visit Official Max Boost Plus Website
+    <h2 class="cta-banner-title">Save $780 on the 6-Bottle Package Today</h2>
+    <a href="https://linkly.link/ENDOPEAK" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
+      Visit Official EndoPeak Website
     </a>
   </div>
 </div>
@@ -307,67 +307,87 @@ category: "men-health"
 <h2 id="scientific-support">Confirming What Is Scientifically Known About the Ingredients</h2>
 
 <p>
-  Although Max Boost Plus has not been clinically studied as a complete formula, several of its individual ingredients are supported by scientific research related to circulation, stress balance, metabolic health, and antioxidant protection.
+  While EndoPeak itself has not been clinically tested as a complete formula, many of its key components have been studied individually with promising results in areas linked to circulation, libido, hormonal balance, stamina, and oxidative protection.
 </p>
 
-<h3>Beetroot and Nitric Oxide Support</h3>
+<h3>Nitric Oxide & Circulation (Epimedium, Hawthorn)</h3>
 <p>
-  Dietary nitrates from beetroot are widely studied for their role in nitric oxide production and vascular function — both essential for erection quality.
+  Research shows these botanicals support vascular dilation and blood flow, which are foundational for erection firmness and endurance.
 </p>
 
-<h3>Berberine and Metabolic Health</h3>
+<h3>Libido & Hormonal Support (Tribulus, Tongkat Ali, Zinc)</h3>
 <p>
-  Berberine has been extensively researched for supporting metabolic markers, which may indirectly benefit vascular performance and energy balance.
+  These ingredients are widely researched for their roles in supporting testosterone balance, sexual motivation, and arousal responsiveness.
 </p>
 
-<h3>Stress and Recovery Ingredients</h3>
+<h3>Oxidative Stress Protection (Chrysin, Hawthorn)</h3>
 <p>
-  Compounds such as 5-HTP, valerian, and hops are commonly used to support mood stability, relaxation, and sleep quality — factors often involved in performance-related difficulties.
+  Antioxidant compounds help protect blood vessels and reproductive tissues from oxidative damage that can impair erectile performance.
 </p>
 
-<h3>Antioxidant Protection</h3>
+<h3>Stamina & Energy Metabolism (Cissus, Magnesium)</h3>
 <p>
-  Spirulina blue and lutein contribute antioxidant support, helping protect blood vessels and cells from oxidative stress associated with aging.
-</p>
-
-<h3>Gut Health and Inflammation Balance</h3>
-<p>
-  Inulin supports beneficial gut bacteria, which can influence inflammation levels and overall metabolic wellness.
+  These nutrients contribute to muscle function, metabolic efficiency, and physical resilience — important for sexual stamina.
 </p>
 
 <p>
-  Taken together, these findings support the rationale behind Max Boost Plus’s ingredient profile as a multi-pathway, non-prescription approach to supporting erection quality and sexual performance.
+  Together, these findings create a strong scientific foundation for how EndoPeak’s ingredient profile may support male performance and vitality.
 </p>
 
-<h2 id="ed-symptoms">Erectile Dysfunction — Symptoms That Indicate It’s Time to Pay Attention</h2>
+<h2 id="ed-symptoms">Erectile & Sexual Health — Symptoms That Indicate It’s Time to Pay Attention</h2>
 
 <p>
-  Erectile dysfunction often reflects deeper imbalances in circulation, stress response, and energy systems. Recognizing early symptoms can help men address performance concerns before they escalate.
+  Sexual health becomes increasingly important as men age. Erection quality and libido depend heavily on blood flow, nitric oxide signaling, hormonal balance, nerve responsiveness, and energy metabolism. When these systems are disrupted, sexual performance may gradually decline.
 </p>
 
-<h3>Common signs include:</h3>
+<p>
+  Multiple biological processes contribute to age-related sexual performance changes: reduced nitric oxide activity, vascular stiffness, hormonal fluctuations, oxidative stress, nervous-system imbalance, and metabolic slowdown. Over time, these imbalances can interfere with erection quality, stamina, and confidence. Several common male sexual health concerns may develop:
+</p>
+
+<h3>Erectile Dysfunction (ED)</h3>
+<p>
+  Difficulty achieving or maintaining a firm erection, often linked to reduced blood flow and nitric oxide signaling.
+</p>
+
+<h3>Reduced Libido</h3>
+<p>
+  Lower sexual desire associated with hormonal shifts, stress, fatigue, or nervous-system imbalance.
+</p>
+
+<h3>Circulatory Inefficiency</h3>
+<p>
+  Poor blood flow to penile tissues can reduce erection firmness and endurance.
+</p>
+
+<h3>Hormonal Imbalance</h3>
+<p>
+  Changes in testosterone rhythm may affect sexual drive, energy levels, and performance consistency.
+</p>
+
+<h3>Common signs that may indicate declining sexual health include:</h3>
 
 <ul>
-  <li>Difficulty achieving or maintaining an erection</li>
-  <li>Reduced morning erections</li>
-  <li>Low libido or reduced sexual desire</li>
-  <li>Performance anxiety during intimacy</li>
-  <li>Reduced stamina or endurance</li>
-  <li>Inconsistent erection quality</li>
+  <li>Reduced erection firmness</li>
+  <li>Erections that fade prematurely</li>
+  <li>Lower libido or reduced sexual interest</li>
+  <li>Difficulty staying aroused or focused</li>
+  <li>Declining stamina or endurance</li>
+  <li>Fewer morning erections</li>
+  <li>Sleep disruption affecting energy and desire</li>
 </ul>
 
 <p>
-  Ignoring these signs may allow underlying contributors to worsen. Supporting circulation, stress balance, and recovery — the same areas targeted by Max Boost Plus’s ingredients — can be a proactive step.
+  Ignoring these signs allows circulatory, hormonal, and metabolic strain to progress. Recognizing them early empowers men to take proactive steps — and this is where natural OTC formulas like EndoPeak can offer supportive benefits.
 </p>
 
-<h2 id="price-and-discounts">Max Boost Plus Price and Discounts</h2>
+<h2 id="price-and-discounts">EndoPeak Price and Discounts</h2>
 
 <div class="pricing-table-container">
   <table class="pricing-table">
     <thead>
       <tr>
         <th></th>
-        <th>1 Bottle</th>
+        <th>2 Bottles</th>
         <th>3 Bottles</th>
         <th class="best-value-col best-value-header">
           <div class="text-xs font-bold text-white bg-red-600 px-2 py-0.5 rounded-full mb-1 mx-auto w-fit shadow-md">
@@ -380,80 +400,119 @@ category: "men-health"
     <tbody>
       <tr>
         <td class="row-label">Supply per Package:</td>
-        <td>30-Day Supply</td>
+        <td>60-Day Supply</td>
         <td>90-Day Supply</td>
         <td class="best-value-col">180-Day Supply</td>
       </tr>
       <tr>
         <td class="row-label">Price per Unit:</td>
-        <td>$79 per bottle</td>
+        <td>$69 per bottle</td>
         <td>$59 per bottle</td>
-        <td class="best-value-col">$39 per bottle</td>
+        <td class="best-value-col">$49 per bottle</td>
       </tr>
       <tr>
         <td class="row-label bold-black">Package Price:</td>
-        <td><span class="bold-black">$79</span></td>
+        <td><span class="bold-black">$138</span></td>
         <td><span class="bold-black">$177</span></td>
-        <td class="best-value-col"><span class="bold-black">$234</span></td>
+        <td class="best-value-col"><span class="bold-black">$294</span></td>
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">not apply</span></td>
-        <td><span class="bold-black">Saving of $60</span></td>
-        <td class="best-value-col"><span class="bold-black">Saving of $240</span></td>
+        <td><span class="bold-black">Save $220</span></td>
+        <td><span class="bold-black">Save $360</span></td>
+        <td class="best-value-col"><span class="bold-black">Save $780</span></td>
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>
-        <td>–</td>
+        <td>Standard shipping</td>
         <td>Free U.S. Shipping</td>
         <td class="best-value-col">Free U.S. Shipping</td>
       </tr>
       <tr class="cta-row">
         <td class="row-label">Official Site:</td>
-        <td><a href="https://linkly.link/2Qwyc" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td><a href="https://linkly.link/2Qwyc" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td class="best-value-col"><a href="https://linkly.link/2Qwyc" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/ENDOPEAK" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/ENDOPEAK" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td class="best-value-col"><a href="https://linkly.link/ENDOPEAK" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <p class="mt-6">
-  The 6-bottle package delivers the best value — the lowest cost per bottle, total savings of $240, and Free U.S. Shipping.
+  Looking for the best deal? The 6-bottle package offers the biggest savings — just $49 per unit, plus Free U.S. Shipping — making it the most popular option for long-term male vitality support.
 </p>
 
-<h2 id="where-to-buy">Where to Buy Max Boost Plus and Guarantee</h2>
+<h2 id="where-to-buy">Where to Buy EndoPeak and Guarantee</h2>
 
 <p>
-  Max Boost Plus is sold exclusively through the official website to ensure authenticity and eligibility for refunds. Discounts are applied automatically at checkout, and every purchase is protected by a 90-day money-back guarantee.
+  EndoPeak is sold exclusively on the official website to ensure product authenticity, proper storage, and eligibility for refunds. No coupon code is required — any discount is applied automatically at checkout. The manufacturer warns against purchasing through Amazon, eBay, or third-party marketplaces due to the risk of counterfeit products.
 </p>
+
+<!-- CTA 3 – PADRÃO (centralizado) -->
+<style>
+  .cta-3-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.25rem 1.25rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .cta-3-title {
+    font-weight: 800;
+    color: #111827;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.25;
+  }
+  .cta-3-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.1rem;
+    border-radius: 12px;
+    background: #111827;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .cta-3-btn:hover {
+    opacity: 0.92;
+  }
+</style>
+
+<div class="cta-3-card">
+  <p class="cta-3-title">Visit the Full Review Before You Decide</p>
+  <a href="/reviews/endopeak" class="cta-3-btn">Go to Full Review</a>
+</div>
 
 <!-- BENEFITS IMAGE (click to hoplink) -->
 <div class="my-10 flex flex-col items-center">
-  <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkly.link/ENDOPEAK" target="_blank" rel="noopener noreferrer">
     <img
-      src="/images/men-health/max-boost-plus/benefits.png"
-      alt="Max Boost Plus 6-bottle pack – erectile dysfunction supplement with natural ingredients and 90-day guarantee"
+      src="/images/men-health/endopeak/benefits.png"
+      alt="EndoPeak bundles and guarantee – male vitality supplement supporting erections, libido, circulation, stamina, and hormonal balance"
       class="benefits-image"
     />
   </a>
   <p class="image-caption">
-    Max Boost Plus offers bundle options for long-term sexual performance support, with up to 6 months of coverage and a 90-day money-back guarantee.
+    EndoPeak offers bundle options for long-term male vitality support and is backed by a satisfaction guarantee.
   </p>
 </div>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
 <p>
-  Max Boost Plus’s ingredient blend reflects a comprehensive approach to male performance support. By targeting circulation, nitric oxide activity, stress balance, antioxidant protection, and recovery, the formula offers a realistic, non-prescription option for men seeking gradual improvements in erection quality and sexual performance.
+  EndoPeak’s ingredient synergy gives it a clear advantage for men seeking natural, multi-pathway support for erection quality, libido, stamina, circulation, and hormonal balance. While results develop gradually, consistent daily use leads to more reliable and sustainable improvements over time.
 </p>
 
 <!-- CTA 4 – Footer -->
 <div class="cta-banner">
   <div class="cta-banner-inner">
     <h2 class="cta-banner-title">Secure Checkout + Exclusive Bundles</h2>
-    <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
-      Visit Official Max Boost Plus Website
+    <a href="https://linkly.link/ENDOPEAK" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
+      Visit Official EndoPeak Website
     </a>
   </div>
 </div>
@@ -464,35 +523,28 @@ category: "men-health"
     HEALTH CONDITION TAGS
   </h3>
   <div class="flex flex-wrap gap-2 mb-6">
-    <span class="tag-item">erectile dysfunction (ED)</span>
-    <span class="tag-item">weak erections</span>
-    <span class="tag-item">difficulty maintaining an erection</span>
-    <span class="tag-item">reduced erection quality</span>
-    <span class="tag-item">low libido</span>
-    <span class="tag-item">sexual performance support</span>
-    <span class="tag-item">male performance support</span>
-    <span class="tag-item">poor blood circulation</span>
+    <span class="tag-item">erection support</span>
+    <span class="tag-item">libido support</span>
     <span class="tag-item">nitric oxide support</span>
-    <span class="tag-item">performance anxiety</span>
-    <span class="tag-item">stress-related ED</span>
-    <span class="tag-item">low stamina</span>
-    <span class="tag-item">fatigue and low energy</span>
-    <span class="tag-item">age-related sexual health</span>
-    <span class="tag-item">men’s vitality</span>
+    <span class="tag-item">circulation support</span>
+    <span class="tag-item">male vitality</span>
+    <span class="tag-item">sexual stamina</span>
+    <span class="tag-item">hormonal balance</span>
+    <span class="tag-item">erectile performance</span>
   </div>
 
   <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 1.25rem;">
     INGREDIENT TAGS
   </h3>
   <div class="flex flex-wrap gap-2">
-    <span class="tag-item">beetroot powder</span>
-    <span class="tag-item">berberine</span>
-    <span class="tag-item">spirulina blue</span>
-    <span class="tag-item">inulin</span>
-    <span class="tag-item">griffonia simplicifolia (5-HTP)</span>
-    <span class="tag-item">valerian root</span>
-    <span class="tag-item">humulus lupulus (hops)</span>
-    <span class="tag-item">lutein</span>
-    <span class="tag-item">black cohosh</span>
+    <span class="tag-item">tribulus terrestris</span>
+    <span class="tag-item">tongkat ali</span>
+    <span class="tag-item">horny goat weed</span>
+    <span class="tag-item">hawthorn berry</span>
+    <span class="tag-item">saw palmetto</span>
+    <span class="tag-item">chrysin</span>
+    <span class="tag-item">cissus quadrangularis</span>
+    <span class="tag-item">magnesium</span>
+    <span class="tag-item">zinc</span>
   </div>
 </div>
