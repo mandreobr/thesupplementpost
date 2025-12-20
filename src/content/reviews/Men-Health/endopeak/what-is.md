@@ -352,8 +352,13 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
   padding: 1.4rem 1.5rem;
-  text-align: center; /* 👈 ESSENCIAL */
   margin: 2rem 0;
+
+  display: flex;              /* 👈 chave */
+  flex-direction: column;     /* 👈 chave */
+  align-items: center;        /* 👈 centraliza horizontal */
+  justify-content: center;    /* 👈 centraliza vertical */
+  text-align: center;         /* fallback */
 }
 
 .cta-3-title {
@@ -361,8 +366,9 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
   font-size: 1.1rem;
   color: #111827;
   margin: 0 0 0.75rem 0;
-  text-align: center; /* 👈 reforço */
+  text-align: center;
 }
+
 
   .cta-3-btn {
     display: inline-flex;
