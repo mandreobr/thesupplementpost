@@ -46,10 +46,12 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 </header>
 
 <!-- KEY INSIGHTS -->
+<style>
 .key-insights li {
-  margin-bottom: 12px;
-  line-height: 1.2;
+  margin-bottom: 14px;
+  line-height: 1.3;
 }
+</style>
 
 <div class="key-insights">
   <ul>
