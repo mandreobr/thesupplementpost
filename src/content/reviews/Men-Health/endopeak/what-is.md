@@ -11,7 +11,7 @@ heroImage: "/images/men-health/endopeak/hero.png"
 heroAlt: "EndoPeak male enhancement supplement bottle – natural capsules for erections, libido, and stamina support"
 heroCaption: "EndoPeak is a natural capsule-based supplement designed to support erection quality, libido, stamina, and healthy circulation."
 
-primaryCtaLabel: "Save $780 On The 6-Bottle Pack Deal Today"
+primaryCtaLabel: "Save $120 On The 6-Bottle Pack Deal Today"
 primaryCtaUrl: "##ENDOPEAK_HOPLINK##"
 
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
@@ -270,7 +270,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 <!-- CTA 2 – Banner (azul) -->
 <div class="cta-banner">
   <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">Save $780 On The 6-Bottle Pack Deal Today</h2>
+    <h2 class="cta-banner-title">Save $120 On The 6-Bottle Pack Deal Today</h2>
     <a href="##ENDOPEAK_HOPLINK##" class="cta-banner-button">Visit Official EndoPeak Website</a>
   </div>
 </div>
@@ -313,9 +313,9 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $220</span></td>
-        <td><span class="bold-black">Save $360</span></td>
-        <td class="best-value-col"><span class="bold-black">Save $780</span></td>
+        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
+        <td class="best-value-col"><span class="bold-black">Save $120</span></td>
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>

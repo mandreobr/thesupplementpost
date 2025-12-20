@@ -183,7 +183,7 @@ Its nine active ingredients work across multiple biological pathways, delivering
 <div class="cta-banner">
   <div class="cta-banner-inner">
     <h2 class="cta-banner-title">
-      Save $780 On The 6-Bottle Pack Deal Today
+      Save $120 On The 6-Bottle Pack Deal Today
     </h2>
     <a
       href="https://linkly.link/2R0io"
@@ -425,10 +425,10 @@ By addressing these systems together, EndoPeak supports erection quality, stamin
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $220</span></td>
-        <td><span class="bold-black">Save $360</span></td>
+        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
         <td class="best-value-col">
-          <span class="bold-black">Save $780</span>
+          <span class="bold-black">Save $120</span>
         </td>
       </tr>
       <tr>
