@@ -49,7 +49,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 <style>
 /* Key Insights – Introductory Section */
 .key-insights {
-  font-size: 0.92rem;        /* Fonte levemente menor */
+  font-size: 0.88rem;        /* Fonte levemente menor */
 }
 
 .key-insights li {
