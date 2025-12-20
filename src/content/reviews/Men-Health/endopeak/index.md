@@ -486,7 +486,7 @@ EndoPeak is available exclusively on the official website. Every purchase is pro
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/endopeak/benefits.png"
+      src="/images/men-health/endopeak/benefits.png"
       alt="EndoPeak bundle options – male enhancement supplement with 60-day guarantee and savings on multi-bottle packages"
       class="benefits-image"
     />
