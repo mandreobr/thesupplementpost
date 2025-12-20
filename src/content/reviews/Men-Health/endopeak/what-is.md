@@ -53,7 +53,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 }
 
 .key-insights li {
-  margin-bottom: 16px;       /* Espaçamento entre os itens */
+  margin-bottom: 20px;       /* Espaçamento entre os itens */
   line-height: 1.4;          /* Conforto de leitura */
   text-align: justify;       /* Texto justificado */
   text-justify: inter-word;
