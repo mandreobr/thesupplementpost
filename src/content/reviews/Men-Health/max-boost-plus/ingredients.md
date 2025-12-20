@@ -60,10 +60,10 @@ category: "men-health"
 
 <div class="key-insights">
   <ul>
-    <li>Targets multiple male performance pathways, including nitric oxide production, circulation, hormonal balance, stamina, and libido.</li>
-    <li>Formulated around blood flow and nitric oxide support, two core factors behind erection quality and endurance.</li>
-    <li>Uses clinically studied botanicals and minerals linked to male vitality, hormonal rhythm, and sexual performance.</li>
-    <li>Designed for daily, long-term use, focusing on sustainable results rather than short-term stimulation.</li>
+    <li><strong>Targets multiple male performance pathways</strong>, including nitric oxide production, circulation, hormonal balance, stamina, and libido.</li>
+    <li><strong>Formulated around blood flow and nitric oxide support</strong>, two core factors behind erection quality and endurance.</li>
+    <li><strong>Uses clinically studied botanicals and minerals linked to male vitality</strong>, hormonal rhythm, and sexual performance.</li>
+    <li><strong>Designed for daily, long-term use</strong>, focusing on sustainable results rather than short-term stimulation.</li>
   </ul>
 </div>
 
@@ -297,7 +297,7 @@ category: "men-health"
 <!-- CTA 2 – Banner -->
 <div class="cta-banner">
   <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">Save $780 on the 6-Bottle Package Today</h2>
+    <h2 class="cta-banner-title">Save $120 on the 6-Bottle Package Today</h2>
     <a href="https://linkly.link/ENDOPEAK" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
       Visit Official EndoPeak Website
     </a>
@@ -418,9 +418,9 @@ category: "men-health"
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $220</span></td>
-        <td><span class="bold-black">Save $360</span></td>
-        <td class="best-value-col"><span class="bold-black">Save $780</span></td>
+        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
+        <td class="best-value-col"><span class="bold-black">Save $120</span></td>
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>

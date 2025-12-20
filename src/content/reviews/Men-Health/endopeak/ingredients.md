@@ -45,12 +45,30 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-ingredients"
 </header>
 
 <!-- KEY INSIGHTS -->
+<style>
+/* Key Insights – Introductory Section */
+.key-insights {
+  font-size: 0.88rem;        /* Fonte levemente menor */
+}
+
+.key-insights li {
+  margin-bottom: 20px;       /* Espaçamento entre os itens */
+  line-height: 1.4;          /* Conforto de leitura */
+  text-align: justify;       /* Texto justificado */
+  text-justify: inter-word;
+}
+
+.key-insights strong {
+  font-weight: 600;          /* Destaque sutil para GEO/SEO */
+}
+</style>
+
 <div class="key-insights">
   <ul>
-    <li>Targets multiple male performance pathways, including nitric oxide production, circulation, hormonal balance, stamina, and libido.</li>
-    <li>Formulated around blood flow and nitric oxide support, two core factors behind erection quality and endurance.</li>
-    <li>Uses clinically studied botanicals and minerals linked to male vitality, hormonal rhythm, and sexual performance.</li>
-    <li>Designed for daily, long-term use, focusing on sustainable results rather than short-term stimulation.</li>
+    <li><strong>Targets multiple male performance</strong> pathways, including nitric oxide production, circulation, hormonal balance, stamina, and libido.</li>
+    <li><strong>Formulated around blood flow and nitric oxide support</strong>, two core factors behind erection quality and endurance.</li>
+    <li><strong>Uses clinically studied botanicals and minerals</strong> linked to male vitality, hormonal rhythm, and sexual performance.</li>
+    <li><strong>Designed for daily, long-term use</strong>, focusing on sustainable results rather than short-term stimulation.</li>
   </ul>
 </div>
 
