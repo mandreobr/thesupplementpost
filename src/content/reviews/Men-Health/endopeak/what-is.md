@@ -46,6 +46,11 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 </header>
 
 <!-- KEY INSIGHTS -->
+.key-insights li {
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
 <div class="key-insights">
   <ul>
     <li>EndoPeak is a natural, daily male enhancement supplement designed to support erections, libido, stamina, circulation, and overall male vitality.</li>
