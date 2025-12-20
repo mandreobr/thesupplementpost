@@ -331,6 +331,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-what-is"
     font-weight: 800;
     font-size: 1.1rem;
     color: #111827;
+    text-align: center;
     margin: 0 0 0.75rem 0;
   }
 
