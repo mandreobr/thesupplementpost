@@ -4,7 +4,7 @@ description: "Read our comprehensive review of EndoPeak, the natural OTC formula
 pageTitle: "EndoPeak Review 2026: Male Enhancement Supplement Buyer’s Guide"
 metaDescription: "Explore EndoPeak review 2026 buyer’s guide. Learn how this natural male enhancement supplement supports erections, libido, circulation, and male vitality."
 slug: "endopeak"
-heroImage: "/images/Men-Health/endopeak/hero.png"
+heroImage: "/images/men-health/endopeak/hero.png"
 heroAlt: "EndoPeak male enhancement supplement bottle – natural formula for erections, libido, circulation, and male vitality"
 heroCaption: "EndoPeak is a natural male-enhancement supplement designed to support erections, libido, blood flow, stamina, and overall male performance."
 primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
@@ -33,7 +33,7 @@ category: "men-health"
       rel="noopener noreferrer"
     >
       <img
-        src="/images/Men-Health/endopeak/hero.png"
+        src="/images/men-health/endopeak/hero.png"
         alt="EndoPeak male enhancement supplement bottle – natural formula for erections, libido, circulation, and male vitality"
         class="hero-image"
       />
@@ -51,18 +51,38 @@ Understanding how EndoPeak supports erection quality, sexual confidence, and lon
 <div class="intro-box">
   Sexual performance depends on much more than desire — it is an integration of healthy circulation, nitric oxide signaling, vascular responsiveness, hormonal balance, nervous-system regulation, sleep quality, and physical stamina.
 </div>
-
-<p>
-As men age or experience chronic stress, these systems may weaken, leading to reduced erection firmness, inconsistent performance, lower libido, and diminished confidence.
-</p>
-
-<p>
-EndoPeak is a natural male-enhancement formula designed to reinforce these foundational pathways. With nine targeted botanicals and essential minerals traditionally used to support circulation, hormonal rhythm, nitric oxide activity, stamina, and sexual vitality, EndoPeak follows a multi-pathway approach focused on gradual, sustainable improvement rather than short-term stimulation.
-</p>
-
-<p>
-This review examines EndoPeak in depth — including symptoms it addresses, ingredient profile, mechanisms of action, scientific rationale, safety considerations, pricing, pros &amp; cons, and frequently asked questions.
-</p>
+<style>
+  .mini-toc {
+    margin: 2rem 0 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.98rem;
+    color: #111827;
+  }
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
+</style>
 
 <!-- TABLE OF CONTENTS -->
 <div class="mini-toc">
@@ -85,6 +105,18 @@ This review examines EndoPeak in depth — including symptoms it addresses, ingr
     <li><a href="#faqs">Frequently Asked Questions (FAQs)</a></li>
   </ul>
 </div>
+<p>
+As men age or experience chronic stress, these systems may weaken, leading to reduced erection firmness, inconsistent performance, lower libido, and diminished confidence.
+</p>
+
+<p>
+EndoPeak is a natural male-enhancement formula designed to reinforce these foundational pathways. With nine targeted botanicals and essential minerals traditionally used to support circulation, hormonal rhythm, nitric oxide activity, stamina, and sexual vitality, EndoPeak follows a multi-pathway approach focused on gradual, sustainable improvement rather than short-term stimulation.
+</p>
+
+<p>
+This review examines EndoPeak in depth — including symptoms it addresses, ingredient profile, mechanisms of action, scientific rationale, safety considerations, pricing, pros &amp; cons, and frequently asked questions.
+</p>
+
 
 <!-- CTA 1 – Banner -->
 <div class="cta-banner">
@@ -237,12 +269,12 @@ EndoPeak combines nine active ingredients traditionally associated with male vit
 <!-- LABEL IMAGE (zoom only) -->
 <div class="my-10 flex flex-col items-center">
   <a
-    href="/images/Men-Health/endopeak/label.jpg"
+    href="/images/men-health/endopeak/label.jpg"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/endopeak/label.jpg"
+      src="/images/men-health/endopeak/label.jpg"
       alt="EndoPeak supplement facts and ingredients label showing tribulus, tongkat ali, horny goat weed, hawthorn, magnesium, and zinc"
       class="label-image"
     />
