@@ -348,19 +348,22 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 <!-- CTA 3 – Full Review -->
 <style>
   .cta-3-card {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 1rem;
-    padding: 1.4rem 1.5rem;
-    text-align: center;
-    margin: 2rem 0;
-  }
-  .cta-3-title {
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: #111827;
-    margin: 0 0 0.75rem 0;
-  }
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+  text-align: center; /* 👈 ESSENCIAL */
+  margin: 2rem 0;
+}
+
+.cta-3-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+  text-align: center; /* 👈 reforço */
+}
+
   .cta-3-btn {
     display: inline-flex;
     align-items: center;
