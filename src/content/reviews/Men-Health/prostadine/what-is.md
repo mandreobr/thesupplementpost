@@ -318,22 +318,27 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-what-is"
 
 <!-- CTA 3 – Full Review -->
 <style>
-  .cta-3-card {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 1rem;
-    padding: 1.4rem 1.5rem;
-    text-align: center;
-    margin: 2rem 0;
-  }
+.cta-3-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+  margin: 2rem 0;
 
-  .cta-3-title {
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: #111827;
-    text-align: center;
-    margin: 0 0 0.75rem 0;
-  }
+  display: flex;              /* 👈 chave */
+  flex-direction: column;     /* 👈 chave */
+  align-items: center;        /* 👈 centraliza horizontal */
+  justify-content: center;    /* 👈 centraliza vertical */
+  text-align: center;         /* fallback */
+}
+
+.cta-3-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
 
   .cta-3-btn {
     display: inline-flex;
