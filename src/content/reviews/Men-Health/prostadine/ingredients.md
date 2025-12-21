@@ -39,6 +39,34 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-ingredients"
   </div>
 </header>
 
+<!-- KEY INSIGHTS -->
+<style>
+/* Key Insights – Introductory Section */
+.key-insights {
+  font-size: 0.92rem;        /* Fonte levemente menor */
+}
+
+.key-insights li {
+  margin-bottom: 16px;       /* Espaçamento entre os itens */
+  line-height: 1.4;          /* Conforto de leitura */
+  text-align: justify;       /* Texto justificado */
+  text-justify: inter-word;
+}
+
+.key-insights strong {
+  font-weight: 600;          /* Destaque sutil para GEO/SEO */
+}
+</style>
+
+<div class="key-insights">
+  <ul>
+    <li>Prostadine is a natural liquid supplement designed to support prostate health, urinary flow, and bladder comfort through daily use.</li>
+    <li>The formula combines 9 ingredients, including seaweed extracts, saw palmetto, and pomegranate, targeting inflammation, oxidative stress, and cellular balance.</li>
+    <li>Marine algae ingredients provide iodine, polyphenols, and fucoidans that help support urinary tract protection and prostate function.</li>
+    <li>Prostadine focuses on long-term prostate and urinary support rather than immediate symptom relief, with results depending on consistent use.</li>
+  </ul>
+</div>
+
 <div class="intro-box">
   Prostadine’s formula is built around a focused list of natural ingredients that work together to support urinary flow, inflammation balance, and long-term prostate comfort — without stimulants or aggressive pharmaceuticals.
 </div>
