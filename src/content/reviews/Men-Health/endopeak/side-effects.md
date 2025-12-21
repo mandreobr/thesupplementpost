@@ -386,6 +386,53 @@ category: "men-health"
   EndoPeak is sold exclusively through the official website to ensure product authenticity, proper storage, and eligibility for refunds. No coupon code is required — discounts are applied automatically at checkout. The manufacturer warns against purchasing through Amazon, eBay, or third-party marketplaces due to the risk of counterfeit products.
 </p>
 
+<!-- CTA 3 – Full Review -->
+<style>
+  .cta-3-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+  margin: 2rem 0;
+
+  display: flex;              /* 👈 chave */
+  flex-direction: column;     /* 👈 chave */
+  align-items: center;        /* 👈 centraliza horizontal */
+  justify-content: center;    /* 👈 centraliza vertical */
+  text-align: center;         /* fallback */
+}
+
+.cta-3-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+
+
+  .cta-3-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.1rem;
+    border-radius: 0.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: #2563eb;
+    text-decoration: none;
+    transition: background 0.15s ease-in-out;
+  }
+  .cta-3-btn:hover {
+    background: #1d4ed8;
+  }
+</style>
+
+<div class="cta-3-card">
+  <p class="cta-3-title">Visit the Full Review Before You Decide</p>
+  <a href="/reviews/endopeak" class="cta-3-btn">Go to Full Review</a>
+</div>
+
 <h2 id="final-thoughts">Final Thoughts</h2>
 
 <p>

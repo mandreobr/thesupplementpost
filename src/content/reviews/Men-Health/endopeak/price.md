@@ -124,6 +124,14 @@ category: "men-health"
   The manufacturer positions EndoPeak as a daily support system for long-term male performance rather than a short-term or stimulant-based solution, making bundle pricing an important consideration.
 </p>
 
+<!-- BUTTON INGREDIENTS -->
+<div class="ingredients-link-row" style="margin: 1.2rem 0 2rem 0; display: flex; align-items: center; gap: 8px;">
+  <div class="ingredients-link-icon"><span>→</span></div>
+  <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer">
+    Click Here to Read Full Ingredients List
+  </a>
+</div>
+
 <h2 id="price-and-discounts">EndoPeak Price and Discounts</h2>
 
 <div class="pricing-table-container">
@@ -163,7 +171,7 @@ category: "men-health"
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
         <td><span class="bold-black">—</span></td>
-        <td><span class="bold-black">Save $300</span></td>
+        <td><span class="bold-black">Save $30</span></td>
         <td class="best-value-col"><span class="bold-black">Save $120</span></td>
       </tr>
       <tr>
@@ -235,6 +243,53 @@ category: "men-health"
 <p>
   Recognizing these symptoms early helps men take proactive steps — and for those considering daily supplementation, choosing the right package can make consistent use more affordable.
 </p>
+
+<!-- CTA 3 – Full Review -->
+<style>
+  .cta-3-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.4rem 1.5rem;
+  margin: 2rem 0;
+
+  display: flex;              /* 👈 chave */
+  flex-direction: column;     /* 👈 chave */
+  align-items: center;        /* 👈 centraliza horizontal */
+  justify-content: center;    /* 👈 centraliza vertical */
+  text-align: center;         /* fallback */
+}
+
+.cta-3-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+
+
+  .cta-3-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.1rem;
+    border-radius: 0.9rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: #2563eb;
+    text-decoration: none;
+    transition: background 0.15s ease-in-out;
+  }
+  .cta-3-btn:hover {
+    background: #1d4ed8;
+  }
+</style>
+
+<div class="cta-3-card">
+  <p class="cta-3-title">Visit the Full Review Before You Decide</p>
+  <a href="/reviews/endopeak" class="cta-3-btn">Go to Full Review</a>
+</div>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 
