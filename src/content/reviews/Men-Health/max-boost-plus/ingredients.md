@@ -317,19 +317,6 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/max-boost-plus-ingredie
   </p>
 </div>
 
-<!-- IMAGE BENEFITS -->
-<div class="my-10 flex flex-col items-center">
-  <a href="https://linkly.link/2Qwyc">
-    <img
-      src="/images/men-health/max-boost-plus/benefits.png"
-      alt="Max Boost Plus 6-bottle pack – erectile dysfunction supplement with natural ingredients and 90-day guarantee"
-      class="label-image"
-    />
-  </a>
-  <p class="image-caption">
-    Max Boost Plus offers bundle options for long-term sexual performance support, with up to 6 months of coverage and a 90-day money-back guarantee.
-  </p>
-</div>
 
 <!-- CTA 2 – Banner (azul) -->
 <div class="cta-banner">
@@ -482,6 +469,20 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/max-boost-plus-ingredie
 <p class="mt-6">
   The 6-bottle package delivers the best value — the lowest cost per bottle, total savings of $240, and Free U.S. Shipping.
 </p>
+
+<!-- IMAGE BENEFITS -->
+<div class="my-10 flex flex-col items-center">
+  <a href="https://linkly.link/2Qwyc">
+    <img
+      src="/images/men-health/max-boost-plus/benefits.png"
+      alt="Max Boost Plus 6-bottle pack – erectile dysfunction supplement with natural ingredients and 90-day guarantee"
+      class="label-image"
+    />
+  </a>
+  <p class="image-caption">
+    Max Boost Plus offers bundle options for long-term sexual performance support, with up to 6 months of coverage and a 90-day money-back guarantee.
+  </p>
+</div>
 
 <h2 id="where-to-buy">Where to Buy Max Boost Plus and Guarantee</h2>
 
