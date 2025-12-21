@@ -4,7 +4,7 @@ description: "Discover the full list of EndoPeak ingredients and how each suppor
 pageTitle: "EndoPeak Ingredients List – What’s Inside the Formula"
 metaDescription: "Discover the full list of EndoPeak ingredients and how each supports male enhancement, circulation, libido, and stamina."
 slug: "endopeak-ingredients"
-heroImage: "/images/Men-Health/endopeak/hero.png"
+heroImage: "/images/men-health/endopeak/hero.png"
 heroAlt: "EndoPeak male enhancement supplement bottle – natural formula for erections, libido, circulation, and male vitality"
 heroCaption: "EndoPeak is a natural male-enhancement supplement designed to support erections, libido, blood flow, stamina, and overall male performance."
 primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
@@ -28,7 +28,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-ingredients"
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2R0io">
       <img
-        src="/images/Men-Health/endopeak/hero.png"
+        src="/images/men-health/endopeak/hero.png"
         alt="EndoPeak male enhancement supplement bottle – natural formula for erections, libido, circulation, and male vitality"
         class="hero-image"
       />
@@ -302,12 +302,12 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-ingredients"
 <!-- LABEL IMAGE (zoom only) -->
 <div class="my-10 flex flex-col items-center">
   <a
-    href="/images/Men-Health/endopeak/label.jpg"
+    href="/images/men-health/endopeak/label.jpg"
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      src="/images/Men-Health/endopeak/label.jpg"
+      src="/images/men-health/endopeak/label.jpg"
       alt="EndoPeak supplement facts and ingredients label showing tribulus, tongkat ali, horny goat weed, hawthorn berry, and zinc"
       class="label-image"
     />
@@ -455,7 +455,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-ingredients"
 <div class="my-10 flex flex-col items-center">
   <a href="https://linkly.link/2R0io">
     <img
-      src="/images/Men-Health/endopeak/benefits.png"
+      src="/images/men-health/endopeak/benefits.png"
       alt="EndoPeak 6-bottle pack – male enhancement supplement with natural ingredients and 60-day guarantee"
       class="label-image"
     />
