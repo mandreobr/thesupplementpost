@@ -128,14 +128,12 @@ category: "men-health"
   The product is positioned as a wellness-based option for men who prefer gradual improvement and long-term support instead of fast-acting pharmaceutical solutions.
 </p>
 
-<!-- CTA 1 -->
-<div class="cta-banner">
-  <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">Secure Checkout + Exclusive Bundles</h2>
-    <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
-      Visit Official Max Boost Plus Website
-    </a>
-  </div>
+<!-- BUTTON INGREDIENTS -->
+<div class="ingredients-link-row" style="margin: 1.2rem 0 2rem 0; display: flex; align-items: center; gap: 8px;">
+  <div class="ingredients-link-icon"><span>→</span></div>
+  <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer">
+    Click Here to Read Full Ingredients List
+  </a>
 </div>
 
 <h2 id="ed-symptoms">Erectile Dysfunction — Symptoms You Shouldn’t Ignore and Why Max Boost Plus May Help</h2>
