@@ -560,7 +560,7 @@ EndoPeak is generally well tolerated due to its natural, stimulant-free formula.
 Men with medical conditions or those using medications related to hormones, cardiovascular health, or mood should consult a healthcare professional. Not intended for individuals under 18.
 </p>
 
-<!-- CTA 3 – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
+<!-- CTA Official Website – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
 <style>
   .cta-3-container {
     background: #ffffff;
