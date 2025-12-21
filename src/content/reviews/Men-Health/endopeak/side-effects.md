@@ -265,7 +265,7 @@ category: "men-health"
 <!-- CTA 3 – Banner (MODEL FIXO: texto centralizado) -->
 <div class="cta-banner">
   <div class="cta-banner-inner" style="text-align:center;">
-    <h2 class="cta-banner-title" style="text-align:center;">Save $780 on the 6-Bottle Pack Deal Today</h2>
+    <h2 class="cta-banner-title" style="text-align:center;">Save $120 on the 6-Bottle Pack Deal Today</h2>
     <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer" class="cta-banner-button" style="margin-left:auto; margin-right:auto;">
       Visit Official EndoPeak Website
     </a>
@@ -356,9 +356,9 @@ category: "men-health"
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $220</span></td>
-        <td><span class="bold-black">Save $360</span></td>
-        <td class="best-value-col"><span class="bold-black">Save $780</span></td>
+        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
+        <td class="best-value-col"><span class="bold-black">Save $120</span></td>
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>
