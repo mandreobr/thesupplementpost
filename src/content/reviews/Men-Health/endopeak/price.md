@@ -244,51 +244,57 @@ category: "men-health"
   Recognizing these symptoms early helps men take proactive steps — and for those considering daily supplementation, choosing the right package can make consistent use more affordable.
 </p>
 
-<!-- CTA 3 – Full Review -->
+<!-- CTA 3 – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
 <style>
-  .cta-3-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  padding: 1.4rem 1.5rem;
-  margin: 2rem 0;
+  .cta-3-container {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+  }
 
-  display: flex;              /* 👈 chave */
-  flex-direction: column;     /* 👈 chave */
-  align-items: center;        /* 👈 centraliza horizontal */
-  justify-content: center;    /* 👈 centraliza vertical */
-  text-align: center;         /* fallback */
-}
-
-.cta-3-title {
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: #111827;
-  margin: 0 0 0.75rem 0;
-  text-align: center;
-}
-
-
-  .cta-3-btn {
+  .cta-3-link {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.85rem 1.1rem;
-    border-radius: 0.9rem;
-    font-weight: 800;
-    color: #ffffff;
-    background: #2563eb;
-    text-decoration: none;
-    transition: background 0.15s ease-in-out;
+    gap: 0.5rem;
+    width: 100%;
   }
-  .cta-3-btn:hover {
-    background: #1d4ed8;
+
+  .cta-3-text {
+    text-decoration: underline;
+  }
+
+  .cta-3-arrow {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #2563eb;
+    animation: arrowMove 1.1s infinite ease-in-out;
+  }
+
+  @keyframes arrowMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
   }
 </style>
 
-<div class="cta-3-card">
-  <p class="cta-3-title">Visit the Full Review Before You Decide</p>
-  <a href="/reviews/endopeak" class="cta-3-btn">Go to Full Review</a>
+<div class="cta-3-container">
+  <a
+    href="https://www.thesupplementpost.com/reviews/endopeak"
+    class="cta-3-link"
+  >
+    <span class="cta-3-arrow">➜</span>
+    <span class="cta-3-text">Visit the Full EndoPeak Review Before You Decide</span>
+  </a>
 </div>
 
 <h2 id="final-thoughts">Final Thoughts</h2>

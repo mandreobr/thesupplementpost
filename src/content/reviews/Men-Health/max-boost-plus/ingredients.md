@@ -448,43 +448,57 @@ category: "men-health"
   EndoPeak is sold exclusively on the official website to ensure product authenticity, proper storage, and eligibility for refunds. No coupon code is required — any discount is applied automatically at checkout. The manufacturer warns against purchasing through Amazon, eBay, or third-party marketplaces due to the risk of counterfeit products.
 </p>
 
-<!-- CTA 3 – PADRÃO (centralizado) -->
+<!-- CTA 3 – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
 <style>
-  .cta-3-card {
-    background: #f9fafb;
+  .cta-3-container {
+    background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 14px;
-    padding: 1.25rem 1.25rem;
-    margin: 2rem 0;
+    border-radius: 1rem;
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    margin: 2rem 0;
   }
-  .cta-3-title {
-    font-weight: 800;
-    color: #111827;
+
+  .cta-3-link {
+    color: #2563eb;
+    font-weight: 600;
     font-size: 1.05rem;
-    margin: 0 0 0.75rem 0;
-    line-height: 1.25;
-  }
-  .cta-3-btn {
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.1rem;
-    border-radius: 12px;
-    background: #111827;
-    color: #ffffff;
-    font-weight: 800;
-    text-decoration: none;
-    line-height: 1;
+    gap: 0.5rem;
+    width: 100%;
   }
-  .cta-3-btn:hover {
-    opacity: 0.92;
+
+  .cta-3-text {
+    text-decoration: underline;
+  }
+
+  .cta-3-arrow {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #2563eb;
+    animation: arrowMove 1.1s infinite ease-in-out;
+  }
+
+  @keyframes arrowMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
   }
 </style>
 
-<div class="cta-3-card">
-  <p class="cta-3-title">Visit the Full Review Before You Decide</p>
-  <a href="/reviews/endopeak" class="cta-3-btn">Go to Full Review</a>
+<div class="cta-3-container">
+  <a
+    href="https://www.thesupplementpost.com/reviews/max-boost-plus"
+    class="cta-3-link"
+  >
+    <span class="cta-3-arrow">➜</span>
+    <span class="cta-3-text">Visit the Full Max Boost Plus Review Before You Decide</span>
+  </a>
 </div>
 
 <!-- BENEFITS IMAGE (click to hoplink) -->
