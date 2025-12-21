@@ -560,6 +560,59 @@ EndoPeak is generally well tolerated due to its natural, stimulant-free formula.
 Men with medical conditions or those using medications related to hormones, cardiovascular health, or mood should consult a healthcare professional. Not intended for individuals under 18.
 </p>
 
+<!-- CTA 3 – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
+<style>
+  .cta-3-container {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .cta-3-link {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .cta-3-text {
+    text-decoration: underline;
+  }
+
+  .cta-3-arrow {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #2563eb;
+    animation: arrowMove 1.1s infinite ease-in-out;
+  }
+
+  @keyframes arrowMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+  }
+</style>
+
+<div class="cta-3-container">
+  <a
+    href="https://linkly.link/2R0io"
+    class="cta-3-link"
+  >
+    <span class="cta-3-arrow">➜</span>
+    <span class="cta-3-text">Visit the Official Website. No coupon needed — Discounts are applied automatically</span>
+  </a>
+</div>
+
 <h2 id="conclusion">Conclusion</h2>
 
 <p>
