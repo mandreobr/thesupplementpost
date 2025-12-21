@@ -307,6 +307,16 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-pros-and-cons"
   </div>
 </div>
 
+<!-- CTA 2 – Banner -->
+<div class="cta-banner">
+  <div class="cta-banner-inner" style="text-align:center;">
+    <h2 class="cta-banner-title" style="text-align:center;">Save $120 on the 6-Bottle Pack Deal Today</h2>
+    <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer" class="cta-banner-button" style="margin-left:auto; margin-right:auto;">
+      Visit Official EndoPeak Website
+    </a>
+  </div>
+</div>
+
 <h2 id="complaints-mixed-reviews">EndoPeak Complaints &amp; Mixed Reviews</h2>
 
 <p>
