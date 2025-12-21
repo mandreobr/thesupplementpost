@@ -12,10 +12,10 @@ heroAlt: "EndoPeak male enhancement supplement bottle – natural capsules for e
 heroCaption: "EndoPeak is a natural capsule-based supplement designed to support erection quality, libido, stamina, and healthy circulation."
 
 primaryCtaLabel: "Save $120 On The 6-Bottle Pack Deal Today"
-primaryCtaUrl: "##ENDOPEAK_HOPLINK##"
+primaryCtaUrl: "https://linkly.link/2R0io"
 
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
-footerCtaUrl: "##ENDOPEAK_HOPLINK##"
+footerCtaUrl: "https://linkly.link/2R0io"
 footerText: "© 2026 The Supplement Post. All rights reserved."
 
 category: "men-health"
@@ -32,7 +32,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
   </p>
 
   <div class="my-6 flex flex-col items-center">
-    <a href="##ENDOPEAK_HOPLINK##">
+    <a href="https://linkly.link/2R0io">
       <img
         src="/images/men-health/endopeak/hero.png"
         alt="EndoPeak male enhancement supplement bottle – natural capsules for erections, libido, and stamina support"
@@ -261,7 +261,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 <!-- Button Ingredients -->
 <div class="my-6 flex justify-center">
   <a
-    href="##ENDOPEAK_HOPLINK##"
+    href="https://linkly.link/2R0io"
     class="inline-flex items-center justify-center px-5 py-3 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-700 transition"
   >
     Click Here to Read Full Ingredients List
@@ -290,7 +290,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 <div class="cta-banner">
   <div class="cta-banner-inner">
     <h2 class="cta-banner-title">Save $120 On The 6-Bottle Pack Deal Today</h2>
-    <a href="##ENDOPEAK_HOPLINK##" class="cta-banner-button">Visit Official EndoPeak Website</a>
+    <a href="https://linkly.link/2R0io" class="cta-banner-button">Visit Official EndoPeak Website</a>
   </div>
 </div>
 
@@ -344,9 +344,9 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
       </tr>
       <tr class="cta-row">
         <td class="row-label">Official Site:</td>
-        <td><a href="##ENDOPEAK_HOPLINK##" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td><a href="##ENDOPEAK_HOPLINK##" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td class="best-value-col"><a href="##ENDOPEAK_HOPLINK##" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2R0io" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2R0io" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td class="best-value-col"><a href="https://linkly.link/2R0io" class="text-primary hover:underline font-bold">Shop Now</a></td>
       </tr>
     </tbody>
   </table>
@@ -437,7 +437,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-what-is"
 <div class="cta-banner">
   <div class="cta-banner-inner">
     <h2 class="cta-banner-title">Secure Checkout + Exclusive Bundles</h2>
-    <a href="##ENDOPEAK_HOPLINK##" class="cta-banner-button">Visit Official EndoPeak Website</a>
+    <a href="https://linkly.link/2R0io" class="cta-banner-button">Visit Official EndoPeak Website</a>
   </div>
 </div>
 
