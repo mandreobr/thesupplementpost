@@ -311,6 +311,15 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-pros-and-con
   </div>
 </div>
 
+<!-- CTA 2 – Banner (azul após a seção de preços) -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2 class="cta-banner-title">Save $120 On The 6-Bottle Pack Deal Today</h2>
+    <a href="https://linkly.link/2LziG" class="cta-banner-button">
+      Visit Official Prostadine Website
+    </a>
+  </div>
+</div>
 
 <h2 id="complaints-mixed-reviews">Prostadine Complaints &amp; Mixed Reviews</h2>
 

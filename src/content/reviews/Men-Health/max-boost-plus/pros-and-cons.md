@@ -313,6 +313,16 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/max-boost-plus-pros-and
   </div>
 </div>
 
+<!-- CTA 2 – Banner -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2 class="cta-banner-title">Save $240 on the 6-Bottle Pack Deal Today</h2>
+    <a href="https://linkly.link/2Qwyc" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
+      Visit Official Max Boost Plus Website
+    </a>
+  </div>
+</div>
+
 <h2 id="complaints-mixed-reviews">Max Boost Plus Complaints &amp; Mixed Reviews</h2>
 
 <p>
