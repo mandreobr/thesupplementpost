@@ -9,9 +9,9 @@ heroImage: "/images/men-health/endopeak/hero.png"
 heroAlt: "EndoPeak dietary supplement bottle – natural male enhancement support for erections, libido, circulation, stamina, and vitality"
 heroCaption: "EndoPeak is a natural over-the-counter supplement designed to support erection quality, libido, stamina, and healthy circulation."
 primaryCtaLabel: "Secure Checkout + Exclusive Bundles"
-primaryCtaUrl: "PASTE_ENDOPEAK_HOPLINK_HERE"
+primaryCtaUrl: "https://linkly.link/2R0io"
 footerCtaLabel: "Secure Checkout + Exclusive Bundles"
-footerCtaUrl: "PASTE_ENDOPEAK_HOPLINK_HERE"
+footerCtaUrl: "https://linkly.link/2R0io"
 footerText: "© 2026 The Supplement Post. All rights reserved."
 category: "men-health"
 ---
@@ -26,7 +26,7 @@ category: "men-health"
   </p>
 
   <div class="my-6 flex flex-col items-center">
-    <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer">
+    <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer">
       <img
         src="/images/men-health/endopeak/hero.png"
         alt="EndoPeak dietary supplement bottle – natural male enhancement support for erections, libido, circulation, stamina, and vitality"
@@ -159,7 +159,7 @@ category: "men-health"
 <!-- BUTTON INGREDIENTS -->
 <div class="ingredients-link-row" style="margin: 1.2rem 0 2rem 0; display: flex; align-items: center; gap: 8px;">
   <div class="ingredients-link-icon"><span>→</span></div>
-  <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer">
     Click Here to Read Full Ingredients List
   </a>
 </div>
@@ -250,7 +250,7 @@ category: "men-health"
 
 <!-- BENEFITS IMAGE (click to hoplink) -->
 <div class="my-10 flex flex-col items-center">
-  <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer">
+  <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer">
     <img
       src="/images/men-health/endopeak/benefits.png"
       alt="EndoPeak bundle options – male enhancement supplement with natural ingredients and refund policy"
@@ -266,7 +266,7 @@ category: "men-health"
 <div class="cta-banner">
   <div class="cta-banner-inner" style="text-align:center;">
     <h2 class="cta-banner-title" style="text-align:center;">Save $120 on the 6-Bottle Pack Deal Today</h2>
-    <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer" class="cta-banner-button" style="margin-left:auto; margin-right:auto;">
+    <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer" class="cta-banner-button" style="margin-left:auto; margin-right:auto;">
       Visit Official EndoPeak Website
     </a>
   </div>
@@ -368,9 +368,9 @@ category: "men-health"
       </tr>
       <tr class="cta-row">
         <td class="row-label">Official Site:</td>
-        <td><a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td><a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td class="best-value-col"><a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2R0io" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2R0io" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td class="best-value-col"><a href="https://linkly.link/2R0io" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
       </tr>
     </tbody>
   </table>
@@ -449,7 +449,7 @@ category: "men-health"
 <div class="cta-banner">
   <div class="cta-banner-inner">
     <h2 class="cta-banner-title">Secure Checkout + Exclusive Bundles</h2>
-    <a href="PASTE_ENDOPEAK_HOPLINK_HERE" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
+    <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
       Visit Official EndoPeak Website
     </a>
   </div>
