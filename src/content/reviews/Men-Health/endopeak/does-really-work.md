@@ -241,79 +241,88 @@ category: "men-health"
 <h2 id="ingredients">What Ingredients Are in EndoPeak?</h2>
 
 <p>
-  EndoPeak contains a proprietary blend of botanicals and essential minerals known for their supportive roles in circulation, libido, hormonal balance, stamina, and male vitality. Below is a breakdown of its key actives.
+EndoPeak combines nine active ingredients traditionally associated with male vitality, circulation, stamina, hormonal balance, and reproductive health.
 </p>
 
 <h3>Key Active Ingredients</h3>
 
-<h3>1. Tribulus Terrestris</h3>
+<div class="ingredient-card-list">
+  <div class="ingredient-card">
+    <h3>1. Tribulus Terrestris — 500 mg</h3>
+    <p>
+      Traditionally linked to libido, sexual motivation, and vitality. Supports androgenic balance and arousal readiness.
+    </p>
+  </div>
+
+  <div class="ingredient-card">
+    <h3>2. Chrysin (Oroxylum indicum) — 50 mg</h3>
+    <p>
+      A flavonoid known for supporting oxidative balance and vascular responsiveness, both important for erection quality.
+    </p>
+  </div>
+
+  <div class="ingredient-card">
+    <h3>3. Epimedium (Horny Goat Weed) — 50 mg</h3>
+    <p>
+      Contains icariin-like compounds that support nitric oxide signaling, blood flow, stamina, and arousal.
+    </p>
+  </div>
+
+  <div class="ingredient-card">
+    <h3>4. Tongkat Ali (Eurycoma longifolia) — 33.3 mg</h3>
+    <p>
+      Supports libido, energy, hormonal rhythm, and stress resilience. Commonly used for male vitality support.
+    </p>
+  </div>
+
+  <div class="ingredient-card">
+    <h3>5. Saw Palmetto — 33.3 mg</h3>
+    <p>
+      Supports male hormonal balance and overall reproductive health.
+    </p>
+  </div>
+
+  <div class="ingredient-card">
+    <h3>6. Hawthorn Berry — 33.3 mg</h3>
+    <p>
+      Traditionally used for cardiovascular and circulatory support. Helps maintain vascular tone and blood flow needed for firm erections.
+    </p>
+  </div>
+</div>
+
 <p>
-  Traditionally used to support libido, sexual motivation, and vitality, helping promote arousal readiness.
+<strong>Additional Ingredients:</strong> Cissus Quadrangularis — 33.3 mg; Magnesium (as Magnesium Oxide) — 133.3 mg; Zinc (as Zinc Oxide) — 20 mg.
 </p>
 
-<h3>2. Chrysin (Oroxylum indicum)</h3>
-<p>
-  A flavonoid that supports antioxidant balance and vascular responsiveness important for erectile performance.
-</p>
-
-<h3>3. Epimedium (Horny Goat Weed)</h3>
-<p>
-  Contains icariin-like compounds associated with nitric oxide signaling, blood flow, stamina, and arousal.
-</p>
-
-<h3>4. Tongkat Ali (Eurycoma longifolia)</h3>
-<p>
-  Supports libido, hormonal rhythm, energy levels, and stress resilience.
-</p>
-
-<h3>5. Saw Palmetto</h3>
-<p>
-  Supports male hormonal balance and overall reproductive health.
-</p>
-
-<h3>6. Hawthorn Berry</h3>
-<p>
-  Traditionally used for cardiovascular support, helping maintain blood flow necessary for firm erections.
-</p>
-
-<h3>7. Cissus Quadrangularis</h3>
-<p>
-  Supports stamina, physical resilience, and recovery.
-</p>
-
-<h3>8. Magnesium (as Magnesium Oxide)</h3>
-<p>
-  Essential for nerve function, muscle response, sleep quality, testosterone balance, and energy metabolism.
-</p>
-
-<h3>9. Zinc (as Zinc Oxide)</h3>
-<p>
-  Critical for male hormonal health, libido, reproductive function, and vitality.
-</p>
-
-<p>
-  <strong>Additional Ingredients:</strong> None.
-</p>
-
-<!-- BUTTON INGREDIENTS -->
-<div class="ingredients-link-row" style="margin: 1.2rem 0 2rem 0; display: flex; align-items: center; gap: 8px;">
-  <div class="ingredients-link-icon"><span>→</span></div>
-  <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer">
+<!-- LINK "CLICK HERE TO READ FULL INGREDIENTS LIST" -->
+<div class="ingredients-link-row" style="margin-bottom: 40px; display: flex; align-items: center; gap: 8px;">
+  <div class="ingredients-link-icon">
+    <span>→</span>
+  </div>
+  <a
+    href="https://linkly.link/2R0io"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     Click Here to Read Full Ingredients List
   </a>
 </div>
 
-<!-- BENEFITS IMAGE -->
+<!-- LABEL IMAGE (zoom only) -->
 <div class="my-10 flex flex-col items-center">
-  <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer">
+  <a
+    href="/images/men-health/endopeak/label.jpg"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img
-      src="/images/men-health/endopeak/benefits.png"
-      alt="EndoPeak 6-bottle pack – male enhancement supplement with natural ingredients and 60-day guarantee"
-      class="benefits-image"
+      src="/images/men-health/endopeak/label.jpg"
+      alt="EndoPeak supplement facts and ingredients label showing tribulus, tongkat ali, horny goat weed, hawthorn, magnesium, and zinc"
+      class="label-image"
     />
   </a>
   <p class="image-caption">
-    EndoPeak offers bundle options for long-term male performance and vitality support, with up to 6 months of coverage and a 60-day money-back guarantee.
+    EndoPeak’s label highlights its 9 key ingredients formulated to support circulation, libido, stamina, and male vitality.
   </p>
 </div>
 
@@ -394,6 +403,20 @@ category: "men-health"
 <p>
   EndoPeak is sold exclusively on the official website to ensure product authenticity, proper storage, and eligibility for refunds. No coupon code is required — discounts are applied automatically at checkout. The manufacturer warns against purchasing through Amazon, eBay, or third-party marketplaces due to counterfeit risks.
 </p>
+
+<!-- BENEFITS IMAGE -->
+<div class="my-10 flex flex-col items-center">
+  <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer">
+    <img
+      src="/images/men-health/endopeak/benefits.png"
+      alt="EndoPeak 6-bottle pack – male enhancement supplement with natural ingredients and 60-day guarantee"
+      class="benefits-image"
+    />
+  </a>
+  <p class="image-caption">
+    EndoPeak offers bundle options for long-term male performance and vitality support, with up to 6 months of coverage and a 60-day money-back guarantee.
+  </p>
+</div>
 
 <!-- CTA 3 – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
 <style>
