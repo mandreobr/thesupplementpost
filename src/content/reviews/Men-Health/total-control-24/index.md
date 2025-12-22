@@ -48,6 +48,17 @@ category: "men-health"
 Explore how TC24’s natural OTC supplement supports urine stream strength and bladder comfort — without a prescription, as a dietary supplement, not a medication.
 </p>
 
+<div class="key-insights">
+  <p class="mini-toc-title" style="margin-bottom: 0.75rem;">Key Insights</p>
+  <ul class="mini-toc-list">
+    <li>Once-daily natural supplement designed to support urinary flow, prostate comfort, and male vitality</li>
+    <li>Multi-pathway formula targeting inflammation, circulation, oxidative stress, and hormonal balance</li>
+    <li>Includes clinically referenced ingredients such as saw palmetto, pygeum, and jaboticaba polyphenols</li>
+    <li>Supports prostate tissue health, urinary comfort, and antioxidant protection with consistent use</li>
+    <li>Backed by bundle discounts and a 60-day money-back guarantee for low-risk long-term support</li>
+  </ul>
+</div>
+
 <div class="intro-box">
   A natural OTC prostate-support complex designed to improve urinary comfort, circulation, and long-term male vitality.
 </div>
