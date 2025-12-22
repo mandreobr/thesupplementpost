@@ -245,44 +245,68 @@ Rather than acting as a stimulant or hormone-altering product, FlowForce Max is 
 
 <h2 id="positive-reviews">Positive Reviews – What’s Working for Users</h2>
 
-<p>Users commonly report:</p>
-<ul>
-  <li>Stronger, more consistent urine flow</li>
-  <li>Reduced nighttime bathroom trips</li>
-  <li>Improved bladder comfort and urgency control</li>
-</ul>
+<style>
+  .benefit-box-list {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1.5rem 0 2.25rem;
+  }
+  @media (min-width: 768px) {
+    .benefit-box-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .benefit-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 5px solid #2563eb;
+    border-radius: 0.9rem;
+    padding: 1.1rem 1.25rem;
+  }
+  .benefit-box-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.6rem 0;
+    color: #111827;
+  }
+  .benefit-box-items {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .benefit-box-items li {
+    margin-bottom: 0.4rem;
+    font-size: 0.96rem;
+    color: #374151;
+  }
+</style>
 
-<p>Across reviews, frequently mentioned benefits include:</p>
+<div class="benefit-box-list">
+  <div class="benefit-box">
+    <p class="benefit-box-title">Users frequently mention:</p>
+    <ul class="benefit-box-items">
+      <li>Stronger, more consistent urine flow over time</li>
+      <li>Fewer nighttime bathroom trips (nocturia improvement)</li>
+      <li>Less urgency and better bladder comfort during the day</li>
+    </ul>
+  </div>
 
-<div class="review-box">
-  <div class="review-grid">
-    <div class="review-item">
-      <h3>Calmer bladder sensations</h3>
-      <p>
-        Men often describe a more settled feeling after urination, with less “irritated” or reactive bladder sensations throughout the day.
-      </p>
-    </div>
+  <div class="benefit-box">
+    <p class="benefit-box-title">Across reports, common benefits include:</p>
+    <ul class="benefit-box-items">
+      <li>A calmer “bladder sensation” with fewer sudden urges</li>
+      <li>Reduced pelvic pressure and improved day-to-day comfort</li>
+      <li>Better sleep quality when nighttime frequency decreases</li>
+    </ul>
+  </div>
+</div>
 
-    <div class="review-item">
-      <h3>Less pelvic pressure</h3>
-      <p>
-        A recurring theme is reduced heaviness and tension in the pelvic area, especially at night or after long periods of sitting.
-      </p>
-    </div>
-
-    <div class="review-item">
-      <h3>Improved daily comfort</h3>
-      <p>
-        Some users note better day-to-day comfort with fewer sudden urges that disrupt routine activities.
-      </p>
-    </div>
-
-    <div class="review-item">
-      <h3>Better sleep quality</h3>
-      <p>
-        When nighttime frequency improves, many men report more continuous sleep and better morning energy.
-      </p>
-    </div>
+<!-- CTA 2 – Banner -->
+<div class="cta-banner">
+  <div class="cta-banner-inner" style="text-align:center;">
+    <h2 class="cta-banner-title" style="text-align:center;">Save $120 on the 6-Bottle Pack Deal Today</h2>
+    <a href="https://linkly.link/2R0io" target="_blank" rel="noopener noreferrer" class="cta-banner-button" style="margin-left:auto; margin-right:auto;">
+      Visit Official EndoPeak Website
+    </a>
   </div>
 </div>
 
