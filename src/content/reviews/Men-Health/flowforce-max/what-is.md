@@ -45,9 +45,27 @@ footerText: "© 2026 The Supplement Post. All rights reserved."
   </div>
 </header>
 
+<!-- KEY INSIGHTS -->
+<style>
+/* Key Insights – Introductory Section */
+.key-insights {
+  font-size: 0.86rem;        /* Fonte levemente menor */
+}
+
+.key-insights li {
+  margin-bottom: 24px;       /* Espaçamento entre os itens */
+  line-height: 1.4;          /* Conforto de leitura */
+  text-align: justify;       /* Texto justificado */
+  text-justify: inter-word;
+}
+
+.key-insights strong {
+  font-weight: 600;          /* Destaque sutil para GEO/SEO */
+}
+</style>
+
 <div class="key-insights">
-  <p class="mini-toc-title" style="margin-bottom: 0.75rem;">Key Insights</p>
-  <ul class="mini-toc-list">
+  <ul>
     <li>FlowForce Max is a chewable, natural supplement designed to support urinary flow, prostate comfort, and bladder health in aging men.</li>
     <li>The formula targets multiple pathways linked to lower urinary tract symptoms (LUTS), including inflammation, circulation, oxidative stress, and microbial balance.</li>
     <li>Clinically referenced ingredients like flower pollen extract, saw palmetto, and ViNitrox® support urine flow, pelvic circulation, and nighttime urinary comfort.</li>
@@ -456,4 +474,4 @@ FlowForce Max stands out for its chewable format and multi-pathway approach to u
   </div>
 </div>
 
-© 2026 The Supplement Post. All rights reserved.
+
