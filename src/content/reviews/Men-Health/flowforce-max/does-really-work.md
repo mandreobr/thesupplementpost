@@ -197,41 +197,93 @@ Flower pollen extract has been clinically associated with smoother urine flow, r
 Yes — FlowForce Max may work for men seeking natural urinary and prostate support. Many users report gradual improvements such as smoother urine flow, reduced urgency, fewer nighttime bathroom trips, and greater day-to-day comfort. As with most natural formulas, consistent use over several weeks is essential to experience meaningful results.
 </p>
 
-<h2 id="ingredients">What Ingredients Are in FlowForce Max?</h2>
+<h2 id="ingredients-explained">Key FlowForce Max Ingredients Explained</h2>
 
 <p>
-FlowForce Max contains a targeted blend of natural ingredients selected for their roles in urinary comfort, inflammation control, circulation, and microbial balance.
+FlowForce Max contains a carefully selected blend of natural ingredients chosen for their supportive roles in urinary flow, microbial balance, antioxidant protection, and pelvic circulation. Below is a detailed breakdown of its key actives.
 </p>
 
-<h3>Key Active Ingredients</h3>
+<h3>Key Active Ingredients:</h3>
 
-<p><strong>1. Graminex® Flower Pollen Extract</strong><br />
-Clinically referenced for supporting urinary flow, reducing nighttime frequency, easing pelvic pressure, and improving overall lower urinary tract comfort.
-</p>
+<div class="ingredient-card-list">
+  <div class="ingredient-card">
+    <h3>1. Graminex® Flower Pollen Extract</h3>
+    <p>
+      One of the most researched natural ingredients for urinary and prostate comfort. Clinical studies associate standardized flower pollen extract with improvements in urine flow, reduced nighttime urination, decreased pelvic pressure, and overall lower urinary tract comfort.
+    </p>
+  </div>
 
-<p><strong>2. Saw Palmetto Fruit Extract</strong><br />
-Supports hormonal balance related to DHT metabolism and may help maintain healthy urine flow.
-</p>
+  <div class="ingredient-card">
+    <h3>2. Saw Palmetto Fruit Extract</h3>
+    <p>
+      Widely studied for prostate support, saw palmetto helps maintain hormonal balance related to DHT metabolism and may support urinary flow and comfort in aging men.
+    </p>
+  </div>
 
-<p><strong>3. ViNitrox® (Grape + Apple Polyphenols)</strong><br />
-Supports nitric oxide pathways and pelvic microcirculation, which are important for prostate tissue health.
-</p>
+  <div class="ingredient-card">
+    <h3>3. ViNitrox® (Grape + Apple Polyphenols)</h3>
+    <p>
+      A premium polyphenol blend studied for supporting nitric oxide production and circulation. Improved pelvic microcirculation supports oxygen and nutrient delivery to prostate and bladder tissues.
+    </p>
+  </div>
 
-<p><strong>4. Fisetin</strong><br />
-Provides antioxidant and anti-inflammatory support that helps protect cells from age-related oxidative stress.
-</p>
+  <div class="ingredient-card">
+    <h3>4. Fisetin</h3>
+    <p>
+      A flavonoid with antioxidant and anti-inflammatory properties. Fisetin helps protect cells from oxidative stress and supports long-term tissue resilience associated with healthy aging.
+    </p>
+  </div>
 
-<p><strong>5. Luteolin</strong><br />
-Known for anti-inflammatory and antifungal activity, relevant when microbial imbalance contributes to urinary irritation.
-</p>
+  <div class="ingredient-card">
+    <h3>5. Luteolin</h3>
+    <p>
+      Luteolin demonstrates anti-inflammatory, antioxidant, and antifungal activity. Its role is particularly relevant where microbial imbalance contributes to urinary irritation and sensitivity.
+    </p>
+  </div>
 
-<p><strong>6. Monolaurin</strong><br />
-Supports microbial balance and biofilm disruption, helping maintain a cleaner urinary environment.
-</p>
+  <div class="ingredient-card">
+    <h3>6. Monolaurin</h3>
+    <p>
+      Known for its ability to disrupt biofilms and support microbial balance. Monolaurin helps reduce persistent microbial triggers that may contribute to urinary discomfort.
+    </p>
+  </div>
+</div>
 
 <p>
-Additional ingredients include oregano extract, grape seed extract, Muira puama, peppermint extract, perilla leaf extract, tricalcium phosphate, magnesium stearate, silk protein, and sucralose, which complement the formula’s multi-pathway design.
+Additional ingredients include oregano extract, grape seed extract, Muira puama, peppermint extract, perilla leaf extract, tricalcium phosphate, magnesium stearate, silk protein, and sucralose. Several of these compounds offer complementary antioxidant or antimicrobial support, reinforcing FlowForce Max’s multi-pathway formulation.
 </p>
+
+<!-- LINK "CLICK HERE TO READ FULL INGREDIENTS LIST" -->
+<div class="ingredients-link-row" style="margin-bottom: 40px; display: flex; align-items: center; gap: 8px;">
+  <div class="ingredients-link-icon">
+    <span>→</span>
+  </div>
+  <a
+    href="https://linkly.link/2R1gT"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Click Here to Read Full Ingredients List
+  </a>
+</div>
+
+<!-- LABEL IMAGE (zoom only) -->
+<div class="my-10 flex flex-col items-center">
+  <a
+    href="/images/men-health/flowforce-max/label.jpg"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/images/men-health/flowforce-max/label.jpg"
+      alt="FlowForce Max supplement facts label showing ingredients for urinary flow and bladder support"
+      class="label-image"
+    />
+  </a>
+  <p class="image-caption">
+    The FlowForce Max label displays its ingredient profile designed to support urinary flow and bladder comfort.
+  </p>
+</div>
 
 <h2 id="pricing">FlowForce Max Price and Discounts</h2>
 
