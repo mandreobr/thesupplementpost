@@ -404,7 +404,7 @@ Taken together, these mechanisms align with current understanding of erectile ph
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
         <td><span class="bold-black">Save $--</span></td>
-        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
         <td class="best-value-col">
           <span class="bold-black">Save $120</span>
         </td>
