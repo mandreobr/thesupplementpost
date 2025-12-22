@@ -117,7 +117,7 @@ layout: "../../../../layouts/MiniReviewIngredientsLayout.astro"
 <div class="mini-toc">
   <p class="mini-toc-title">In this guide:</p>
   <ul class="mini-toc-list">
-    <li><a href="#what-is">What Is TC24?</a></li>
+    <li><a href="#what-is">What Is TC24 for Frequent Urination and Bladder Control?</a></li>
     <li><a href="#why-ingredients-matter">Why TC24 Ingredients Matter</a></li>
     <li><a href="#key-ingredients">Key TC24 Ingredients Explained</a></li>
     <li><a href="#science">Confirming What Is Scientifically Known About the Ingredients</a></li>
@@ -128,7 +128,7 @@ layout: "../../../../layouts/MiniReviewIngredientsLayout.astro"
   </ul>
 </div>
 
-<h2 id="what-is">What Is TC24?</h2>
+<h2 id="what-is">What Is TC24 for Frequent Urination and Bladder Control?</h2>
 
 <p>
   TC24 (Total Control 24) is a natural, once-daily urinary and prostate-support supplement formulated to support urine stream strength, bladder comfort, and urinary flow balance. It blends nine active ingredients selected to reinforce several biological systems linked to urinary symptoms — including inflammation balance, oxidative stress protection, circulation support, and male hormone metabolism.
