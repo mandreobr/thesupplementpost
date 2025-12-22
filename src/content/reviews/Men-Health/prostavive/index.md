@@ -292,16 +292,47 @@ Together, these ingredients form a multi-angle complex intended to support prost
 <h2 id="science">Confirming What Is Scientifically Known About the Ingredients</h2>
 
 <p>
-While Prostavive itself has not been presented here as a clinically tested finished product, several ingredients commonly used in prostate-focused and men’s vitality formulas have scientific backgrounds when studied individually.
+Prostavive itself is not presented here as a clinically tested finished product, so the strongest evidence we can discuss comes from research on its <em>individual ingredients</em> and the biological pathways they influence. In prostate-support supplements, the most relevant “evidence questions” are usually practical: can the ingredients plausibly support urinary comfort, reduce nighttime urgency, and help men feel more control — especially when symptoms are tied to inflammation, oxidative stress, and age-related hormonal shifts?
 </p>
 
 <p>
-Research and scientific summaries often discuss how certain botanicals (such as nettle root and ginseng) and supportive nutrients may relate to urinary comfort, antioxidant defense, stress balance, and healthy hormone metabolism. The most responsible way to interpret this is as a “biologically plausible rationale” for the formula — not a guarantee of results.
+From a scientific perspective, many OTC prostate formulas are built around a few recurring mechanisms: <strong>inflammation balance</strong>, <strong>antioxidant protection</strong>, <strong>smooth muscle and urinary tract comfort</strong>, and <strong>hormone-related pathways</strong> (often discussed in the context of DHT and age-related prostate changes). Prostavive’s ingredient profile fits this “multi-pathway” strategy — not as proof of results, but as a reasonable formulation logic.
 </p>
 
 <p>
-Taken together, Prostavive’s ingredient profile aligns with the broader evidence base used to formulate many OTC men’s health supplements: support inflammation balance, antioxidant protection, and healthy metabolic/hormone pathways that may influence prostate comfort over time.
+<strong>Nettle Root (prostate and urinary comfort)</strong><br />
+Nettle root is one of the more common botanicals in prostate-focused routines because it is frequently discussed in relation to urinary comfort and hormone metabolism that may influence prostate aging. In ingredient-level research and reviews, nettle is often examined for its role in supporting day-to-day urinary function — which matters for symptoms men notice most (nocturia, weak stream, urgency, and incomplete emptying).
 </p>
+
+<p>
+<strong>Panax Ginseng (energy, resilience, and perceived vitality)</strong><br />
+Panax ginseng has a long research history in the context of vitality and performance. For men dealing with sleep disruption from nighttime urination, “energy support” is not just a generic claim — it can influence how men perceive quality of life while they work on consistent lifestyle and supplement routines. Ginseng is commonly studied for fatigue, physical endurance, and stress-related performance strain, which may indirectly support day-to-day wellbeing while urinary symptoms are being managed gradually.
+</p>
+
+<p>
+<strong>Ashwagandha (stress response and sleep-related downstream effects)</strong><br />
+Stress and poor sleep don’t directly “cause” prostate issues, but they often worsen how symptoms feel — especially urgency and nighttime awakenings. Ashwagandha is widely used as an adaptogen to support stress resilience, and this is one reason it appears in multi-ingredient men’s wellness formulas. When men are waking at night, improving stress balance and recovery quality can meaningfully affect perceived symptom burden and daytime comfort.
+</p>
+
+<p>
+<strong>Tongkat Ali + Fenugreek + Boron (hormone metabolism support)</strong><br />
+Prostavive also includes ingredients commonly used in men’s vitality formulas that focus on healthy hormone metabolism. Importantly, these are not “testosterone boosters” in a medication sense — but they are often selected because they are discussed in research and traditional use around hormonal rhythm, vitality, and age-related metabolic support. Since prostate comfort is frequently discussed alongside hormone-related pathways (including DHT-related conversations), these ingredients provide a plausible rationale for why the product is positioned as supporting “balance” rather than only urinary flow.
+</p>
+
+<p>
+<strong>Artichoke Extract (antioxidant and metabolic support)</strong><br />
+Oxidative stress and metabolic strain are recurring themes in aging-related tissue discomfort. Artichoke extract is often used in wellness formulas for its antioxidant profile and metabolic support associations. In the context of prostate support positioning, antioxidants matter because they help explain why many formulations include botanicals aimed at protecting tissues from ongoing oxidative pressure rather than only “symptom relief.”
+</p>
+
+<p>
+<strong>Maca Root (stamina and wellbeing)</strong><br />
+Maca is commonly included in men’s wellness routines for stamina and vitality. While it is not a prostate-specific botanical, it fits the broader positioning of supporting overall male wellbeing — particularly for men who feel run down from disrupted sleep and ongoing nighttime bathroom trips.
+</p>
+
+<p>
+The key takeaway is this: ingredient-level research can support a <strong>biologically plausible rationale</strong> for Prostavive’s design — especially its emphasis on inflammation/oxidative balance, stress resilience, and hormone metabolism in the context of prostate aging. However, because finished-product clinical trials are not presented here, the most responsible interpretation remains that outcomes depend on individual baseline health, consistency, and time (often weeks to months), not an instant guaranteed effect.
+</p>
+
 
 <h2 id="does-it-work">Does Prostavive Really Work?</h2>
 
