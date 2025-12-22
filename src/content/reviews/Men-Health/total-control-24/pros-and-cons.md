@@ -108,7 +108,7 @@ category: "men-health"
   <p class="mini-toc-title">In this guide:</p>
   <ul class="mini-toc-list">
     <li><a href="#symptoms">Prostate &amp; Urinary Health — Symptoms That Indicate It’s Time to Pay Attention</a></li>
-    <li><a href="#what-is">What Is TC24?</a></li>
+    <li><a href="#what-is">What Is TC24 for Enlarged Prostate Treatment?</a></li>
     <li><a href="#pros-cons">TC24 Pros &amp; Cons</a></li>
     <li><a href="#positive-reviews">Positive Reviews – What’s Working for Users</a></li>
     <li><a href="#complaints">Complaints &amp; Mixed Reviews – What Some Users Don’t Love</a></li>
@@ -139,7 +139,7 @@ category: "men-health"
   TC24 is positioned to support these concerns gradually by supporting inflammation balance, antioxidant defenses, circulation efficiency, and hormonal metabolism — systems commonly linked to long-term urinary comfort.
 </p>
 
-<h2 id="what-is">What Is TC24?</h2>
+<h2 id="what-is">What Is TC24 for Enlarged Prostate Treatment?</h2>
 
 <p>
   TC24 (Total Control 24) is a natural over-the-counter urinary and prostate-support supplement designed to support urine stream strength, bladder comfort, and urinary flow balance. It combines classic prostate botanicals (such as saw palmetto and pygeum) with antioxidant-rich compounds (including jaboticaba polyphenols) and supportive ingredients positioned to support circulation and male hormone metabolism.
