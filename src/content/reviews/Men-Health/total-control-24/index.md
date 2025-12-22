@@ -305,36 +305,37 @@ Total Control 24 contains nine active ingredients that work synergistically to s
 <h2 id="science">Confirming What Is Scientifically Known About the Ingredients</h2>
 
 <p>
-While TC24 itself has not been evaluated in clinical trials, many of its ingredients have strong scientific backgrounds.
+While Total Control 24 itself has not been evaluated in large-scale clinical trials, its formulation is built around ingredients that have been individually studied for their roles in prostate health, urinary function, circulation, inflammation balance, and hormonal regulation.
 </p>
 
 <p>
-Pygeum Africanum has been shown in research to improve urinary flow and reduce nighttime urination.
+Pygeum Africanum has been evaluated in multiple human studies for lower urinary tract symptoms associated with prostate enlargement, with research indicating improvements in urine flow rate, reduced nighttime urination, and better bladder emptying through inflammation balance within prostate tissues.
 </p>
 
 <p>
-Saw Palmetto is widely studied for its role in DHT metabolism and urinary comfort.
+Saw Palmetto is one of the most extensively researched botanical ingredients for prostate support, with scientific literature linking it to healthy DHT metabolism, reduced prostate tissue sensitivity, and improvements in urinary comfort, flow consistency, and urgency.
 </p>
 
 <p>
-Jaboticaba Polyphenols provide potent antioxidant defense supporting tissue resilience.
+Jaboticaba Polyphenols are rich in anthocyanins and antioxidant compounds shown to defend prostate cells against oxidative stress, a key factor in age-related tissue decline and inflammation.
 </p>
 
 <p>
-Lipophytol® is associated with improved circulation and nutrient transport.
+Lipophytol® is associated with enhanced microcirculation and improved delivery of oxygen and nutrients into prostate tissues, supporting metabolic efficiency and urinary function as circulation naturally declines with age.
 </p>
 
 <p>
-Boron supports hormonal balance and testosterone availability.
+Boron plays a documented role in hormonal regulation by supporting testosterone availability and metabolic balance, which are important for maintaining prostate tissue stability and reducing sensitivity to inflammatory stimuli.
 </p>
 
 <p>
-Neem and Vitamin E derivatives provide antimicrobial and antioxidant support.
+Neem and vitamin E derivatives, including tocopheryl nicotinate, contribute antimicrobial and antioxidant activity that supports cellular protection, tissue resilience, and a balanced urinary environment.
 </p>
 
 <p>
-Together, these mechanisms form a biologically sound rationale for the formula’s prostate-support role.
+Together, these mechanisms address inflammation, oxidative stress, circulation efficiency, and hormonal balance, forming a coherent, evidence-informed rationale for Total Control 24’s role as a long-term prostate support formula.
 </p>
+
 
 <h2 id="does-it-work">Does Total Control 24 Really Work?</h2>
 
