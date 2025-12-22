@@ -107,7 +107,7 @@ category: "men-health"
 <div class="mini-toc">
   <p class="mini-toc-title">In this guide:</p>
   <ul class="mini-toc-list">
-    <li><a href="#what-is-tc24">What Is TC24?</a></li>
+    <li><a href="#what-is-tc24">What Is TC24 for Enlarged Prostate Treatment?</a></li>
     <li><a href="#pricing">TC24 Price and Discounts</a></li>
     <li><a href="#where-to-buy">Where to Buy TC24 and Guarantee</a></li>
     <li><a href="#why-official-website">Why Buy From the Official Website?</a></li>
@@ -116,7 +116,7 @@ category: "men-health"
   </ul>
 </div>
 
-<h2 id="what-is-tc24">What Is TC24?</h2>
+<h2 id="what-is-tc24">What Is TC24 for Enlarged Prostate Treatment?</h2>
 
 <p>
   TC24 (Total Control 24) is a natural over-the-counter urinary and prostate-support supplement designed to support urine stream strength, bladder comfort, and urinary flow balance. It is positioned as a daily, long-term formula rather than a quick fix, which is why bundle pricing is a major factor for many buyers.
