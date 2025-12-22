@@ -327,7 +327,9 @@ category: "men-health"
         <th>1 Jar</th>
         <th>3 Jars</th>
         <th class="best-value-col best-value-header">
-          <div class="text-xs font-bold text-white bg-red-600 px-2 py-0.5 rounded-full mb-1 mx-auto w-fit shadow-md">
+          <div
+            class="text-xs font-bold text-white bg-red-600 px-2 py-0.5 rounded-full mb-1 mx-auto w-fit shadow-md"
+          >
             BEST VALUE!
           </div>
           <span class="font-bold text-gray-900 block">6 Jars</span>
@@ -343,42 +345,71 @@ category: "men-health"
       </tr>
       <tr>
         <td class="row-label">Price per Unit:</td>
-        <td>$69 per jar</td>
-        <td>$59 per jar</td>
-        <td class="best-value-col">$49 per jar</td>
+        <td>$69.00 per jar</td>
+        <td>$59.00 per jar</td>
+        <td class="best-value-col">$49.00 per jar</td>
       </tr>
-
       <tr>
         <td class="row-label bold-black">Package Price:</td>
         <td><span class="bold-black">$69</span></td>
         <td><span class="bold-black">$177</span></td>
-        <td class="best-value-col"><span class="bold-black">$294</span></td>
+        <td class="best-value-col">
+          <span class="bold-black">$294</span>
+        </td>
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $0</span></td>
         <td><span class="bold-black">Save $30</span></td>
-        <td class="best-value-col"><span class="bold-black">Save $120</span></td>
+        <td class="best-value-col">
+          <span class="bold-black">Save $120</span>
+        </td>
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>
         <td>Standard shipping</td>
-        <td>Free U.S. Shipping</td>
+        <td class="best-value-col">Free U.S. Shipping</td>
         <td class="best-value-col">Free U.S. Shipping</td>
       </tr>
       <tr class="cta-row">
         <td class="row-label">Official Site:</td>
-        <td><a href="https://linkly.link/2W3Vn" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td><a href="https://linkly.link/2W3Vn" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td class="best-value-col"><a href="https://linkly.link/2W3Vn" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td>
+          <a href="https://linkly.link/2W3Vn" class="text-primary hover:underline font-bold">
+            Shop Now
+          </a>
+        </td>
+        <td>
+          <a href="https://linkly.link/2W3Vn" class="text-primary hover:underline font-bold">
+            Shop Now
+          </a>
+        </td>
+        <td class="best-value-col">
+          <a href="https://linkly.link/2W3Vn" class="text-primary hover:underline font-bold">
+            Shop Now
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <p class="mt-6">
-  Looking for the best deal? The 6-jar package gives you the biggest savings and Free U.S. Shipping, making it the most cost-effective option for long-term erectile and performance support.
+  Looking for the best deal? The 6-jar package offers the biggest savings — just $49 per unit, plus Free U.S. Shipping — making it the most popular option for long-term sexual performance support.
 </p>
+
+<!-- IMAGE BENEFITS (click to hoplink) -->
+<div class="my-10 flex flex-col items-center">
+  <a href="https://linkly.link/2W3Vn">
+    <img
+      src="/images/men-health/nitric-boost/benefits.png"
+      alt="Nitric Boost 6-jar pack – erectile dysfunction supplement with natural ingredients and 180-day guarantee"
+      class="label-image"
+    />
+  </a>
+  <p class="image-caption">
+    Nitric Boost offers bundle options for long-term sexual performance support, with up to 6 months of coverage and a 180-day money-back guarantee.
+  </p>
+</div>
 
 <h2 id="where-to-buy">Where to Buy Nitric Boost and Guarantee</h2>
 
