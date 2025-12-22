@@ -1,5 +1,5 @@
 ---
-title: "TC24 Side Effects and Safety Facts Explained"
+title: "TC24 Side Effects and Long-Term Use Explained"
 description: "Is TC24 safe? Learn about its natural ingredients, possible side effects, and safety considerations before buying."
 pageTitle: "TC24 Side Effects and Safety Facts Explained"
 metaDescription: "Is TC24 safe? Learn about its natural ingredients, possible side effects, and safety considerations before buying."
@@ -14,7 +14,6 @@ footerCtaLabel: "Secure Checkout + Exclusive Bundles"
 footerCtaUrl: "https://linkly.link/2RIOy"
 footerText: "© 2026 The Supplement Post. All rights reserved."
 category: "men-health"
-layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
 ---
 
 <header class="mb-10 text-center">
@@ -23,11 +22,11 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
   </h1>
 
   <p class="text-lg md:text-xl text-gray-600 font-medium mb-8">
-    Everything you need to know about TC24’s safety profile, tolerability, and ingredient purity.
+    Understanding TC24’s safety profile, tolerability, and what to expect when starting this natural urinary flow supplement.
   </p>
 
   <div class="my-6 flex flex-col items-center">
-    <a href="https://linkly.link/2RIOy">
+    <a href="https://linkly.link/2RIOy" target="_blank" rel="noopener noreferrer">
       <img
         src="/images/men-health/total-control-24/hero.png"
         alt="TC24 dietary supplement bottle – natural urinary flow support formula for urine stream strength and bladder comfort"
@@ -42,43 +41,34 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
 
 <!-- KEY INSIGHTS -->
 <style>
-/* Key Insights – Introductory Section */
 .key-insights {
-  font-size: 0.88rem;
+  font-size: 0.86rem;       
 }
 
 .key-insights li {
-  margin-bottom: 20px;
-  line-height: 1.4;
-  text-align: justify;
+  margin-bottom: 24px;       
+  line-height: 1.4;          
+  text-align: justify;       
   text-justify: inter-word;
 }
 
 .key-insights strong {
-  font-weight: 600;
+  font-weight: 600;          
 }
 </style>
 
 <div class="key-insights">
   <ul>
-    <li><strong>TC24 is generally positioned as a well-tolerated, stimulant-free formula</strong> designed for daily urinary and prostate support.</li>
-    <li>Most reported tolerability concerns tend to be <strong>mild and temporary</strong>, such as digestive sensitivity during the first days of use.</li>
-    <li>Men using <strong>prostate medications, hormone therapy, blood thinners, or anti-inflammatories</strong> should consult a healthcare professional before use.</li>
-    <li>For best safety, TC24 should be taken as directed and purchased from the <strong>official website</strong> to reduce counterfeit risk.</li>
+    <li><strong>TC24</strong> is a stimulant-free, once-daily urinary and prostate-support supplement formulated with natural botanicals and supportive micronutrients.</li>
+    <li><strong>Designed for gradual, long-term use</strong>, it targets multiple contributors to urinary discomfort — including inflammation balance, oxidative stress, circulation support, and hormonal metabolism.</li>
+    <li><strong>Most users report good tolerability</strong>, with side effects—when present—typically mild and temporary (often digestive sensitivity during the first days).</li>
+    <li><strong>Backed by a 60-day money-back guarantee</strong> when purchased through the official website, offering a more confident, low-risk way to evaluate personal tolerance.</li>
   </ul>
 </div>
 
 <div class="intro-box">
-  Everything you need to know about TC24’s safety profile, possible side effects, and how to use this urinary-support supplement responsibly.
+  Understanding TC24’s safety profile, tolerability, and what to expect when starting this natural urinary flow supplement.
 </div>
-
-<p>
-  When men consider a urinary or prostate-support supplement, safety is usually the first question — especially for formulas designed for consistent daily use. TC24 (Total Control 24) is marketed as a natural, stimulant-free supplement, which generally improves tolerability for long-term routines.
-</p>
-
-<p>
-  Still, “natural” does not automatically mean risk-free for every person. Individual sensitivity, medication use, and existing health conditions can change how any supplement feels. This guide explains what to realistically expect from TC24’s safety profile, what side effects may occur, and who should be more cautious.
-</p>
 
 <style>
   .mini-toc {
@@ -117,92 +107,62 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
 <div class="mini-toc">
   <p class="mini-toc-title">In this guide:</p>
   <ul class="mini-toc-list">
-    <li><a href="#what-is">What Is TC24?</a></li>
-    <li><a href="#is-safe">Is TC24 Safe?</a></li>
-    <li><a href="#safety-profile">TC24 Safety Profile and Possible Side Effects</a></li>
-    <li><a href="#side-effects-glance">Side Effects at a Glance</a></li>
-    <li><a href="#label">TC24 Supplement Label</a></li>
-    <li><a href="#symptoms">Prostate &amp; Urinary Health — Symptoms That Indicate It’s Time to Pay Attention</a></li>
-    <li><a href="#pricing">TC24 Price and Discounts</a></li>
+    <li><a href="#what-is-tc24">What Is TC24?</a></li>
+    <li><a href="#is-tc24-safe">Is TC24 Safe?</a></li>
+    <li><a href="#safety-profile-side-effects">Understanding TC24’s Safety Profile and Side Effects</a></li>
+    <li><a href="#urinary-symptoms">Prostate &amp; Urinary Health — Symptoms That Indicate It’s Time to Pay Attention</a></li>
+    <li><a href="#price-and-discounts">TC24 Price and Discounts</a></li>
     <li><a href="#where-to-buy">Where to Buy TC24 and Guarantee</a></li>
     <li><a href="#final-thoughts">Final Thoughts</a></li>
   </ul>
 </div>
 
-<h2 id="what-is">What Is TC24?</h2>
+<!-- Local styles for safety boxes -->
+<style>
+  .safety-box-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0.9rem 0 1.4rem 0;
+  }
+  .safety-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.6rem;
+    padding: 0.45rem 0.75rem;
+  }
+  .safety-box-title {
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 0.12rem 0;
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+  .safety-box-text {
+    margin: 0;
+    color: #374151;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+</style>
+
+<h2 id="what-is-tc24">What Is TC24?</h2>
 
 <p>
-  TC24 (Total Control 24) is a once-daily urinary and prostate-support supplement designed to support urine stream strength, bladder comfort, and urinary flow balance. The formula combines classic prostate botanicals with antioxidant and circulation-support compounds, aiming to support inflammation balance, oxidative protection, and male hormone metabolism over time.
-</p>
-
-<h2 id="is-safe">Is TC24 Safe?</h2>
-
-<p>
-  TC24 is generally positioned as safe for healthy adults when used as directed. It is stimulant-free and designed for gradual, long-term support rather than aggressive short-term effects, which typically improves overall tolerability for many users.
+  TC24 (Total Control 24) is a natural over-the-counter urinary and prostate-support supplement designed to support urine stream strength, bladder comfort, and urinary flow balance. It combines classic prostate botanicals with antioxidant-rich compounds and supportive micronutrients — selected to support inflammation balance, oxidative stress protection, circulation efficiency, and male hormone metabolism.
 </p>
 
 <p>
-  That said, supplements are not one-size-fits-all. Men with medical conditions, men taking prescription medications, or men who have strong sensitivity to botanicals should use additional caution and consult a healthcare professional before starting TC24.
+  The formula is designed for daily, long-term use rather than a short-term “quick fix,” with results that typically build through consistent supplementation over several weeks.
 </p>
 
-<h2 id="safety-profile">TC24 Safety Profile and Possible Side Effects</h2>
-
-<p>
-  Based on its ingredient profile and typical user experience with similar prostate-support formulas, most side effects — when they occur — tend to be mild and temporary. These effects are often related to digestive adjustment, individual herb sensitivity, or how the product is taken (for example, on an empty stomach).
-</p>
-
-<div class="safety-box">
-  <h3 class="safety-box-title">Most commonly reported tolerability concerns</h3>
-  <ul class="safety-box-list">
-    <li><strong>Mild digestive sensitivity:</strong> temporary stomach discomfort, mild nausea, or a “heavy” feeling — especially in the first few days.</li>
-    <li><strong>Herbal sensitivity:</strong> mild discomfort in users who are reactive to botanicals (varies by individual).</li>
-    <li><strong>Temporary adjustment period:</strong> some men notice their body “settling in” during week 1 as routines and hydration stabilize.</li>
-  </ul>
+<!-- BUTTON INGREDIENTS -->
+<div class="ingredients-link-row" style="margin: 1.2rem 0 2rem 0; display: flex; align-items: center; gap: 8px;">
+  <div class="ingredients-link-icon"><span>→</span></div>
+  <a href="https://linkly.link/2RIOy" target="_blank" rel="noopener noreferrer">
+    Click Here to Read Full Ingredients List
+  </a>
 </div>
-
-<p>
-  If a side effect appears, it often helps to take TC24 with food, stay hydrated, and avoid combining it with multiple new supplements at the same time. If symptoms persist or feel uncomfortable, discontinuing use and speaking with a clinician is the responsible step.
-</p>
-
-<h3>Who should be more cautious?</h3>
-<ul>
-  <li>Men using <strong>blood thinners</strong> or who have bleeding-related conditions</li>
-  <li>Men taking <strong>prostate medications</strong> or therapies affecting urinary function</li>
-  <li>Men using <strong>hormone-related medications</strong> or testosterone therapy</li>
-  <li>Men using frequent <strong>anti-inflammatory medications</strong></li>
-  <li>Anyone with chronic conditions who needs individualized supplement guidance</li>
-</ul>
-
-<p>
-  TC24 is not intended for women, children, or individuals under 18.
-</p>
-
-<h2 id="side-effects-glance">Side Effects at a Glance</h2>
-
-<div class="side-effects-glance">
-  <div class="side-effects-item">
-    <h4 class="side-effects-title">Most likely (when they happen)</h4>
-    <p class="side-effects-body">
-      Mild digestive sensitivity or temporary stomach adjustment — often improved by taking with food and water.
-    </p>
-  </div>
-
-  <div class="side-effects-item">
-    <h4 class="side-effects-title">Less common</h4>
-    <p class="side-effects-body">
-      Mild herbal sensitivity in users who react strongly to botanical extracts.
-    </p>
-  </div>
-
-  <div class="side-effects-item">
-    <h4 class="side-effects-title">When to stop and get advice</h4>
-    <p class="side-effects-body">
-      If discomfort persists, worsens, or you are taking prescription medications that may interact with botanicals.
-    </p>
-  </div>
-</div>
-
-<h2 id="label">TC24 Supplement Label</h2>
 
 <!-- LABEL IMAGE (zoom only) -->
 <div class="my-10 flex flex-col items-center">
@@ -222,13 +182,93 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
   </p>
 </div>
 
+<h2 id="is-tc24-safe">Is TC24 Safe?</h2>
+
+<p>
+  TC24 is generally well tolerated due to its stimulant-free formulation and its positioning as a daily support supplement rather than an aggressive, fast-acting product. However, individuals with underlying medical conditions or those taking medications related to prostate health, hormones, blood thinning, or inflammation should consult a healthcare professional before use.
+</p>
+
+<div class="safety-box-list">
+  <div class="safety-box">
+    <p class="safety-box-title">Existing medical conditions</p>
+    <p class="safety-box-text">
+      If you have an underlying medical condition, ask your healthcare provider before starting — especially if urinary symptoms overlap with bladder, prostate, blood pressure, or cardiovascular considerations.
+    </p>
+  </div>
+
+  <div class="safety-box">
+    <p class="safety-box-title">Prescription medication use</p>
+    <p class="safety-box-text">
+      If you take prostate medications, hormone therapy, blood thinners, or anti-inflammatories, confirm safety before combining them with any urinary-support supplement.
+    </p>
+  </div>
+
+  <div class="safety-box">
+    <p class="safety-box-title">Age and life stage</p>
+    <p class="safety-box-text">
+      TC24 is not recommended for individuals under 18, or for women who are pregnant or nursing.
+    </p>
+  </div>
+
+  <div class="safety-box">
+    <p class="safety-box-title">Personal sensitivity</p>
+    <p class="safety-box-text">
+      As with any supplement, tolerance varies. Monitor your response during the first week and follow label directions consistently.
+    </p>
+  </div>
+</div>
+
+<h2 id="safety-profile-side-effects">Understanding TC24’s Safety Profile and Side Effects</h2>
+
+<p>
+  A common question among potential users is whether TC24 is safe for long-term use. With its plant-based ingredients, absence of stimulants, and daily-support positioning, TC24 offers a generally favorable safety profile for most healthy adult men when used as directed.
+</p>
+
+<h3>Key Reasons Why TC24 Is Safe</h3>
+
+<div class="safety-box-list">
+  <div class="safety-box">
+    <p class="safety-box-title">Stimulant-free design</p>
+    <p class="safety-box-text">
+      TC24 is positioned as stimulant-free, avoiding harsh excitants that may contribute to jitteriness, sleep disruption, or unwanted “crash” effects.
+    </p>
+  </div>
+
+  <div class="safety-box">
+    <p class="safety-box-title">Daily-use, gradual support approach</p>
+    <p class="safety-box-text">
+      The formula is intended to build benefits gradually through consistent use, which often supports better tolerability compared to short-term, high-intensity products.
+    </p>
+  </div>
+
+  <div class="safety-box">
+    <p class="safety-box-title">Ingredient strategy aligned with prostate support</p>
+    <p class="safety-box-text">
+      TC24 includes commonly discussed prostate botanicals and supportive compounds selected for inflammation balance, antioxidant protection, circulation support, and hormonal metabolism.
+    </p>
+  </div>
+
+  <div class="safety-box">
+    <p class="safety-box-title">Refund policy support</p>
+    <p class="safety-box-text">
+      The 60-day money-back guarantee allows users to evaluate tolerance and overall fit more confidently during consistent daily use.
+    </p>
+  </div>
+</div>
+
+<h3>TC24 Side Effects at a Glance</h3>
+
+<p>
+  Most users report no noticeable side effects. When side effects occur, they are typically mild and temporary, such as digestive sensitivity, minor stomach discomfort, or a short adjustment period as the body adapts. Because individual tolerance varies, the safest approach is to follow label directions and avoid exceeding the suggested daily serving.
+</p>
+
+<p>
+  If you’re sensitive to supplements, many people reduce the chance of discomfort by taking capsules with a small meal and a full glass of water, and by staying consistent with the recommended serving rather than increasing it.
+</p>
+
 <!-- BENEFITS IMAGE (click to hoplink) -->
-<div class="my-8 flex flex-col items-center">
-  <a
-    href="https://linkly.link/2RIOy"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+<div class="my-10 flex flex-col items-center">
+  <a href="https://linkly.link/2RIOy" target="_blank" rel="noopener noreferrer">
     <img
       src="/images/men-health/total-control-24/benefits.png"
       alt="TC24 6-bottle pack – urinary flow supplement with natural ingredients and 60-day guarantee"
@@ -240,30 +280,48 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
   </p>
 </div>
 
-<!-- CTA 3 – Banner (Centered) -->
+<!-- CTA 3 – Banner (MODEL FIXO: texto centralizado) -->
 <div class="cta-banner">
-  <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">
-      Secure Checkout + Exclusive Bundles
-    </h2>
-    <a
-      href="https://linkly.link/2RIOy"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="cta-banner-button"
-    >
+  <div class="cta-banner-inner" style="text-align:center;">
+    <h2 class="cta-banner-title" style="text-align:center;">Save $120 on the 6-Bottle Pack Deal Today</h2>
+    <a href="https://linkly.link/2RIOy" target="_blank" rel="noopener noreferrer" class="cta-banner-button" style="margin-left:auto; margin-right:auto;">
       Visit Official TC24 Website
     </a>
   </div>
 </div>
 
-<h2 id="symptoms">Prostate &amp; Urinary Health — Symptoms That Indicate It’s Time to Pay Attention</h2>
+<h2 id="urinary-symptoms">Prostate &amp; Urinary Health — Symptoms That Indicate It’s Time to Pay Attention</h2>
 
 <p>
-  Urinary changes can impact more than comfort — they can disrupt sleep, reduce daily energy, and create ongoing stress around routines and travel. Many men first notice symptoms such as weak stream strength, increased urgency, or repeated nighttime bathroom trips.
+  Urinary comfort becomes increasingly important as men age. Because the prostate sits around the urethra, age-related changes in prostate tissue, inflammation pressure, and reduced microcirculation may influence urinary flow and bladder comfort over time.
 </p>
 
-<p><strong>Common signs men experience include:</strong></p>
+<p>
+  Multiple biological processes contribute to urinary changes: inflammation, oxidative stress, tissue sensitivity, hormone-related shifts, and bladder muscle changes. Over time, these factors may lead to common urinary concerns such as:
+</p>
+
+<h3>Weak Stream Strength</h3>
+<p>
+  A slower or weaker urine stream, often linked to prostate tissue pressure or reduced urinary tract efficiency.
+</p>
+
+<h3>Nighttime Urination (Nocturia)</h3>
+<p>
+  Repeated nighttime bathroom trips that disrupt sleep and reduce daily energy.
+</p>
+
+<h3>Urgency and Frequency</h3>
+<p>
+  Sudden urges and more frequent urination, sometimes triggered by mild fluid intake or bladder irritability.
+</p>
+
+<h3>Incomplete Emptying</h3>
+<p>
+  A lingering sensation that the bladder didn’t fully empty, which can contribute to repeat bathroom trips.
+</p>
+
+<h3>Common signs that may indicate declining urinary comfort include:</h3>
+
 <ul>
   <li>Weaker or slower urine flow</li>
   <li>Difficulty initiating urination</li>
@@ -271,14 +329,14 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
   <li>A feeling of incomplete emptying</li>
   <li>Pelvic or lower-abdominal tension</li>
   <li>Sudden urgency from small fluid intake</li>
-  <li>Changes in energy, stamina, or motivation</li>
+  <li>Sleep disruption affecting daytime energy</li>
 </ul>
 
 <p>
-  TC24 is designed to support several biological pathways commonly linked to these symptoms, especially inflammation balance and long-term tissue resilience.
+  Ignoring these signs allows discomfort and sleep disruption to progress. Recognizing them early empowers men to take proactive steps — and this is where natural OTC formulas like TC24 may offer supportive benefits.
 </p>
 
-<h2 id="pricing">TC24 Price and Discounts</h2>
+<h2 id="price-and-discounts">TC24 Price and Discounts</h2>
 
 <div class="pricing-table-container">
   <table class="pricing-table">
@@ -328,22 +386,22 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
       </tr>
       <tr class="cta-row">
         <td class="row-label">Official Site:</td>
-        <td><a href="https://linkly.link/2RIOy" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td><a href="https://linkly.link/2RIOy" class="text-primary hover:underline font-bold">Shop Now</a></td>
-        <td class="best-value-col"><a href="https://linkly.link/2RIOy" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2RIOy" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2RIOy" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td class="best-value-col"><a href="https://linkly.link/2RIOy" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <p class="mt-6">
-  The best value is typically the 6-bottle bundle, which lowers the price to $49 per bottle, includes Free U.S. Shipping, and provides the largest overall savings (Save $120).
+  Looking for the best deal? The 6-bottle package gives you the biggest savings and Free U.S. Shipping, making it the most cost-effective option for long-term urinary flow support.
 </p>
 
 <h2 id="where-to-buy">Where to Buy TC24 and Guarantee</h2>
 
 <p>
-  TC24 is sold exclusively on the official website. Buying direct helps ensure product authenticity, secure checkout, and full eligibility for the 60-day money-back guarantee. Bundle discounts are applied automatically at checkout.
+  TC24 is sold exclusively through the official website to ensure product authenticity, proper storage, and eligibility for refunds. No coupon code is required — discounts are applied automatically at checkout. Purchasing through third-party marketplaces increases the risk of counterfeit or improperly handled products.
 </p>
 
 <!-- CTA 3 – Link Only Version in Styled Box (ANTES de Final Thoughts) -->
@@ -402,21 +460,14 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
 <h2 id="final-thoughts">Final Thoughts</h2>
 
 <p>
-  TC24 is generally positioned as a safe, stimulant-free option for men who want daily support for urinary comfort and prostate-related changes. Most tolerability concerns — when they happen — tend to be mild and temporary, commonly centered around digestion or individual herbal sensitivity. If you use prescription medications or have a medical condition, getting personalized guidance first is the safest approach. For men who want official-website authenticity and risk-free coverage, the 60-day guarantee adds an extra layer of confidence.
+  TC24 offers strong safety advantages due to its stimulant-free formulation and daily-support positioning. While reactions are uncommon and usually mild, users should monitor personal tolerance, follow label directions, and consult a healthcare professional if using medications or managing an underlying condition. For most men, TC24 provides a generally well-tolerated option for supporting urine stream strength, bladder comfort, and long-term urinary flow balance — with the added reassurance of a 60-day money-back guarantee when purchased through the official website.
 </p>
 
-<!-- CTA 4 – Banner (Footer CTA) -->
+<!-- CTA 4 – Footer -->
 <div class="cta-banner">
   <div class="cta-banner-inner">
-    <h2 class="cta-banner-title">
-      Secure Checkout + Exclusive Bundles
-    </h2>
-    <a
-      href="https://linkly.link/2RIOy"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="cta-banner-button"
-    >
+    <h2 class="cta-banner-title">Secure Checkout + Exclusive Bundles</h2>
+    <a href="https://linkly.link/2RIOy" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
       Visit Official TC24 Website
     </a>
   </div>
@@ -424,13 +475,9 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
 
 <!-- TAGS START -->
 <div class="tag-container">
-  <h3
-    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
-    style="border-bottom: none; margin-top: 0;"
-  >
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 0;">
     HEALTH CONDITION TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2 mb-6">
     <span class="tag-item">prostate health</span>
     <span class="tag-item">urinary flow</span>
@@ -440,17 +487,11 @@ layout: "../../../../layouts/MiniReviewSideEffectsLayout.astro"
     <span class="tag-item">inflammation balance</span>
     <span class="tag-item">pelvic discomfort</span>
     <span class="tag-item">circulation support</span>
-    <span class="tag-item">bladder comfort</span>
-    <span class="tag-item">urine stream strength</span>
   </div>
 
-  <h3
-    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
-    style="border-bottom: none; margin-top: 1.25rem;"
-  >
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 1.25rem;">
     INGREDIENT TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2">
     <span class="tag-item">pine pollen extract</span>
     <span class="tag-item">saw palmetto</span>
