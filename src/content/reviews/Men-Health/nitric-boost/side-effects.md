@@ -397,20 +397,6 @@ category: "men-health"
   Looking for the best deal? The 6-jar package offers the biggest savings — just $49 per unit, plus Free U.S. Shipping — making it the most popular option for long-term sexual performance support.
 </p>
 
-<!-- IMAGE BENEFITS (click to hoplink) -->
-<div class="my-10 flex flex-col items-center">
-  <a href="https://linkly.link/2W3Vn">
-    <img
-      src="/images/men-health/nitric-boost/benefits.png"
-      alt="Nitric Boost 6-jar pack – erectile dysfunction supplement with natural ingredients and 180-day guarantee"
-      class="label-image"
-    />
-  </a>
-  <p class="image-caption">
-    Nitric Boost offers bundle options for long-term sexual performance support, with up to 6 months of coverage and a 180-day money-back guarantee.
-  </p>
-</div>
-
 <h2 id="where-to-buy">Where to Buy Nitric Boost and Guarantee</h2>
 
 <p>
