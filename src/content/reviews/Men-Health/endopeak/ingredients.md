@@ -413,10 +413,10 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/endopeak-ingredients"
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $220</span></td>
-        <td><span class="bold-black">Save $360</span></td>
+        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
         <td class="best-value-col">
-          <span class="bold-black">Save $780</span>
+          <span class="bold-black">Save $120</span>
         </td>
       </tr>
       <tr>

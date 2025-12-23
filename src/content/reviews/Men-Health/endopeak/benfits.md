@@ -46,6 +46,39 @@ category: "men-health"
   </div>
 </header>
 
+<style>
+  .mini-toc {
+    margin: 2rem 0 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.98rem;
+    color: #111827;
+  }
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
+</style>
+
 <!-- MINI TOC -->
 <div class="mini-toc">
   <p class="mini-toc-title">In this guide:</p>
@@ -199,9 +232,9 @@ category: "men-health"
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td><span class="bold-black">Save $220</span></td>
-        <td><span class="bold-black">Save $360</span></td>
-        <td class="best-value-col"><span class="bold-black">Save $780</span></td>
+        <td><span class="bold-black">Save $--</span></td>
+        <td><span class="bold-black">Save $30</span></td>
+        <td class="best-value-col"><span class="bold-black">Save $120</span></td>
       </tr>
       <tr>
         <td class="row-label">Shipping Policy:</td>
