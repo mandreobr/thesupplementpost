@@ -108,15 +108,94 @@ const getPublicSlug = (review) => {
   return s.includes("/") ? s.split("/").filter(Boolean).pop() : s;
 };
 
-const getHealthTags = (review, limit = 8) => {
-  const tags =
-    review?.data?.healthConditionTags ||
-    review?.data?.health_condition_tags ||
-    review?.data?.healthTags ||
-    [];
+const decodeHtmlEntities = (str) =>
+  String(str || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .trim();
 
-  if (!Array.isArray(tags)) return [];
-  return tags.slice(0, limit);
+const cleanTag = (tag) => {
+  let t = decodeHtmlEntities(tag);
+  // remove espaços e restos comuns
+  t = t.replace(/\s+/g, " ").trim();
+  // remove trailing punctuation estranha
+  t = t.replace(/[•·|]+$/g, "").trim();
+  return t;
+};
+
+/**
+ * ✅ Extrai Health Condition Tags do bloco "HEALTH CONDITION TAGS"
+ * Regra: pega tudo entre "HEALTH CONDITION TAGS" e "INGREDIENT TAGS" (ou fim)
+ * Suporta:
+ *  - <span>Tag</span>
+ *  - <a>Tag</a>
+ *  - listas markdown: "- Tag"
+ *  - fallback por linhas
+ */
+const extractHealthTagsFromBody = (body, limit = 8) => {
+  const raw = String(body || "");
+  const startIdx = raw.toUpperCase().indexOf("HEALTH CONDITION TAGS");
+  if (startIdx === -1) return [];
+
+  const afterStart = raw.slice(startIdx);
+  const endIdxLocal = afterStart.toUpperCase().indexOf("INGREDIENT TAGS");
+  const block = endIdxLocal !== -1 ? afterStart.slice(0, endIdxLocal) : afterStart;
+
+  const collected = [];
+
+  // 1) <span ...>TAG</span>
+  const spanRe = /<span\b[^>]*>([^<]{1,120})<\/span>/gi;
+  let m;
+  while ((m = spanRe.exec(block)) !== null) {
+    const t = cleanTag(m[1]);
+    if (t) collected.push(t);
+  }
+
+  // 2) <a ...>TAG</a> (caso seus chips sejam links no futuro)
+  const aRe = /<a\b[^>]*>([^<]{1,120})<\/a>/gi;
+  while ((m = aRe.exec(block)) !== null) {
+    const t = cleanTag(m[1]);
+    if (t) collected.push(t);
+  }
+
+  // 3) listas markdown "- tag"
+  const listRe = /^\s*[-*]\s+(.+?)\s*$/gm;
+  while ((m = listRe.exec(block)) !== null) {
+    const t = cleanTag(m[1]);
+    if (t) collected.push(t);
+  }
+
+  // 4) fallback: se ainda não pegou nada, tenta por linhas "chipadas"
+  if (collected.length === 0) {
+    const lines = block
+      .split("\n")
+      .map((l) => cleanTag(l))
+      .filter(Boolean);
+
+    for (const line of lines) {
+      // ignora o título
+      if (line.toUpperCase() === "HEALTH CONDITION TAGS") continue;
+      // ignora linhas muito longas (provável parágrafo)
+      if (line.length > 80) continue;
+      collected.push(line);
+    }
+  }
+
+  // remove duplicados mantendo ordem
+  const unique = [];
+  const seen = new Set();
+  for (const t of collected) {
+    const key = t.toLowerCase();
+    if (!t || seen.has(key)) continue;
+    seen.add(key);
+    unique.push(t);
+    if (unique.length >= limit) break;
+  }
+
+  return unique;
 };
 
 /* =========================
@@ -516,7 +595,8 @@ const breadcrumbs = [
             const description = review.data.description ?? "";
             const heroImage = review.data.heroImage;
 
-            const healthTags = getHealthTags(review, 8);
+            // ✅ Extrai automaticamente do body do review
+            const healthTags = extractHealthTagsFromBody(review.body, 8);
 
             // ✅ Link SEMPRE no formato público: /reviews/{slug-limpo}
             const href = `/reviews/${getPublicSlug(review)}`;
