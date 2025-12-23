@@ -108,6 +108,17 @@ const getPublicSlug = (review) => {
   return s.includes("/") ? s.split("/").filter(Boolean).pop() : s;
 };
 
+const getHealthTags = (review, limit = 8) => {
+  const tags =
+    review?.data?.healthConditionTags ||
+    review?.data?.health_condition_tags ||
+    review?.data?.healthTags ||
+    [];
+
+  if (!Array.isArray(tags)) return [];
+  return tags.slice(0, limit);
+};
+
 /* =========================
    FILTER: ONLY FULL REVIEWS
 ========================= */
@@ -351,10 +362,28 @@ const breadcrumbs = [
       }
 
       .article-description {
-        margin: 0 0 14px;
+        margin: 0 0 8px;
         font-size: 15px;
         line-height: 1.6;
         color: #374151;
+      }
+
+      /* ✅ Health Condition Tags */
+      .health-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 6px 0 10px;
+      }
+
+      .health-tag {
+        font-size: 11px;
+        padding: 6px 10px;
+        background: #f1f5f9;
+        border: 1px solid #e5e7eb;
+        border-radius: 999px;
+        color: #374151;
+        white-space: nowrap;
       }
 
       .article-cta {
@@ -487,6 +516,8 @@ const breadcrumbs = [
             const description = review.data.description ?? "";
             const heroImage = review.data.heroImage;
 
+            const healthTags = getHealthTags(review, 8);
+
             // ✅ Link SEMPRE no formato público: /reviews/{slug-limpo}
             const href = `/reviews/${getPublicSlug(review)}`;
 
@@ -502,6 +533,15 @@ const breadcrumbs = [
                   <div class="article-content">
                     <h2 class="article-title">{title}</h2>
                     <p class="article-description">{description}</p>
+
+                    {healthTags.length > 0 ? (
+                      <div class="health-tags">
+                        {healthTags.map((tag) => (
+                          <span class="health-tag">{tag}</span>
+                        ))}
+                      </div>
+                    ) : null}
+
                     <div class="article-cta">Read Full Review →</div>
                   </div>
                 </div>
