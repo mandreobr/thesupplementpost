@@ -98,6 +98,22 @@ category: "men-health"
 <p>
   These elements reduce misinformation and ensure that the product being evaluated matches what is actually delivered to the customer.
 </p>
+<!-- CTA 2 – Banner -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2 class="cta-banner-title">
+      Save $120 On The 6-Bottle Pack Deal Today
+    </h2>
+    <a
+      href="https://linkly.link/2R0io"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cta-banner-button"
+    >
+      Visit Official EndoPeak Website
+    </a>
+  </div>
+</div>
 
 <h2 id="ingredients-transparency">EndoPeak Official Website Ingredients and Formula Transparency</h2>
 
@@ -219,48 +235,66 @@ category: "men-health"
 
 <h2 id="price">EndoPeak Official Website Price and Package Options</h2>
 
-<p>
-  The EndoPeak official website provides standardized pricing and bundle options:
+<div class="pricing-table-container">
+  <table class="pricing-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>2 Bottles</th>
+        <th>3 Bottles</th>
+        <th class="best-value-col best-value-header">
+          <div class="text-xs font-bold text-white bg-red-600 px-2 py-0.5 rounded-full mb-1 mx-auto w-fit shadow-md">
+            BEST VALUE!
+          </div>
+          <span class="font-bold text-gray-900 block">6 Bottles</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">Supply per Package:</td>
+        <td>60-Day Supply</td>
+        <td>90-Day Supply</td>
+        <td class="best-value-col">180-Day Supply</td>
+      </tr>
+      <tr>
+        <td class="row-label">Price per Unit:</td>
+        <td>$69 per bottle</td>
+        <td>$59 per bottle</td>
+        <td class="best-value-col">$49 per bottle</td>
+      </tr>
+      <tr>
+        <td class="row-label bold-black">Package Price:</td>
+        <td><span class="bold-black">$138</span></td>
+        <td><span class="bold-black">$177</span></td>
+        <td class="best-value-col"><span class="bold-black">$294</span></td>
+      </tr>
+      <tr>
+        <td class="row-label bold-black">Total Savings:</td>
+        <td><span class="bold-black">—</span></td>
+        <td><span class="bold-black">Save $30</span></td>
+        <td class="best-value-col"><span class="bold-black">Save $120</span></td>
+      </tr>
+      <tr>
+        <td class="row-label">Shipping Policy:</td>
+        <td>Standard shipping</td>
+        <td>Standard shipping</td>
+        <td class="best-value-col">Free U.S. Shipping</td>
+      </tr>
+      <tr class="cta-row">
+        <td class="row-label">Official Site:</td>
+        <td><a href="https://linkly.link/2R0io" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td><a href="https://linkly.link/2R0io" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+        <td class="best-value-col"><a href="https://linkly.link/2R0io" target="_blank" class="text-primary hover:underline font-bold">Shop Now</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="mt-6">
+  Looking for the best deal? The 6-bottle package gives you the biggest savings — just $49 per unit, plus Free U.S. Shipping. That works out to approximately $1.63 per day, making it the most popular option for long-term male vitality support.
 </p>
 
-<p><strong>Supply per Package</strong></p>
-<ul>
-  <li>2 bottles — 60-day supply</li>
-  <li>3 bottles — 90-day supply</li>
-  <li>6 bottles — 180-day supply</li>
-</ul>
-
-<p><strong>Price per Unit</strong></p>
-<ul>
-  <li>2 bottles — $69</li>
-  <li>3 bottles — $59</li>
-  <li>6 bottles — $49</li>
-</ul>
-
-<p><strong>Total Package Price</strong></p>
-<ul>
-  <li>2 bottles — $138</li>
-  <li>3 bottles — $177</li>
-  <li>6 bottles — $294</li>
-</ul>
-
-<p><strong>Savings</strong></p>
-<ul>
-  <li>2 bottles — Save $220</li>
-  <li>3 bottles — Save $360</li>
-  <li>6 bottles — Save $780</li>
-</ul>
-
-<p><strong>Shipping</strong></p>
-<ul>
-  <li>2 bottles — Standard fee</li>
-  <li>3 bottles — Free U.S. Shipping</li>
-  <li>6 bottles — Free U.S. Shipping</li>
-</ul>
-
-<p>
-  The 6-bottle package offers the best overall value, averaging approximately $1.63 per day.
-</p>
 
 <h2 id="guarantee">Official Website Guarantee, Refund Policy and Buyer Protection</h2>
 
@@ -271,6 +305,17 @@ category: "men-health"
 <p>
   Buying directly from the official source ensures authentic product supply, eligibility for refunds, access to customer support, and protection against unauthorized sellers.
 </p>
+
+
+<div class="cta-3-container">
+  <a
+    href="https://linkly.link/2R0io"
+    class="cta-3-link"
+  >
+    <span class="cta-3-arrow">➜</span>
+    <span class="cta-3-text">Visit the Official Website. No coupon needed — Discounts are applied automatically</span>
+  </a>
+</div>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -293,6 +338,23 @@ category: "men-health"
     For men seeking informed and responsible decisions about natural male vitality supplements, the official website remains the most dependable starting point.
   </p>
 </section>
+
+<!-- CTA 4 – Banner (Footer CTA 3) -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2 class="cta-banner-title">
+      Secure Checkout + Exclusive Bundles
+    </h2>
+    <a
+      href="https://linkly.link/2R0io"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cta-banner-button"
+    >
+      Visit Official EndoPeak Website
+    </a>
+  </div>
+</div>
 
 <!-- TAGS START -->
 <div class="tag-container">
