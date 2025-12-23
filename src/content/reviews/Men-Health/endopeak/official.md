@@ -222,7 +222,22 @@ category: "men-health"
 <p>
   These symptoms are commonly associated with reduced circulation efficiency, nitric oxide decline, hormonal rhythm changes, oxidative stress, and metabolic slowdown. Addressing these systems early aligns with modern preventive and integrative health approaches.
 </p>
-
+<!-- CTA Extra-->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2 class="cta-banner-title">
+      Secure Checkout + Exclusive Bundles
+    </h2>
+    <a
+      href="https://linkly.link/2R0io"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="cta-banner-button"
+    >
+      Visit Official EndoPeak Website
+    </a>
+  </div>
+</div>
 <h2 id="who-is-it-for">Who Is EndoPeak Designed For According to the Official Website</h2>
 
 <p>
