@@ -226,8 +226,8 @@ category: "men-health"
       </tr>
       <tr>
         <td class="row-label bold-black">Total Savings:</td>
-        <td>—</td>
-        <td>—</td>
+        <td>$—</td>
+        <td>$30</td>
         <td class="best-value-col">Save $240</td>
       </tr>
       <tr>
