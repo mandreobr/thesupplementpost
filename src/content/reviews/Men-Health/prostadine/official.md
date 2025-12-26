@@ -9,9 +9,9 @@ metaDescription: "Prostadine official website verified. Read a trusted source re
 slug: "prostadine-official-website"
 canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-official-website"
 
-heroImage: "/images/prostadine/Prostadine Benefits/hero.png"
-heroAlt: "Prostadine dietary supplement bottle – natural prostate health support for urinary flow and bladder comfort"
-heroCaption: "Prostadine is a natural over-the-counter supplement designed to support strong urinary flow, bladder comfort, and long-term prostate health."
+heroImage: "/images/men-health/prostadine/hero.png"
+heroAlt: "Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
+heroCaption: "Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control."
 
 primaryCtaLabel: "Save $120 on the 6-Bottle Pack Deal Today"
 primaryCtaUrl: "https://linkly.link/2LziG"
@@ -35,13 +35,13 @@ category: "men-health"
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2LziG">
       <img
-        src="/images/prostadine/Prostadine Benefits/hero.png"
-        alt="Prostadine dietary supplement bottle – natural prostate health support for urinary flow and bladder comfort"
+        src="/images/men-health/prostadine/hero.png"
+        alt="Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
         class="hero-image"
       />
     </a>
     <p class="image-caption">
-      Prostadine is a natural over-the-counter supplement designed to support strong urinary flow, bladder comfort, and long-term prostate health.
+      Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control.
     </p>
   </div>
 </header>
@@ -248,6 +248,25 @@ category: "men-health"
   All purchases made through the official Prostadine website are protected by a 60-day money-back guarantee. This policy allows customers to request a full refund — even on empty bottles — if they are not satisfied.
 </p>
 
+<!-- BENEFITS IMAGE (click to hoplink) -->
+<div class="my-8 flex flex-col items-center">
+  <a
+    href="https://linkly.link/2LziG"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/images/men-health/prostadine/benefits.png"
+      alt="Prostadine 6-bottle pack – prostate support supplement with natural ingredients and 60-day guarantee"
+      class="benefits-image"
+    />
+  </a>
+  <p class="image-caption">
+    Prostadine offers bundle options for long-term prostate and urinary health, with up to 6 months of coverage and a 60-day money-back guarantee.
+  </p>
+</div>
+
+
 <h2 id="conclusion">Conclusion</h2>
 
 <p>
@@ -265,3 +284,42 @@ category: "men-health"
 </section>
 
 <!-- CTA 4 – Footer -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2 class="cta-banner-title">Secure Checkout + Exclusive Bundles</h2>
+    <a href="https://linkly.link/2LziG" target="_blank" rel="noopener noreferrer" class="cta-banner-button">
+      Visit Official Prostadine Website
+    </a>
+  </div>
+</div>
+
+<!-- TAGS START -->
+<div class="tag-container">
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom:none;">
+    HEALTH CONDITION TAGS
+  </h3>
+  <div class="flex flex-wrap gap-2 mb-6">
+    <span class="tag-item">prostate health</span>
+    <span class="tag-item">enlarged prostate</span>
+    <span class="tag-item">BPH</span>
+    <span class="tag-item">urinary flow support</span>
+    <span class="tag-item">nocturia</span>
+    <span class="tag-item">bladder comfort</span>
+    <span class="tag-item">men’s urinary health</span>
+  </div>
+
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom:none; margin-top:1.25rem;">
+    INGREDIENT TAGS
+  </h3>
+  <div class="flex flex-wrap gap-2">
+    <span class="tag-item">saw palmetto</span>
+    <span class="tag-item">pomegranate extract</span>
+    <span class="tag-item">nori yaki extract</span>
+    <span class="tag-item">wakame extract</span>
+    <span class="tag-item">kelp powder</span>
+    <span class="tag-item">bladderwrack</span>
+    <span class="tag-item">neem extract</span>
+    <span class="tag-item">shilajit</span>
+    <span class="tag-item">MCT oil</span>
+  </div>
+</div>

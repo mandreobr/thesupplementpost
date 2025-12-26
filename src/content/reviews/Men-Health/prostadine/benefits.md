@@ -9,9 +9,9 @@ metaDescription: "Discover the key Prostadine benefits and how consistent daily 
 slug: "prostadine-benefits"
 canonicalUrl: "https://www.thesupplementpost.com/reviews/prostadine-benefits"
 
-heroImage: "/images/prostadine/prostadine benefits/hero.png"
-heroAlt: "Prostadine dietary supplement bottle – natural prostate health support for urinary flow and bladder comfort"
-heroCaption: "Prostadine is a natural over-the-counter supplement designed to support strong urinary flow, bladder comfort, and long-term prostate health."
+heroImage: "/images/men-health/prostadine/hero.png"
+heroAlt: "Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
+heroCaption: "Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control."
 
 primaryCtaLabel: "Save $120 on the 6-Bottle Pack Deal Today"
 primaryCtaUrl: "https://linkly.link/2LziG"
@@ -35,13 +35,13 @@ category: "men-health"
   <div class="my-6 flex flex-col items-center">
     <a href="https://linkly.link/2LziG">
       <img
-        src="/images/prostadine/prostadine benefits/hero.png"
-        alt="Prostadine dietary supplement bottle – natural prostate health support for urinary flow and bladder comfort"
+        src="/images/men-health/prostadine/hero.png"
+        alt="Prostadine dietary supplement bottle – natural drops for prostate health and urinary support"
         class="hero-image"
       />
     </a>
     <p class="image-caption">
-      Prostadine is positioned for gradual, daily support for urinary flow, bladder comfort, and long-term prostate health.
+      Prostadine is a natural liquid supplement designed to support prostate health, urinary comfort, and bladder control.
     </p>
   </div>
 </header>
@@ -193,6 +193,25 @@ category: "men-health"
 <p>
   Consistency is essential, as natural formulas build gradually through continued daily use rather than forcing short-lived effects.
 </p>
+
+<!-- BENEFITS IMAGE (click to hoplink) -->
+<div class="my-8 flex flex-col items-center">
+  <a
+    href="https://linkly.link/2LziG"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/images/men-health/prostadine/benefits.png"
+      alt="Prostadine 6-bottle pack – prostate support supplement with natural ingredients and 60-day guarantee"
+      class="benefits-image"
+    />
+  </a>
+  <p class="image-caption">
+    Prostadine offers bundle options for long-term prostate and urinary health, with up to 6 months of coverage and a 60-day money-back guarantee.
+  </p>
+</div>
+
 
 <h2 id="price">Prostadine Price and Bundle Discounts</h2>
 
