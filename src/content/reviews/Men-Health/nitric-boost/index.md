@@ -652,53 +652,32 @@ All orders are covered by a 180-day money-back guarantee.
 
 <!-- TAGS START -->
 <div class="tag-container">
-  <h3
-    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
-    style="border-bottom: none; margin-top: 0;"
-  >
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 0;">
     HEALTH CONDITION TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2 mb-6">
     <span class="tag-item">erectile health</span>
     <span class="tag-item">erectile dysfunction support</span>
     <span class="tag-item">sexual performance</span>
     <span class="tag-item">male sexual health</span>
-    <span class="tag-item">low libido</span>
-    <span class="tag-item">male vitality</span>
     <span class="tag-item">nitric oxide levels</span>
     <span class="tag-item">blood flow</span>
     <span class="tag-item">circulation</span>
     <span class="tag-item">stamina</span>
-    <span class="tag-item">energy</span>
-    <span class="tag-item">performance anxiety</span>
-    <span class="tag-item">aging men sexual issues</span>
   </div>
 
-  <h3
-    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
-    style="border-bottom: none; margin-top: 1.25rem;"
-  >
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 1.25rem;">
     INGREDIENT TAGS
   </h3>
-
   <div class="flex flex-wrap gap-2">
-    <span class="tag-item">l-arginine</span>
-    <span class="tag-item">l-citrulline dl-malate</span>
-    <span class="tag-item">beet root powder</span>
-    <span class="tag-item">beet root extract</span>
-    <span class="tag-item">betaine nitrate</span>
-    <span class="tag-item">horny goat weed</span>
-    <span class="tag-item">icariin</span>
-    <span class="tag-item">dong quai</span>
-    <span class="tag-item">ginkgo biloba</span>
-    <span class="tag-item">d-aspartic acid</span>
-    <span class="tag-item">niacin</span>
-    <span class="tag-item">vitamin d3</span>
-    <span class="tag-item">folic acid</span>
-    <span class="tag-item">calcium ascorbate</span>
-    <span class="tag-item">nitric oxide booster</span>
-    <span class="tag-item">no supplement</span>
-    <span class="tag-item">circulation support botanicals</span>
+    <span class="tag-item">L-Arginine</span>
+    <span class="tag-item">L-Citrulline DL-Malate</span>
+    <span class="tag-item">Beet Root Powder</span>
+    <span class="tag-item">Beet Root Extract</span>
+    <span class="tag-item">Betaine Nitrate</span>
+    <span class="tag-item">Horny Goat Weed</span>
+    <span class="tag-item">Ginkgo Biloba</span>
+    <span class="tag-item">D-Aspartic Acid</span>
   </div>
 </div>
+

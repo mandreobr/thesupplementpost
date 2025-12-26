@@ -478,10 +478,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/nitric-boost-pros-and-c
 
 <!-- TAGS START -->
 <div class="tag-container">
-  <h3
-    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
-    style="border-bottom: none; margin-top: 0;"
-  >
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 0;">
     HEALTH CONDITION TAGS
   </h3>
   <div class="flex flex-wrap gap-2 mb-6">
@@ -489,21 +486,13 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/nitric-boost-pros-and-c
     <span class="tag-item">erectile dysfunction support</span>
     <span class="tag-item">sexual performance</span>
     <span class="tag-item">male sexual health</span>
-    <span class="tag-item">low libido</span>
-    <span class="tag-item">male vitality</span>
     <span class="tag-item">nitric oxide levels</span>
     <span class="tag-item">blood flow</span>
     <span class="tag-item">circulation</span>
     <span class="tag-item">stamina</span>
-    <span class="tag-item">energy</span>
-    <span class="tag-item">performance anxiety</span>
-    <span class="tag-item">aging men sexual issues</span>
   </div>
 
-  <h3
-    class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
-    style="border-bottom: none; margin-top: 1.25rem;"
-  >
+  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" style="border-bottom: none; margin-top: 1.25rem;">
     INGREDIENT TAGS
   </h3>
   <div class="flex flex-wrap gap-2">
@@ -513,16 +502,7 @@ canonicalUrl: "https://www.thesupplementpost.com/reviews/nitric-boost-pros-and-c
     <span class="tag-item">Beet Root Extract</span>
     <span class="tag-item">Betaine Nitrate</span>
     <span class="tag-item">Horny Goat Weed</span>
-    <span class="tag-item">Icariin</span>
-    <span class="tag-item">Dong Quai</span>
     <span class="tag-item">Ginkgo Biloba</span>
     <span class="tag-item">D-Aspartic Acid</span>
-    <span class="tag-item">Niacin</span>
-    <span class="tag-item">Vitamin D3</span>
-    <span class="tag-item">Folic Acid</span>
-    <span class="tag-item">Calcium Ascorbate</span>
-    <span class="tag-item">nitric oxide booster</span>
-    <span class="tag-item">NO supplement</span>
-    <span class="tag-item">circulation support botanicals</span>
   </div>
 </div>
