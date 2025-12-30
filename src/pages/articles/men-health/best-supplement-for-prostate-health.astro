@@ -12,82 +12,48 @@ const meta = {
 };
 
 const products = [
-  {
-    name: "Prostadine",
-    hoplink: "https://linkly.link/2LziG",
-    img: "/images/men-health/prostadine/hero.png",
-    alt: "Prostadine supplement bottle",
-  },
-  {
-    name: "EndoPeak",
-    hoplink: "https://linkly.link/2R0io",
-    img: "/images/men-health/endopeak/hero.png",
-    alt: "EndoPeak supplement bottle",
-  },
-  {
-    name: "FlowForce Max",
-    hoplink: "https://linkly.link/2R1gT",
-    img: "/images/men-health/flowforce-max/hero.png",
-    alt: "FlowForce Max supplement bottle",
-  },
-  {
-    name: "Max Boost Plus",
-    hoplink: "https://linkly.link/2Qwyc",
-    img: "/images/men-health/max-boost-plus/hero.png",
-    alt: "Max Boost Plus supplement bottle",
-  },
-  {
-    name: "TC24",
-    hoplink: "https://linkly.link/2RIOy",
-    img: "/images/men-health/tc24/hero.png",
-    alt: "TC24 supplement bottle",
-  },
-  {
-    name: "EndoPump",
-    hoplink: "https://linkly.link/2R0ii",
-    img: "/images/men-health/endopump/hero.png",
-    alt: "EndoPump supplement bottle",
-  },
-  {
-    name: "Prostavive",
-    hoplink: "https://linkly.link/2W2pQ",
-    img: "/images/men-health/prostavive/hero.png",
-    alt: "Prostavive supplement bottle",
-  },
-  {
-    name: "TitanFlow",
-    hoplink: "https://linkly.link/2W4wj",
-    img: "/images/men-health/titanflow/hero.png",
-    alt: "TitanFlow supplement bottle",
-  },
-  {
-    name: "Nitric Boost",
-    hoplink: "https://linkly.link/2W3Vn",
-    img: "/images/men-health/nitric-boost/hero.png",
-    alt: "Nitric Boost supplement bottle",
-  },
-  {
-    name: "Fluxactive Complete",
-    hoplink: "https://linkly.link/2W4ws",
-    img: "/images/men-health/fluxactive-complete/hero.png",
-    alt: "Fluxactive Complete supplement bottle",
-  },
+  { name: "Prostadine", hoplink: "https://linkly.link/2LziG", img: "/images/men-health/prostadine/hero.png", alt: "Prostadine supplement bottle" },
+  { name: "EndoPeak", hoplink: "https://linkly.link/2R0io", img: "/images/men-health/endopeak/hero.png", alt: "EndoPeak supplement bottle" },
+  { name: "FlowForce Max", hoplink: "https://linkly.link/2R1gT", img: "/images/men-health/flowforce-max/hero.png", alt: "FlowForce Max supplement bottle" },
+  { name: "Max Boost Plus", hoplink: "https://linkly.link/2Qwyc", img: "/images/men-health/max-boost-plus/hero.png", alt: "Max Boost Plus supplement bottle" },
+  { name: "TC24", hoplink: "https://linkly.link/2RIOy", img: "/images/men-health/tc24/hero.png", alt: "TC24 supplement bottle" },
+  { name: "EndoPump", hoplink: "https://linkly.link/2R0ii", img: "/images/men-health/endopump/hero.png", alt: "EndoPump supplement bottle" },
+  { name: "Prostavive", hoplink: "https://linkly.link/2W2pQ", img: "/images/men-health/prostavive/hero.png", alt: "Prostavive supplement bottle" },
+  { name: "TitanFlow", hoplink: "https://linkly.link/2W4wj", img: "/images/men-health/titanflow/hero.png", alt: "TitanFlow supplement bottle" },
+  { name: "Nitric Boost", hoplink: "https://linkly.link/2W3Vn", img: "/images/men-health/nitric-boost/hero.png", alt: "Nitric Boost supplement bottle" },
+  { name: "Fluxactive Complete", hoplink: "https://linkly.link/2W4ws", img: "/images/men-health/fluxactive-complete/hero.png", alt: "Fluxactive Complete supplement bottle" },
 ];
+
+const byName = Object.fromEntries(products.map((p) => [p.name, p]));
+const L = (name) => (byName[name]?.hoplink ?? "#");
 ---
 
 <style is:global>
-  /* ===== Article Typography (match review look) ===== */
+  /* ===== Page-level style to match your review reference ===== */
+
+  .article-typography header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
   .article-typography h1 {
     font-size: clamp(2rem, 3.2vw, 3rem);
     line-height: 1.15;
-    margin: 0 0 0.85rem;
+    margin: 0 0 0.65rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: #111827;
   }
 
+  .article-typography .subheader {
+    font-size: 1.05rem;
+    color: #4b5563;
+    margin: 0;
+    font-weight: 600;
+  }
+
   .article-typography h2 {
-    margin-top: 2.4rem;
+    margin-top: 2.5rem;
     margin-bottom: 0.85rem;
     font-size: 1.65rem;
     line-height: 1.25;
@@ -130,11 +96,104 @@ const products = [
   .article-typography a:hover {
     text-decoration: underline;
   }
+
+  /* Hero image + caption (review-like) */
+  .hero-image {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .image-caption {
+    margin: 0.65rem 0 0;
+    color: #6b7280;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    max-width: 52ch;
+    text-align: center;
+  }
+
+  /* Key Insights (same feel as reference) */
+  .key-insights {
+    font-size: 0.92rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .key-insights li {
+    margin-bottom: 16px;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* Intro box */
+  .intro-box {
+    margin: 1.25rem 0 1.75rem;
+    padding: 1.1rem 1.2rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    color: #111827;
+    font-weight: 600;
+  }
+
+  /* Mini TOC */
+  .mini-toc {
+    margin: 2rem 0 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.98rem;
+    color: #111827;
+  }
+
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
+
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
+
+  /* Tables */
+  .table-note {
+    color: #6b7280;
+    font-style: italic;
+    margin-top: -0.2rem;
+  }
+
+  /* Make product links inside tables feel consistent */
+  .inline-product-link {
+    font-weight: 650;
+  }
 </style>
 
 <ArticleLayout title={meta.title} description={meta.description} canonicalUrl={meta.canonicalUrl}>
   <div class="article-typography">
-    <!-- META BLOCK (Card) -->
+    {/* META BLOCK (Card) */}
     <div class="meta-block">
       <h2 class="meta-title">META BLOCK — Best Supplement for Prostate Health</h2>
       <ul class="meta-list">
@@ -148,14 +207,43 @@ const products = [
       </ul>
     </div>
 
-    <header class="mb-10 text-center">
+    <header>
       <h1>Best Supplement for Prostate Health: Ingredients That Actually Make a Difference</h1>
       <p class="subheader">
         A condition-based, ingredient-first guide to help you choose a prostate supplement that fits your real symptoms and goals.
       </p>
+
+      {/* Optional hero (review-like). Using Prostadine hero as “topic visual”. */}
+      <div class="my-6 flex flex-col items-center">
+        <a href={L("Prostadine")} target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/men-health/prostadine/hero.png"
+            alt="Prostadine supplement bottle – prostate health support and urinary comfort"
+            class="hero-image"
+            loading="eager"
+          />
+        </a>
+        <p class="image-caption">
+          Ingredient-first prostate guidance: urinary flow, nocturia, hormonal balance, and circulation are often connected — so formulas overlap more than most people expect.
+        </p>
+      </div>
     </header>
 
-    <!-- MINI TOC -->
+    {/* KEY INSIGHTS */}
+    <div class="key-insights">
+      <ul>
+        <li>Most “best prostate supplement” searches are really about identifying which ingredients are most relevant to specific symptoms.</li>
+        <li>Across real-world formulas, certain ingredients repeat often — usually because they play a central role in urinary comfort, hormonal balance, or circulation support.</li>
+        <li>Saw palmetto and pygeum commonly show up together for urinary and BPH-related concerns, while circulation ingredients appear frequently due to the overlap with erection quality.</li>
+        <li>Choosing by condition first and ingredients second typically leads to clearer expectations and better decision-making.</li>
+      </ul>
+    </div>
+
+    <div class="intro-box">
+      What actually works, why it works, and how to match a supplement to urinary symptoms, nocturia, prostate comfort, hormonal balance, and circulation goals.
+    </div>
+
+    {/* MINI TOC */}
     <div class="mini-toc">
       <p class="mini-toc-title">In this guide:</p>
       <ul class="mini-toc-list">
@@ -169,9 +257,9 @@ const products = [
       </ul>
     </div>
 
+    {/* ===== 100% CONTENT START ===== */}
     <p>
-      When people search for the best supplement for prostate health, they are rarely looking for a random brand recommendation.
-      What they really want to know is what actually works, why it works, and how to choose a supplement that fits their specific concerns.
+      When people search for the best supplement for prostate health, they are rarely looking for a random brand recommendation. What they really want to know is what actually works, why it works, and how to choose a supplement that fits their specific concerns.
     </p>
 
     <p>Prostate health is closely connected to:</p>
@@ -184,18 +272,18 @@ const products = [
     </ul>
 
     <p>
-      Because these issues often overlap, the most effective supplements are not those built around a single ingredient,
-      but those that combine repeating, functionally relevant compounds.
+      Because these issues often overlap, the most effective supplements are not those built around a single ingredient, but those that combine repeating, functionally relevant compounds.
     </p>
 
     <p>
-      Below, we break down the ingredients that appear most often across real prostate and men’s health formulas, explain why they matter,
-      and show how different supplements align with specific prostate-related needs.
+      Below, we break down the ingredients that appear most often across real prostate and men’s health formulas, explain why they matter, and show how different supplements align with specific prostate-related needs.
     </p>
 
     <h2 id="why-ingredients-matter">Why Ingredients Matter More Than Brand Names</h2>
 
-    <p>There is no universal “best” prostate supplement for every man. Prostate symptoms vary widely, and so do supplement formulations.</p>
+    <p>
+      There is no universal “best” prostate supplement for every man. Prostate symptoms vary widely, and so do supplement formulations.
+    </p>
 
     <p>The most reliable way to evaluate prostate supplements is to:</p>
     <ul>
@@ -205,37 +293,39 @@ const products = [
     </ul>
 
     <p>
-      Patterns of repetition are especially important. When an ingredient appears in several different products,
-      it usually means it plays a central role in prostate or male health support.
+      Patterns of repetition are especially important. When an ingredient appears in several different products, it usually means it plays a central role in prostate or male health support.
     </p>
 
     <h2 id="key-ingredients">Key Ingredients Repeated Across Prostate &amp; Male Health Supplements</h2>
 
     <h3>Saw Palmetto — Hormonal Balance and Prostate Comfort</h3>
     <p>
-      Saw Palmetto is the most frequently recurring prostate-related ingredient across modern formulations. It is commonly associated with
-      DHT-related hormonal pathways, which are linked to age-related prostate enlargement and urinary discomfort.
+      Saw Palmetto is the most frequently recurring prostate-related ingredient across modern formulations. It is commonly associated with DHT-related hormonal pathways, which are linked to age-related prostate enlargement and urinary discomfort.
     </p>
     <p>
-      In addition to hormonal balance, Saw Palmetto is widely used for prostate inflammation and overall prostate comfort. While scientific results
-      are mixed in large trials, its consistent inclusion across formulas suggests it remains a foundational ingredient for prostate-focused support.
+      In addition to hormonal balance, Saw Palmetto is widely used for prostate inflammation and overall prostate comfort. While scientific results are mixed in large trials, its consistent inclusion across formulas suggests it remains a foundational ingredient for prostate-focused support.
     </p>
 
     <h3>Pygeum Africanum — Urinary Symptoms and Nighttime Urination</h3>
     <p>
-      Pygeum Africanum is strongly associated with urinary comfort, especially nighttime urination and urgency. Men who wake frequently to urinate often
-      prioritize symptom relief over abstract long-term prevention, which explains Pygeum’s frequent appearance in urinary-support formulas.
+      Pygeum Africanum is strongly associated with urinary comfort, especially nighttime urination and urgency. Men who wake frequently to urinate often prioritize symptom relief over abstract long-term prevention, which explains Pygeum’s frequent appearance in urinary-support formulas.
     </p>
-    <p>It is commonly paired with Saw Palmetto or sterols to create a broader urinary-support profile.</p>
+    <p>
+      It is commonly paired with Saw Palmetto or sterols to create a broader urinary-support profile.
+    </p>
 
     <h3>Beta-Sitosterol — Urinary Flow and Bladder Emptying</h3>
-    <p>Beta-Sitosterol targets the mechanics of urination rather than prostate size itself. It is commonly linked to:</p>
+    <p>
+      Beta-Sitosterol targets the mechanics of urination rather than prostate size itself. It is commonly linked to:
+    </p>
     <ul>
       <li>improved urine flow</li>
       <li>reduced residual urine in the bladder</li>
       <li>better bladder emptying</li>
     </ul>
-    <p>This makes it especially relevant for men dealing with weak stream or incomplete urination.</p>
+    <p>
+      This makes it especially relevant for men dealing with weak stream or incomplete urination.
+    </p>
 
     <h3>Ginseng — Energy, Circulation, and Erectile Support</h3>
     <p>
@@ -252,8 +342,7 @@ const products = [
 
     <h3>Horny Goat Weed (Icariin) — Circulation and Erection Quality</h3>
     <p>
-      Horny Goat Weed is one of the most commonly repeated circulation and erection-support ingredients. It is frequently used to support nitric oxide pathways,
-      pelvic blood flow, and erectile function.
+      Horny Goat Weed is one of the most commonly repeated circulation and erection-support ingredients. It is frequently used to support nitric oxide pathways, pelvic blood flow, and erectile function.
     </p>
     <p>
       Its frequent appearance alongside prostate herbs reflects the strong connection between circulation, urinary control, and sexual function.
@@ -261,23 +350,407 @@ const products = [
 
     <h3>Muira Puama &amp; Ginkgo Biloba — Pelvic Circulation and Urinary Support</h3>
     <p>
-      These two herbs appear repeatedly in formulas aimed at improving blood flow, pelvic circulation, and nerve signaling. They are often included to support both
-      urinary comfort and erection quality, reinforcing the link between vascular health and prostate-related symptoms.
+      These two herbs appear repeatedly in formulas aimed at improving blood flow, pelvic circulation, and nerve signaling. They are often included to support both urinary comfort and erection quality, reinforcing the link between vascular health and prostate-related symptoms.
     </p>
 
     <h3>Ashwagandha &amp; Boron — Stress, Hormones, and Indirect Prostate Support</h3>
     <p>
-      Ashwagandha and Boron appear less frequently but serve an important role in stress regulation and hormonal balance. Chronic stress and hormonal imbalance can worsen
-      inflammation and prostate discomfort, making these ingredients relevant for men whose symptoms worsen under stress or fatigue.
+      Ashwagandha and Boron appear less frequently but serve an important role in stress regulation and hormonal balance. Chronic stress and hormonal imbalance can worsen inflammation and prostate discomfort, making these ingredients relevant for men whose symptoms worsen under stress or fatigue.
     </p>
 
     <h2 id="table-1">Table 1 — Most Repeated Ingredients Across Prostate Supplements</h2>
-    <p><em>(Optimized for Featured Snippets)</em></p>
+    <p class="table-note">(Optimized for Featured Snippets)</p>
 
-    <!-- (tabelas + resto do conteúdo + cards de produtos continuam iguais ao seu arquivo) -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Appears In</th>
+            <th>Primary Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Saw Palmetto</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
+              <a class="inline-product-link" href={L("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>,{" "}
+              <a class="inline-product-link" href={L("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a>,{" "}
+              <a class="inline-product-link" href={L("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a>,{" "}
+              <a class="inline-product-link" href={L("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a>
+            </td>
+            <td>Hormonal balance, prostate comfort, BPH-related symptoms</td>
+          </tr>
+          <tr>
+            <td><strong>Pygeum Africanum</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("TitanFlow")} target="_blank" rel="noopener noreferrer">TitanFlow</a>,{" "}
+              <a class="inline-product-link" href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
+              <a class="inline-product-link" href={L("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>
+            </td>
+            <td>Nighttime urination, urinary comfort</td>
+          </tr>
+          <tr>
+            <td><strong>Horny Goat Weed (Icariin)</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("Nitric Boost")} target="_blank" rel="noopener noreferrer">Nitric Boost</a>,{" "}
+              <a class="inline-product-link" href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
+              <a class="inline-product-link" href={L("EndoPump")} target="_blank" rel="noopener noreferrer">EndoPump</a>,{" "}
+              <a class="inline-product-link" href={L("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a>
+            </td>
+            <td>Circulation, erection quality</td>
+          </tr>
+          <tr>
+            <td><strong>Ginseng (Panax / Chinese)</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a>,{" "}
+              <a class="inline-product-link" href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>
+            </td>
+            <td>Energy, circulation, erectile support</td>
+          </tr>
+          <tr>
+            <td><strong>Muira Puama</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
+              <a class="inline-product-link" href={L("EndoPump")} target="_blank" rel="noopener noreferrer">EndoPump</a>,{" "}
+              <a class="inline-product-link" href={L("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a>
+            </td>
+            <td>Libido, pelvic circulation</td>
+          </tr>
+          <tr>
+            <td><strong>Ginkgo Biloba</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("Nitric Boost")} target="_blank" rel="noopener noreferrer">Nitric Boost</a>,{" "}
+              <a class="inline-product-link" href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
+              <a class="inline-product-link" href={L("EndoPump")} target="_blank" rel="noopener noreferrer">EndoPump</a>
+            </td>
+            <td>Blood flow, vascular support</td>
+          </tr>
+          <tr>
+            <td><strong>Boron</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a>,{" "}
+              <a class="inline-product-link" href={L("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>
+            </td>
+            <td>Hormonal regulation</td>
+          </tr>
+          <tr>
+            <td><strong>Beta-Sitosterol</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("TitanFlow")} target="_blank" rel="noopener noreferrer">TitanFlow</a>
+            </td>
+            <td>Urinary flow, bladder emptying</td>
+          </tr>
+          <tr>
+            <td><strong>Lycopene</strong></td>
+            <td>
+              <a class="inline-product-link" href={L("TitanFlow")} target="_blank" rel="noopener noreferrer">TitanFlow</a>
+            </td>
+            <td>Antioxidant prostate protection</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="table-2">Table 2 — Prostate Supplements by Health Condition</h2>
+    <p class="table-note">(Directly answers “which supplement is best for my problem?”)</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Health Focus</th>
+            <th><a href={L("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></th>
+            <th><a href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></th>
+            <th><a href={L("TitanFlow")} target="_blank" rel="noopener noreferrer">TitanFlow</a></th>
+            <th><a href={L("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></th>
+            <th><a href={L("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a></th>
+            <th><a href={L("EndoPump")} target="_blank" rel="noopener noreferrer">EndoPump</a></th>
+            <th><a href={L("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></th>
+            <th><a href={L("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Overall Prostate Health</strong></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Enlarged Prostate / BPH</strong></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Urinary Flow / Weak Stream</strong></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Nighttime Urination (Nocturia)</strong></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Bladder / Urinary Comfort</strong></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Hormonal / DHT Balance</strong></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Circulation Support</strong></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Erection Quality</strong></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Male Vitality / Libido</strong></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+          </tr>
+
+          <tr>
+            <td><strong>Stress / Adaptogen Support</strong></td>
+            <td class="cell-center"><span class="badge-ok">✓</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+            <td class="cell-center"><span class="badge-dash">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="what-data-shows">What This Data Really Shows</h2>
+
+    <p>Looking at real ingredient repetition and health focus patterns, several insights emerge:</p>
+    <ul>
+      <li>Saw Palmetto and Pygeum form the core prostate-support stack, especially for urinary symptoms and BPH-related concerns.</li>
+      <li>Circulation and erection-support ingredients appear almost as frequently as classic prostate herbs, reflecting how closely these issues are linked.</li>
+      <li>Supplements that combine urinary, hormonal, and circulation support tend to feel more effective in real-world use than single-focus formulas.</li>
+      <li>This explains why many men searching for prostate supplements also care about erection quality, energy, and overall male vitality.</li>
+    </ul>
+
+    <p>
+      Perfeito — vamos substituir apenas a seção final, mantendo todo o conteúdo anterior intacto, mas encerrando o artigo de forma muito mais útil, clara e orientada à decisão, exatamente como o search intent pede.
+      Abaixo está a nova versão da seção final, já pronta para substituir a atual.
+    </p>
+
+    <h2 id="final-thoughts">Final Thoughts: How to Choose the Best Supplement for Prostate Health</h2>
+
+    <p>
+      There is no single supplement that is “best” for every prostate concern. The most effective choice depends on which health condition you are trying to address and which ingredients are most relevant to that condition.
+    </p>
+
+    <p>
+      Based on ingredient repetition, formulation patterns, and health focus, here is how to make a smarter, condition-based decision.
+    </p>
+
+    <h3>If Your Main Concern Is Enlarged Prostate (BPH) and Urinary Symptoms</h3>
+    <p>
+      Men dealing with BPH-related symptoms such as weak stream, urgency, and nighttime urination tend to benefit most from formulas built around classic prostate herbs.
+    </p>
+    <p>Key ingredients to look for:</p>
+    <ul>
+      <li>Saw Palmetto</li>
+      <li>Pygeum Africanum</li>
+      <li>Supporting urinary herbs</li>
+    </ul>
+    <p>Formulas that align best with this profile:</p>
+    <ul>
+      <li><a href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></li>
+      <li><a href={L("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></li>
+      <li><a href={L("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></li>
+      <li><a href={L("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a></li>
+      <li><a href={L("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></li>
+    </ul>
+    <p>
+      These supplements focus primarily on urinary flow, bladder comfort, and prostate-related inflammation, which are central concerns for BPH.
+    </p>
+
+    <h3>If Your Priority Is Urinary Flow and Bladder Emptying</h3>
+    <p>
+      When the main issue is weak stream or the feeling of incomplete bladder emptying, ingredients that support urinary mechanics become more important than prostate size alone.
+    </p>
+    <p>Key ingredients to look for:</p>
+    <ul>
+      <li>Beta-Sitosterol</li>
+      <li>Pygeum Africanum</li>
+      <li>Pumpkin seed or pollen-based extracts</li>
+    </ul>
+    <p>Formula that stands out most in this category:</p>
+    <ul>
+      <li><a href={L("TitanFlow")} target="_blank" rel="noopener noreferrer">TitanFlow</a></li>
+    </ul>
+    <p>
+      Its ingredient profile is especially aligned with functional urinary performance, making it a strong option for men focused on flow quality.
+    </p>
+
+    <h3>If Nighttime Urination (Nocturia) Is the Biggest Problem</h3>
+    <p>
+      Frequent nighttime trips to the bathroom are one of the most disruptive prostate-related symptoms. Supplements that emphasize Pygeum and urinary comfort compounds tend to be more relevant here.
+    </p>
+    <p>Key ingredients to look for:</p>
+    <ul>
+      <li>Pygeum Africanum</li>
+      <li>Saw Palmetto</li>
+      <li>Urinary-soothing plant extracts</li>
+    </ul>
+    <p>Strong options for nocturia support include:</p>
+    <ul>
+      <li><a href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></li>
+      <li><a href={L("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></li>
+      <li><a href={L("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></li>
+      <li><a href={L("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></li>
+    </ul>
+    <p>
+      These formulas are commonly positioned for nighttime urinary comfort and reduced urgency.
+    </p>
+
+    <h3>If Prostate Health and Erection Quality Are Both Important</h3>
+    <p>
+      Many men searching for prostate supplements are also concerned about erection quality, circulation, and male vitality. This overlap is reflected in how often circulation-support ingredients appear alongside prostate herbs.
+    </p>
+    <p>Key ingredients to look for:</p>
+    <ul>
+      <li>Horny Goat Weed (Icariin)</li>
+      <li>Ginseng</li>
+      <li>Muira Puama</li>
+      <li>Ginkgo Biloba</li>
+      <li>Nitric oxide–supporting compounds</li>
+    </ul>
+    <p>Formulas that best combine prostate support with erection and circulation benefits:</p>
+    <ul>
+      <li><a href={L("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></li>
+      <li><a href={L("TitanFlow")} target="_blank" rel="noopener noreferrer">TitanFlow</a></li>
+      <li><a href={L("EndoPump")} target="_blank" rel="noopener noreferrer">EndoPump</a></li>
+      <li><a href={L("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></li>
+      <li><a href={L("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></li>
+    </ul>
+    <p>
+      These options are more suitable when urinary symptoms coexist with reduced erection quality or overall male vitality concerns.
+    </p>
+
+    <h3>If You’re Focused on Hormonal Balance, Stress, and Long-Term Maintenance</h3>
+    <p>
+      Some men experience prostate discomfort alongside stress, fatigue, or hormonal imbalance rather than severe urinary symptoms. In these cases, adaptogens and hormonal regulators become more relevant.
+    </p>
+    <p>Key ingredients to look for:</p>
+    <ul>
+      <li>Ashwagandha</li>
+      <li>Boron</li>
+      <li>Tongkat Ali</li>
+      <li>Fenugreek</li>
+    </ul>
+    <p>Formula most aligned with this profile:</p>
+    <ul>
+      <li><a href={L("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></li>
+    </ul>
+    <p>
+      This type of formulation is better suited for long-term support and prevention, rather than acute urinary symptom relief.
+    </p>
+
+    <h3>The Takeaway</h3>
+    <p>
+      The best supplement for prostate health is not defined by popularity or branding, but by how well its ingredients match your specific health needs.
+    </p>
+    <ul>
+      <li>Urinary and BPH symptoms → prioritize Saw Palmetto and Pygeum</li>
+      <li>Weak flow and bladder emptying → look for Beta-Sitosterol</li>
+      <li>Prostate health + erections → favor circulation and nitric oxide support</li>
+      <li>Stress and hormonal balance → consider adaptogens and mineral regulators</li>
+    </ul>
+    <p>
+      Choosing based on conditions first and ingredients second leads to clearer expectations and better outcomes when searching for the best supplement for prostate health.
+    </p>
+
+    <h2 id="meta-block-plain">META BLOCK — Best Supplement for Prostate Health</h2>
+    <p><strong>Page Title</strong><br />Best Supplement for Prostate Health: Ingredients That Actually Work</p>
+    <p>
+      <strong>Meta Description</strong><br />
+      Discover the best supplement for prostate health based on proven ingredients. Compare saw palmetto, pygeum, beta-sitosterol, and circulation support for urinary flow, BPH, and erections.
+    </p>
+    <p><strong>URL / Slug</strong><br />/articles/men-health/best-supplement-for-prostate-health</p>
+    <p><strong>Article Category</strong><br />men-health</p>
 
     <h2 id="recommended-products">Recommended Products</h2>
-    <p>Explore the supplements mentioned in this guide. Each card links directly to the official offer page.</p>
+    <p>
+      Explore the supplements mentioned in this guide. Each card links directly to the official offer page.
+    </p>
 
     <div class="product-grid">
       {products.map((p) => (
@@ -288,5 +761,6 @@ const products = [
         </a>
       ))}
     </div>
+    {/* ===== 100% CONTENT END ===== */}
   </div>
 </ArticleLayout>
