@@ -18,8 +18,6 @@ const { title, description, canonicalUrl } = Astro.props;
     <meta name="description" content={description} />
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Optional: nice text rendering -->
     <meta name="color-scheme" content="light" />
   </head>
 
@@ -30,8 +28,12 @@ const { title, description, canonicalUrl } = Astro.props;
       </article>
     </main>
 
-    <style>
-      :global(html, body) {
+    <style is:global>
+      /* =========================
+         Base / Page
+      ========================== */
+      html,
+      body {
         margin: 0;
         padding: 0;
         background: #ffffff;
@@ -53,68 +55,90 @@ const { title, description, canonicalUrl } = Astro.props;
         font-size: 1.05rem;
       }
 
-      /* Typography */
-      :global(h1) {
+      /* =========================
+         Typography (reference-like)
+      ========================== */
+      .article h1 {
         font-size: clamp(2rem, 3.2vw, 3rem);
         line-height: 1.15;
-        margin: 0 0 0.75rem;
-        font-weight: 900;
+        margin: 0 0 0.85rem;
+        font-weight: 800; /* "font-extrabold" feel */
         letter-spacing: -0.02em;
-      }
-
-      :global(h2) {
-        margin-top: 2.6rem;
-        margin-bottom: 0.85rem;
-        font-size: 1.65rem;
-        line-height: 1.25;
-        font-weight: 850;
-        letter-spacing: -0.01em;
-      }
-
-      :global(h3) {
-        margin-top: 1.7rem;
-        margin-bottom: 0.55rem;
-        font-size: 1.25rem;
-        line-height: 1.35;
-        font-weight: 800;
-      }
-
-      :global(p) {
-        margin: 0 0 1.05rem;
         color: #111827;
       }
 
-      :global(ul) {
+      .article h2 {
+        margin-top: 2.4rem;
+        margin-bottom: 0.85rem;
+        font-size: 1.65rem;
+        line-height: 1.25;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        color: #111827;
+      }
+
+      .article h3 {
+        margin-top: 1.65rem;
+        margin-bottom: 0.55rem;
+        font-size: 1.25rem;
+        line-height: 1.35;
+        font-weight: 700;
+        color: #111827;
+      }
+
+      .article p {
+        margin: 0 0 1.05rem;
+        color: #111827;
+        font-size: 1.05rem;
+      }
+
+      .article p strong {
+        font-weight: 700;
+      }
+
+      .article ul {
         margin: 0.75rem 0 1.25rem;
         padding-left: 1.25rem;
       }
 
-      :global(li) {
+      .article li {
         margin-bottom: 0.35rem;
         color: #111827;
       }
 
-      :global(em) {
-        color: #374151;
-      }
-
-      :global(a) {
+      .article a {
         color: #2563eb;
+        text-decoration: none;
       }
 
-      :global(a:hover) {
+      .article a:hover {
         text-decoration: underline;
       }
 
-      /* Reusable UI blocks (inspired by your reference) */
-      :global(.subheader) {
+      .article em {
+        color: #374151;
+      }
+
+      /* Header spacing helpers (Tailwind-like classes used in your pages) */
+      .mb-10 {
+        margin-bottom: 2.5rem;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      /* =========================
+         Reusable UI blocks (from your reference)
+      ========================== */
+      .subheader {
         font-size: 1.1rem;
         color: #4b5563;
         margin: 0 0 1.5rem;
         font-weight: 600;
       }
 
-      :global(.intro-box) {
+      .intro-box {
         margin: 1.25rem 0 1.75rem;
         padding: 1.1rem 1.2rem;
         background: #f9fafb;
@@ -124,7 +148,7 @@ const { title, description, canonicalUrl } = Astro.props;
         font-weight: 600;
       }
 
-      :global(.mini-toc) {
+      .mini-toc {
         margin: 1.8rem 0 2.25rem;
         padding: 1.25rem 1.35rem;
         background: #f9fafb;
@@ -132,37 +156,37 @@ const { title, description, canonicalUrl } = Astro.props;
         border: 1px solid #e5e7eb;
       }
 
-      :global(.mini-toc-title) {
-        font-weight: 800;
+      .mini-toc-title {
+        font-weight: 700;
         font-size: 1.05rem;
         margin: 0 0 0.75rem;
         color: #111827;
       }
 
-      :global(.mini-toc-list) {
+      .mini-toc-list {
         list-style: disc;
         padding-left: 1.25rem;
         margin: 0;
-        font-size: 1rem;
+        font-size: 0.98rem;
         color: #111827;
       }
 
-      :global(.mini-toc-list li) {
+      .mini-toc-list li {
         margin-bottom: 0.25rem;
       }
 
-      :global(.mini-toc-list a) {
+      .mini-toc-list a {
         color: #2563eb;
         text-decoration: none;
-        font-weight: 650;
+        font-weight: 600;
       }
 
-      :global(.mini-toc-list a:hover) {
+      .mini-toc-list a:hover {
         text-decoration: underline;
       }
 
       /* Meta block */
-      :global(.meta-block) {
+      .meta-block {
         border: 1px solid #e5e7eb;
         border-radius: 0.9rem;
         background: #fafafa;
@@ -170,22 +194,24 @@ const { title, description, canonicalUrl } = Astro.props;
         margin: 0 0 2rem;
       }
 
-      :global(.meta-title) {
+      .meta-title {
         margin: 0 0 0.75rem;
-        font-weight: 900;
+        font-weight: 800;
       }
 
-      :global(.meta-list) {
+      .meta-list {
         margin: 0;
         padding-left: 1.15rem;
       }
 
-      :global(.meta-list li) {
+      .meta-list li {
         margin: 0.45rem 0;
       }
 
-      /* Tables (beautified + responsive) */
-      :global(.table-wrap) {
+      /* =========================
+         Tables (beautified + responsive)
+      ========================== */
+      .table-wrap {
         width: 100%;
         overflow-x: auto;
         border: 1px solid #e5e7eb;
@@ -194,45 +220,45 @@ const { title, description, canonicalUrl } = Astro.props;
         margin: 1rem 0 2rem;
       }
 
-      :global(table) {
+      .article table {
         width: 100%;
         border-collapse: separate;
         border-spacing: 0;
-        min-width: 820px; /* helps Table 2 not collapse */
+        min-width: 820px;
         font-size: 0.98rem;
       }
 
-      :global(th),
-      :global(td) {
+      .article th,
+      .article td {
         padding: 0.85rem 0.9rem;
         border-bottom: 1px solid #e5e7eb;
         vertical-align: top;
         text-align: left;
       }
 
-      :global(th) {
+      .article th {
         background: #f9fafb;
-        font-weight: 850;
+        font-weight: 700;
         color: #111827;
         position: sticky;
         top: 0;
         z-index: 1;
       }
 
-      :global(tr:nth-child(even) td) {
+      .article tr:nth-child(even) td {
         background: #fcfcfd;
       }
 
-      :global(tr:last-child td) {
+      .article tr:last-child td {
         border-bottom: 0;
       }
 
-      :global(.cell-center) {
+      .cell-center {
         text-align: center;
         white-space: nowrap;
       }
 
-      :global(.badge-ok) {
+      .badge-ok {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -246,7 +272,7 @@ const { title, description, canonicalUrl } = Astro.props;
         line-height: 1;
       }
 
-      :global(.badge-dash) {
+      .badge-dash {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -260,15 +286,17 @@ const { title, description, canonicalUrl } = Astro.props;
         line-height: 1;
       }
 
-      /* Product cards */
-      :global(.product-grid) {
+      /* =========================
+         Product cards
+      ========================== */
+      .product-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 1.2rem;
         margin-top: 1.25rem;
       }
 
-      :global(.product-card) {
+      .product-card {
         display: block;
         border: 1px solid #e5e7eb;
         border-radius: 1rem;
@@ -280,12 +308,12 @@ const { title, description, canonicalUrl } = Astro.props;
         transition: transform 0.15s ease, box-shadow 0.15s ease;
       }
 
-      :global(.product-card:hover) {
+      .product-card:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
       }
 
-      :global(.product-card img) {
+      .product-card img {
         max-width: 100%;
         height: auto;
         display: block;
@@ -293,19 +321,19 @@ const { title, description, canonicalUrl } = Astro.props;
         border-radius: 0.75rem;
       }
 
-      :global(.product-name) {
+      .product-name {
         margin: 0.2rem 0 0.75rem;
         font-size: 1.05rem;
-        font-weight: 850;
+        font-weight: 800;
       }
 
-      :global(.product-button) {
+      .product-button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 0.6rem 1.05rem;
         border-radius: 0.75rem;
-        font-weight: 900;
+        font-weight: 800;
         background: #2563eb;
         color: #ffffff;
       }
@@ -315,7 +343,8 @@ const { title, description, canonicalUrl } = Astro.props;
         .page {
           padding: 1.75rem 1rem 2.5rem;
         }
-        :global(table) {
+
+        .article table {
           min-width: 760px;
         }
       }
