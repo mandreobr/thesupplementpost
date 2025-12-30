@@ -1,4 +1,6 @@
 ---
+// File: src/layouts/ArticleLayout.astro
+
 interface Props {
   title: string;
   description: string;
@@ -16,60 +18,306 @@ const { title, description, canonicalUrl } = Astro.props;
     <meta name="description" content={description} />
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Optional: nice text rendering -->
+    <meta name="color-scheme" content="light" />
   </head>
 
   <body>
-    <main class="article-container">
-      <article class="article-content">
+    <main class="page">
+      <article class="article">
         <slot />
       </article>
     </main>
 
     <style>
-      .article-container {
-        max-width: 860px;
+      :global(html, body) {
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: #111827;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      .page {
+        max-width: 980px;
         margin: 0 auto;
-        padding: 2rem 1rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-        line-height: 1.65;
+        padding: 2.25rem 1rem 3rem;
       }
 
-      h1 {
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
+      .article {
+        font-size: 1.05rem;
       }
 
-      h2 {
-        margin-top: 2.5rem;
-        margin-bottom: 1rem;
-        font-size: 1.6rem;
+      /* Typography */
+      :global(h1) {
+        font-size: clamp(2rem, 3.2vw, 3rem);
+        line-height: 1.15;
+        margin: 0 0 0.75rem;
+        font-weight: 900;
+        letter-spacing: -0.02em;
       }
 
-      h3 {
-        margin-top: 1.8rem;
+      :global(h2) {
+        margin-top: 2.6rem;
+        margin-bottom: 0.85rem;
+        font-size: 1.65rem;
+        line-height: 1.25;
+        font-weight: 850;
+        letter-spacing: -0.01em;
+      }
+
+      :global(h3) {
+        margin-top: 1.7rem;
+        margin-bottom: 0.55rem;
         font-size: 1.25rem;
+        line-height: 1.35;
+        font-weight: 800;
       }
 
-      ul {
-        padding-left: 1.2rem;
+      :global(p) {
+        margin: 0 0 1.05rem;
+        color: #111827;
       }
 
-      table {
+      :global(ul) {
+        margin: 0.75rem 0 1.25rem;
+        padding-left: 1.25rem;
+      }
+
+      :global(li) {
+        margin-bottom: 0.35rem;
+        color: #111827;
+      }
+
+      :global(em) {
+        color: #374151;
+      }
+
+      :global(a) {
+        color: #2563eb;
+      }
+
+      :global(a:hover) {
+        text-decoration: underline;
+      }
+
+      /* Reusable UI blocks (inspired by your reference) */
+      :global(.subheader) {
+        font-size: 1.1rem;
+        color: #4b5563;
+        margin: 0 0 1.5rem;
+        font-weight: 600;
+      }
+
+      :global(.intro-box) {
+        margin: 1.25rem 0 1.75rem;
+        padding: 1.1rem 1.2rem;
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.9rem;
+        color: #111827;
+        font-weight: 600;
+      }
+
+      :global(.mini-toc) {
+        margin: 1.8rem 0 2.25rem;
+        padding: 1.25rem 1.35rem;
+        background: #f9fafb;
+        border-radius: 0.9rem;
+        border: 1px solid #e5e7eb;
+      }
+
+      :global(.mini-toc-title) {
+        font-weight: 800;
+        font-size: 1.05rem;
+        margin: 0 0 0.75rem;
+        color: #111827;
+      }
+
+      :global(.mini-toc-list) {
+        list-style: disc;
+        padding-left: 1.25rem;
+        margin: 0;
+        font-size: 1rem;
+        color: #111827;
+      }
+
+      :global(.mini-toc-list li) {
+        margin-bottom: 0.25rem;
+      }
+
+      :global(.mini-toc-list a) {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 650;
+      }
+
+      :global(.mini-toc-list a:hover) {
+        text-decoration: underline;
+      }
+
+      /* Meta block */
+      :global(.meta-block) {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.9rem;
+        background: #fafafa;
+        padding: 1rem 1.2rem;
+        margin: 0 0 2rem;
+      }
+
+      :global(.meta-title) {
+        margin: 0 0 0.75rem;
+        font-weight: 900;
+      }
+
+      :global(.meta-list) {
+        margin: 0;
+        padding-left: 1.15rem;
+      }
+
+      :global(.meta-list li) {
+        margin: 0.45rem 0;
+      }
+
+      /* Tables (beautified + responsive) */
+      :global(.table-wrap) {
         width: 100%;
-        border-collapse: collapse;
-        margin: 2rem 0;
-        font-size: 0.95rem;
+        overflow-x: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.9rem;
+        background: #ffffff;
+        margin: 1rem 0 2rem;
       }
 
-      table th,
-      table td {
-        border: 1px solid #ddd;
-        padding: 0.6rem;
+      :global(table) {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        min-width: 820px; /* helps Table 2 not collapse */
+        font-size: 0.98rem;
+      }
+
+      :global(th),
+      :global(td) {
+        padding: 0.85rem 0.9rem;
+        border-bottom: 1px solid #e5e7eb;
+        vertical-align: top;
         text-align: left;
       }
 
-      table th {
-        background: #f5f5f5;
+      :global(th) {
+        background: #f9fafb;
+        font-weight: 850;
+        color: #111827;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      :global(tr:nth-child(even) td) {
+        background: #fcfcfd;
+      }
+
+      :global(tr:last-child td) {
+        border-bottom: 0;
+      }
+
+      :global(.cell-center) {
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      :global(.badge-ok) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 999px;
+        background: #ecfdf5;
+        border: 1px solid #a7f3d0;
+        color: #065f46;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      :global(.badge-dash) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 999px;
+        background: #f3f4f6;
+        border: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      /* Product cards */
+      :global(.product-grid) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.2rem;
+        margin-top: 1.25rem;
+      }
+
+      :global(.product-card) {
+        display: block;
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        background: #ffffff;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      :global(.product-card:hover) {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      }
+
+      :global(.product-card img) {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 0.8rem;
+        border-radius: 0.75rem;
+      }
+
+      :global(.product-name) {
+        margin: 0.2rem 0 0.75rem;
+        font-size: 1.05rem;
+        font-weight: 850;
+      }
+
+      :global(.product-button) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1.05rem;
+        border-radius: 0.75rem;
+        font-weight: 900;
+        background: #2563eb;
+        color: #ffffff;
+      }
+
+      /* Small screens */
+      @media (max-width: 520px) {
+        .page {
+          padding: 1.75rem 1rem 2.5rem;
+        }
+        :global(table) {
+          min-width: 760px;
+        }
       }
     </style>
   </body>
