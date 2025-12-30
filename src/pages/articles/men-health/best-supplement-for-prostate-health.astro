@@ -157,12 +157,6 @@ const products = [
     margin: 1.35rem 0;
   }
 
-  .content-box-title {
-    font-weight: 900;
-    margin: 0 0 0.55rem;
-    color: #111827;
-  }
-
   /* ===== Ingredient cards (like reference) ===== */
   .ingredient-card-list {
     display: grid;
@@ -184,7 +178,6 @@ const products = [
     font-weight: 900;
   }
 
-  /* make “em” closer to review style */
   .article-typography em {
     color: #374151;
     font-style: italic;
@@ -192,22 +185,7 @@ const products = [
 </style>
 
 <ArticleLayout title={meta.title} description={meta.description} canonicalUrl={meta.canonicalUrl}>
-  {/* IMPORTANT: everything must be inside this wrapper so typography styles apply */}
   <div class="article-typography">
-    {/* META BLOCK (Card) */}
-    <div class="meta-block">
-      <h2 class="meta-title">META BLOCK — Best Supplement for Prostate Health</h2>
-      <ul class="meta-list">
-        <li><strong>Page Title:</strong> Best Supplement for Prostate Health: Ingredients That Actually Work</li>
-        <li>
-          <strong>Meta Description:</strong> Discover the best supplement for prostate health based on proven ingredients.
-          Compare saw palmetto, pygeum, beta-sitosterol, and circulation support for urinary flow, BPH, and erections.
-        </li>
-        <li><strong>URL / Slug:</strong> /articles/men-health/best-supplement-for-prostate-health</li>
-        <li><strong>Article Category:</strong> men-health</li>
-      </ul>
-    </div>
-
     <header class="article-hero">
       <h1>Best Supplement for Prostate Health: Ingredients That Actually Make a Difference</h1>
       <p class="article-subheader">
@@ -230,6 +208,7 @@ const products = [
     </div>
 
     <p>
+
       When people search for the best supplement for prostate health, they are rarely looking for a random brand recommendation.
       What they really want to know is what actually works, why it works, and how to choose a supplement that fits their specific concerns.
     </p>
@@ -705,24 +684,7 @@ const products = [
       </p>
     </div>
 
-    <h2 id="meta-block-plain">META BLOCK — Best Supplement for Prostate Health</h2>
-
-    <div class="content-box">
-      <p><strong>Page Title</strong><br />Best Supplement for Prostate Health: Ingredients That Actually Work</p>
-      <p>
-        <strong>Meta Description</strong><br />
-        Discover the best supplement for prostate health based on proven ingredients. Compare saw palmetto, pygeum, beta-sitosterol, and circulation support for urinary flow, BPH, and erections.
-      </p>
-      <p><strong>URL / Slug</strong><br />/articles/men-health/best-supplement-for-prostate-health</p>
-      <p><strong>Article Category</strong><br />men-health</p>
-    </div>
-
-    <h2 id="recommended-products">Recommended Products</h2>
-    <p>
-      Explore the supplements mentioned in this guide. Each card links directly to the official offer page.
-    </p>
-
-    <div class="product-grid">
+        <div class="product-grid">
       {products.map((p) => (
         <a class="product-card" href={p.hoplink} target="_blank" rel="noopener noreferrer">
           <img src={p.img} alt={p.alt} loading="lazy" />
