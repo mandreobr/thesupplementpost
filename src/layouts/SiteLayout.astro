@@ -1,0 +1,129 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  pageTitle: string;
+  metaDescription: string;
+  canonicalUrl?: string;
+}
+
+const { pageTitle, metaDescription, canonicalUrl } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle} metaDescription={metaDescription} canonicalUrl={canonicalUrl}>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="site-header__inner">
+        {/* BRAND / LOGO */}
+        <a class="site-brand" href="/" aria-label="The Supplement Post Home">
+          <img
+            class="site-brand__logo"
+            src="/images/1.Home/logo.png"
+            alt="The Supplement Post"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+
+        {/* NAV */}
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__link" href="/">Home</a>
+          <a class="site-nav__link" href="/reviews/">Reviews</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <slot />
+    </main>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .site-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header brand color */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #30B7CF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .site-header__inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0.7rem 1rem; /* menor para não virar “faixa gigante” */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  /* BRAND */
+  .site-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 0; /* evita espaço extra */
+  }
+
+  /* ✅ LOGO PROPORCIONAL */
+  .site-brand__logo {
+    height: 44px;          /* controla a altura */
+    width: auto;           /* mantém proporção */
+    max-width: 240px;      /* impede “banner gigante” */
+    object-fit: contain;   /* garante proporção */
+    display: block;
+  }
+
+  /* NAV */
+  .site-nav {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+  }
+
+  /* ✅ FORÇA MENU SEM NEGRITO (mesmo com CSS global do artigo) */
+  .site-nav__link {
+    text-decoration: none;
+    font-weight: 500 !important; /* override total */
+    color: #ffffff;
+    padding: 0.45rem 0.65rem;
+    border-radius: 0.65rem;
+    opacity: 0.95;
+  }
+
+  .site-nav__link:hover {
+    background: rgba(255, 255, 255, 0.18);
+    opacity: 1;
+  }
+
+  /* Match page width/padding like your previous layout */
+  .site-main {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2.25rem 1rem 3rem;
+  }
+
+  @media (max-width: 520px) {
+    .site-header__inner {
+      padding: 0.65rem 1rem;
+    }
+
+    .site-brand__logo {
+      height: 38px;
+      max-width: 190px;
+    }
+
+    .site-main {
+      padding: 1.75rem 1rem 2.5rem;
+    }
+  }
+</style>

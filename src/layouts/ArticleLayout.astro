@@ -1,6 +1,8 @@
 ---
 // File: src/layouts/ArticleLayout.astro
 
+import SiteLayout from "./SiteLayout.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -10,344 +12,327 @@ interface Props {
 const { title, description, canonicalUrl } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
-  </head>
+<SiteLayout pageTitle={title} metaDescription={description} canonicalUrl={canonicalUrl}>
+  <main class="page">
+    <article class="article">
+      <slot />
+    </article>
+  </main>
+</SiteLayout>
 
-  <body>
-    <main class="page">
-      <article class="article">
-        <slot />
-      </article>
-    </main>
+<style is:global>
+  /* =========================
+     Article Layout Shell (keeps your 980px width)
+     IMPORTANT: do NOT style html/body here (SiteLayout/BaseLayout owns that)
+  ========================== */
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2.25rem 1rem 3rem;
+  }
 
-    <style is:global>
-      /* =========================
-         Base / Page
-      ========================== */
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: #ffffff;
-        color: #111827;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        line-height: 1.75;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-      }
+  .article {
+    font-size: 1.05rem;
+    /* force Inter so it matches the site (prevents Times fallback) */
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.75;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
-      .page {
-        max-width: 980px;
-        margin: 0 auto;
-        padding: 2.25rem 1rem 3rem;
-      }
+  /* =========================
+     Typography (reference-like)
+  ========================== */
+  .article h1 {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 0.85rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #111827;
+  }
 
-      .article {
-        font-size: 1.05rem;
-      }
+  .article h2 {
+    margin-top: 2.4rem;
+    margin-bottom: 0.85rem;
+    font-size: 1.65rem;
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #111827;
+  }
 
-      /* =========================
-         Typography (reference-like)
-      ========================== */
-      .article h1 {
-        font-size: clamp(2rem, 3.2vw, 3rem);
-        line-height: 1.15;
-        margin: 0 0 0.85rem;
-        font-weight: 800; /* "font-extrabold" feel */
-        letter-spacing: -0.02em;
-        color: #111827;
-      }
+  .article h3 {
+    margin-top: 1.65rem;
+    margin-bottom: 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #111827;
+  }
 
-      .article h2 {
-        margin-top: 2.4rem;
-        margin-bottom: 0.85rem;
-        font-size: 1.65rem;
-        line-height: 1.25;
-        font-weight: 800;
-        letter-spacing: -0.01em;
-        color: #111827;
-      }
+  .article p {
+    margin: 0 0 1.05rem;
+    color: #111827;
+    font-size: 1.05rem;
+  }
 
-      .article h3 {
-        margin-top: 1.65rem;
-        margin-bottom: 0.55rem;
-        font-size: 1.25rem;
-        line-height: 1.35;
-        font-weight: 700;
-        color: #111827;
-      }
+  .article p strong {
+    font-weight: 700;
+  }
 
-      .article p {
-        margin: 0 0 1.05rem;
-        color: #111827;
-        font-size: 1.05rem;
-      }
+  .article ul {
+    margin: 0.75rem 0 1.25rem;
+    padding-left: 1.25rem;
+  }
 
-      .article p strong {
-        font-weight: 700;
-      }
+  .article li {
+    margin-bottom: 0.35rem;
+    color: #111827;
+  }
 
-      .article ul {
-        margin: 0.75rem 0 1.25rem;
-        padding-left: 1.25rem;
-      }
+  .article a {
+    color: #2563eb;
+    text-decoration: none;
+  }
 
-      .article li {
-        margin-bottom: 0.35rem;
-        color: #111827;
-      }
+  .article a:hover {
+    text-decoration: underline;
+  }
 
-      .article a {
-        color: #2563eb;
-        text-decoration: none;
-      }
+  .article em {
+    color: #374151;
+  }
 
-      .article a:hover {
-        text-decoration: underline;
-      }
+  /* Header spacing helpers (Tailwind-like classes used in your pages) */
+  .mb-10 {
+    margin-bottom: 2.5rem;
+  }
 
-      .article em {
-        color: #374151;
-      }
+  .text-center {
+    text-align: center;
+  }
 
-      /* Header spacing helpers (Tailwind-like classes used in your pages) */
-      .mb-10 {
-        margin-bottom: 2.5rem;
-      }
+  /* =========================
+     Reusable UI blocks (from your reference)
+  ========================== */
+  .subheader {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin: 0 0 1.5rem;
+    font-weight: 600;
+  }
 
-      .text-center {
-        text-align: center;
-      }
+  .intro-box {
+    margin: 1.25rem 0 1.75rem;
+    padding: 1.1rem 1.2rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    color: #111827;
+    font-weight: 600;
+  }
 
-      /* =========================
-         Reusable UI blocks (from your reference)
-      ========================== */
-      .subheader {
-        font-size: 1.1rem;
-        color: #4b5563;
-        margin: 0 0 1.5rem;
-        font-weight: 600;
-      }
+  .mini-toc {
+    margin: 1.8rem 0 2.25rem;
+    padding: 1.25rem 1.35rem;
+    background: #f9fafb;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+  }
 
-      .intro-box {
-        margin: 1.25rem 0 1.75rem;
-        padding: 1.1rem 1.2rem;
-        background: #f9fafb;
-        border: 1px solid #e5e7eb;
-        border-radius: 0.9rem;
-        color: #111827;
-        font-weight: 600;
-      }
+  .mini-toc-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
 
-      .mini-toc {
-        margin: 1.8rem 0 2.25rem;
-        padding: 1.25rem 1.35rem;
-        background: #f9fafb;
-        border-radius: 0.9rem;
-        border: 1px solid #e5e7eb;
-      }
+  .mini-toc-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.98rem;
+    color: #111827;
+  }
 
-      .mini-toc-title {
-        font-weight: 700;
-        font-size: 1.05rem;
-        margin: 0 0 0.75rem;
-        color: #111827;
-      }
+  .mini-toc-list li {
+    margin-bottom: 0.25rem;
+  }
 
-      .mini-toc-list {
-        list-style: disc;
-        padding-left: 1.25rem;
-        margin: 0;
-        font-size: 0.98rem;
-        color: #111827;
-      }
+  .mini-toc-list a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-      .mini-toc-list li {
-        margin-bottom: 0.25rem;
-      }
+  .mini-toc-list a:hover {
+    text-decoration: underline;
+  }
 
-      .mini-toc-list a {
-        color: #2563eb;
-        text-decoration: none;
-        font-weight: 600;
-      }
+  /* Meta block (if you ever use it internally) */
+  .meta-block {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    background: #fafafa;
+    padding: 1rem 1.2rem;
+    margin: 0 0 2rem;
+  }
 
-      .mini-toc-list a:hover {
-        text-decoration: underline;
-      }
+  .meta-title {
+    margin: 0 0 0.75rem;
+    font-weight: 800;
+  }
 
-      /* Meta block */
-      .meta-block {
-        border: 1px solid #e5e7eb;
-        border-radius: 0.9rem;
-        background: #fafafa;
-        padding: 1rem 1.2rem;
-        margin: 0 0 2rem;
-      }
+  .meta-list {
+    margin: 0;
+    padding-left: 1.15rem;
+  }
 
-      .meta-title {
-        margin: 0 0 0.75rem;
-        font-weight: 800;
-      }
+  .meta-list li {
+    margin: 0.45rem 0;
+  }
 
-      .meta-list {
-        margin: 0;
-        padding-left: 1.15rem;
-      }
+  /* =========================
+     Tables (beautified + responsive)
+  ========================== */
+  .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    background: #ffffff;
+    margin: 1rem 0 2rem;
+  }
 
-      .meta-list li {
-        margin: 0.45rem 0;
-      }
+  .article table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 820px;
+    font-size: 0.98rem;
+  }
 
-      /* =========================
-         Tables (beautified + responsive)
-      ========================== */
-      .table-wrap {
-        width: 100%;
-        overflow-x: auto;
-        border: 1px solid #e5e7eb;
-        border-radius: 0.9rem;
-        background: #ffffff;
-        margin: 1rem 0 2rem;
-      }
+  .article th,
+  .article td {
+    padding: 0.85rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+    text-align: left;
+  }
 
-      .article table {
-        width: 100%;
-        border-collapse: separate;
-        border-spacing: 0;
-        min-width: 820px;
-        font-size: 0.98rem;
-      }
+  .article th {
+    background: #f9fafb;
+    font-weight: 700;
+    color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
 
-      .article th,
-      .article td {
-        padding: 0.85rem 0.9rem;
-        border-bottom: 1px solid #e5e7eb;
-        vertical-align: top;
-        text-align: left;
-      }
+  .article tr:nth-child(even) td {
+    background: #fcfcfd;
+  }
 
-      .article th {
-        background: #f9fafb;
-        font-weight: 700;
-        color: #111827;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-      }
+  .article tr:last-child td {
+    border-bottom: 0;
+  }
 
-      .article tr:nth-child(even) td {
-        background: #fcfcfd;
-      }
+  .cell-center {
+    text-align: center;
+    white-space: nowrap;
+  }
 
-      .article tr:last-child td {
-        border-bottom: 0;
-      }
+  .badge-ok {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    font-weight: 900;
+    line-height: 1;
+  }
 
-      .cell-center {
-        text-align: center;
-        white-space: nowrap;
-      }
+  .badge-dash {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-weight: 900;
+    line-height: 1;
+  }
 
-      .badge-ok {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 999px;
-        background: #ecfdf5;
-        border: 1px solid #a7f3d0;
-        color: #065f46;
-        font-weight: 900;
-        line-height: 1;
-      }
+  /* =========================
+     Product cards
+  ========================== */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.25rem;
+  }
 
-      .badge-dash {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 999px;
-        background: #f3f4f6;
-        border: 1px solid #e5e7eb;
-        color: #6b7280;
-        font-weight: 900;
-        line-height: 1;
-      }
+  .product-card {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    background: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
 
-      /* =========================
-         Product cards
-      ========================== */
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 1.2rem;
-        margin-top: 1.25rem;
-      }
+  .product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
 
-      .product-card {
-        display: block;
-        border: 1px solid #e5e7eb;
-        border-radius: 1rem;
-        background: #ffffff;
-        padding: 1rem;
-        text-align: center;
-        text-decoration: none;
-        color: inherit;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-      }
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.8rem;
+    border-radius: 0.75rem;
+  }
 
-      .product-card:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-      }
+  .product-name {
+    margin: 0.2rem 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 800;
+  }
 
-      .product-card img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto 0.8rem;
-        border-radius: 0.75rem;
-      }
+  .product-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.05rem;
+    border-radius: 0.75rem;
+    font-weight: 800;
+    background: #2563eb;
+    color: #ffffff;
+  }
 
-      .product-name {
-        margin: 0.2rem 0 0.75rem;
-        font-size: 1.05rem;
-        font-weight: 800;
-      }
+  /* Small screens */
+  @media (max-width: 520px) {
+    .page {
+      padding: 1.75rem 1rem 2.5rem;
+    }
 
-      .product-button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.6rem 1.05rem;
-        border-radius: 0.75rem;
-        font-weight: 800;
-        background: #2563eb;
-        color: #ffffff;
-      }
-
-      /* Small screens */
-      @media (max-width: 520px) {
-        .page {
-          padding: 1.75rem 1rem 2.5rem;
-        }
-
-        .article table {
-          min-width: 760px;
-        }
-      }
-    </style>
-  </body>
-</html>
+    .article table {
+      min-width: 760px;
+    }
+  }
+</style>
