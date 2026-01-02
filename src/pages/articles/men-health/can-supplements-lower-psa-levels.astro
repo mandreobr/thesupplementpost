@@ -1,0 +1,623 @@
+---
+/* File: src/pages/articles/men-health/can-supplements-lower-psa-levels.astro */
+
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+
+const meta = {
+  title: "Can Supplements Lower PSA Levels? What Men Should Really Know",
+  description:
+    "Can supplements lower PSA levels? Learn what PSA measures, why it can rise, and which supplement strategies may support PSA balance indirectly—without false promises.",
+  canonicalUrl:
+    "https://www.thesupplementpost.com/articles/men-health/can-supplements-lower-psa-levels",
+};
+
+const products = [
+  {
+    name: "Prostadine",
+    hoplink: "https://linkly.link/2LziG",
+    img: "/images/men-health/prostadine/hero.png",
+    alt: "Prostadine supplement bottle",
+  },
+  {
+    name: "EndoPeak",
+    hoplink: "https://linkly.link/2R0io",
+    img: "/images/men-health/endopeak/hero.png",
+    alt: "EndoPeak supplement bottle",
+  },
+  {
+    name: "FlowForce Max",
+    hoplink: "https://linkly.link/2R1gT",
+    img: "/images/men-health/flowforce-max/hero.png",
+    alt: "FlowForce Max supplement bottle",
+  },
+  {
+    name: "TC24",
+    hoplink: "https://linkly.link/2RIOy",
+    img: "/images/men-health/total-control-24/hero.png",
+    alt: "TC24 supplement bottle",
+  },
+  {
+    name: "Prostavive",
+    hoplink: "https://linkly.link/2W2pQ",
+    img: "/images/men-health/prostavive/hero.png",
+    alt: "Prostavive supplement bottle",
+  },
+  {
+    name: "Fluxactive Complete",
+    hoplink: "https://linkly.link/2W4ws",
+    img: "/images/men-health/fluxactive-complete/hero.png",
+    alt: "Fluxactive Complete supplement bottle",
+  },
+];
+
+const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
+---
+
+<style is:global>
+  /* ===== Article Typography (match review look) ===== */
+  .article-typography h1 {
+    font-size: clamp(2rem, 3.4vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 0.85rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #111827;
+  }
+
+  /* IMPORTANT: underline via pseudo-element so it never “disappears” inside boxes */
+  .article-typography h2 {
+    margin-top: 0; /* sections control spacing */
+    margin-bottom: 0.9rem;
+    font-size: 1.7rem;
+    line-height: 1.25;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: #111827;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .article-typography h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.35rem;
+    width: 100%;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 999px;
+    opacity: 1;
+  }
+
+  .article-typography h3 {
+    margin-top: 1.55rem;
+    margin-bottom: 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #111827;
+  }
+
+  .article-typography p {
+    margin: 0 0 1.05rem;
+    color: #111827;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-typography ul {
+    margin: 0.75rem 0 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .article-typography li {
+    margin-bottom: 0.35rem;
+    color: #111827;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-typography a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .article-typography a:hover {
+    text-decoration: underline;
+  }
+
+  /* “review-like” hero */
+  .article-hero {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .article-subheader {
+    font-size: 1.05rem;
+    color: #4b5563;
+    font-weight: 600;
+    margin: 0.65rem 0 0;
+  }
+
+  /* ===== One styled box per H2 block ===== */
+  .content-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.15rem 1.25rem;
+    margin: 1.35rem 0;
+  }
+
+  /* Give sections breathing room while keeping underline consistent */
+  .content-box + .content-box {
+    margin-top: 1.6rem;
+  }
+
+  /* Ensure in-box headings don't crash into underline */
+  .content-box h2 {
+    margin-top: 0;
+  }
+
+  /* Optional: keep images consistent */
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .image-caption {
+    margin-top: 0.65rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+    font-weight: 600;
+  }
+
+  /* ===== Tables ===== */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+
+  .table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+
+  .table-wrap th,
+  .table-wrap td {
+    text-align: left;
+    padding: 0.85rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+    color: #111827;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .table-wrap thead th {
+    background: #f3f4f6;
+    font-weight: 900;
+    color: #111827;
+  }
+
+  .table-note {
+    margin-top: 0.75rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* ===== Key insights bullets (tight) ===== */
+  .key-insights {
+    margin: 1rem auto 0;
+    max-width: 980px;
+    text-align: left;
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 1.05rem 1.15rem;
+  }
+
+  .key-insights-title {
+    margin: 0 0 0.5rem;
+    font-weight: 900;
+    color: #111827;
+    font-size: 1.05rem;
+  }
+
+  .key-insights ul {
+    margin: 0.5rem 0 0;
+  }
+
+  /* ===== Product grid (recommended) ===== */
+  .product-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: 1.05rem;
+  }
+
+  @media (min-width: 640px) {
+    .product-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .product-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+    border-color: #dbeafe;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    background: #f3f4f6;
+  }
+
+  .product-name {
+    margin-top: 0.75rem;
+    font-weight: 900;
+    color: #111827;
+    font-size: 1.05rem;
+  }
+
+  .product-button {
+    display: inline-block;
+    margin-top: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.95rem;
+  }
+
+  /* ===== SGE block ===== */
+  .sge-block {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 1.05rem 1.15rem;
+    margin-top: 1.05rem;
+  }
+
+  .sge-block h3 {
+    margin-top: 0;
+  }
+
+  .sge-block p:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<ArticleLayout title={meta.title} description={meta.description} canonicalUrl={meta.canonicalUrl}>
+  <div class="article-typography">
+    <header class="article-hero">
+      <h1>Can Supplements Lower PSA Levels? What Men Should Really Know</h1>
+      <p class="article-subheader">
+        A PSA-first, evidence-minded guide to what supplements can realistically support—and what they cannot—when PSA is elevated.
+      </p>
+
+      <div class="my-6 text-center">
+        <img
+          src="/images/articles/men-health/hero-4.png"
+          alt="Supplements to lower PSA levels: what actually helps"
+          class="hero-image inline-block"
+          loading="eager"
+          decoding="async"
+        />
+        <p class="image-caption">
+          A clear, PSA-only guide: what PSA measures, why it rises, and how supplements may support PSA balance indirectly.
+        </p>
+      </div>
+
+      <div class="key-insights">
+        <p class="key-insights-title">Key Insights</p>
+        <ul>
+          <li>
+            PSA is a prostate-produced marker that reflects prostate activity and stress, not a diagnosis by itself.
+          </li>
+          <li>
+            PSA levels can rise for several non-cancer reasons, including inflammation, irritation, infection, or age-related prostate changes.
+          </li>
+          <li>
+            Supplements do not directly lower PSA in a medical sense, but some may support PSA balance indirectly by improving the prostate environment.
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {/* MINI TOC */}
+    <div class="mini-toc">
+      <p class="mini-toc-title">In this guide:</p>
+      <ul class="mini-toc-list">
+        <li><a href="#why-men-look">Why Men Look Into Supplements After an Elevated PSA Result</a></li>
+        <li><a href="#products-considered">Products Commonly Considered When PSA Is Elevated</a></li>
+        <li><a href="#table-positioning">How These Supplements Are Positioned for PSA Support</a></li>
+        <li><a href="#what-psa-measures">What PSA Measures</a></li>
+        <li><a href="#why-psa-rises">Why PSA Levels Can Increase</a></li>
+        <li><a href="#can-supplements-lower">Can Supplements Actually Lower PSA Levels?</a></li>
+        <li><a href="#what-helps-most">What Actually Helps Most When PSA Is Elevated</a></li>
+        <li><a href="#common-mistakes">Common Mistakes Men Make With PSA and Supplements</a></li>
+        <li><a href="#medical-follow-up">When Medical Follow-Up Is Essential</a></li>
+        <li><a href="#final-thoughts">Final Thoughts</a></li>
+        <li><a href="#recommended-products">Recommended Products</a></li>
+      </ul>
+    </div>
+
+    <p>
+      <strong>
+        Elevated PSA can create uncertainty. This guide stays PSA-first: what the PSA number actually reflects, why it can rise, and what supplement strategies are
+        realistically positioned to support PSA balance indirectly—without false promises.
+      </strong>
+    </p>
+
+    {/* H2 BLOCK 1 */}
+    <section class="content-box">
+      <h2 id="why-men-look">Why Men Look Into Supplements After an Elevated PSA Result</h2>
+      <p>
+        When PSA levels come back higher than expected, many men are advised to monitor trends over time rather than act immediately. This monitoring period often creates
+        uncertainty, especially when symptoms are mild or unclear.
+      </p>
+      <p>
+        During this phase, supplements are commonly explored not as treatment, but as a supportive measure—a way to reduce potential prostate stress while continuing proper
+        medical observation. The goal is usually stability and context, not rapid PSA reduction.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 2 */}
+    <section class="content-box">
+      <h2 id="products-considered">Products Commonly Considered When PSA Is Elevated</h2>
+      <p>
+        Men who explore supplements during PSA monitoring tend to look for formulas positioned around prostate comfort, inflammation balance, antioxidant support, or
+        long-term prostate maintenance.
+      </p>
+      <p>Within this context, the products most frequently discussed include:</p>
+      <ul>
+        <li><a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></li>
+        <li><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></li>
+        <li><a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></li>
+        <li><a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></li>
+        <li><a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></li>
+        <li><a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a></li>
+      </ul>
+      <p>
+        These products are not designed to lower PSA numbers directly. They are generally used as supportive tools while PSA levels are observed and potential causes are
+        evaluated.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 3 */}
+    <section class="content-box">
+      <h2 id="table-positioning">How These Supplements Are Positioned for PSA Support</h2>
+      <p>
+        Rather than focusing on PSA numbers themselves, these supplements are typically positioned according to how they support the prostate environment. The table below
+        summarizes the most common positioning patterns.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Supplement</th>
+              <th>Primary PSA-Relevant Strategy</th>
+              <th>Typical Use Context</th>
+              <th>Important Limitation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></td>
+              <td>Inflammation balance and long-term prostate environment support</td>
+              <td>Mild PSA elevation monitored over time</td>
+              <td>Not intended for short-term PSA changes</td>
+            </tr>
+            <tr>
+              <td><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></td>
+              <td>Prostate inflammation and oxidative stress support</td>
+              <td>PSA elevation alongside prostate irritation</td>
+              <td>Does not target PSA numbers directly</td>
+            </tr>
+            <tr>
+              <td><a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></td>
+              <td>Circulation and prostate tissue stress support</td>
+              <td>PSA elevation where vascular stress may be a factor</td>
+              <td>Indirect support only</td>
+            </tr>
+            <tr>
+              <td><a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></td>
+              <td>Prostate comfort and internal stress reduction</td>
+              <td>PSA fluctuation linked to prostate irritation</td>
+              <td>Supportive, not corrective</td>
+            </tr>
+            <tr>
+              <td><a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></td>
+              <td>Antioxidant and cellular stress support</td>
+              <td>PSA monitoring with lifestyle optimization</td>
+              <td>Gradual, maintenance-oriented</td>
+            </tr>
+            <tr>
+              <td><a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a></td>
+              <td>Prostate tissue support and oxidative balance</td>
+              <td>Mild PSA elevation without acute symptoms</td>
+              <td>Not intended for PSA normalization</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">
+        Editorial note: These supplements are commonly used as supportive strategies while PSA levels are monitored. None are medical treatments for elevated PSA, and none
+        should replace follow-up testing or professional evaluation.
+      </p>
+
+      <div class="sge-block">
+        <h3>Quick takeaway</h3>
+        <p>
+          PSA-focused supplementation is best understood as indirect support: products are typically positioned around inflammation balance, oxidative stress support, or
+          long-term prostate environment maintenance—not as guaranteed PSA-lowering treatments.
+        </p>
+      </div>
+    </section>
+
+    {/* H2 BLOCK 4 */}
+    <section class="content-box">
+      <h2 id="what-psa-measures">What PSA Measures</h2>
+      <p>
+        PSA is a protein produced by prostate tissue and measured through a blood test. PSA levels tend to rise when the prostate is irritated, inflamed, enlarged, or
+        otherwise under stress.
+      </p>
+      <p>
+        An elevated PSA result does not diagnose a specific condition on its own. Instead, it signals that the prostate is being affected by one or more underlying factors
+        that need to be understood in context.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 5 */}
+    <section class="content-box">
+      <h2 id="why-psa-rises">Why PSA Levels Can Increase</h2>
+      <p>
+        PSA is sensitive to a wide range of influences, many of which are non-cancerous and temporary. In clinical practice, elevated PSA is often associated with factors
+        such as:
+      </p>
+      <ul>
+        <li>Prostate inflammation or irritation</li>
+        <li>Benign prostate enlargement</li>
+        <li>Prostate or urinary infection</li>
+        <li>Recent ejaculation or prostate stimulation</li>
+        <li>Age-related prostate changes</li>
+      </ul>
+      <p>Because PSA can fluctuate, results are best interpreted over time rather than based on a single reading.</p>
+    </section>
+
+    {/* H2 BLOCK 6 */}
+    <section class="content-box">
+      <h2 id="can-supplements-lower">Can Supplements Actually Lower PSA Levels?</h2>
+
+      <h3>What Supplements Can Realistically Do</h3>
+      <p>
+        From a realistic standpoint, supplements may support PSA balance indirectly by improving the conditions that influence PSA production. This usually involves:
+      </p>
+      <ul>
+        <li>Supporting inflammation balance within prostate tissue</li>
+        <li>Reducing oxidative stress</li>
+        <li>Promoting a healthier overall prostate environment</li>
+      </ul>
+      <p>When prostate stress is reduced, PSA levels may stabilize or decline in some men over time.</p>
+
+      <h3>What Supplements Cannot Do</h3>
+      <p>It is equally important to understand the limits of supplementation. Supplements cannot:</p>
+      <ul>
+        <li>Diagnose the cause of elevated PSA</li>
+        <li>Replace PSA monitoring or medical follow-up</li>
+        <li>Reliably normalize PSA levels</li>
+        <li>Rule out serious underlying conditions</li>
+      </ul>
+      <p>Any supplement claiming guaranteed PSA reduction should be approached with caution.</p>
+    </section>
+
+    {/* H2 BLOCK 7 */}
+    <section class="content-box">
+      <h2 id="what-helps-most">What Actually Helps Most When PSA Is Elevated</h2>
+
+      <h3>Focus on the Prostate Environment</h3>
+      <p>
+        PSA reflects how the prostate is functioning internally. Strategies that support inflammation balance, oxidative control, and tissue health tend to align better with
+        PSA management than attempts to manipulate PSA numbers directly.
+      </p>
+
+      <h3>Consistency Over Speed</h3>
+      <p>
+        PSA trends are evaluated over weeks or months. Short-term supplementation rarely produces meaningful changes in PSA readings, which is why patience and consistency
+        matter.
+      </p>
+
+      <h3>Lifestyle Still Matters</h3>
+      <p>
+        In addition to supplements, everyday factors can influence PSA results. These commonly include:
+      </p>
+      <ul>
+        <li>Hydration and diet</li>
+        <li>Stress and sleep quality</li>
+        <li>Physical activity</li>
+        <li>Timing before PSA testing</li>
+      </ul>
+      <p>Supplements work best when viewed as one component of a broader prostate-care approach.</p>
+    </section>
+
+    {/* H2 BLOCK 8 */}
+    <section class="content-box">
+      <h2 id="common-mistakes">Common Mistakes Men Make With PSA and Supplements</h2>
+      <p>Men exploring supplements for PSA often fall into predictable traps, including:</p>
+      <ul>
+        <li>Treating PSA as a disease rather than a marker</li>
+        <li>Using supplements instead of medical follow-up</li>
+        <li>Expecting rapid PSA reduction</li>
+        <li>Focusing only on lab numbers while ignoring clinical context</li>
+      </ul>
+      <p>Avoiding these mistakes helps keep expectations realistic and decisions responsible.</p>
+    </section>
+
+    {/* H2 BLOCK 9 */}
+    <section class="content-box">
+      <h2 id="medical-follow-up">When Medical Follow-Up Is Essential</h2>
+      <p>Even when supplements are used, medical evaluation should never be delayed if PSA is:</p>
+      <ul>
+        <li>Rising rapidly across tests</li>
+        <li>Persistently elevated without explanation</li>
+        <li>Associated with concerning symptoms</li>
+        <li>Accompanied by abnormal exam findings</li>
+      </ul>
+      <p>Supplements are supportive tools, not substitutes for proper care.</p>
+    </section>
+
+    {/* H2 BLOCK 10 */}
+    <section class="content-box">
+      <h2 id="final-thoughts">Final Thoughts: What Men Should Really Know About PSA and Supplements</h2>
+      <p>
+        Supplements are not a direct solution for lowering PSA levels. However, certain strategies may support prostate health factors that influence PSA indirectly,
+        especially when elevation is linked to inflammation or oxidative stress.
+      </p>
+      <p>
+        The most responsible approach is to use supplements as supportive tools, maintain regular PSA monitoring, and focus on understanding what is driving PSA changes
+        over time.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 11 */}
+    <section class="content-box">
+      <h2 id="recommended-products">Recommended Products</h2>
+      <div class="product-grid">
+        {products.map((p) => (
+          <a class="product-card" href={p.hoplink} target="_blank" rel="noopener noreferrer">
+            <img
+              src={p.img}
+              alt={p.alt}
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null; this.src='/images/placeholder-product.png';"
+            />
+            <div class="product-name">{p.name}</div>
+            <span class="product-button">Access</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</ArticleLayout>
