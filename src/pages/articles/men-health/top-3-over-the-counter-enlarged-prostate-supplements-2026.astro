@@ -1,0 +1,641 @@
+---
+/* File: src/pages/articles/men-health/top-3-over-the-counter-enlarged-prostate-supplements-2026.astro */
+
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+
+const meta = {
+  title: "Top 3 Over-the-Counter Enlarged Prostate Supplements in 2026",
+  description:
+    "Discover the top 3 over-the-counter supplements for enlarged prostate in 2026. Learn how Prostadine, TC24, and Prostavive compare in ingredients, benefits, and prostate support.",
+  canonicalUrl:
+    "https://www.thesupplementpost.com/articles/men-health/top-3-over-the-counter-enlarged-prostate-supplements-2026",
+};
+
+const products = [
+  {
+    name: "Prostadine",
+    hoplink: "https://linkly.link/2LziG",
+    img: "/images/men-health/prostadine/hero.png",
+    alt: "Prostadine supplement bottle",
+  },
+  {
+    name: "TC24",
+    hoplink: "https://linkly.link/2RIOy",
+    img: "/images/men-health/total-control-24/hero.png",
+    alt: "TC24 supplement bottle",
+  },
+  {
+    name: "Prostavive",
+    hoplink: "https://linkly.link/2W2pQ",
+    img: "/images/men-health/prostavive/hero.png",
+    alt: "Prostavive supplement bottle",
+  },
+];
+
+const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
+---
+
+<style is:global>
+  /* ===== Article Typography (match review look) ===== */
+  .article-typography h1 {
+    font-size: clamp(2rem, 3.4vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 0.85rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #111827;
+  }
+
+  /* IMPORTANT: underline via pseudo-element so it never “disappears” inside boxes */
+  .article-typography h2 {
+    margin-top: 0; /* sections control spacing */
+    margin-bottom: 0.9rem;
+    font-size: 1.7rem;
+    line-height: 1.25;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: #111827;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .article-typography h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.35rem;
+    width: 100%;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 999px;
+    opacity: 1;
+  }
+
+  .article-typography h3 {
+    margin-top: 1.55rem;
+    margin-bottom: 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #111827;
+  }
+
+  .article-typography p {
+    margin: 0 0 1.05rem;
+    color: #111827;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-typography ul {
+    margin: 0.75rem 0 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .article-typography li {
+    margin-bottom: 0.35rem;
+    color: #111827;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-typography a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .article-typography a:hover {
+    text-decoration: underline;
+  }
+
+  /* “review-like” hero */
+  .article-hero {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .article-subheader {
+    font-size: 1.05rem;
+    color: #4b5563;
+    font-weight: 600;
+    margin: 0.65rem 0 0;
+  }
+
+  /* ===== One styled box per H2 block ===== */
+  .content-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.15rem 1.25rem;
+    margin: 1.35rem 0;
+  }
+
+  /* Give sections breathing room while keeping underline consistent */
+  .content-box + .content-box {
+    margin-top: 1.6rem;
+  }
+
+  /* Ensure in-box headings don't crash into underline */
+  .content-box h2 {
+    margin-top: 0;
+  }
+
+  /* Optional: keep images consistent */
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .image-caption {
+    margin-top: 0.65rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+    font-weight: 600;
+  }
+
+  /* ===== Tables (SEO-first) ===== */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+
+  .table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+
+  .table-wrap th,
+  .table-wrap td {
+    text-align: left;
+    padding: 0.85rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+    color: #111827;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .table-wrap thead th {
+    background: #f3f4f6;
+    font-weight: 900;
+    color: #111827;
+  }
+
+  .table-note {
+    margin-top: 0.75rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* ===== Key insights bullets (tight) ===== */
+  .key-insights {
+    margin: 1rem auto 0;
+    max-width: 980px;
+    text-align: left;
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 1.05rem 1.15rem;
+  }
+
+  .key-insights-title {
+    margin: 0 0 0.5rem;
+    font-weight: 900;
+    color: #111827;
+    font-size: 1.05rem;
+  }
+
+  .key-insights ul {
+    margin: 0.5rem 0 0;
+  }
+
+  /* ===== Product grid (recommended) ===== */
+  .product-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: 1.05rem;
+  }
+
+  @media (min-width: 640px) {
+    .product-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .product-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+    border-color: #dbeafe;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    background: #f3f4f6;
+  }
+
+  .product-name {
+    margin-top: 0.75rem;
+    font-weight: 900;
+    color: #111827;
+    font-size: 1.05rem;
+  }
+
+  .product-button {
+    display: inline-block;
+    margin-top: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.95rem;
+  }
+
+  /* ===== SGE block ===== */
+  .sge-block {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 1.05rem 1.15rem;
+    margin-top: 1.05rem;
+  }
+
+  .sge-block h3 {
+    margin-top: 0;
+  }
+
+  .sge-block p:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<ArticleLayout title={meta.title} description={meta.description} canonicalUrl={meta.canonicalUrl}>
+  <div class="article-typography">
+    <header class="article-hero">
+      <h1>Top 3 Over-the-Counter Enlarged Prostate Supplements in 2026</h1>
+      <p class="article-subheader">
+        A symptom-first, evidence-minded comparison of Prostadine, TC24, and Prostavive—so you can choose the best fit without unrealistic expectations.
+      </p>
+
+      <div class="my-6 text-center">
+        <img
+          src="/images/articles/men-health/hero-2.png"
+          alt="Top over-the-counter enlarged prostate supplements in 2026"
+          class="hero-image inline-block"
+          loading="eager"
+          decoding="async"
+        />
+        <p class="image-caption">
+          A practical 2026 comparison of three popular OTC prostate supplements—focused on urinary comfort, circulation, and long-term balance.
+        </p>
+      </div>
+
+      <div class="key-insights">
+        <p class="key-insights-title">Key Insights</p>
+        <ul>
+          <li>
+            There is no over-the-counter supplement clinically proven to medically shrink the prostate, but many formulas are designed to support urinary flow,
+            bladder comfort, and prostate balance.
+          </li>
+          <li>
+            Stronger strategies tend to focus on inflammation control, circulation support, and age-related prostate changes—rather than a single “magic” mechanism.
+          </li>
+          <li>
+            Prostadine, TC24, and Prostavive stand out in 2026 because they approach prostate support from clearly different angles.
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {/* MINI TOC */}
+    <div class="mini-toc">
+      <p class="mini-toc-title">In this guide:</p>
+      <ul class="mini-toc-list">
+        <li><a href="#understanding-bph">Understanding Enlarged Prostate and OTC Options</a></li>
+        <li><a href="#what-makes-good">What Makes a Good OTC Prostate Supplement in 2026</a></li>
+        <li><a href="#top-3-review">Top 3 Supplements (Prostadine, TC24, Prostavive)</a></li>
+        <li><a href="#comparison">Comparison Table (SEO-first) + SGE Summary</a></li>
+        <li><a href="#worth-trying">Are OTC Prostate Supplements Worth Trying?</a></li>
+        <li><a href="#mistakes">Common Mistakes Men Make</a></li>
+        <li><a href="#safe-use">How to Use OTC Prostate Supplements Safely</a></li>
+        <li><a href="#final-thoughts">Final Thoughts</a></li>
+        <li><a href="#recommended-products">Recommended Products</a></li>
+      </ul>
+    </div>
+
+    <p>
+      <strong>
+        When men search “best over-the-counter enlarged prostate supplement,” they’re usually not looking for hype—they want a realistic comparison that connects
+        ingredients and positioning to real symptoms like nighttime urination, weak stream, urgency, and prostate discomfort.
+      </strong>
+    </p>
+
+    <p>
+      This guide compares three widely discussed products—<a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a>,{" "}
+      <a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>, and{" "}
+      <a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a>—using a simple principle:
+      the best supplement is usually the one whose formulation strategy best matches your symptom profile and goals.
+    </p>
+
+    {/* H2 BLOCK 1 */}
+    <section class="content-box">
+      <h2 id="understanding-bph">Understanding Enlarged Prostate and OTC Supplement Options</h2>
+
+      <h3>What an Enlarged Prostate (BPH) Actually Is</h3>
+      <p>
+        Benign Prostatic Hyperplasia (BPH) is a non-cancerous enlargement of the prostate that commonly develops with age. As the gland grows, it can compress the urethra
+        and contribute to symptoms such as weak flow, frequent urination, nighttime urgency, and the feeling of incomplete emptying.
+      </p>
+
+      <h3>Why Many Men Look for Over-the-Counter Solutions</h3>
+      <p>
+        Prescription medications may help some men manage BPH symptoms, but they are not always a preferred first step—often due to side effects, long-term use concerns,
+        or a desire to try lifestyle-oriented approaches first. OTC supplements are commonly explored as an initial option for comfort and urinary support.
+      </p>
+
+      <h3>What OTC Supplements Can — and Cannot — Do</h3>
+      <p>OTC prostate supplements are not designed to cure BPH or replace medical treatment. Instead, they typically aim to:</p>
+      <ul>
+        <li>support urinary flow and bladder comfort</li>
+        <li>help manage inflammation and oxidative stress</li>
+        <li>promote healthy circulation to prostate tissue</li>
+      </ul>
+      <p>
+        Most outcomes—when they happen—tend to be gradual. If symptoms are severe, sudden, or worsening, professional evaluation matters.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 2 */}
+    <section class="content-box">
+      <h2 id="what-makes-good">What Makes a Good Over-the-Counter Prostate Supplement in 2026</h2>
+
+      <h3>Clinically Studied Ingredients vs. Marketing Blends</h3>
+      <p>
+        Stronger formulas prioritize ingredients with a track record in human research or consistent clinical use patterns (for example, classic prostate botanicals,
+        plant sterols, and circulation-support compounds) rather than relying on vague proprietary blends.
+      </p>
+
+      <h3>Dosage Transparency and Standardization</h3>
+      <p>
+        Clear labeling and standardized extracts matter because underdosed or inconsistently sourced ingredients often fail to deliver meaningful results.
+        Transparency is not a “nice to have”—it’s part of quality.
+      </p>
+
+      <h3>Circulation, Inflammation, and Age-Related Prostate Changes</h3>
+      <p>
+        Prostate discomfort rarely has a single cause. Inflammation, circulation, and age-related hormonal changes can interact, which is why multi-pathway formulas
+        often feel more practical than single-focus approaches.
+      </p>
+
+      <h3>Safety and Manufacturing Standards</h3>
+      <p>
+        Responsible supplement brands prioritize quality manufacturing and avoid unnecessary stimulants. If you take medications or have chronic conditions,
+        it’s wise to check compatibility with a healthcare professional.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 3 */}
+    <section class="content-box">
+      <h2 id="top-3-review">Top 3 Over-the-Counter Enlarged Prostate Supplements (2026 Review)</h2>
+
+      <h3>1) Prostadine</h3>
+      <p><strong>Primary Focus:</strong> urinary flow, bladder comfort, and internal “comfort-first” support</p>
+      <p>
+        Prostadine is positioned around urinary function and daily comfort rather than prostate size claims. Its strategy emphasizes botanical support commonly associated
+        with bladder lining comfort and urinary consistency. This makes it a practical match for men whose biggest complaints are urgency, frequency, and disrupted sleep.
+      </p>
+      <p><strong>Best suited for:</strong></p>
+      <ul>
+        <li>men prioritizing nighttime comfort and fewer bathroom interruptions</li>
+        <li>men who feel bladder urgency or urinary irritation is the dominant issue</li>
+        <li>those who want gradual support rather than “instant” promises</li>
+      </ul>
+      <p>
+        <a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Learn more about Prostadine</a>
+      </p>
+
+      <h3>2) TC24</h3>
+      <p><strong>Primary Focus:</strong> circulation and internal pressure balance</p>
+      <p>
+        TC24 approaches prostate support from a circulation-centered perspective. The core premise is that reduced blood flow and tissue oxygenation can contribute to
+        prostate pressure and urinary resistance over time. Instead of targeting symptoms directly, it aims to support the vascular environment around the prostate.
+      </p>
+      <p><strong>Best suited for:</strong></p>
+      <ul>
+        <li>men who describe “pressure” or a slow/weak stream that feels structural</li>
+        <li>men who want a systemic approach tied to vascular function</li>
+        <li>those thinking in terms of long-term function, not quick fixes</li>
+      </ul>
+      <p>
+        <a href={hop("TC24")} target="_blank" rel="noopener noreferrer">Learn more about TC24</a>
+      </p>
+
+      <h3>3) Prostavive</h3>
+      <p><strong>Primary Focus:</strong> metabolic and inflammation balance for long-term prostate maintenance</p>
+      <p>
+        Prostavive positions itself around internal prostate balance rather than isolated symptoms. Its approach emphasizes metabolic and inflammatory pathways linked to
+        age-related prostate changes. This tends to appeal to men who want “maintenance mode” support and prefer a broader wellness framing.
+      </p>
+      <p><strong>Best suited for:</strong></p>
+      <ul>
+        <li>men focused on long-term prostate balance rather than immediate symptom changes</li>
+        <li>men who associate discomfort with inflammation and age-related changes</li>
+        <li>those who prefer broader systemic support over a symptom-only approach</li>
+      </ul>
+      <p>
+        <a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Learn more about Prostavive</a>
+      </p>
+    </section>
+
+    {/* H2 BLOCK 4 */}
+    <section class="content-box">
+      <h2 id="comparison">Comparing the Top 3 Prostate Supplements Side by Side</h2>
+
+      <p>
+        Although Prostadine, TC24, and Prostavive are all positioned as OTC options for enlarged prostate support, they are built on different assumptions about what
+        drives symptoms. This distinction matters, because enlarged prostate symptoms rarely have a single cause.
+      </p>
+
+      <h3>SEO-First Comparison Table</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature / Focus Area</th>
+              <th>Prostadine</th>
+              <th>TC24</th>
+              <th>Prostavive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Primary Support Strategy</strong></td>
+              <td>Urinary flow &amp; bladder comfort</td>
+              <td>Prostate circulation &amp; blood flow support</td>
+              <td>Metabolic &amp; inflammation balance</td>
+            </tr>
+            <tr>
+              <td><strong>Core Formulation Logic</strong></td>
+              <td>Botanical support linked to urinary tract comfort</td>
+              <td>Vascular / microcirculation environment support</td>
+              <td>Internal prostate environment + age-related balance</td>
+            </tr>
+            <tr>
+              <td><strong>Best-Aligned Symptoms</strong></td>
+              <td>Frequency, nighttime urgency, urinary irritation</td>
+              <td>Pressure, weak/interrupted stream tied to circulation</td>
+              <td>Gradual discomfort linked to aging/inflammation</td>
+            </tr>
+            <tr>
+              <td><strong>Symptom Relief Profile</strong></td>
+              <td>Gradual, symptom-oriented</td>
+              <td>Progressive, circulation-dependent</td>
+              <td>Long-term, cumulative</td>
+            </tr>
+            <tr>
+              <td><strong>Approach Type</strong></td>
+              <td>Symptom-focused</td>
+              <td>Structural / systemic</td>
+              <td>Biological / internal balance</td>
+            </tr>
+            <tr>
+              <td><strong>Ideal User Profile</strong></td>
+              <td>Men prioritizing daily urinary comfort</td>
+              <td>Men concerned with circulation-related prostate pressure</td>
+              <td>Men focused on long-term prostate maintenance</td>
+            </tr>
+            <tr>
+              <td><strong>Not Designed To Do</strong></td>
+              <td>Medically shrink the prostate</td>
+              <td>Replace prescription therapy</td>
+              <td>Deliver immediate symptom relief</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">
+        Note: OTC supplements are not medical treatments. Benefits—when they occur—depend on symptom profile, consistency, and individual response.
+      </p>
+
+      <div class="sge-block">
+        <h3>Quick Comparison: How the Top 3 OTC Prostate Supplements Differ</h3>
+        <ul>
+          <li>
+            <strong>Prostadine</strong> is more aligned with urinary comfort and bladder-focused support, often appealing to men dealing with frequency and nighttime urgency.
+          </li>
+          <li>
+            <strong>TC24</strong> emphasizes circulation and blood flow support, targeting prostate pressure that may relate to reduced vascular function.
+          </li>
+          <li>
+            <strong>Prostavive</strong> leans toward metabolic and inflammation balance, aligning with long-term, age-related prostate health goals.
+          </li>
+        </ul>
+        <p>
+          Over-the-counter prostate supplements do not medically shrink the prostate, but they may support comfort and urinary function depending on how well their
+          formulation strategy matches the underlying cause of symptoms.
+        </p>
+      </div>
+
+      <h3>Value Is Not About “Best” — It’s About Fit</h3>
+      <p>
+        From a value perspective, none of these supplements is objectively “better” in isolation. Men focused on daily urinary comfort may prefer bladder-oriented support,
+        those thinking in circulation terms may gravitate toward vascular strategies, and men prioritizing long-term prostate balance may prefer metabolism/inflammation framing.
+        The best choice is usually the best match—not the loudest claim.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 5 */}
+    <section class="content-box">
+      <h2 id="worth-trying">Are Over-the-Counter Prostate Supplements Worth Trying?</h2>
+
+      <h3>What Men Commonly Report</h3>
+      <p>
+        Many users describe gradual changes in urinary comfort and nighttime frequency over weeks—not dramatic overnight shifts. A realistic timeline helps prevent
+        disappointment and helps you judge outcomes more fairly.
+      </p>
+
+      <h3>Who May Benefit the Most</h3>
+      <p>
+        Men with mild to moderate prostate-related symptoms who are not currently using prescription treatments often explore OTC supplements as a first step,
+        especially when symptoms are bothersome but not severe.
+      </p>
+
+      <h3>When Supplements May Not Be Enough</h3>
+      <p>
+        Sudden symptom changes, severe discomfort, or worsening urinary issues should be evaluated by a healthcare professional. Supplements can support comfort, but they
+        should not delay proper assessment when needed.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 6 */}
+    <section class="content-box">
+      <h2 id="mistakes">Common Mistakes Men Make When Choosing Prostate Supplements</h2>
+      <ul>
+        <li><strong>Expecting supplements to shrink the prostate directly.</strong> That expectation drives frustration and poor decisions.</li>
+        <li><strong>Ignoring dosage transparency.</strong> Ingredients without meaningful dosing often underperform.</li>
+        <li><strong>Choosing based on brand momentum.</strong> Prostate supplements are not interchangeable—strategy matters.</li>
+      </ul>
+    </section>
+
+    {/* H2 BLOCK 7 */}
+    <section class="content-box">
+      <h2 id="safe-use">How to Use OTC Prostate Supplements Safely</h2>
+      <ul>
+        <li><strong>Give it time:</strong> allow several weeks for noticeable changes.</li>
+        <li><strong>Use consistently:</strong> “on and off” use makes outcomes harder to assess.</li>
+        <li><strong>Support with lifestyle:</strong> hydration, sleep, and diet can influence urinary comfort.</li>
+        <li><strong>Be cautious with combinations:</strong> if you use medications or have chronic conditions, check compatibility first.</li>
+      </ul>
+    </section>
+
+    {/* H2 BLOCK 8 */}
+    <section class="content-box">
+      <h2 id="final-thoughts">Final Thoughts: Choosing the Best OTC Enlarged Prostate Supplement in 2026</h2>
+      <p>
+        The best over-the-counter enlarged prostate supplements in 2026 are defined by formulation logic and realistic expectations—not bold promises.
+        Prostadine, TC24, and Prostavive each represent a distinct approach: urinary comfort, circulation support, and long-term prostate balance.
+        Understanding these differences is what allows men to make an informed, realistic, and responsible decision.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 9 */}
+    <section class="content-box">
+      <h2 id="recommended-products">Recommended Products</h2>
+
+      <div class="product-grid">
+        {products.map((p) => (
+          <a class="product-card" href={p.hoplink} target="_blank" rel="noopener noreferrer">
+            <img
+              src={p.img}
+              alt={p.alt}
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null; this.src='/images/placeholder-product.png';"
+            />
+            <div class="product-name">{p.name}</div>
+            <span class="product-button">Access</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</ArticleLayout>
