@@ -1,0 +1,577 @@
+---
+/* File: src/pages/articles/men-health/best-supplements-for-bladder-control-and-urinary-flow-what-to-expect.astro */
+
+import ArticleLayout from "../../../layouts/ArticleLayout.astro";
+
+const meta = {
+  title: "Best Supplements for Bladder Control and Urinary Flow: What to Expect",
+  description:
+    "Looking for better bladder control and stronger urinary flow? Learn what supplement strategies may help, what to expect realistically, and which options men commonly consider.",
+  canonicalUrl:
+    "https://www.thesupplementpost.com/articles/men-health/best-supplements-for-bladder-control-and-urinary-flow-what-to-expect",
+};
+
+const products = [
+  {
+    name: "Prostadine",
+    hoplink: "https://linkly.link/2LziG",
+    img: "/images/men-health/prostadine/hero.png",
+    alt: "Prostadine supplement bottle",
+  },
+  {
+    name: "Fluxactive Complete",
+    hoplink: "https://linkly.link/2W4ws",
+    img: "/images/men-health/fluxactive-complete/hero.png",
+    alt: "Fluxactive Complete supplement bottle",
+  },
+  {
+    name: "TC24",
+    hoplink: "https://linkly.link/2RIOy",
+    img: "/images/men-health/total-control-24/hero.png",
+    alt: "TC24 supplement bottle",
+  },
+  {
+    name: "FlowForce Max",
+    hoplink: "https://linkly.link/2R1gT",
+    img: "/images/men-health/flowforce-max/hero.png",
+    alt: "FlowForce Max supplement bottle",
+  },
+  {
+    name: "EndoPeak",
+    hoplink: "https://linkly.link/2R0io",
+    img: "/images/men-health/endopeak/hero.png",
+    alt: "EndoPeak supplement bottle",
+  },
+  {
+    name: "Prostavive",
+    hoplink: "https://linkly.link/2W2pQ",
+    img: "/images/men-health/prostavive/hero.png",
+    alt: "Prostavive supplement bottle",
+  },
+];
+
+const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
+---
+
+<style is:global>
+  /* ===== Article Typography (match review look) ===== */
+  .article-typography h1 {
+    font-size: clamp(2rem, 3.4vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 0.85rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: #111827;
+  }
+
+  /* IMPORTANT: underline via pseudo-element so it never “disappears” inside boxes */
+  .article-typography h2 {
+    margin-top: 0; /* sections control spacing */
+    margin-bottom: 0.9rem;
+    font-size: 1.7rem;
+    line-height: 1.25;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    color: #111827;
+    position: relative;
+    padding-bottom: 0.75rem;
+  }
+
+  .article-typography h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.35rem;
+    width: 100%;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 999px;
+    opacity: 1;
+  }
+
+  .article-typography h3 {
+    margin-top: 1.55rem;
+    margin-bottom: 0.55rem;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #111827;
+  }
+
+  .article-typography p {
+    margin: 0 0 1.05rem;
+    color: #111827;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-typography ul {
+    margin: 0.75rem 0 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .article-typography li {
+    margin-bottom: 0.35rem;
+    color: #111827;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .article-typography a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .article-typography a:hover {
+    text-decoration: underline;
+  }
+
+  /* “review-like” hero */
+  .article-hero {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .article-subheader {
+    font-size: 1.05rem;
+    color: #4b5563;
+    font-weight: 600;
+    margin: 0.65rem 0 0;
+  }
+
+  /* ===== One styled box per H2 block ===== */
+  .content-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.15rem 1.25rem;
+    margin: 1.35rem 0;
+  }
+
+  /* Give sections breathing room while keeping underline consistent */
+  .content-box + .content-box {
+    margin-top: 1.6rem;
+  }
+
+  /* Ensure in-box headings don't crash into underline */
+  .content-box h2 {
+    margin-top: 0;
+  }
+
+  /* Optional: keep images consistent */
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .image-caption {
+    margin-top: 0.65rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+    font-weight: 600;
+  }
+
+  /* ===== Tables ===== */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+  }
+
+  .table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+
+  .table-wrap th,
+  .table-wrap td {
+    text-align: left;
+    padding: 0.85rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+    color: #111827;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .table-wrap thead th {
+    background: #f3f4f6;
+    font-weight: 900;
+    color: #111827;
+  }
+
+  .table-note {
+    margin-top: 0.75rem;
+    color: #4b5563;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* ===== Key insights bullets (tight) ===== */
+  .key-insights {
+    margin: 1rem auto 0;
+    max-width: 980px;
+    text-align: left;
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 1.05rem 1.15rem;
+  }
+
+  .key-insights-title {
+    margin: 0 0 0.5rem;
+    font-weight: 900;
+    color: #111827;
+    font-size: 1.05rem;
+  }
+
+  .key-insights ul {
+    margin: 0.5rem 0 0;
+  }
+
+  /* ===== Product grid (recommended) ===== */
+  .product-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    margin-top: 1.05rem;
+  }
+
+  @media (min-width: 640px) {
+    .product-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .product-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(17, 24, 39, 0.08);
+    border-color: #dbeafe;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.85rem;
+    background: #f3f4f6;
+  }
+
+  .product-name {
+    margin-top: 0.75rem;
+    font-weight: 900;
+    color: #111827;
+    font-size: 1.05rem;
+  }
+
+  .product-button {
+    display: inline-block;
+    margin-top: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.95rem;
+  }
+
+  /* ===== SGE block ===== */
+  .sge-block {
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    border-radius: 1rem;
+    padding: 1.05rem 1.15rem;
+    margin-top: 1.05rem;
+  }
+
+  .sge-block h3 {
+    margin-top: 0;
+  }
+
+  .sge-block p:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<ArticleLayout title={meta.title} description={meta.description} canonicalUrl={meta.canonicalUrl}>
+  <div class="article-typography">
+    <header class="article-hero">
+      <h1>Best Supplements for Bladder Control and Urinary Flow: What to Expect</h1>
+      <p class="article-subheader">
+        A practical, symptom-first guide to bladder control and urinary flow support—so you can choose products based on what they’re actually positioned to help.
+      </p>
+
+      <div class="my-6 text-center">
+        <img
+          src="/images/articles/men-health/hero-6.png"
+          alt="Best supplements for bladder control and urinary flow"
+          class="hero-image inline-block"
+          loading="eager"
+          decoding="async"
+        />
+        <p class="image-caption">
+          A realistic guide to urinary flow and bladder control support—focused on comfort, frequency, and what men commonly report over time.
+        </p>
+      </div>
+
+      <div class="key-insights">
+        <p class="key-insights-title">Key Insights</p>
+        <ul>
+          <li>
+            “Bladder control” and “urinary flow” issues often come from more than one factor—prostate pressure, irritation, inflammation, and circulation can overlap.
+          </li>
+          <li>
+            Supplements do not replace medical evaluation, but some products are positioned to support urinary comfort, reduce irritation, and improve day-to-day flow.
+          </li>
+          <li>
+            The best results tend to come from realistic expectations: symptom-fit, consistency, and tracking what changes (and what doesn’t) over a few weeks.
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    {/* MINI TOC */}
+    <div class="mini-toc">
+      <p class="mini-toc-title">In this guide:</p>
+      <ul class="mini-toc-list">
+        <li><a href="#why-this-happens">Why Bladder Control and Urinary Flow Problems Happen</a></li>
+        <li><a href="#what-supplements-do">What Supplements Can Realistically Do</a></li>
+        <li><a href="#top-products">Top Products Men Commonly Consider</a></li>
+        <li><a href="#comparison-table">Comparison Table: Positioning and Best Fit</a></li>
+        <li><a href="#how-to-choose">How to Choose Based on Your Symptoms</a></li>
+        <li><a href="#safe-use">How to Use Supplements Safely</a></li>
+        <li><a href="#when-to-see-doctor">When Medical Follow-Up Matters</a></li>
+        <li><a href="#final-thoughts">Final Thoughts</a></li>
+        <li><a href="#recommended-products">Recommended Products</a></li>
+      </ul>
+    </div>
+
+    <p>
+      <strong>
+        If you’re dealing with frequent bathroom trips, urgency, weak stream, or that “not fully empty” feeling, you’re not alone—and you’re also not imagining it.
+        Bladder control and urinary flow issues are common, especially with age, and they often come down to prostate pressure, irritation, inflammation, and circulation
+        interacting together.
+      </strong>
+    </p>
+
+    <p>
+      This guide breaks down what supplements are commonly used for bladder control and urinary flow support, what you can realistically expect, and how to compare
+      product positioning without hype. The goal is not “miracle claims”—it’s symptom-fit and a smarter way to evaluate options.
+    </p>
+
+    {/* H2 BLOCK 1 */}
+    <section class="content-box">
+      <h2 id="why-this-happens">Why Bladder Control and Urinary Flow Problems Happen</h2>
+
+      <h3>It’s Often Not Just One Cause</h3>
+      <p>
+        Urinary symptoms often overlap. For some men, the issue is mainly prostate pressure on the urethra. For others, irritation and inflammation make urgency and
+        frequency worse. Circulation and tissue stress can also play a role in how “responsive” urinary function feels day to day.
+      </p>
+
+      <h3>Common Symptom Patterns Men Describe</h3>
+      <ul>
+        <li><strong>Urgency and frequency:</strong> needing to go “right now,” often with smaller output</li>
+        <li><strong>Nighttime waking:</strong> sleep disruption from repeated trips to the bathroom</li>
+        <li><strong>Weak stream:</strong> slower flow, intermittent flow, or longer time to finish</li>
+        <li><strong>Incomplete emptying:</strong> the feeling you still need to go after you finish</li>
+        <li><strong>Irritation:</strong> discomfort that feels like sensitivity or internal “pressure”</li>
+      </ul>
+
+      <p>
+        Because these symptoms can have different drivers, the “best” supplement is usually the one whose strategy best matches what you’re experiencing.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 2 */}
+    <section class="content-box">
+      <h2 id="what-supplements-do">What Supplements Can Realistically Do</h2>
+
+      <h3>What Supplements May Help Support</h3>
+      <p>
+        Over-the-counter supplements are typically positioned around supporting the urinary tract and prostate environment. In practical terms, that usually means
+        working on comfort, irritation control, inflammation balance, oxidative stress support, and (in some formulas) circulation support.
+      </p>
+
+      <h3>What Supplements Cannot Promise</h3>
+      <p>
+        Supplements are not medical treatments and should not be viewed as guaranteed fixes. They can’t diagnose the cause of symptoms, replace evaluation when needed,
+        or reliably produce “instant” changes. Results—when they occur—tend to be gradual and vary by symptom profile and consistency.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 3 */}
+    <section class="content-box">
+      <h2 id="top-products">Top Products Men Commonly Consider</h2>
+
+      <p>
+        Based on your list, the most relevant set for bladder control and urinary flow positioning typically includes{" "}
+        <a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a>,{" "}
+        <a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
+        <a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>,{" "}
+        <a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a>,{" "}
+        <a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a>, plus{" "}
+        <a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a> as an additional long-term prostate environment option.
+      </p>
+
+      <p>
+        Next, the table helps you compare these products by “strategy” (how they’re positioned) so the choice feels more logical and less guess-based.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 4 */}
+    <section class="content-box">
+      <h2 id="comparison-table">Comparison Table: Positioning and Best Fit</h2>
+
+      <p>
+        Rather than treating these supplements as interchangeable, compare them by what they’re positioned to support. This helps align expectations with likely outcomes.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Supplement</th>
+              <th>Primary Strategy</th>
+              <th>Best Fit For</th>
+              <th>Official Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></td>
+              <td>Urinary comfort + bladder-focused support</td>
+              <td>Men prioritizing urgency/frequency and nighttime comfort</td>
+              <td><a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+            </tr>
+            <tr>
+              <td><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></td>
+              <td>Inflammation balance + oxidative stress support</td>
+              <td>Men who feel irritation or sensitivity is the main driver</td>
+              <td><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+            </tr>
+            <tr>
+              <td><a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></td>
+              <td>Circulation-focused prostate support</td>
+              <td>Men describing pressure/weak stream that feels “structural”</td>
+              <td><a href={hop("TC24")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+            </tr>
+            <tr>
+              <td><a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a></td>
+              <td>Prostate tissue support + oxidative balance</td>
+              <td>Men who want gentle daily support with mild-to-moderate symptoms</td>
+              <td><a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+            </tr>
+            <tr>
+              <td><a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></td>
+              <td>Antioxidant + cellular stress support</td>
+              <td>Men aiming for long-term support alongside lifestyle optimization</td>
+              <td><a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+            </tr>
+            <tr>
+              <td><a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></td>
+              <td>Long-term prostate environment support</td>
+              <td>Men focused on maintenance and broader prostate balance framing</td>
+              <td><a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">
+        Note: These products are commonly used as supportive tools for urinary comfort and flow. Results vary, and symptoms that are severe, sudden, or worsening should be medically evaluated.
+      </p>
+
+      <div class="sge-block">
+        <h3>Quick takeaway</h3>
+        <p>
+          If your main issue is urgency/frequency, bladder-comfort positioning often feels most relevant. If the issue feels like pressure and weak stream, circulation
+          strategies may be a better “fit.” For long-term support, inflammation and cellular stress approaches tend to be the most common framing.
+        </p>
+      </div>
+    </section>
+
+    {/* H2 BLOCK 5 */}
+    <section class="content-box">
+      <h2 id="how-to-choose">How to Choose Based on Your Symptoms</h2>
+
+      <h3>If Nighttime Urination Is the Main Problem</h3>
+      <p>
+        Men who wake up multiple times often prioritize urinary comfort and bladder-focused positioning, since sleep disruption is usually the biggest quality-of-life driver.
+      </p>
+
+      <h3>If Weak Stream and Pressure Are the Main Problem</h3>
+      <p>
+        When symptoms feel like resistance or pressure, circulation and tissue support strategies tend to be the most relevant “logic,” especially for longer-term support.
+      </p>
+
+      <h3>If Irritation and Sensitivity Are the Main Problem</h3>
+      <p>
+        If urgency feels tied to irritation, inflammation balance and oxidative stress support positioning may align better than “one-mechanism” products.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 6 */}
+    <section class="content-box">
+      <h2 id="safe-use">How to Use Supplements Safely</h2>
+      <ul>
+        <li><strong>Be consistent:</strong> day-to-day use typically gives the clearest read on whether something helps.</li>
+        <li><strong>Give it time:</strong> many men judge changes over weeks, not days.</li>
+        <li><strong>Don’t stack aggressively:</strong> adding multiple supplements at once makes it hard to know what is helping (or irritating).</li>
+        <li><strong>Check compatibility:</strong> if you take medications or have chronic conditions, confirm supplement compatibility first.</li>
+      </ul>
+    </section>
+
+    {/* H2 BLOCK 7 */}
+    <section class="content-box">
+      <h2 id="when-to-see-doctor">When Medical Follow-Up Matters</h2>
+      <p>
+        Seek evaluation if symptoms are severe, sudden, or worsening—especially if you have pain, fever, blood in urine, inability to urinate, or significant changes over a short timeframe.
+        Supplements are supportive tools, not substitutes for diagnosis.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 8 */}
+    <section class="content-box">
+      <h2 id="final-thoughts">Final Thoughts</h2>
+      <p>
+        The best supplements for bladder control and urinary flow are the ones that match your symptom pattern and expectations. Most men do better when they choose a strategy
+        (comfort, inflammation balance, circulation support, or long-term maintenance), stay consistent, and track changes over time.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 9 */}
+    <section class="content-box">
+      <h2 id="recommended-products">Recommended Products</h2>
+
+      <div class="product-grid">
+        {products.map((p) => (
+          <a class="product-card" href={p.hoplink} target="_blank" rel="noopener noreferrer">
+            <img
+              src={p.img}
+              alt={p.alt}
+              loading="lazy"
+              decoding="async"
+              onerror="this.onerror=null; this.src='/images/placeholder-product.png';"
+            />
+            <div class="product-name">{p.name}</div>
+            <span class="product-button">Access</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</ArticleLayout>
