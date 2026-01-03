@@ -1,14 +1,14 @@
 ---
-/* File: src/pages/articles/men-health/best-supplements-for-bladder-control-and-urinary-flow-what-to-expect.astro */
+/* File: src/pages/articles/men-health/best-supplements-for-bladder-control-and-urinary-flow.astro */
 
 import ArticleLayout from "../../../layouts/ArticleLayout.astro";
 
 const meta = {
   title: "Best Supplements for Bladder Control and Urinary Flow: What to Expect",
   description:
-    "Looking for better bladder control and stronger urinary flow? Learn what supplement strategies may help, what to expect realistically, and which options men commonly consider.",
+    "Looking for better bladder control and urinary flow? Learn what actually helps, which ingredients matter most, and how top supplements compare—without unrealistic promises.",
   canonicalUrl:
-    "https://www.thesupplementpost.com/articles/men-health/best-supplements-for-bladder-control-and-urinary-flow-what-to-expect",
+    "https://www.thesupplementpost.com/articles/men-health/best-supplements-for-bladder-control-and-urinary-flow",
 };
 
 const products = [
@@ -17,12 +17,6 @@ const products = [
     hoplink: "https://linkly.link/2LziG",
     img: "/images/men-health/prostadine/hero.png",
     alt: "Prostadine supplement bottle",
-  },
-  {
-    name: "Fluxactive Complete",
-    hoplink: "https://linkly.link/2W4ws",
-    img: "/images/men-health/fluxactive-complete/hero.png",
-    alt: "Fluxactive Complete supplement bottle",
   },
   {
     name: "TC24",
@@ -41,6 +35,12 @@ const products = [
     hoplink: "https://linkly.link/2R0io",
     img: "/images/men-health/endopeak/hero.png",
     alt: "EndoPeak supplement bottle",
+  },
+  {
+    name: "Fluxactive Complete",
+    hoplink: "https://linkly.link/2W4ws",
+    img: "/images/men-health/fluxactive-complete/hero.png",
+    alt: "Fluxactive Complete supplement bottle",
   },
   {
     name: "Prostavive",
@@ -311,7 +311,7 @@ const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
     <header class="article-hero">
       <h1>Best Supplements for Bladder Control and Urinary Flow: What to Expect</h1>
       <p class="article-subheader">
-        A practical, symptom-first guide to bladder control and urinary flow support—so you can choose products based on what they’re actually positioned to help.
+        A symptom-first guide to urgency, frequency, and weak flow—plus the ingredients and supplement strategies men commonly use without unrealistic promises.
       </p>
 
       <div class="my-6 text-center">
@@ -323,7 +323,7 @@ const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
           decoding="async"
         />
         <p class="image-caption">
-          A realistic guide to urinary flow and bladder control support—focused on comfort, frequency, and what men commonly report over time.
+          A practical comparison for men dealing with urgency, nighttime trips, and weak stream—focused on what to expect, what matters, and how products are positioned.
         </p>
       </div>
 
@@ -331,13 +331,14 @@ const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
         <p class="key-insights-title">Key Insights</p>
         <ul>
           <li>
-            “Bladder control” and “urinary flow” issues often come from more than one factor—prostate pressure, irritation, inflammation, and circulation can overlap.
+            “Bladder control” issues are often driven by irritation, sensitive signaling, or incomplete emptying—not just one simple cause.
           </li>
           <li>
-            Supplements do not replace medical evaluation, but some products are positioned to support urinary comfort, reduce irritation, and improve day-to-day flow.
+            The most credible supplements don’t claim to “fix everything”—they target a specific strategy (comfort/irritation, circulation/flow, or long-term prostate
+            balance).
           </li>
           <li>
-            The best results tend to come from realistic expectations: symptom-fit, consistency, and tracking what changes (and what doesn’t) over a few weeks.
+            Results are usually gradual. The best approach is matching the product’s strategy to your symptom pattern and tracking changes over weeks.
           </li>
         </ul>
       </div>
@@ -347,13 +348,15 @@ const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
     <div class="mini-toc">
       <p class="mini-toc-title">In this guide:</p>
       <ul class="mini-toc-list">
-        <li><a href="#why-this-happens">Why Bladder Control and Urinary Flow Problems Happen</a></li>
-        <li><a href="#what-supplements-do">What Supplements Can Realistically Do</a></li>
-        <li><a href="#top-products">Top Products Men Commonly Consider</a></li>
-        <li><a href="#comparison-table">Comparison Table: Positioning and Best Fit</a></li>
-        <li><a href="#how-to-choose">How to Choose Based on Your Symptoms</a></li>
+        <li><a href="#why-it-happens">Why Bladder Control and Urinary Flow Problems Happen</a></li>
+        <li><a href="#what-actually-helps">What Actually Helps (Mechanisms That Matter)</a></li>
+        <li><a href="#key-ingredients">Key Ingredients That Matter for Bladder &amp; Urinary Flow</a></li>
+        <li><a href="#top-supplements">Top Supplements Men Commonly Consider</a></li>
+        <li><a href="#positioning-table">How These Supplements Are Positioned (Comparison Table)</a></li>
+        <li><a href="#how-to-choose">How to Choose the Best Fit for Your Symptom Pattern</a></li>
+        <li><a href="#what-to-expect">What to Expect (Timeline, Realistic Outcomes, Limits)</a></li>
+        <li><a href="#mistakes">Common Mistakes Men Make</a></li>
         <li><a href="#safe-use">How to Use Supplements Safely</a></li>
-        <li><a href="#when-to-see-doctor">When Medical Follow-Up Matters</a></li>
         <li><a href="#final-thoughts">Final Thoughts</a></li>
         <li><a href="#recommended-products">Recommended Products</a></li>
       </ul>
@@ -361,83 +364,145 @@ const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
 
     <p>
       <strong>
-        If you’re dealing with frequent bathroom trips, urgency, weak stream, or that “not fully empty” feeling, you’re not alone—and you’re also not imagining it.
-        Bladder control and urinary flow issues are common, especially with age, and they often come down to prostate pressure, irritation, inflammation, and circulation
-        interacting together.
+        If your biggest frustration is urgency, frequent bathroom trips, nighttime wake-ups, or a weak stream, you’re not alone—and you’re not imagining it.
+        Bladder control and urinary flow problems usually come from a combination of tissue irritation, signaling sensitivity, and (in many men) prostate pressure that
+        affects emptying.
       </strong>
     </p>
 
     <p>
-      This guide breaks down what supplements are commonly used for bladder control and urinary flow support, what you can realistically expect, and how to compare
-      product positioning without hype. The goal is not “miracle claims”—it’s symptom-fit and a smarter way to evaluate options.
+      This guide is designed to feel like a real decision tool: you’ll learn what tends to drive symptoms, which ingredient strategies are most relevant, and how
+      popular supplements are positioned—so you can set realistic expectations and choose a better fit.
     </p>
 
     {/* H2 BLOCK 1 */}
     <section class="content-box">
-      <h2 id="why-this-happens">Why Bladder Control and Urinary Flow Problems Happen</h2>
+      <h2 id="why-it-happens">Why Bladder Control and Urinary Flow Problems Happen</h2>
 
-      <h3>It’s Often Not Just One Cause</h3>
       <p>
-        Urinary symptoms often overlap. For some men, the issue is mainly prostate pressure on the urethra. For others, irritation and inflammation make urgency and
-        frequency worse. Circulation and tissue stress can also play a role in how “responsive” urinary function feels day to day.
+        Most men assume bladder issues are a single problem. In reality, symptoms often overlap—and the “same” complaint can come from different triggers. That’s why
+        the best supplement choice usually depends on your dominant pattern.
       </p>
 
-      <h3>Common Symptom Patterns Men Describe</h3>
-      <ul>
-        <li><strong>Urgency and frequency:</strong> needing to go “right now,” often with smaller output</li>
-        <li><strong>Nighttime waking:</strong> sleep disruption from repeated trips to the bathroom</li>
-        <li><strong>Weak stream:</strong> slower flow, intermittent flow, or longer time to finish</li>
-        <li><strong>Incomplete emptying:</strong> the feeling you still need to go after you finish</li>
-        <li><strong>Irritation:</strong> discomfort that feels like sensitivity or internal “pressure”</li>
-      </ul>
-
+      <h3>Pattern #1: Irritation and Sensitivity</h3>
       <p>
-        Because these symptoms can have different drivers, the “best” supplement is usually the one whose strategy best matches what you’re experiencing.
+        When the urinary tract feels irritated or sensitive, the bladder may “signal” too often. This can show up as urgency, frequent urination, discomfort, or
+        feeling like you always need to go—especially at night.
+      </p>
+
+      <h3>Pattern #2: Incomplete Emptying</h3>
+      <p>
+        If the bladder doesn’t fully empty, you may experience repeated trips, weak stream, stop-and-start flow, or the frustrating sensation of “not done yet.”
+        In men, incomplete emptying is often linked to prostate pressure or flow resistance.
+      </p>
+
+      <h3>Pattern #3: Tissue Stress and Circulation Factors</h3>
+      <p>
+        Circulation and tissue oxygenation influence pelvic function over time. Some formulas focus less on immediate “comfort” and more on supporting the environment
+        around flow, pressure, and long-term tissue resilience.
       </p>
     </section>
 
     {/* H2 BLOCK 2 */}
     <section class="content-box">
-      <h2 id="what-supplements-do">What Supplements Can Realistically Do</h2>
+      <h2 id="what-actually-helps">What Actually Helps (Mechanisms That Matter)</h2>
 
-      <h3>What Supplements May Help Support</h3>
       <p>
-        Over-the-counter supplements are typically positioned around supporting the urinary tract and prostate environment. In practical terms, that usually means
-        working on comfort, irritation control, inflammation balance, oxidative stress support, and (in some formulas) circulation support.
+        Supplements that feel more relevant tend to align with one or more of the mechanisms below. The key is not finding a “best supplement”—it’s finding the
+        strategy that matches your symptom profile.
       </p>
 
-      <h3>What Supplements Cannot Promise</h3>
+      <h3>1) Calming Irritation (Comfort-First Support)</h3>
       <p>
-        Supplements are not medical treatments and should not be viewed as guaranteed fixes. They can’t diagnose the cause of symptoms, replace evaluation when needed,
-        or reliably produce “instant” changes. Results—when they occur—tend to be gradual and vary by symptom profile and consistency.
+        This strategy is most aligned with urgency, frequency, and nighttime disruption—especially when discomfort or sensitivity is part of the picture.
       </p>
+
+      <h3>2) Supporting Flow and Emptying (Pressure / Resistance Support)</h3>
+      <p>
+        This is most aligned with weak stream, slow flow, stop-and-start urination, or repeated trips caused by incomplete emptying.
+      </p>
+
+      <h3>3) Reducing Oxidative Stress and Supporting Long-Term Balance</h3>
+      <p>
+        Some men prefer a maintenance approach: supporting tissue resilience, inflammation balance, and the “prostate environment” over time rather than chasing a
+        fast change.
+      </p>
+
+      <div class="sge-block">
+        <h3>Quick takeaway</h3>
+        <p>
+          If urgency is dominant, comfort-first formulas tend to feel more relevant. If weak stream/incomplete emptying is dominant, flow/pressure-oriented strategies
+          often make more sense. If your goal is long-term balance, maintenance-focused formulas are the better match.
+        </p>
+      </div>
     </section>
 
     {/* H2 BLOCK 3 */}
     <section class="content-box">
-      <h2 id="top-products">Top Products Men Commonly Consider</h2>
+      <h2 id="key-ingredients">Key Ingredients That Matter for Bladder &amp; Urinary Flow</h2>
 
       <p>
-        Based on your list, the most relevant set for bladder control and urinary flow positioning typically includes{" "}
-        <a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a>,{" "}
-        <a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>,{" "}
-        <a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>,{" "}
-        <a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a>,{" "}
-        <a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a>, plus{" "}
-        <a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a> as an additional long-term prostate environment option.
+        Bladder control and urinary flow are influenced by muscle signaling, irritation/inflammation, circulation, and (in many men) prostate-related pressure.
+        Supplements that feel more “real” usually target one or more of these categories.
       </p>
 
+      <h3>Ingredients Positioned for Bladder Comfort and Sensitivity</h3>
+      <ul>
+        <li>Often associated with calming urinary tract irritation and reducing “always need to go” discomfort</li>
+        <li>Most relevant for urgency, frequent urination, and nighttime wake-ups</li>
+      </ul>
+
+      <h3>Ingredients Positioned for Inflammation &amp; Oxidative Stress Balance</h3>
+      <ul>
+        <li>Commonly framed around reducing inflammatory load and supporting tissue resilience</li>
+        <li>Often used as part of a longer-term plan rather than a quick “symptom flip”</li>
+      </ul>
+
+      <h3>Ingredients Positioned for Circulation and Pelvic Flow</h3>
+      <ul>
+        <li>More aligned with weak stream, pressure sensations, and long-term flow support</li>
+        <li>Best judged over weeks, not days</li>
+      </ul>
+
+      <h3>Prostate-Adjacent Support Ingredients (Men-Focused Context)</h3>
+      <ul>
+        <li>Relevant when bladder symptoms appear tied to prostate pressure and incomplete emptying</li>
+        <li>Often positioned as long-term “environment support” rather than a direct fix</li>
+      </ul>
+
       <p>
-        Next, the table helps you compare these products by “strategy” (how they’re positioned) so the choice feels more logical and less guess-based.
+        The strongest “guide” mindset is this: don’t chase the longest label. Choose the strategy that matches your symptom pattern, then give it enough time to
+        judge results fairly.
       </p>
     </section>
 
     {/* H2 BLOCK 4 */}
     <section class="content-box">
-      <h2 id="comparison-table">Comparison Table: Positioning and Best Fit</h2>
+      <h2 id="top-supplements">Top Supplements Men Commonly Consider</h2>
 
       <p>
-        Rather than treating these supplements as interchangeable, compare them by what they’re positioned to support. This helps align expectations with likely outcomes.
+        Based on how these products are positioned (comfort, flow, maintenance), men commonly explore:
+        <a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer"> Prostadine</a>,{" "}
+        <a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a>,{" "}
+        <a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a>,{" "}
+        <a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a>,{" "}
+        <a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a>, and{" "}
+        <a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a>.
+      </p>
+
+      <p>
+        These products are not medical treatments and should not replace professional evaluation—especially if symptoms are sudden, severe, or worsening. In most cases,
+        they’re used as supportive tools during a longer-term “figure out what’s driving this” process.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 5 */}
+    <section class="content-box">
+      <h2 id="positioning-table">How These Supplements Are Positioned (Comparison Table)</h2>
+
+      <p>
+        Instead of treating these products like interchangeable “prostate pills,” it’s more useful to see them as different strategies. The table below summarizes how
+        they’re commonly positioned for bladder control and urinary flow support.
       </p>
 
       <div class="table-wrap">
@@ -446,114 +511,141 @@ const hop = (name) => products.find((p) => p.name === name)?.hoplink || "#";
             <tr>
               <th>Supplement</th>
               <th>Primary Strategy</th>
-              <th>Best Fit For</th>
-              <th>Official Website</th>
+              <th>Best-Aligned Symptom Pattern</th>
+              <th>What to Expect (Realistically)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Prostadine</a></td>
-              <td>Urinary comfort + bladder-focused support</td>
-              <td>Men prioritizing urgency/frequency and nighttime comfort</td>
-              <td><a href={hop("Prostadine")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
-            </tr>
-            <tr>
-              <td><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></td>
-              <td>Inflammation balance + oxidative stress support</td>
-              <td>Men who feel irritation or sensitivity is the main driver</td>
-              <td><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+              <td>Bladder comfort &amp; irritation support</td>
+              <td>Urgency, frequency, nighttime wake-ups</td>
+              <td>Gradual comfort support; best judged over weeks</td>
             </tr>
             <tr>
               <td><a href={hop("TC24")} target="_blank" rel="noopener noreferrer">TC24</a></td>
-              <td>Circulation-focused prostate support</td>
-              <td>Men describing pressure/weak stream that feels “structural”</td>
-              <td><a href={hop("TC24")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+              <td>Circulation &amp; pressure-focused support</td>
+              <td>Weak stream, “pressure,” resistance patterns</td>
+              <td>Longer timeline; more “environment” than instant relief</td>
             </tr>
             <tr>
               <td><a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">FlowForce Max</a></td>
-              <td>Prostate tissue support + oxidative balance</td>
-              <td>Men who want gentle daily support with mild-to-moderate symptoms</td>
-              <td><a href={hop("FlowForce Max")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+              <td>Flow-oriented prostate environment support</td>
+              <td>Incomplete emptying, stop-and-start, mild ongoing issues</td>
+              <td>Maintenance feel; consistency matters most</td>
             </tr>
             <tr>
               <td><a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">EndoPeak</a></td>
-              <td>Antioxidant + cellular stress support</td>
-              <td>Men aiming for long-term support alongside lifestyle optimization</td>
-              <td><a href={hop("EndoPeak")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+              <td>Antioxidant &amp; cellular stress balance</td>
+              <td>Long-term prostate/bladder environment optimization</td>
+              <td>Gradual support; best paired with lifestyle consistency</td>
+            </tr>
+            <tr>
+              <td><a href={hop("Fluxactive Complete")} target="_blank" rel="noopener noreferrer">Fluxactive Complete</a></td>
+              <td>Inflammation &amp; oxidative stress support</td>
+              <td>Irritation-linked patterns + inflammation framing</td>
+              <td>Supportive, not corrective; track trend changes over time</td>
             </tr>
             <tr>
               <td><a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Prostavive</a></td>
-              <td>Long-term prostate environment support</td>
-              <td>Men focused on maintenance and broader prostate balance framing</td>
-              <td><a href={hop("Prostavive")} target="_blank" rel="noopener noreferrer">Official Website</a></td>
+              <td>Long-term balance / maintenance positioning</td>
+              <td>Men thinking “maintenance mode” rather than quick symptom flips</td>
+              <td>Most useful when judged as a long-term support tool</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p class="table-note">
-        Note: These products are commonly used as supportive tools for urinary comfort and flow. Results vary, and symptoms that are severe, sudden, or worsening should be medically evaluated.
-      </p>
-
-      <div class="sge-block">
-        <h3>Quick takeaway</h3>
-        <p>
-          If your main issue is urgency/frequency, bladder-comfort positioning often feels most relevant. If the issue feels like pressure and weak stream, circulation
-          strategies may be a better “fit.” For long-term support, inflammation and cellular stress approaches tend to be the most common framing.
-        </p>
-      </div>
-    </section>
-
-    {/* H2 BLOCK 5 */}
-    <section class="content-box">
-      <h2 id="how-to-choose">How to Choose Based on Your Symptoms</h2>
-
-      <h3>If Nighttime Urination Is the Main Problem</h3>
-      <p>
-        Men who wake up multiple times often prioritize urinary comfort and bladder-focused positioning, since sleep disruption is usually the biggest quality-of-life driver.
-      </p>
-
-      <h3>If Weak Stream and Pressure Are the Main Problem</h3>
-      <p>
-        When symptoms feel like resistance or pressure, circulation and tissue support strategies tend to be the most relevant “logic,” especially for longer-term support.
-      </p>
-
-      <h3>If Irritation and Sensitivity Are the Main Problem</h3>
-      <p>
-        If urgency feels tied to irritation, inflammation balance and oxidative stress support positioning may align better than “one-mechanism” products.
+        Note: These are positioning patterns, not medical claims. If you have pain, blood in urine, fever, or sudden urinary retention, medical evaluation is essential.
       </p>
     </section>
 
     {/* H2 BLOCK 6 */}
     <section class="content-box">
-      <h2 id="safe-use">How to Use Supplements Safely</h2>
-      <ul>
-        <li><strong>Be consistent:</strong> day-to-day use typically gives the clearest read on whether something helps.</li>
-        <li><strong>Give it time:</strong> many men judge changes over weeks, not days.</li>
-        <li><strong>Don’t stack aggressively:</strong> adding multiple supplements at once makes it hard to know what is helping (or irritating).</li>
-        <li><strong>Check compatibility:</strong> if you take medications or have chronic conditions, confirm supplement compatibility first.</li>
-      </ul>
+      <h2 id="how-to-choose">How to Choose the Best Fit for Your Symptom Pattern</h2>
+
+      <h3>If urgency and nighttime frequency are dominant</h3>
+      <p>
+        A comfort-first approach tends to feel most relevant. Look for products positioned around bladder comfort, irritation reduction, and urinary consistency rather
+        than “big claims” about prostate size.
+      </p>
+
+      <h3>If weak stream and incomplete emptying are dominant</h3>
+      <p>
+        Flow/pressure-oriented strategies often make more sense. These are usually judged over time and tend to focus on circulation and the pelvic/prostate environment.
+      </p>
+
+      <h3>If your goal is long-term maintenance</h3>
+      <p>
+        Maintenance-positioned formulas tend to be a better psychological fit: you’re supporting the environment consistently rather than expecting a fast shift after
+        a few days.
+      </p>
+
+      <div class="sge-block">
+        <h3>Quick rule</h3>
+        <p>
+          Choose one primary strategy, commit to it for a fair trial window, and track symptoms (nighttime wake-ups, urgency episodes, stream strength, and “emptying”
+          quality). That’s how the article becomes a guide—not a guess.
+        </p>
+      </div>
     </section>
 
     {/* H2 BLOCK 7 */}
     <section class="content-box">
-      <h2 id="when-to-see-doctor">When Medical Follow-Up Matters</h2>
+      <h2 id="what-to-expect">What to Expect (Timeline, Realistic Outcomes, Limits)</h2>
+
+      <h3>Week 1–2: Subtle signals, not dramatic changes</h3>
       <p>
-        Seek evaluation if symptoms are severe, sudden, or worsening—especially if you have pain, fever, blood in urine, inability to urinate, or significant changes over a short timeframe.
-        Supplements are supportive tools, not substitutes for diagnosis.
+        Some men notice small shifts in comfort or nighttime disruption first. Others notice nothing early—this is normal, and not a failure.
+      </p>
+
+      <h3>Week 3–6: Better pattern clarity</h3>
+      <p>
+        This is when many people can judge whether the strategy fits. Improvements (when they happen) usually look like fewer wake-ups, less urgency, smoother flow, or
+        reduced irritation—not a sudden “cure.”
+      </p>
+
+      <h3>What supplements cannot do</h3>
+      <p>
+        Supplements cannot diagnose the cause of symptoms, replace evaluation when warning signs are present, or guarantee outcomes. If symptoms are worsening or severe,
+        a medical check matters.
       </p>
     </section>
 
     {/* H2 BLOCK 8 */}
     <section class="content-box">
-      <h2 id="final-thoughts">Final Thoughts</h2>
-      <p>
-        The best supplements for bladder control and urinary flow are the ones that match your symptom pattern and expectations. Most men do better when they choose a strategy
-        (comfort, inflammation balance, circulation support, or long-term maintenance), stay consistent, and track changes over time.
-      </p>
+      <h2 id="mistakes">Common Mistakes Men Make</h2>
+      <ul>
+        <li><strong>Buying based on hype instead of symptom pattern.</strong> Strategy-fit drives better outcomes than “top trending.”</li>
+        <li><strong>Stacking multiple products immediately.</strong> It becomes impossible to know what helped—or what caused irritation.</li>
+        <li><strong>Expecting a fast result.</strong> These are usually gradual-support tools, not instant fixes.</li>
+        <li><strong>Ignoring warning signs.</strong> Pain, blood, fever, or urinary retention should be evaluated.</li>
+      </ul>
     </section>
 
     {/* H2 BLOCK 9 */}
+    <section class="content-box">
+      <h2 id="safe-use">How to Use Supplements Safely</h2>
+      <ul>
+        <li><strong>Keep it simple:</strong> choose one strategy first and give it a fair trial window.</li>
+        <li><strong>Track outcomes:</strong> urgency episodes, nighttime wake-ups, stream strength, and “emptying” quality.</li>
+        <li><strong>Be consistent:</strong> on/off use makes results harder to interpret.</li>
+        <li><strong>Check compatibility:</strong> if you take medications or have chronic conditions, confirm safety with a professional.</li>
+      </ul>
+    </section>
+
+    {/* H2 BLOCK 10 */}
+    <section class="content-box">
+      <h2 id="final-thoughts">Final Thoughts</h2>
+      <p>
+        The most useful way to think about bladder control and urinary flow supplements is this: they are strategy tools. Some focus on comfort and irritation, others
+        on circulation and flow, and others on long-term maintenance. When you match the strategy to your symptom pattern—and track outcomes over weeks—your decisions
+        become clearer, more realistic, and more effective.
+      </p>
+    </section>
+
+    {/* H2 BLOCK 11 */}
     <section class="content-box">
       <h2 id="recommended-products">Recommended Products</h2>
 
