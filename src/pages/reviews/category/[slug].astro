@@ -45,67 +45,67 @@ const normalize = (value) =>
         .replace(/\s+/g, "-")
     : "";
 
-// minis "flattened" (prostadine-what-is, prostadine-price, etc)
-const MINI_SUFFIXES = [
+const splitParts = (val) =>
+  String(val || "").replace(/\\/g, "/").split("/").filter(Boolean);
+
+const getFolderCategorySlugFromId = (id) => {
+  const first = splitParts(id)[0];
+  return normalize(first);
+};
+
+// ✅ lista canônica de minis (inclui "official" pois você tem official.md)
+const MINI_KEYS = [
   "what-is",
   "ingredients",
   "side-effects",
   "price",
   "pros-and-cons",
   "does-really-work",
+  "official",
 ];
 
-const isMiniSlug = (s) => {
-  if (!s) return false;
-  return MINI_SUFFIXES.some((suffix) => s.endsWith(`-${suffix}`) || s.endsWith(`/${suffix}`));
+// ✅ Detecta minis por NOME DO ARQUIVO: price.md, ingredients.md etc
+const looksLikeMini = (id) => {
+  const parts = splitParts(id);
+  if (!parts.length) return false;
+
+  const last = parts[parts.length - 1]; // ex: "price.md" | "index.md"
+  const file = String(last).replace(/\.md$/, ""); // "price" | "index"
+
+  return MINI_KEYS.includes(file);
 };
 
-const getFolderCategorySlugFromId = (id) => {
-  // id pode ser:
-  // "Men-Health/prostadine/index"
-  // "Men-Health/prostadine/what-is"
-  // "Men-Health/prostadine-what-is"
-  // pegamos a primeira parte como "Men-Health"
-  const first = (id || "").split("/")[0];
-  return normalize(first);
-};
-
+/**
+ * ✅ FULL REVIEW
+ * Regra real do seu projeto: full review = .../index.md
+ * (sem depender de layout)
+ */
 const isFullReview = (review) => {
-  const id = review?.id || "";
-  const s = review?.slug || "";
+  const id = String(review?.id || "").replace(/\\/g, "/");
 
-  // Formato clássico em pasta: .../index
-  if (id.endsWith("/index")) return true;
+  if (!id.endsWith("/index.md")) return false;
+  if (looksLikeMini(id)) return false;
 
-  // Formato "flatten": FULL costuma ser só "prostadine" (sem sufixo de mini)
-  // (e normalmente sem barra)
-  const looksLikeSingle = !s.includes("/");
-  if (looksLikeSingle && !isMiniSlug(s)) return true;
-
-  // Extra segurança: se slug tem pasta e NÃO parece mini, trate como full
-  // Ex: "Men-Health/prostadine"
-  const parts = s.split("/").filter(Boolean);
-  if (parts.length === 2 && !isMiniSlug(s)) return true;
-
-  return false;
+  return true;
 };
 
 const isSameCategory = (review) => {
-  // 1) Preferência: frontmatter category (quando existe e é confiável)
+  // 1) frontmatter category (se existir)
   const byFrontmatter = review?.data?.category === slug;
 
-  // 2) Fallback: pasta (Men-Health -> men-health)
+  // 2) fallback: pasta (men-health)
   const byFolder = getFolderCategorySlugFromId(review?.id) === slug;
 
   return byFrontmatter || byFolder;
 };
 
+/**
+ * ✅ Slug público do produto:
+ * - usa o 2º segmento do id: category/product/...
+ */
 const getPublicSlug = (review) => {
-  // Se vier "Men-Health/prostadine" -> "prostadine"
-  // Se vier "prostadine" -> "prostadine"
-  // Se vier "prostadine-what-is" -> "prostadine-what-is" (mas minis já serão filtradas fora)
-  const s = String(review?.slug || "");
-  return s.includes("/") ? s.split("/").filter(Boolean).pop() : s;
+  const parts = splitParts(review?.id); // ["men-health","prostadine","index.md"]
+  return parts[1] || "";
 };
 
 const decodeHtmlEntities = (str) =>
@@ -119,9 +119,7 @@ const decodeHtmlEntities = (str) =>
 
 const cleanTag = (tag) => {
   let t = decodeHtmlEntities(tag);
-  // remove espaços e restos comuns
   t = t.replace(/\s+/g, " ").trim();
-  // remove trailing punctuation estranha
   t = t.replace(/[•·|]+$/g, "").trim();
   return t;
 };
@@ -129,11 +127,6 @@ const cleanTag = (tag) => {
 /**
  * ✅ Extrai Health Condition Tags do bloco "HEALTH CONDITION TAGS"
  * Regra: pega tudo entre "HEALTH CONDITION TAGS" e "INGREDIENT TAGS" (ou fim)
- * Suporta:
- *  - <span>Tag</span>
- *  - <a>Tag</a>
- *  - listas markdown: "- Tag"
- *  - fallback por linhas
  */
 const extractHealthTagsFromBody = (body, limit = 8) => {
   const raw = String(body || "");
@@ -146,7 +139,7 @@ const extractHealthTagsFromBody = (body, limit = 8) => {
 
   const collected = [];
 
-  // 1) <span ...>TAG</span>
+  // 1) <span>TAG</span>
   const spanRe = /<span\b[^>]*>([^<]{1,120})<\/span>/gi;
   let m;
   while ((m = spanRe.exec(block)) !== null) {
@@ -154,21 +147,21 @@ const extractHealthTagsFromBody = (body, limit = 8) => {
     if (t) collected.push(t);
   }
 
-  // 2) <a ...>TAG</a> (caso seus chips sejam links no futuro)
+  // 2) <a>TAG</a>
   const aRe = /<a\b[^>]*>([^<]{1,120})<\/a>/gi;
   while ((m = aRe.exec(block)) !== null) {
     const t = cleanTag(m[1]);
     if (t) collected.push(t);
   }
 
-  // 3) listas markdown "- tag"
+  // 3) lista markdown "- tag"
   const listRe = /^\s*[-*]\s+(.+?)\s*$/gm;
   while ((m = listRe.exec(block)) !== null) {
     const t = cleanTag(m[1]);
     if (t) collected.push(t);
   }
 
-  // 4) fallback: se ainda não pegou nada, tenta por linhas "chipadas"
+  // 4) fallback por linhas
   if (collected.length === 0) {
     const lines = block
       .split("\n")
@@ -176,15 +169,13 @@ const extractHealthTagsFromBody = (body, limit = 8) => {
       .filter(Boolean);
 
     for (const line of lines) {
-      // ignora o título
       if (line.toUpperCase() === "HEALTH CONDITION TAGS") continue;
-      // ignora linhas muito longas (provável parágrafo)
       if (line.length > 80) continue;
       collected.push(line);
     }
   }
 
-  // remove duplicados mantendo ordem
+  // dedupe mantendo ordem
   const unique = [];
   const seen = new Set();
   for (const t of collected) {
@@ -231,8 +222,6 @@ const breadcrumbs = [
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- VIEWPORT PARA MOBILE -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>{categoryTitle} — Supplement Reviews | The Supplement Post</title>
@@ -240,7 +229,6 @@ const breadcrumbs = [
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- Inter font -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
@@ -269,7 +257,6 @@ const breadcrumbs = [
         font-family: "Inter", sans-serif;
       }
 
-      /* HEADER */
       .site-header {
         background: #ffffff;
         box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
@@ -308,7 +295,6 @@ const breadcrumbs = [
         color: var(--primary-blue);
       }
 
-      /* WRAPPER CENTRAL */
       .page-wrapper {
         max-width: 1120px;
         margin: 40px auto;
@@ -318,7 +304,6 @@ const breadcrumbs = [
         box-shadow: var(--shadow-soft);
       }
 
-      /* Breadcrumb */
       .breadcrumb ol {
         padding: 0;
         margin: 0 0 18px;
@@ -339,7 +324,6 @@ const breadcrumbs = [
         color: #374151;
       }
 
-      /* Category Header */
       .category-hero {
         background: #ffffff;
         border-radius: 16px;
@@ -362,14 +346,12 @@ const breadcrumbs = [
         color: var(--text-muted);
       }
 
-      /* Article list */
       .article-list {
         display: flex;
         flex-direction: column;
         gap: 28px;
       }
 
-      /* CARD */
       .article-card {
         display: block;
         background: var(--bg-card);
@@ -447,7 +429,6 @@ const breadcrumbs = [
         color: #374151;
       }
 
-      /* ✅ Health Condition Tags */
       .health-tags {
         display: flex;
         flex-wrap: wrap;
@@ -475,81 +456,40 @@ const breadcrumbs = [
         gap: 6px;
       }
 
-      /* Footer */
-      .site-footer {
-        margin-top: 60px;
+      /* =========================
+         PAGINATION (CLIENT-SIDE)
+      ========================= */
+      .pagination {
+        margin-top: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .page-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border-subtle);
         background: #ffffff;
-        border-top: 1px solid #e5e7eb;
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 13px;
       }
 
-      .footer-inner {
-        max-width: 1120px;
-        margin: 0 auto;
-        padding: 18px;
-        text-align: center;
-        font-size: 12px;
-        color: #6b7280;
+      .page-btn[aria-disabled="true"] {
+        opacity: 0.45;
+        pointer-events: none;
       }
 
-      @media (max-width: 640px) {
-        .header-inner {
-          padding: 12px 12px;
-        }
-
-        .brand {
-          font-size: 12px;
-          letter-spacing: 0.18em;
-        }
-
-        .page-wrapper {
-          margin: 24px 12px;
-          padding: 24px 18px;
-          border-radius: 18px;
-        }
-
-        .breadcrumb ol {
-          font-size: 11px;
-          flex-wrap: wrap;
-        }
-
-        .category-hero {
-          padding: 22px 18px;
-          margin-bottom: 28px;
-        }
-
-        .category-title {
-          font-size: 24px;
-          line-height: 1.25;
-        }
-
-        .category-description {
-          font-size: 14px;
-        }
-
-        .article-image-container {
-          height: 200px;
-        }
-
-        .article-content {
-          padding: 20px;
-        }
-
-        .article-title {
-          font-size: 18px;
-        }
-
-        .article-description {
-          font-size: 14px;
-        }
-
-        .article-cta {
-          font-size: 14px;
-        }
-
-        .footer-inner {
-          font-size: 11px;
-          padding: 16px;
-        }
+      .page-indicator {
+        font-size: 13px;
+        color: #374151;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -589,46 +529,128 @@ const breadcrumbs = [
       {categoryReviews.length === 0 ? (
         <p>No reviews found for this category.</p>
       ) : (
-        <section class="article-list">
-          {categoryReviews.map((review) => {
-            const title = review.data.pageTitle ?? review.data.title;
-            const description = review.data.description ?? "";
-            const heroImage = review.data.heroImage;
+        <>
+          <section class="article-list" id="reviewsList">
+            {categoryReviews.map((review) => {
+              const title = review.data.pageTitle ?? review.data.title;
+              const description = review.data.description ?? "";
+              const heroImage = review.data.heroImage;
 
-            // ✅ Extrai automaticamente do body do review
-            const healthTags = extractHealthTagsFromBody(review.body, 8);
+              const healthTags = extractHealthTagsFromBody(review.body, 8);
+              const href = `/reviews/${getPublicSlug(review)}`;
 
-            // ✅ Link SEMPRE no formato público: /reviews/{slug-limpo}
-            const href = `/reviews/${getPublicSlug(review)}`;
+              return (
+                <a href={href} class="article-card" data-review-card>
+                  <div class="article-card-inner">
+                    <div class="article-image-container">
+                      {heroImage ? <img src={heroImage} alt={title} class="article-image" /> : null}
+                    </div>
 
-            return (
-              <a href={href} class="article-card">
-                <div class="article-card-inner">
-                  <div class="article-image-container">
-                    {heroImage ? (
-                      <img src={heroImage} alt={title} class="article-image" />
-                    ) : null}
+                    <div class="article-content">
+                      <h2 class="article-title">{title}</h2>
+                      <p class="article-description">{description}</p>
+
+                      {healthTags.length > 0 ? (
+                        <div class="health-tags">
+                          {healthTags.map((tag) => (
+                            <span class="health-tag">{tag}</span>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      <div class="article-cta">Read Full Review →</div>
+                    </div>
                   </div>
+                </a>
+              );
+            })}
+          </section>
 
-                  <div class="article-content">
-                    <h2 class="article-title">{title}</h2>
-                    <p class="article-description">{description}</p>
+          <nav class="pagination" aria-label="Pagination">
+            <a class="page-btn" href="#" id="prevBtn" aria-disabled="true">← Prev</a>
+            <div class="page-indicator" id="pageIndicator">Page 1</div>
+            <a class="page-btn" href="#" id="nextBtn" aria-disabled="true">Next →</a>
+          </nav>
 
-                    {healthTags.length > 0 ? (
-                      <div class="health-tags">
-                        {healthTags.map((tag) => (
-                          <span class="health-tag">{tag}</span>
-                        ))}
-                      </div>
-                    ) : null}
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const PER_PAGE = 10;
 
-                    <div class="article-cta">Read Full Review →</div>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
-        </section>
+    const list = document.getElementById("reviewsList");
+    const nav = document.querySelector(".pagination");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const indicator = document.getElementById("pageIndicator");
+
+    if (!list || !prevBtn || !nextBtn || !indicator) return;
+
+    const cards = Array.from(list.querySelectorAll(".article-card"));
+    const total = cards.length;
+    const totalPages = Math.max(1, Math.ceil(total / PER_PAGE));
+
+    // 🔒 esconde tudo primeiro (garantia)
+    cards.forEach((el) => (el.style.display = "none"));
+
+    const getPageFromHash = () => {
+      const match = window.location.hash.match(/page=(\d+)/i);
+      const page = match ? parseInt(match[1], 10) : 1;
+      if (!Number.isFinite(page) || page < 1) return 1;
+      return Math.min(page, totalPages);
+    };
+
+    const setHashPage = (page) => {
+      window.location.hash = `page=${page}`;
+    };
+
+    const render = (page) => {
+      const start = (page - 1) * PER_PAGE;
+      const end = start + PER_PAGE;
+
+      cards.forEach((el, idx) => {
+        el.style.display = idx >= start && idx < end ? "block" : "none";
+      });
+
+      indicator.textContent = `Page ${page} of ${totalPages}`;
+
+      prevBtn.setAttribute("aria-disabled", page <= 1 ? "true" : "false");
+      nextBtn.setAttribute("aria-disabled", page >= totalPages ? "true" : "false");
+    };
+
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const page = getPageFromHash();
+      if (page > 1) {
+        setHashPage(page - 1);
+        render(page - 1);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const page = getPageFromHash();
+      if (page < totalPages) {
+        setHashPage(page + 1);
+        render(page + 1);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+
+    window.addEventListener("hashchange", () => {
+      render(getPageFromHash());
+    });
+
+    // init
+    render(getPageFromHash());
+
+    if (totalPages <= 1 && nav) {
+      nav.style.display = "none";
+    }
+  });
+</script>
+
+
+        </>
       )}
     </main>
 
